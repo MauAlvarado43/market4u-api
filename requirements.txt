@@ -1,0 +1,5 @@
+-r seed/requirements.txt
+
+#  Include custom dependencies
+#  Examples:
+#     PyPDF2==1.26.0

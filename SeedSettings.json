@@ -1,0 +1,22 @@
+{
+  "api": {
+    "include": {
+      "*": "*"
+    }
+  },
+  "extend": {
+    "models": [],
+    "routes": [],
+    "schema_types": [],
+    "serializers": []
+  },
+  "graphql": {
+    "include": {
+      "*": "*"
+    }
+  },
+  "last_build_version": "0.6.1",
+  "platform": "django",
+  "project_description": "This repository holds the source code of Market4U",
+  "project_name": "Market4U"
+}

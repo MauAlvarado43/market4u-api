@@ -1,0 +1,9 @@
+---
+exclude_paths:
+  - "**.md"
+  - "models/migrations/*"
+  - "seed/tests/**"
+  - "tests/**"
+  - ".git/**"
+  - ".venv/**"
+  - ".data/**"

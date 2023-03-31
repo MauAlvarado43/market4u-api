@@ -1,0 +1,452 @@
+{
+  "models": [
+    {
+      "attrs": [
+        {
+          "length": "200",
+          "name": "destiny",
+          "type": "string"
+        },
+        {
+          "card": {
+            "has": "1",
+            "ref": "0..*"
+          },
+          "is_fk": true,
+          "name": "purchases",
+          "type": "purchase[]",
+          "write": false
+        },
+        {
+          "card": {
+            "has": "0..*",
+            "ref": "1"
+          },
+          "is_fk": true,
+          "name": "user",
+          "type": "user"
+        },
+        {
+          "card": {
+            "has": "0..*",
+            "ref": "1"
+          },
+          "is_fk": true,
+          "name": "payment",
+          "type": "payment"
+        }
+      ],
+      "name": "cart"
+    },
+    {
+      "attrs": [
+        {
+          "length": "100",
+          "name": "name",
+          "type": "string"
+        },
+        {
+          "card": {
+            "has": "1",
+            "ref": "0..*"
+          },
+          "is_fk": true,
+          "name": "products",
+          "type": "product[]",
+          "write": false
+        }
+      ],
+      "name": "category"
+    },
+    {
+      "attrs": [
+        {
+          "length": "100",
+          "name": "name",
+          "type": "string"
+        },
+        {
+          "length": "100",
+          "name": "common_name",
+          "type": "string"
+        },
+        {
+          "length": "20",
+          "name": "rfc",
+          "type": "string"
+        },
+        {
+          "length": "100",
+          "name": "address",
+          "type": "string"
+        },
+        {
+          "length": "20",
+          "name": "phone",
+          "type": "string"
+        },
+        {
+          "length": "100",
+          "name": "email",
+          "type": "string"
+        },
+        {
+          "default": "false",
+          "name": "active",
+          "type": "boolean"
+        },
+        {
+          "name": "photo",
+          "type": "file"
+        },
+        {
+          "card": {
+            "has": "1",
+            "ref": "0..*"
+          },
+          "is_fk": true,
+          "name": "users",
+          "type": "user[]",
+          "write": false
+        }
+      ],
+      "name": "company"
+    },
+    {
+      "attrs": [
+        {
+          "name": "content",
+          "type": "text"
+        },
+        {
+          "card": {
+            "has": "0..*",
+            "ref": "1"
+          },
+          "is_fk": true,
+          "name": "sender",
+          "type": "user"
+        },
+        {
+          "card": {
+            "has": "0..*",
+            "ref": "1"
+          },
+          "is_fk": true,
+          "name": "target",
+          "type": "user"
+        }
+      ],
+      "name": "message"
+    },
+    {
+      "attrs": [
+        {
+          "length": "100",
+          "name": "title",
+          "type": "string"
+        },
+        {
+          "name": "description",
+          "type": "text"
+        },
+        {
+          "name": "rate",
+          "type": "int"
+        },
+        {
+          "card": {
+            "has": "0..*",
+            "ref": "1"
+          },
+          "is_fk": true,
+          "name": "product",
+          "type": "product"
+        },
+        {
+          "card": {
+            "has": "0..*",
+            "ref": "1"
+          },
+          "is_fk": true,
+          "name": "user",
+          "type": "user"
+        }
+      ],
+      "name": "opinion"
+    },
+    {
+      "attrs": [
+        {
+          "length": "100",
+          "name": "card_number",
+          "type": "string"
+        },
+        {
+          "length": "10",
+          "name": "expire_date",
+          "type": "string"
+        },
+        {
+          "name": "type",
+          "options": [
+            "DEBIT",
+            "CREDIT"
+          ],
+          "type": "enum"
+        },
+        {
+          "card": {
+            "has": "0..*",
+            "ref": "1"
+          },
+          "is_fk": true,
+          "name": "user",
+          "type": "user"
+        },
+        {
+          "length": "200",
+          "name": "address",
+          "type": "string"
+        }
+      ],
+      "name": "payment"
+    },
+    {
+      "attrs": [
+        {
+          "length": "100",
+          "name": "name",
+          "type": "string"
+        },
+        {
+          "length": "200",
+          "name": "short_description",
+          "type": "string"
+        },
+        {
+          "name": "description",
+          "type": "text"
+        },
+        {
+          "name": "price",
+          "type": "float"
+        },
+        {
+          "name": "stock",
+          "type": "int"
+        },
+        {
+          "card": {
+            "has": "0..*",
+            "ref": "1"
+          },
+          "is_fk": true,
+          "name": "user",
+          "type": "user"
+        },
+        {
+          "card": {
+            "has": "1",
+            "ref": "0..*"
+          },
+          "is_fk": true,
+          "name": "opinions",
+          "type": "opinion[]",
+          "write": false
+        },
+        {
+          "card": {
+            "has": "1",
+            "ref": "0..*"
+          },
+          "is_fk": true,
+          "name": "sales",
+          "type": "sale[]",
+          "write": false
+        },
+        {
+          "card": {
+            "has": "0..*",
+            "ref": "1"
+          },
+          "is_fk": true,
+          "name": "category",
+          "type": "category"
+        },
+        {
+          "name": "photos",
+          "type": "file[]",
+          "write": false
+        }
+      ],
+      "name": "product"
+    },
+    {
+      "attrs": [
+        {
+          "name": "amount",
+          "type": "int"
+        },
+        {
+          "name": "product",
+          "type": "json"
+        },
+        {
+          "name": "sale",
+          "type": "json"
+        },
+        {
+          "card": {
+            "has": "0..*",
+            "ref": "1"
+          },
+          "is_fk": true,
+          "name": "cart",
+          "type": "cart"
+        }
+      ],
+      "name": "purchase"
+    },
+    {
+      "attrs": [
+        {
+          "name": "disscount",
+          "type": "float"
+        },
+        {
+          "default": "now",
+          "name": "start_date",
+          "type": "date"
+        },
+        {
+          "default": "now",
+          "name": "end_date",
+          "type": "date"
+        },
+        {
+          "card": {
+            "has": "0..*",
+            "ref": "1"
+          },
+          "is_fk": true,
+          "name": "product",
+          "type": "product"
+        },
+        {
+          "card": {
+            "has": "0..*",
+            "ref": "1"
+          },
+          "is_fk": true,
+          "name": "user",
+          "type": "user"
+        }
+      ],
+      "name": "sale"
+    },
+    {
+      "attrs": [
+        {
+          "length": "100",
+          "name": "username",
+          "type": "string"
+        },
+        {
+          "length": "100",
+          "name": "password",
+          "type": "string"
+        },
+        {
+          "length": "100",
+          "name": "email",
+          "type": "string"
+        },
+        {
+          "length": "100",
+          "name": "first_name",
+          "type": "string"
+        },
+        {
+          "length": "100",
+          "name": "last_name",
+          "type": "string"
+        },
+        {
+          "length": "200",
+          "name": "address",
+          "type": "string"
+        },
+        {
+          "default": "false",
+          "name": "active",
+          "type": "boolean"
+        },
+        {
+          "name": "type",
+          "options": [
+            "SUPERADMIN",
+            "ADMIN;SELLER",
+            "NORMAL"
+          ],
+          "type": "enum"
+        },
+        {
+          "name": "photo",
+          "type": "file"
+        },
+        {
+          "card": {
+            "has": "0..*",
+            "ref": "1"
+          },
+          "empty": true,
+          "is_fk": true,
+          "name": "company",
+          "type": "company"
+        },
+        {
+          "card": {
+            "has": "1",
+            "ref": "0..*"
+          },
+          "is_fk": true,
+          "name": "carts",
+          "type": "cart[]",
+          "write": false
+        },
+        {
+          "card": {
+            "has": "1",
+            "ref": "0..*"
+          },
+          "is_fk": true,
+          "name": "products",
+          "type": "product[]",
+          "write": false
+        },
+        {
+          "card": {
+            "has": "1",
+            "ref": "0..*"
+          },
+          "is_fk": true,
+          "name": "whishlist",
+          "type": "product[]",
+          "write": false
+        },
+        {
+          "card": {
+            "has": "1",
+            "ref": "0..*"
+          },
+          "is_fk": true,
+          "name": "sales",
+          "type": "sale[]",
+          "write": false
+        }
+      ],
+      "name": "user"
+    }
+  ]
+}

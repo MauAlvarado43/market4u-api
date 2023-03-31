@@ -1,0 +1,59 @@
+version: "3.7"
+
+services:
+
+  postgres:
+    image: postgres
+    volumes:
+      - ../../.data/postgres:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_DB=postgres
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    logging:
+      driver: none
+    ports:
+      - "${POSTGRES_PORT}:5432"
+
+  redis:
+    image: "redis:alpine"
+    logging:
+      driver: none
+    ports:
+      - "${REDIS_PORT}:6379"
+
+  django:
+    build:
+      context: ../../.
+      dockerfile: Dockerfile
+    command: "python manage.py runserver 0.0.0.0:${DJANGO_PORT}"
+    volumes:
+      - ../../.:/app
+    environment:
+      - USE_DOCKER=true
+    env_file:
+      - docker.env
+    ports:
+      - "${DJANGO_PORT}:${DJANGO_PORT}"
+    depends_on:
+      - postgres
+      - redis
+
+  celery:
+    build:
+      context: ../../.
+      dockerfile: Dockerfile
+    command: "celery -A seed.app worker -l INFO -B"
+    volumes:
+      - ../../.:/app
+    environment:
+      - USE_DOCKER=true
+    env_file:
+      - docker.env
+    depends_on:
+      - postgres
+      - redis
+
+networks:
+  default:
+    name: market4u_backend
