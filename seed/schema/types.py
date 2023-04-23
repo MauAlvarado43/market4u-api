@@ -20,7 +20,10 @@ from app.models import Payment as PaymentModel
 from app.models import Product as ProductModel
 from app.models import Purchase as PurchaseModel
 from app.models import Sale as SaleModel
+from app.models import Shipping as ShippingModel
 from app.models import User as UserModel
+from app.models import Variant as VariantModel
+from app.models import Variantoption as VariantoptionModel
 from app.models import File as FileModel
 from seed.util.query_util import sql_alike_q
 
@@ -204,6 +207,26 @@ class SaleCount(ObjectType):
     id = graphene.Int()
     count = graphene.Int()
 
+class Shipping(DjangoObjectType):
+    id = graphene.Int(description="Shipping primary key")
+    class Meta:
+        model = ShippingModel
+        
+    def resolve_id(self, info):
+        return self.pk
+
+class ShippingPagination(ObjectType):
+    id = graphene.Int()
+    pageNum = graphene.Int()
+    pageSize = graphene.Int()
+    totalPages = graphene.Int()
+    totalCount = graphene.Int()
+    shippings = DjangoListField(Shipping)
+
+class ShippingCount(ObjectType):
+    id = graphene.Int()
+    count = graphene.Int()
+
 class User(DjangoObjectType):
     id = graphene.Int(description="User primary key")
     class Meta:
@@ -222,6 +245,46 @@ class UserPagination(ObjectType):
     users = DjangoListField(User)
 
 class UserCount(ObjectType):
+    id = graphene.Int()
+    count = graphene.Int()
+
+class Variant(DjangoObjectType):
+    id = graphene.Int(description="Variant primary key")
+    class Meta:
+        model = VariantModel
+        
+    def resolve_id(self, info):
+        return self.pk
+
+class VariantPagination(ObjectType):
+    id = graphene.Int()
+    pageNum = graphene.Int()
+    pageSize = graphene.Int()
+    totalPages = graphene.Int()
+    totalCount = graphene.Int()
+    variants = DjangoListField(Variant)
+
+class VariantCount(ObjectType):
+    id = graphene.Int()
+    count = graphene.Int()
+
+class Variantoption(DjangoObjectType):
+    id = graphene.Int(description="Variantoption primary key")
+    class Meta:
+        model = VariantoptionModel
+        
+    def resolve_id(self, info):
+        return self.pk
+
+class VariantoptionPagination(ObjectType):
+    id = graphene.Int()
+    pageNum = graphene.Int()
+    pageSize = graphene.Int()
+    totalPages = graphene.Int()
+    totalCount = graphene.Int()
+    variantoptions = DjangoListField(Variantoption)
+
+class VariantoptionCount(ObjectType):
     id = graphene.Int()
     count = graphene.Int()
 
@@ -390,6 +453,17 @@ class Query(object):
         SaleCount, query=graphene.String())
     sale = graphene.Field(
         Sale, id=graphene.Int(required=True))
+    shippings = graphene.List(
+        Shipping, query=graphene.String(),
+        orderBy=graphene.String(), limit=graphene.Int())
+    shippingPagination = graphene.Field(
+        ShippingPagination,
+        pageNum=graphene.Int(required=True), pageSize=graphene.Int(required=True),
+        query=graphene.String(), orderBy=graphene.String())
+    shippingCount = graphene.Field(
+        ShippingCount, query=graphene.String())
+    shipping = graphene.Field(
+        Shipping, id=graphene.Int(required=True))
     users = graphene.List(
         User, query=graphene.String(),
         orderBy=graphene.String(), limit=graphene.Int())
@@ -401,6 +475,28 @@ class Query(object):
         UserCount, query=graphene.String())
     user = graphene.Field(
         User, id=graphene.Int(required=True))
+    variants = graphene.List(
+        Variant, query=graphene.String(),
+        orderBy=graphene.String(), limit=graphene.Int())
+    variantPagination = graphene.Field(
+        VariantPagination,
+        pageNum=graphene.Int(required=True), pageSize=graphene.Int(required=True),
+        query=graphene.String(), orderBy=graphene.String())
+    variantCount = graphene.Field(
+        VariantCount, query=graphene.String())
+    variant = graphene.Field(
+        Variant, id=graphene.Int(required=True))
+    variantoptions = graphene.List(
+        Variantoption, query=graphene.String(),
+        orderBy=graphene.String(), limit=graphene.Int())
+    variantoptionPagination = graphene.Field(
+        VariantoptionPagination,
+        pageNum=graphene.Int(required=True), pageSize=graphene.Int(required=True),
+        query=graphene.String(), orderBy=graphene.String())
+    variantoptionCount = graphene.Field(
+        VariantoptionCount, query=graphene.String())
+    variantoption = graphene.Field(
+        Variantoption, id=graphene.Int(required=True))
     files = graphene.List(
         File, query=graphene.String(), orderBy=graphene.String(), limit=graphene.Int())
     filePagination = graphene.Field(
@@ -627,6 +723,30 @@ class Query(object):
             SaleModel.permission_filters(user)).get(pk=id)
     
     # pylint: disable=C0103
+    def resolve_shippings(self, info, **kwargs):
+        if "limit" in kwargs:
+            kwargs["end"] = kwargs["limit"]
+        return resolve_list(ShippingModel, info, **kwargs)
+
+    # pylint: disable=C0103
+    def resolve_shippingPagination(self, info, **kwargs):
+        return resolve_pagination(
+            ShippingModel, 'shippings',
+            ShippingPagination, info, **kwargs)
+
+    # pylint: disable=C0103
+    def resolve_shippingCount(self, info, **kwargs):
+        return resolve_count(
+          ShippingModel, ShippingCount, info, **kwargs)
+
+    # pylint: disable=C0103,W0622
+    def resolve_shipping(self, info, id):
+        user = info.context.user
+        return ShippingModel.filter_permissions(
+            ShippingModel.objects,
+            ShippingModel.permission_filters(user)).get(pk=id)
+    
+    # pylint: disable=C0103
     def resolve_users(self, info, **kwargs):
         if "limit" in kwargs:
             kwargs["end"] = kwargs["limit"]
@@ -649,6 +769,54 @@ class Query(object):
         return UserModel.filter_permissions(
             UserModel.objects,
             UserModel.permission_filters(user)).get(pk=id)
+    
+    # pylint: disable=C0103
+    def resolve_variants(self, info, **kwargs):
+        if "limit" in kwargs:
+            kwargs["end"] = kwargs["limit"]
+        return resolve_list(VariantModel, info, **kwargs)
+
+    # pylint: disable=C0103
+    def resolve_variantPagination(self, info, **kwargs):
+        return resolve_pagination(
+            VariantModel, 'variants',
+            VariantPagination, info, **kwargs)
+
+    # pylint: disable=C0103
+    def resolve_variantCount(self, info, **kwargs):
+        return resolve_count(
+          VariantModel, VariantCount, info, **kwargs)
+
+    # pylint: disable=C0103,W0622
+    def resolve_variant(self, info, id):
+        user = info.context.user
+        return VariantModel.filter_permissions(
+            VariantModel.objects,
+            VariantModel.permission_filters(user)).get(pk=id)
+    
+    # pylint: disable=C0103
+    def resolve_variantoptions(self, info, **kwargs):
+        if "limit" in kwargs:
+            kwargs["end"] = kwargs["limit"]
+        return resolve_list(VariantoptionModel, info, **kwargs)
+
+    # pylint: disable=C0103
+    def resolve_variantoptionPagination(self, info, **kwargs):
+        return resolve_pagination(
+            VariantoptionModel, 'variantoptions',
+            VariantoptionPagination, info, **kwargs)
+
+    # pylint: disable=C0103
+    def resolve_variantoptionCount(self, info, **kwargs):
+        return resolve_count(
+          VariantoptionModel, VariantoptionCount, info, **kwargs)
+
+    # pylint: disable=C0103,W0622
+    def resolve_variantoption(self, info, id):
+        user = info.context.user
+        return VariantoptionModel.filter_permissions(
+            VariantoptionModel.objects,
+            VariantoptionModel.permission_filters(user)).get(pk=id)
     
     def resolve_files(self, info, **kwargs):
         if "limit" in kwargs:

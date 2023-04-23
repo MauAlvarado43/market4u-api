@@ -17,7 +17,10 @@ from seed.app.routes import PaymentViewSet
 from seed.app.routes import ProductViewSet
 from seed.app.routes import PurchaseViewSet
 from seed.app.routes import SaleViewSet
+from seed.app.routes import ShippingViewSet
 from seed.app.routes import UserViewSet
+from seed.app.routes import VariantViewSet
+from seed.app.routes import VariantoptionViewSet
 from seed.app.routes import FileView
 
 router = DefaultRouter()
@@ -30,7 +33,10 @@ router.register(r'payments', PaymentViewSet)
 router.register(r'products', ProductViewSet)
 router.register(r'purchases', PurchaseViewSet)
 router.register(r'sales', SaleViewSet)
+router.register(r'shippings', ShippingViewSet)
 router.register(r'users', UserViewSet)
+router.register(r'variants', VariantViewSet)
+router.register(r'variantoptions', VariantoptionViewSet)
 
 urlpatterns = [
     path('', include(router.urls)),

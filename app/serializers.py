@@ -40,9 +40,21 @@ def get_sale_serializer():
     import seed.serializers.sale as SeedSerializer
     return SeedSerializer.SaleSerializer
 
+def get_shipping_serializer():
+    import seed.serializers.shipping as SeedSerializer
+    return SeedSerializer.ShippingSerializer
+
 def get_user_serializer():
     import seed.serializers.user as SeedSerializer
     return SeedSerializer.UserSerializer
+
+def get_variant_serializer():
+    import seed.serializers.variant as SeedSerializer
+    return SeedSerializer.VariantSerializer
+
+def get_variantoption_serializer():
+    import seed.serializers.variantoption as SeedSerializer
+    return SeedSerializer.VariantoptionSerializer
 
 def get_file_serializer():
     import seed.serializers.file as SeedSerializer
@@ -57,5 +69,8 @@ PaymentSerializer = get_payment_serializer()
 ProductSerializer = get_product_serializer()
 PurchaseSerializer = get_purchase_serializer()
 SaleSerializer = get_sale_serializer()
+ShippingSerializer = get_shipping_serializer()
 UserSerializer = get_user_serializer()
+VariantSerializer = get_variant_serializer()
+VariantoptionSerializer = get_variantoption_serializer()
 FileSerializer = get_file_serializer()

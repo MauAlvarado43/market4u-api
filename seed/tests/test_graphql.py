@@ -25,8 +25,7 @@ class TestGraphql(GraphQLTestCase):
             {
                 carts(query: "id=1", orderBy: "id", limit: 1){
                     id
-                    destiny
-                    user {
+                    buyer {
                       id
                     }
                     payment {
@@ -98,8 +97,7 @@ class TestGraphql(GraphQLTestCase):
             {
                 cart(id: 1){
                     id
-                    destiny
-                    user {
+                    buyer {
                       id
                     }
                     payment {
@@ -117,14 +115,12 @@ class TestGraphql(GraphQLTestCase):
             '''
             mutation {
                 saveCart(
-                    destiny: "",
-                    user:  1,
+                    buyer:  1,
                     payment:  1,
                 ) {
                     cart {
                         id
-                        destiny
-                        user {
+                        buyer {
                           id
                         }
                         payment {
@@ -143,15 +139,13 @@ class TestGraphql(GraphQLTestCase):
             '''
             mutation {
                 setCart(id:1
-                    destiny: "",
-                    user:  1,
+                    buyer:  1,
                     payment:  1,
 
                 ) {
                     cart {
                         id
-                        destiny
-                        user {
+                        buyer {
                           id
                         }
                         payment {
@@ -1161,7 +1155,7 @@ class TestGraphql(GraphQLTestCase):
                     amount
                     product
                     sale
-                    cart {
+                    shipping {
                       id
                     }
                 }
@@ -1233,7 +1227,7 @@ class TestGraphql(GraphQLTestCase):
                     amount
                     product
                     sale
-                    cart {
+                    shipping {
                       id
                     }
                 }
@@ -1251,14 +1245,14 @@ class TestGraphql(GraphQLTestCase):
                     amount: 128,
                     product: "{}",
                     sale: "{}",
-                    cart:  1,
+                    shipping:  1,
                 ) {
                     purchase {
                         id
                         amount
                         product
                         sale
-                        cart {
+                        shipping {
                           id
                         }
                     }
@@ -1277,7 +1271,7 @@ class TestGraphql(GraphQLTestCase):
                     amount: 128,
                     product: "{}",
                     sale: "{}",
-                    cart:  1,
+                    shipping:  1,
 
                 ) {
                     purchase {
@@ -1285,7 +1279,7 @@ class TestGraphql(GraphQLTestCase):
                         amount
                         product
                         sale
-                        cart {
+                        shipping {
                           id
                         }
                     }
@@ -1476,6 +1470,181 @@ class TestGraphql(GraphQLTestCase):
         self.assertResponseNoErrors(response)
         self.assertEqual(res["deleteSale"]["id"], 1)
 
+    def test_query_shippings(self):
+        response_01 = self.query(
+            '''
+            {
+                shippings(query: "id=1", orderBy: "id", limit: 1){
+                    id
+                    info
+                    folio
+                    address
+                    status
+                    seller {
+                      id
+                    }
+                    cart {
+                      id
+                    }
+                }
+            }
+            ''', headers=self.headers)
+        res_01 = json.loads(response_01.content)["data"]
+        self.assertResponseNoErrors(response_01)
+        with self.subTest():
+            self.assertEqual(res_01["shippings"][0]["id"], 1)
+
+        response_02 = self.query(
+            '''
+            {
+                shippings{ id }
+            }
+            ''', headers=self.headers)
+        res_02 = json.loads(response_02.content)["data"]
+        self.assertResponseNoErrors(response_02)
+        with self.subTest():
+            self.assertEqual(res_02["shippings"][0]["id"], 1)
+
+        response_03 = self.query(
+            '''
+            {
+                shippingPagination(pageNum: 1, pageSize: 1){
+                    pageNum
+                    pageSize
+                    totalPages
+                    totalCount
+                    shippings { id }
+                }
+            }
+            ''', headers=self.headers)
+        res_03 = json.loads(response_03.content)["data"]
+        self.assertResponseNoErrors(response_03)
+        with self.subTest():
+            self.assertEqual(res_03["shippingPagination"]["totalPages"], 1)
+            self.assertEqual(res_03["shippingPagination"]["totalCount"], 1)
+            self.assertEqual(res_03["shippingPagination"]["shippings"][0]["id"], 1)
+
+        response_04 = self.query(
+            '''
+            {
+                shippingCount(query: "id=1"){ count }
+            }
+            ''', headers=self.headers)
+        res_04 = json.loads(response_04.content)["data"]
+        self.assertResponseNoErrors(response_04)
+        with self.subTest():
+            self.assertEqual(res_04["shippingCount"]["count"], 1)
+
+        response_05 = self.query(
+            '''
+            {
+                shippingCount { count }
+            }
+            ''', headers=self.headers)
+        res_05 = json.loads(response_05.content)["data"]
+        self.assertResponseNoErrors(response_05)
+        with self.subTest():
+            self.assertEqual(res_05["shippingCount"]["count"], 1)
+
+    def test_query_shipping(self):
+        response = self.query(
+            '''
+            {
+                shipping(id: 1){
+                    id
+                    info
+                    folio
+                    address
+                    status
+                    seller {
+                      id
+                    }
+                    cart {
+                      id
+                    }
+                }
+            }
+            ''', headers=self.headers)
+        res = json.loads(response.content)["data"]
+        self.assertResponseNoErrors(response)
+        self.assertEqual(res["shipping"]["id"], 1)
+    
+    def test_save_shipping(self):
+        response = self.query(
+            '''
+            mutation {
+                saveShipping(
+                    info: "",
+                    folio: "",
+                    address: "",
+                    status: "CREATED",
+                    seller:  1,
+                    cart:  1,
+                ) {
+                    shipping {
+                        id
+                        info
+                        folio
+                        address
+                        status
+                        seller {
+                          id
+                        }
+                        cart {
+                          id
+                        }
+                    }
+                }
+            }
+            ''', headers=self.headers)
+        res = json.loads(response.content)["data"]
+        self.assertResponseNoErrors(response)
+        self.assertEqual(res["saveShipping"]["shipping"]["id"], 2)
+    
+    def test_set_shipping(self):
+        response = self.query(
+            '''
+            mutation {
+                setShipping(id:1
+                    info: "",
+                    folio: "",
+                    address: "",
+                    status: "CREATED",
+                    seller:  1,
+                    cart:  1,
+
+                ) {
+                    shipping {
+                        id
+                        info
+                        folio
+                        address
+                        status
+                        seller {
+                          id
+                        }
+                        cart {
+                          id
+                        }
+                    }
+                }
+            }
+            ''', headers=self.headers)
+        res = json.loads(response.content)["data"]
+        self.assertResponseNoErrors(response)
+        self.assertEqual(res["setShipping"]["shipping"]["id"], 1)
+    
+    def test_delete_shipping(self):
+        response = self.query(
+            '''
+            mutation {
+                deleteShipping(id:1) { id }
+            }
+            ''', headers=self.headers)
+        res = json.loads(response.content)["data"]
+        self.assertResponseNoErrors(response)
+        self.assertEqual(res["deleteShipping"]["id"], 1)
+
     def test_query_users(self):
         response_01 = self.query(
             '''
@@ -1487,11 +1656,6 @@ class TestGraphql(GraphQLTestCase):
                     lastName
                     email
                     isActive
-                    username
-                    password
-                    email
-                    firstName
-                    lastName
                     address
                     active
                     type
@@ -1572,11 +1736,6 @@ class TestGraphql(GraphQLTestCase):
                     lastName
                     email
                     isActive
-                    username
-                    password
-                    email
-                    firstName
-                    lastName
                     address
                     active
                     type
@@ -1604,11 +1763,6 @@ class TestGraphql(GraphQLTestCase):
                     email: "email@test.com",
                     password: "pbkdf2_sha256$150000$jMOqkdOUpor5$kU/QofjBsopM+CdCnU2+pROhtnxd5CZc7NhUiXNTMc0=",
                     isActive: true,
-                    username: "",
-                    password: "",
-                    email: "",
-                    firstName: "",
-                    lastName: "",
                     address: "",
                     active: false,
                     type: "SUPERADMIN",
@@ -1622,11 +1776,6 @@ class TestGraphql(GraphQLTestCase):
                         lastName
                         email
                         isActive
-                        username
-                        password
-                        email
-                        firstName
-                        lastName
                         address
                         active
                         type
@@ -1655,11 +1804,6 @@ class TestGraphql(GraphQLTestCase):
                     email: "email_1@test.com",
                     password: "pbkdf2_sha256$150000$jMOqkdOUpor5$kU/QofjBsopM+CdCnU2+pROhtnxd5CZc7NhUiXNTMc0=",
                     isActive: true,
-                    username: "",
-                    password: "",
-                    email: "",
-                    firstName: "",
-                    lastName: "",
                     address: "",
                     active: false,
                     type: "SUPERADMIN",
@@ -1674,11 +1818,6 @@ class TestGraphql(GraphQLTestCase):
                         lastName
                         email
                         isActive
-                        username
-                        password
-                        email
-                        firstName
-                        lastName
                         address
                         active
                         type
@@ -1706,3 +1845,295 @@ class TestGraphql(GraphQLTestCase):
         res = json.loads(response.content)["data"]
         self.assertResponseNoErrors(response)
         self.assertEqual(res["deleteUser"]["id"], 1)
+
+    def test_query_variants(self):
+        response_01 = self.query(
+            '''
+            {
+                variants(query: "id=1", orderBy: "id", limit: 1){
+                    id
+                    name
+                    product {
+                      id
+                    }
+                }
+            }
+            ''', headers=self.headers)
+        res_01 = json.loads(response_01.content)["data"]
+        self.assertResponseNoErrors(response_01)
+        with self.subTest():
+            self.assertEqual(res_01["variants"][0]["id"], 1)
+
+        response_02 = self.query(
+            '''
+            {
+                variants{ id }
+            }
+            ''', headers=self.headers)
+        res_02 = json.loads(response_02.content)["data"]
+        self.assertResponseNoErrors(response_02)
+        with self.subTest():
+            self.assertEqual(res_02["variants"][0]["id"], 1)
+
+        response_03 = self.query(
+            '''
+            {
+                variantPagination(pageNum: 1, pageSize: 1){
+                    pageNum
+                    pageSize
+                    totalPages
+                    totalCount
+                    variants { id }
+                }
+            }
+            ''', headers=self.headers)
+        res_03 = json.loads(response_03.content)["data"]
+        self.assertResponseNoErrors(response_03)
+        with self.subTest():
+            self.assertEqual(res_03["variantPagination"]["totalPages"], 1)
+            self.assertEqual(res_03["variantPagination"]["totalCount"], 1)
+            self.assertEqual(res_03["variantPagination"]["variants"][0]["id"], 1)
+
+        response_04 = self.query(
+            '''
+            {
+                variantCount(query: "id=1"){ count }
+            }
+            ''', headers=self.headers)
+        res_04 = json.loads(response_04.content)["data"]
+        self.assertResponseNoErrors(response_04)
+        with self.subTest():
+            self.assertEqual(res_04["variantCount"]["count"], 1)
+
+        response_05 = self.query(
+            '''
+            {
+                variantCount { count }
+            }
+            ''', headers=self.headers)
+        res_05 = json.loads(response_05.content)["data"]
+        self.assertResponseNoErrors(response_05)
+        with self.subTest():
+            self.assertEqual(res_05["variantCount"]["count"], 1)
+
+    def test_query_variant(self):
+        response = self.query(
+            '''
+            {
+                variant(id: 1){
+                    id
+                    name
+                    product {
+                      id
+                    }
+                }
+            }
+            ''', headers=self.headers)
+        res = json.loads(response.content)["data"]
+        self.assertResponseNoErrors(response)
+        self.assertEqual(res["variant"]["id"], 1)
+    
+    def test_save_variant(self):
+        response = self.query(
+            '''
+            mutation {
+                saveVariant(
+                    name: "",
+                    product:  1,
+                ) {
+                    variant {
+                        id
+                        name
+                        product {
+                          id
+                        }
+                    }
+                }
+            }
+            ''', headers=self.headers)
+        res = json.loads(response.content)["data"]
+        self.assertResponseNoErrors(response)
+        self.assertEqual(res["saveVariant"]["variant"]["id"], 2)
+    
+    def test_set_variant(self):
+        response = self.query(
+            '''
+            mutation {
+                setVariant(id:1
+                    name: "",
+                    product:  1,
+
+                ) {
+                    variant {
+                        id
+                        name
+                        product {
+                          id
+                        }
+                    }
+                }
+            }
+            ''', headers=self.headers)
+        res = json.loads(response.content)["data"]
+        self.assertResponseNoErrors(response)
+        self.assertEqual(res["setVariant"]["variant"]["id"], 1)
+    
+    def test_delete_variant(self):
+        response = self.query(
+            '''
+            mutation {
+                deleteVariant(id:1) { id }
+            }
+            ''', headers=self.headers)
+        res = json.loads(response.content)["data"]
+        self.assertResponseNoErrors(response)
+        self.assertEqual(res["deleteVariant"]["id"], 1)
+
+    def test_query_variantoptions(self):
+        response_01 = self.query(
+            '''
+            {
+                variantoptions(query: "id=1", orderBy: "id", limit: 1){
+                    id
+                    name
+                    stock
+                    variant {
+                      id
+                    }
+                }
+            }
+            ''', headers=self.headers)
+        res_01 = json.loads(response_01.content)["data"]
+        self.assertResponseNoErrors(response_01)
+        with self.subTest():
+            self.assertEqual(res_01["variantoptions"][0]["id"], 1)
+
+        response_02 = self.query(
+            '''
+            {
+                variantoptions{ id }
+            }
+            ''', headers=self.headers)
+        res_02 = json.loads(response_02.content)["data"]
+        self.assertResponseNoErrors(response_02)
+        with self.subTest():
+            self.assertEqual(res_02["variantoptions"][0]["id"], 1)
+
+        response_03 = self.query(
+            '''
+            {
+                variantoptionPagination(pageNum: 1, pageSize: 1){
+                    pageNum
+                    pageSize
+                    totalPages
+                    totalCount
+                    variantoptions { id }
+                }
+            }
+            ''', headers=self.headers)
+        res_03 = json.loads(response_03.content)["data"]
+        self.assertResponseNoErrors(response_03)
+        with self.subTest():
+            self.assertEqual(res_03["variantoptionPagination"]["totalPages"], 1)
+            self.assertEqual(res_03["variantoptionPagination"]["totalCount"], 1)
+            self.assertEqual(res_03["variantoptionPagination"]["variantoptions"][0]["id"], 1)
+
+        response_04 = self.query(
+            '''
+            {
+                variantoptionCount(query: "id=1"){ count }
+            }
+            ''', headers=self.headers)
+        res_04 = json.loads(response_04.content)["data"]
+        self.assertResponseNoErrors(response_04)
+        with self.subTest():
+            self.assertEqual(res_04["variantoptionCount"]["count"], 1)
+
+        response_05 = self.query(
+            '''
+            {
+                variantoptionCount { count }
+            }
+            ''', headers=self.headers)
+        res_05 = json.loads(response_05.content)["data"]
+        self.assertResponseNoErrors(response_05)
+        with self.subTest():
+            self.assertEqual(res_05["variantoptionCount"]["count"], 1)
+
+    def test_query_variantoption(self):
+        response = self.query(
+            '''
+            {
+                variantoption(id: 1){
+                    id
+                    name
+                    stock
+                    variant {
+                      id
+                    }
+                }
+            }
+            ''', headers=self.headers)
+        res = json.loads(response.content)["data"]
+        self.assertResponseNoErrors(response)
+        self.assertEqual(res["variantoption"]["id"], 1)
+    
+    def test_save_variantoption(self):
+        response = self.query(
+            '''
+            mutation {
+                saveVariantoption(
+                    name: "",
+                    stock: 128,
+                    variant:  1,
+                ) {
+                    variantoption {
+                        id
+                        name
+                        stock
+                        variant {
+                          id
+                        }
+                    }
+                }
+            }
+            ''', headers=self.headers)
+        res = json.loads(response.content)["data"]
+        self.assertResponseNoErrors(response)
+        self.assertEqual(res["saveVariantoption"]["variantoption"]["id"], 2)
+    
+    def test_set_variantoption(self):
+        response = self.query(
+            '''
+            mutation {
+                setVariantoption(id:1
+                    name: "",
+                    stock: 128,
+                    variant:  1,
+
+                ) {
+                    variantoption {
+                        id
+                        name
+                        stock
+                        variant {
+                          id
+                        }
+                    }
+                }
+            }
+            ''', headers=self.headers)
+        res = json.loads(response.content)["data"]
+        self.assertResponseNoErrors(response)
+        self.assertEqual(res["setVariantoption"]["variantoption"]["id"], 1)
+    
+    def test_delete_variantoption(self):
+        response = self.query(
+            '''
+            mutation {
+                deleteVariantoption(id:1) { id }
+            }
+            ''', headers=self.headers)
+        res = json.loads(response.content)["data"]
+        self.assertResponseNoErrors(response)
+        self.assertEqual(res["deleteVariantoption"]["id"], 1)

@@ -9,8 +9,7 @@
 - model: models.cart
   pk: 1
   fields:
-    destiny: ""
-    user: 0
+    buyer: 0
     payment: 0
 
 ## CATEGORIES
@@ -86,7 +85,7 @@
     amount: 0
     product: "{}"
     sale: "{}"
-    cart: 0
+    shipping: 0
 
 ## SALES
 
@@ -98,6 +97,18 @@
     end_date: "2020-01-01"
     product: 0
     user: 0
+
+## SHIPPINGS
+
+- model: models.shipping
+  pk: 1
+  fields:
+    info: ""
+    folio: ""
+    address: ""
+    status: "CREATED|SENT|COMPLETED|"
+    seller: 0
+    cart: 0
 
 ## USERS
 
@@ -112,16 +123,28 @@
     is_active: true
     is_superuser: false
     is_staff: false
-    username: ""
-    password: ""
-    email: ""
-    first_name: ""
-    last_name: ""
     address: ""
     active: false
     type: "SUPERADMIN|ADMIN;SELLER|NORMAL|"
     photo: 0
     company: 0
+
+## VARIANTS
+
+- model: models.variant
+  pk: 1
+  fields:
+    name: ""
+    product: 0
+
+## VARIANTOPTIONS
+
+- model: models.variantoption
+  pk: 1
+  fields:
+    name: ""
+    stock: 0
+    variant: 0
 
 ## FILES
 

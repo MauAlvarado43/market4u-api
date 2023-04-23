@@ -16,11 +16,6 @@ class User(AbstractUser, Model):
         ('NORMAL', 'NORMAL'),
     )
 
-    username = models.CharField(max_length=100, blank=True)
-    password = models.CharField(max_length=100, blank=True)
-    email = models.CharField(max_length=100, blank=True)
-    first_name = models.CharField(max_length=100, blank=True)
-    last_name = models.CharField(max_length=100, blank=True)
     address = models.CharField(max_length=200, blank=True)
     active = models.BooleanField(
         default=False)
@@ -37,7 +32,7 @@ class User(AbstractUser, Model):
     
     @property
     def carts(self):
-        return self.carts.all()
+        return self.buyer_carts.all()
     @property
     def products(self):
         return self.products.all()
@@ -47,6 +42,9 @@ class User(AbstractUser, Model):
     @property
     def sales(self):
         return self.sales.all()
+    @property
+    def shippings(self):
+        return self.seller_shippings.all()
 
     class Meta:
         db_table = '_user'

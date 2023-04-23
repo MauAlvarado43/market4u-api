@@ -15,8 +15,7 @@ class SaveCartMutation(graphene.Mutation):
     cart = graphene.Field(CartType)
     
     class Arguments:
-        destiny = graphene.String(required=True)
-        user = graphene.Int(required=True)
+        buyer = graphene.Int(required=True)
         payment = graphene.Int(required=True)
         pass
         
@@ -24,14 +23,12 @@ class SaveCartMutation(graphene.Mutation):
     def mutate(self, info, **kwargs):
         user = info.context.user
         cart = {}
-        if "destiny" in kwargs:
-            cart["destiny"] = kwargs["destiny"]
-        if "user" in kwargs:
-            user = User.filter_permissions(
+        if "buyer" in kwargs:
+            buyer = User.filter_permissions(
                 User.objects,
                 User.permission_filters(user)) \
-                .get(pk=kwargs["user"])
-            cart["user"] = user
+                .get(pk=kwargs["buyer"])
+            cart["buyer"] = buyer
         if "payment" in kwargs:
             payment = Payment.filter_permissions(
                 Payment.objects,
@@ -51,8 +48,7 @@ class SetCartMutation(graphene.Mutation):
     
     class Arguments:
         id = graphene.Int(required=True)
-        destiny = graphene.String(required=False)
-        user = graphene.Int(required=False)
+        buyer = graphene.Int(required=False)
         payment = graphene.Int(required=False)
         
     # pylint: disable=R0912,W0622
@@ -62,12 +58,10 @@ class SetCartMutation(graphene.Mutation):
             Cart.objects,
             Cart.permission_filters(user)) \
             .get(pk=kwargs["id"])
-        if "destiny" in kwargs:
-            cart.destiny = kwargs["destiny"]
-        if "user" in kwargs:
-            user = User.objects \
-                .get(pk=kwargs["user"])
-            cart.user = user
+        if "buyer" in kwargs:
+            buyer = User.objects \
+                .get(pk=kwargs["buyer"])
+            cart.buyer = buyer
         if "payment" in kwargs:
             payment = Payment.objects \
                 .get(pk=kwargs["payment"])

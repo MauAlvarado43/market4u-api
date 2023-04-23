@@ -40,9 +40,21 @@ def get_sale():
     import seed.models.sale as SeedModel
     return SeedModel.Sale
 
+def get_shipping():
+    import seed.models.shipping as SeedModel
+    return SeedModel.Shipping
+
 def get_user():
     import seed.models.user as SeedModel
     return SeedModel.User
+
+def get_variant():
+    import seed.models.variant as SeedModel
+    return SeedModel.Variant
+
+def get_variantoption():
+    import seed.models.variantoption as SeedModel
+    return SeedModel.Variantoption
 
 def get_file():
     import seed.models.file as SeedFile
@@ -57,5 +69,8 @@ Payment = get_payment()
 Product = get_product()
 Purchase = get_purchase()
 Sale = get_sale()
+Shipping = get_shipping()
 User = get_user()
+Variant = get_variant()
+Variantoption = get_variantoption()
 File = get_file()

@@ -17,7 +17,10 @@ from app.models import Payment
 from app.models import Product
 from app.models import Purchase
 from app.models import Sale
+from app.models import Shipping
 from app.models import User
+from app.models import Variant
+from app.models import Variantoption
 from app.models import File
 
 class Admin:
@@ -35,10 +38,9 @@ class Admin:
                 fields = (
                     'id',
                     'created_at',
-                    'destiny',
-                    'purchases',
-                    'user',
+                    'buyer',
                     'payment',
+                    'shippings',
                 )
         
         class CategoryResource(resources.ModelResource):
@@ -147,6 +149,7 @@ class Admin:
                     'opinions',
                     'sales',
                     'category',
+                    'variants',
                 )
         
         class PurchaseResource(resources.ModelResource):
@@ -162,7 +165,7 @@ class Admin:
                     'amount',
                     'product',
                     'sale',
-                    'cart',
+                    'shipping',
                 )
         
         class SaleResource(resources.ModelResource):
@@ -182,6 +185,24 @@ class Admin:
                     'user',
                 )
         
+        class ShippingResource(resources.ModelResource):
+            pass
+
+        class ShippingAdmin(DjangoQLSearchMixin, ImportExportModelAdmin):
+            resource_class = ShippingResource
+            class Meta:
+                model = Shipping
+                fields = (
+                    'id',
+                    'created_at',
+                    'info',
+                    'folio',
+                    'address',
+                    'status',
+                    'seller',
+                    'cart',
+                )
+        
         class UserResource(resources.ModelResource):
             pass
 
@@ -197,11 +218,6 @@ class Admin:
                     'last_name',
                     'email',
                     'is_active',
-                    'username',
-                    'password',
-                    'email',
-                    'first_name',
-                    'last_name',
                     'address',
                     'active',
                     'type',
@@ -212,6 +228,39 @@ class Admin:
                     'products',
                     'whishlist',
                     'sales',
+                    'shippings',
+                )
+        
+        class VariantResource(resources.ModelResource):
+            pass
+
+        class VariantAdmin(DjangoQLSearchMixin, ImportExportModelAdmin):
+            resource_class = VariantResource
+            class Meta:
+                model = Variant
+                fields = (
+                    'id',
+                    'created_at',
+                    'name',
+                    'options',
+                    'product',
+                )
+        
+        class VariantoptionResource(resources.ModelResource):
+            pass
+
+        class VariantoptionAdmin(DjangoQLSearchMixin, ImportExportModelAdmin):
+            resource_class = VariantoptionResource
+            class Meta:
+                model = Variantoption
+                fields = (
+                    'id',
+                    'created_at',
+                    'name',
+                    'stock',
+                    'photos',
+                    'photos',
+                    'variant',
                 )
         
         class FileResource(resources.ModelResource):
@@ -237,5 +286,8 @@ class Admin:
         admin.site.register(Product, ProductAdmin)
         admin.site.register(Purchase, PurchaseAdmin)
         admin.site.register(Sale, SaleAdmin)
+        admin.site.register(Shipping, ShippingAdmin)
         admin.site.register(User, UserAdmin)
+        admin.site.register(Variant, VariantAdmin)
+        admin.site.register(Variantoption, VariantoptionAdmin)
         admin.site.register(File, FileAdmin)

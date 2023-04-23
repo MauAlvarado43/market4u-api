@@ -3,27 +3,12 @@
     {
       "attrs": [
         {
-          "length": "200",
-          "name": "destiny",
-          "type": "string"
-        },
-        {
-          "card": {
-            "has": "1",
-            "ref": "0..*"
-          },
-          "is_fk": true,
-          "name": "purchases",
-          "type": "purchase[]",
-          "write": false
-        },
-        {
           "card": {
             "has": "0..*",
             "ref": "1"
           },
           "is_fk": true,
-          "name": "user",
+          "name": "buyer",
           "type": "user"
         },
         {
@@ -34,6 +19,16 @@
           "is_fk": true,
           "name": "payment",
           "type": "payment"
+        },
+        {
+          "card": {
+            "has": "1",
+            "ref": "0..*"
+          },
+          "is_fk": true,
+          "name": "shippings",
+          "type": "shipping[]",
+          "write": false
         }
       ],
       "name": "cart"
@@ -278,6 +273,16 @@
           "name": "photos",
           "type": "file[]",
           "write": false
+        },
+        {
+          "card": {
+            "has": "1",
+            "ref": "0..*"
+          },
+          "is_fk": true,
+          "name": "variants",
+          "type": "variant[]",
+          "write": false
         }
       ],
       "name": "product"
@@ -302,8 +307,8 @@
             "ref": "1"
           },
           "is_fk": true,
-          "name": "cart",
-          "type": "cart"
+          "name": "shipping",
+          "type": "shipping"
         }
       ],
       "name": "purchase"
@@ -348,30 +353,51 @@
     {
       "attrs": [
         {
-          "length": "100",
-          "name": "username",
+          "name": "info",
+          "type": "text"
+        },
+        {
+          "length": "200",
+          "name": "folio",
           "type": "string"
         },
         {
-          "length": "100",
-          "name": "password",
+          "length": "200",
+          "name": "address",
           "type": "string"
         },
         {
-          "length": "100",
-          "name": "email",
-          "type": "string"
+          "name": "status",
+          "options": [
+            "CREATED",
+            "SENT",
+            "COMPLETED"
+          ],
+          "type": "enum"
         },
         {
-          "length": "100",
-          "name": "first_name",
-          "type": "string"
+          "card": {
+            "has": "0..*",
+            "ref": "1"
+          },
+          "is_fk": true,
+          "name": "seller",
+          "type": "user"
         },
         {
-          "length": "100",
-          "name": "last_name",
-          "type": "string"
-        },
+          "card": {
+            "has": "0..*",
+            "ref": "1"
+          },
+          "is_fk": true,
+          "name": "cart",
+          "type": "cart"
+        }
+      ],
+      "name": "shipping"
+    },
+    {
+      "attrs": [
         {
           "length": "200",
           "name": "address",
@@ -444,9 +470,76 @@
           "name": "sales",
           "type": "sale[]",
           "write": false
+        },
+        {
+          "card": {
+            "has": "1",
+            "ref": "0..*"
+          },
+          "is_fk": true,
+          "name": "shippings",
+          "type": "shipping[]",
+          "write": false
         }
       ],
       "name": "user"
+    },
+    {
+      "attrs": [
+        {
+          "length": "100",
+          "name": "name",
+          "type": "string"
+        },
+        {
+          "card": {
+            "has": "1",
+            "ref": "0..*"
+          },
+          "is_fk": true,
+          "name": "options",
+          "type": "variantoption[]",
+          "write": false
+        },
+        {
+          "card": {
+            "has": "0..*",
+            "ref": "1"
+          },
+          "is_fk": true,
+          "name": "product",
+          "type": "product"
+        }
+      ],
+      "name": "variant"
+    },
+    {
+      "attrs": [
+        {
+          "length": "100",
+          "name": "name",
+          "type": "string"
+        },
+        {
+          "name": "stock",
+          "type": "int"
+        },
+        {
+          "card": {
+            "has": "0..*",
+            "ref": "1"
+          },
+          "is_fk": true,
+          "name": "variant",
+          "type": "variant"
+        },
+        {
+          "name": "photos",
+          "type": "file[]",
+          "write": false
+        }
+      ],
+      "name": "variantoption"
     }
   ]
 }

@@ -11,11 +11,11 @@ from app.models import Payment
 
 class CartSerializer(serializers.ModelSerializer):
 
-    purchase_ids = serializers.PrimaryKeyRelatedField(
-        many=True, source='purchases', read_only=True)
+    shipping_ids = serializers.PrimaryKeyRelatedField(
+        many=True, source='shippings', read_only=True)
 
-    user_id = serializers.PrimaryKeyRelatedField(
-        source='user', queryset=User.objects.all(),
+    buyer_id = serializers.PrimaryKeyRelatedField(
+        source='buyer', queryset=User.objects.all(),
         required=True, allow_null=False)
     payment_id = serializers.PrimaryKeyRelatedField(
         source='payment', queryset=Payment.objects.all(),
@@ -27,8 +27,7 @@ class CartSerializer(serializers.ModelSerializer):
             'id',
             'created_at',
             'hash',
-            'destiny',
-            'purchase_ids',
-            'user_id',
-            'payment_id',  
+            'buyer_id',
+            'payment_id',
+            'shipping_ids',  
         )

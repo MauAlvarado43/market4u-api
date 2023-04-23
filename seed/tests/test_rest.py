@@ -30,8 +30,7 @@ class TestRest(APITestCase):
     
     def test_post_cart(self):
         data = {
-            "destiny": "",
-            "user_id":  1,
+            "buyer_id":  1,
             "payment_id":  1,
         }
         response = self.client.post('/api/carts/', data)
@@ -39,8 +38,7 @@ class TestRest(APITestCase):
     
     def test_put_cart(self):
         data = {
-            "destiny": "",
-            "user_id":  1,
+            "buyer_id":  1,
             "payment_id":  1,
         }
         response = self.client.put('/api/carts/1/', data)
@@ -293,7 +291,7 @@ class TestRest(APITestCase):
             "amount": 128,
             "product": "{}",
             "sale": "{}",
-            "cart_id":  1,
+            "shipping_id":  1,
         }
         response = self.client.post('/api/purchases/', data)
         self.assertEqual(response.status_code, status.HTTP_201_CREATED)
@@ -303,7 +301,7 @@ class TestRest(APITestCase):
             "amount": 128,
             "product": "{}",
             "sale": "{}",
-            "cart_id":  1,
+            "shipping_id":  1,
         }
         response = self.client.put('/api/purchases/1/', data)
         self.assertEqual(response.status_code, status.HTTP_200_OK)
@@ -352,6 +350,46 @@ class TestRest(APITestCase):
         self.assertEqual(response.status_code, status.HTTP_200_OK)
         self.assertEqual(response.data["id"], 1)
 
+    def test_get_shippings(self):
+        response = self.client.get('/api/shippings/')
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+        self.assertEqual(len(response.data), 1)
+    
+    def test_get_shipping(self):
+        response = self.client.get('/api/shippings/1/')
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+        self.assertEqual(response.data["id"], 1)
+    
+    def test_post_shipping(self):
+        data = {
+            "info": "",
+            "folio": "",
+            "address": "",
+            "status": "CREATED",
+            "seller_id":  1,
+            "cart_id":  1,
+        }
+        response = self.client.post('/api/shippings/', data)
+        self.assertEqual(response.status_code, status.HTTP_201_CREATED)
+    
+    def test_put_shipping(self):
+        data = {
+            "info": "",
+            "folio": "",
+            "address": "",
+            "status": "CREATED",
+            "seller_id":  1,
+            "cart_id":  1,
+        }
+        response = self.client.put('/api/shippings/1/', data)
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+        self.assertEqual(response.data["id"], 1)
+    
+    def test_delete_shipping(self):
+        response = self.client.delete('/api/shippings/1/')
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+        self.assertEqual(response.data["id"], 1)
+
     def test_get_users(self):
         response = self.client.get('/api/users/')
         self.assertEqual(response.status_code, status.HTTP_200_OK)
@@ -370,11 +408,6 @@ class TestRest(APITestCase):
             "email": "email_1@test.com",
             "password": "pbkdf2_sha256$150000$jMOqkdOUpor5$kU/QofjBsopM+CdCnU2+pROhtnxd5CZc7NhUiXNTMc0=",
             "is_active": False,
-            "username": "",
-            "password": "",
-            "email": "",
-            "first_name": "",
-            "last_name": "",
             "address": "",
             "active": False,
             "type": "SUPERADMIN",
@@ -392,11 +425,6 @@ class TestRest(APITestCase):
             "email": "email_1@test.com",
             "password": "pbkdf2_sha256$150000$jMOqkdOUpor5$kU/QofjBsopM+CdCnU2+pROhtnxd5CZc7NhUiXNTMc0=",
             "is_active": False,
-            "username": "",
-            "password": "",
-            "email": "",
-            "first_name": "",
-            "last_name": "",
             "address": "",
             "active": False,
             "type": "SUPERADMIN",
@@ -409,5 +437,71 @@ class TestRest(APITestCase):
     
     def test_delete_user(self):
         response = self.client.delete('/api/users/1/')
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+        self.assertEqual(response.data["id"], 1)
+
+    def test_get_variants(self):
+        response = self.client.get('/api/variants/')
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+        self.assertEqual(len(response.data), 1)
+    
+    def test_get_variant(self):
+        response = self.client.get('/api/variants/1/')
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+        self.assertEqual(response.data["id"], 1)
+    
+    def test_post_variant(self):
+        data = {
+            "name": "",
+            "product_id":  1,
+        }
+        response = self.client.post('/api/variants/', data)
+        self.assertEqual(response.status_code, status.HTTP_201_CREATED)
+    
+    def test_put_variant(self):
+        data = {
+            "name": "",
+            "product_id":  1,
+        }
+        response = self.client.put('/api/variants/1/', data)
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+        self.assertEqual(response.data["id"], 1)
+    
+    def test_delete_variant(self):
+        response = self.client.delete('/api/variants/1/')
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+        self.assertEqual(response.data["id"], 1)
+
+    def test_get_variantoptions(self):
+        response = self.client.get('/api/variantoptions/')
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+        self.assertEqual(len(response.data), 1)
+    
+    def test_get_variantoption(self):
+        response = self.client.get('/api/variantoptions/1/')
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+        self.assertEqual(response.data["id"], 1)
+    
+    def test_post_variantoption(self):
+        data = {
+            "name": "",
+            "stock": 128,
+            "variant_id":  1,
+        }
+        response = self.client.post('/api/variantoptions/', data)
+        self.assertEqual(response.status_code, status.HTTP_201_CREATED)
+    
+    def test_put_variantoption(self):
+        data = {
+            "name": "",
+            "stock": 128,
+            "variant_id":  1,
+        }
+        response = self.client.put('/api/variantoptions/1/', data)
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+        self.assertEqual(response.data["id"], 1)
+    
+    def test_delete_variantoption(self):
+        response = self.client.delete('/api/variantoptions/1/')
         self.assertEqual(response.status_code, status.HTTP_200_OK)
         self.assertEqual(response.data["id"], 1)

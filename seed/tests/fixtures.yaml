@@ -10,8 +10,7 @@
   pk: 1
   fields:
     created_at: "2020-01-01"
-    destiny: ""
-    user: 1
+    buyer: 1
     payment: 1
 
 ## CATEGORIES
@@ -94,7 +93,7 @@
     amount: 128
     product: "{}"
     sale: "{}"
-    cart: 1
+    shipping: 1
 
 ## SALES
 
@@ -107,6 +106,19 @@
     end_date: "2020-01-01"
     product: 1
     user: 1
+
+## SHIPPINGS
+
+- model: models.shipping
+  pk: 1
+  fields:
+    created_at: "2020-01-01"
+    info: ""
+    folio: ""
+    address: ""
+    status: "CREATED"
+    seller: 1
+    cart: 1
 
 ## USERS
 
@@ -124,16 +136,30 @@
     is_staff: false
     last_login: "2020-01-01"
     date_joined: "2020-01-01"
-    username: ""
-    password: ""
-    email: ""
-    first_name: ""
-    last_name: ""
     address: ""
     active: false
     type: "SUPERADMIN"
     photo: 1
     company: 1
+
+## VARIANTS
+
+- model: models.variant
+  pk: 1
+  fields:
+    created_at: "2020-01-01"
+    name: ""
+    product: 1
+
+## VARIANTOPTIONS
+
+- model: models.variantoption
+  pk: 1
+  fields:
+    created_at: "2020-01-01"
+    name: ""
+    stock: 128
+    variant: 1
 
 ## FILES
 

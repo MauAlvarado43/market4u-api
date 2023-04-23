@@ -15,13 +15,15 @@ class UserSerializer(serializers.ModelSerializer):
     photo = FileSerializer(read_only=True)
 
     cart_ids = serializers.PrimaryKeyRelatedField(
-        many=True, source='carts', read_only=True)
+        many=True, source='buyer_carts', read_only=True)
     product_ids = serializers.PrimaryKeyRelatedField(
         many=True, source='products', read_only=True)
     whishlist_ids = serializers.PrimaryKeyRelatedField(
         many=True, source='products', read_only=True)
     sale_ids = serializers.PrimaryKeyRelatedField(
         many=True, source='sales', read_only=True)
+    shipping_ids = serializers.PrimaryKeyRelatedField(
+        many=True, source='seller_shippings', read_only=True)
 
     company_id = serializers.PrimaryKeyRelatedField(
         source='company', queryset=Company.objects.all(),
@@ -41,11 +43,6 @@ class UserSerializer(serializers.ModelSerializer):
             'last_name',
             'email',
             'is_active',
-            'username',
-            'password',
-            'email',
-            'first_name',
-            'last_name',
             'address',
             'active',
             'type',
@@ -55,5 +52,6 @@ class UserSerializer(serializers.ModelSerializer):
             'cart_ids',
             'product_ids',
             'whishlist_ids',
-            'sale_ids',  
+            'sale_ids',
+            'shipping_ids',  
         )

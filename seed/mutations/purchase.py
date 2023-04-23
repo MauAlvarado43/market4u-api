@@ -6,7 +6,7 @@ __Seed builder__
 
 import graphene
 from app.models import Purchase
-from app.models import Cart
+from app.models import Shipping
 from graphene.types.generic import GenericScalar
 from seed.schema.types import Purchase as PurchaseType
 
@@ -18,7 +18,7 @@ class SavePurchaseMutation(graphene.Mutation):
         amount = graphene.Int(required=True)
         product = GenericScalar(required=True)
         sale = GenericScalar(required=True)
-        cart = graphene.Int(required=True)
+        shipping = graphene.Int(required=True)
         pass
         
     # pylint: disable=R0912,W0622
@@ -31,12 +31,12 @@ class SavePurchaseMutation(graphene.Mutation):
             purchase["product"] = kwargs["product"]
         if "sale" in kwargs:
             purchase["sale"] = kwargs["sale"]
-        if "cart" in kwargs:
-            cart = Cart.filter_permissions(
-                Cart.objects,
-                Cart.permission_filters(user)) \
-                .get(pk=kwargs["cart"])
-            purchase["cart"] = cart
+        if "shipping" in kwargs:
+            shipping = Shipping.filter_permissions(
+                Shipping.objects,
+                Shipping.permission_filters(user)) \
+                .get(pk=kwargs["shipping"])
+            purchase["shipping"] = shipping
         purchase = \
             Purchase.objects.create(**purchase)
         purchase.save()
@@ -53,7 +53,7 @@ class SetPurchaseMutation(graphene.Mutation):
         amount = graphene.Int(required=False)
         product = GenericScalar(required=False)
         sale = GenericScalar(required=False)
-        cart = graphene.Int(required=False)
+        shipping = graphene.Int(required=False)
         
     # pylint: disable=R0912,W0622
     def mutate(self, info, **kwargs):
@@ -68,10 +68,10 @@ class SetPurchaseMutation(graphene.Mutation):
             purchase.product = kwargs["product"]
         if "sale" in kwargs:
             purchase.sale = kwargs["sale"]
-        if "cart" in kwargs:
-            cart = Cart.objects \
-                .get(pk=kwargs["cart"])
-            purchase.cart = cart
+        if "shipping" in kwargs:
+            shipping = Shipping.objects \
+                .get(pk=kwargs["shipping"])
+            purchase.shipping = shipping
         purchase.save()
     
         return SetPurchaseMutation(

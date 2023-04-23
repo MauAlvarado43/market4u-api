@@ -33,6 +33,9 @@ class Product(Model):
     @property
     def sales(self):
         return self.sales.all()
+    @property
+    def variants(self):
+        return self.variants.all()
 
     class Meta:
         db_table = '_product'

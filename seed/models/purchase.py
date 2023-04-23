@@ -16,8 +16,8 @@ class Purchase(Model):
     sale = models.JSONField(
         blank=True, default=dict)
 
-    cart = models.ForeignKey(
-        'models.Cart', related_name='purchases',
+    shipping = models.ForeignKey(
+        'models.Shipping', related_name='purchases',
         blank=False, null=False, on_delete=models.CASCADE)
 
     class Meta:

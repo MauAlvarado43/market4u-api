@@ -16,7 +16,10 @@ import seed.mutations.payment
 import seed.mutations.product
 import seed.mutations.purchase
 import seed.mutations.sale
+import seed.mutations.shipping
 import seed.mutations.user
+import seed.mutations.variant
+import seed.mutations.variantoption
 
 class Query(seed.schema.types.Query, graphene.ObjectType):
     pass
@@ -76,11 +79,29 @@ class Mutation(graphene.ObjectType):
         .SetSaleMutation.Field()
     deleteSale = seed.mutations.sale \
         .DeleteSaleMutation.Field()
+    saveShipping = seed.mutations.shipping \
+        .SaveShippingMutation.Field()
+    setShipping = seed.mutations.shipping \
+        .SetShippingMutation.Field()
+    deleteShipping = seed.mutations.shipping \
+        .DeleteShippingMutation.Field()
     saveUser = seed.mutations.user \
         .SaveUserMutation.Field()
     setUser = seed.mutations.user \
         .SetUserMutation.Field()
     deleteUser = seed.mutations.user \
         .DeleteUserMutation.Field()
+    saveVariant = seed.mutations.variant \
+        .SaveVariantMutation.Field()
+    setVariant = seed.mutations.variant \
+        .SetVariantMutation.Field()
+    deleteVariant = seed.mutations.variant \
+        .DeleteVariantMutation.Field()
+    saveVariantoption = seed.mutations.variantoption \
+        .SaveVariantoptionMutation.Field()
+    setVariantoption = seed.mutations.variantoption \
+        .SetVariantoptionMutation.Field()
+    deleteVariantoption = seed.mutations.variantoption \
+        .DeleteVariantoptionMutation.Field()
     pass
 schema = graphene.Schema(query=Query, mutation=Mutation)

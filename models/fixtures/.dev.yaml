@@ -17,16 +17,10 @@
     is_active: true
     is_superuser: true
     is_staff: true
-    username: ""
-    password: ""
-    email: ""
-    first_name: ""
-    last_name: ""
     address: ""
     active: false
     type: "SUPERADMIN"
     photo: 10000
-    company: 0
 
 ## FILES
 

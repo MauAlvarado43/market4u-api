@@ -40,9 +40,21 @@ def get_sale_viewset():
     import seed.routes.sales as SeedViewSet
     return SeedViewSet.SaleViewSet
 
+def get_shipping_viewset():
+    import seed.routes.shippings as SeedViewSet
+    return SeedViewSet.ShippingViewSet
+
 def get_user_viewset():
     import seed.routes.users as SeedViewSet
     return SeedViewSet.UserViewSet
+
+def get_variant_viewset():
+    import seed.routes.variants as SeedViewSet
+    return SeedViewSet.VariantViewSet
+
+def get_variantoption_viewset():
+    import seed.routes.variantoptions as SeedViewSet
+    return SeedViewSet.VariantoptionViewSet
 
 def get_file_view():
     import seed.routes.files as SeedView
@@ -57,5 +69,8 @@ PaymentViewSet = get_payment_viewset()
 ProductViewSet = get_product_viewset()
 PurchaseViewSet = get_purchase_viewset()
 SaleViewSet = get_sale_viewset()
+ShippingViewSet = get_shipping_viewset()
 UserViewSet = get_user_viewset()
+VariantViewSet = get_variant_viewset()
+VariantoptionViewSet = get_variantoption_viewset()
 FileView = get_file_view()

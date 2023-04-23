@@ -6,12 +6,12 @@ __Seed builder__
 
 from rest_framework import serializers
 from app.models import Purchase
-from app.models import Cart
+from app.models import Shipping
 
 class PurchaseSerializer(serializers.ModelSerializer):
 
-    cart_id = serializers.PrimaryKeyRelatedField(
-        source='cart', queryset=Cart.objects.all(),
+    shipping_id = serializers.PrimaryKeyRelatedField(
+        source='shipping', queryset=Shipping.objects.all(),
         required=True, allow_null=False)
 
     class Meta:
@@ -23,5 +23,5 @@ class PurchaseSerializer(serializers.ModelSerializer):
             'amount',
             'product',
             'sale',
-            'cart_id',  
+            'shipping_id',  
         )

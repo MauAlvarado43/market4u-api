@@ -19,6 +19,8 @@ class ProductSerializer(serializers.ModelSerializer):
         many=True, source='opinions', read_only=True)
     sale_ids = serializers.PrimaryKeyRelatedField(
         many=True, source='sales', read_only=True)
+    variant_ids = serializers.PrimaryKeyRelatedField(
+        many=True, source='variants', read_only=True)
     photo_ids = serializers.PrimaryKeyRelatedField(
         many=True, source='photos', read_only=True)
 
@@ -45,5 +47,6 @@ class ProductSerializer(serializers.ModelSerializer):
             'user_id',
             'opinion_ids',
             'sale_ids',
-            'category_id',  
+            'category_id',
+            'variant_ids',  
         )

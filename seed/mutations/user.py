@@ -21,11 +21,6 @@ class SaveUserMutation(graphene.Mutation):
         email = graphene.String(required=True)
         isActive = graphene.Boolean(required=True)
         password = graphene.String(required=True)
-        username = graphene.String(required=True)
-        password = graphene.String(required=True)
-        email = graphene.String(required=True)
-        firstName = graphene.String(required=True)
-        lastName = graphene.String(required=True)
         address = graphene.String(required=True)
         active = graphene.Boolean(required=True)
         type = graphene.String(required=True)
@@ -47,16 +42,6 @@ class SaveUserMutation(graphene.Mutation):
             user["email"] = kwargs["email"]
         if "isActive" in kwargs:
             user["is_active"] = kwargs["isActive"]
-        if "username" in kwargs:
-            user["username"] = kwargs["username"]
-        if "password" in kwargs:
-            user["password"] = kwargs["password"]
-        if "email" in kwargs:
-            user["email"] = kwargs["email"]
-        if "firstName" in kwargs:
-            user["first_name"] = kwargs["firstName"]
-        if "lastName" in kwargs:
-            user["last_name"] = kwargs["lastName"]
         if "address" in kwargs:
             user["address"] = kwargs["address"]
         if "active" in kwargs:
@@ -95,11 +80,6 @@ class SetUserMutation(graphene.Mutation):
         email = graphene.String(required=False)
         isActive = graphene.Boolean(required=False)
         password = graphene.String(required=False)
-        username = graphene.String(required=False)
-        password = graphene.String(required=False)
-        email = graphene.String(required=False)
-        firstName = graphene.String(required=False)
-        lastName = graphene.String(required=False)
         address = graphene.String(required=False)
         active = graphene.Boolean(required=False)
         type = graphene.String(required=False)
@@ -125,16 +105,6 @@ class SetUserMutation(graphene.Mutation):
             user.is_active = kwargs["isActive"]
         if "password" in kwargs:
             user.set_password(kwargs["password"])
-        if "username" in kwargs:
-            user.username = kwargs["username"]
-        if "password" in kwargs:
-            user.password = kwargs["password"]
-        if "email" in kwargs:
-            user.email = kwargs["email"]
-        if "firstName" in kwargs:
-            user.first_name = kwargs["firstName"]
-        if "lastName" in kwargs:
-            user.last_name = kwargs["lastName"]
         if "address" in kwargs:
             user.address = kwargs["address"]
         if "active" in kwargs:
