@@ -141,10 +141,6 @@ class Admin:
                     'name',
                     'short_description',
                     'description',
-                    'price',
-                    'stock',
-                    'photos',
-                    'photos',
                     'user',
                     'opinions',
                     'sales',
@@ -241,7 +237,10 @@ class Admin:
                 fields = (
                     'id',
                     'created_at',
-                    'name',
+                    'price',
+                    'stock',
+                    'photos',
+                    'photos',
                     'options',
                     'product',
                 )
@@ -256,10 +255,8 @@ class Admin:
                 fields = (
                     'id',
                     'created_at',
-                    'name',
-                    'stock',
-                    'photos',
-                    'photos',
+                    'title',
+                    'value',
                     'variant',
                 )
         

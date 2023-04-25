@@ -8,7 +8,6 @@ import graphene
 from app.models import Product
 from app.models import User
 from app.models import Category
-from app.models import File
 from seed.schema.types import Product as ProductType
 
 class SaveProductMutation(graphene.Mutation):
@@ -19,8 +18,6 @@ class SaveProductMutation(graphene.Mutation):
         name = graphene.String(required=True)
         shortDescription = graphene.String(required=True)
         description = graphene.String(required=True)
-        price = graphene.Float(required=True)
-        stock = graphene.Int(required=True)
         user = graphene.Int(required=True)
         category = graphene.Int(required=True)
         pass
@@ -35,10 +32,6 @@ class SaveProductMutation(graphene.Mutation):
             product["short_description"] = kwargs["shortDescription"]
         if "description" in kwargs:
             product["description"] = kwargs["description"]
-        if "price" in kwargs:
-            product["price"] = kwargs["price"]
-        if "stock" in kwargs:
-            product["stock"] = kwargs["stock"]
         if "user" in kwargs:
             user = User.filter_permissions(
                 User.objects,
@@ -67,8 +60,6 @@ class SetProductMutation(graphene.Mutation):
         name = graphene.String(required=False)
         shortDescription = graphene.String(required=False)
         description = graphene.String(required=False)
-        price = graphene.Float(required=False)
-        stock = graphene.Int(required=False)
         user = graphene.Int(required=False)
         category = graphene.Int(required=False)
         
@@ -85,10 +76,6 @@ class SetProductMutation(graphene.Mutation):
             product.short_description = kwargs["shortDescription"]
         if "description" in kwargs:
             product.description = kwargs["description"]
-        if "price" in kwargs:
-            product.price = kwargs["price"]
-        if "stock" in kwargs:
-            product.stock = kwargs["stock"]
         if "user" in kwargs:
             user = User.objects \
                 .get(pk=kwargs["user"])

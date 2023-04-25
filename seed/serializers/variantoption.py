@@ -7,15 +7,8 @@ __Seed builder__
 from rest_framework import serializers
 from app.models import Variantoption
 from app.models import Variant
-from app.models import File
-from seed.serializers.file import FileSerializer
 
 class VariantoptionSerializer(serializers.ModelSerializer):
-    
-    photos = FileSerializer(many=True, read_only=True)
-
-    photo_ids = serializers.PrimaryKeyRelatedField(
-        many=True, source='photos', read_only=True)
 
     variant_id = serializers.PrimaryKeyRelatedField(
         source='variant', queryset=Variant.objects.all(),
@@ -27,9 +20,7 @@ class VariantoptionSerializer(serializers.ModelSerializer):
             'id',
             'created_at',
             'hash',
-            'name',
-            'stock',
-            'photos',
-            'photo_ids',
+            'title',
+            'value',
             'variant_id',  
         )

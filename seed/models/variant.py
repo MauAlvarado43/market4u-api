@@ -9,7 +9,13 @@ from seed.models.model import Model
 
 class Variant(Model):
 
-    name = models.CharField(max_length=100, blank=True)
+    price = models.FloatField(
+        default=0)
+    stock = models.IntegerField(
+        default=0)
+    photos = models.ManyToManyField(
+        'models.File', related_name='variant_photoses', blank=False
+        )
 
     product = models.ForeignKey(
         'models.Product', related_name='variants',

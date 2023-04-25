@@ -79,8 +79,6 @@
     name: ""
     short_description: ""
     description: ""
-    price: 128.0
-    stock: 128
     user: 1
     category: 1
 
@@ -148,8 +146,9 @@
   pk: 1
   fields:
     created_at: "2020-01-01"
-    name: ""
     product: 1
+    price: 128.0
+    stock: 128
 
 ## VARIANTOPTIONS
 
@@ -157,8 +156,8 @@
   pk: 1
   fields:
     created_at: "2020-01-01"
-    name: ""
-    stock: 128
+    title: ""
+    value: ""
     variant: 1
 
 ## FILES

@@ -9,12 +9,8 @@ from seed.models.model import Model
 
 class Variantoption(Model):
 
-    name = models.CharField(max_length=100, blank=True)
-    stock = models.IntegerField(
-        default=0)
-    photos = models.ManyToManyField(
-        'models.File', related_name='variantoption_photoses', blank=False
-        )
+    title = models.CharField(max_length=100, blank=True)
+    value = models.CharField(max_length=100, blank=True)
 
     variant = models.ForeignKey(
         'models.Variant', related_name='variantoptions',

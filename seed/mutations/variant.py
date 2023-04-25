@@ -7,6 +7,7 @@ __Seed builder__
 import graphene
 from app.models import Variant
 from app.models import Product
+from app.models import File
 from seed.schema.types import Variant as VariantType
 
 class SaveVariantMutation(graphene.Mutation):
@@ -14,7 +15,8 @@ class SaveVariantMutation(graphene.Mutation):
     variant = graphene.Field(VariantType)
     
     class Arguments:
-        name = graphene.String(required=True)
+        price = graphene.Float(required=True)
+        stock = graphene.Int(required=True)
         product = graphene.Int(required=True)
         pass
         
@@ -22,8 +24,10 @@ class SaveVariantMutation(graphene.Mutation):
     def mutate(self, info, **kwargs):
         user = info.context.user
         variant = {}
-        if "name" in kwargs:
-            variant["name"] = kwargs["name"]
+        if "price" in kwargs:
+            variant["price"] = kwargs["price"]
+        if "stock" in kwargs:
+            variant["stock"] = kwargs["stock"]
         if "product" in kwargs:
             product = Product.filter_permissions(
                 Product.objects,
@@ -43,7 +47,8 @@ class SetVariantMutation(graphene.Mutation):
     
     class Arguments:
         id = graphene.Int(required=True)
-        name = graphene.String(required=False)
+        price = graphene.Float(required=False)
+        stock = graphene.Int(required=False)
         product = graphene.Int(required=False)
         
     # pylint: disable=R0912,W0622
@@ -53,8 +58,10 @@ class SetVariantMutation(graphene.Mutation):
             Variant.objects,
             Variant.permission_filters(user)) \
             .get(pk=kwargs["id"])
-        if "name" in kwargs:
-            variant.name = kwargs["name"]
+        if "price" in kwargs:
+            variant.price = kwargs["price"]
+        if "stock" in kwargs:
+            variant.stock = kwargs["stock"]
         if "product" in kwargs:
             product = Product.objects \
                 .get(pk=kwargs["product"])

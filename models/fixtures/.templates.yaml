@@ -72,8 +72,6 @@
     name: ""
     short_description: ""
     description: ""
-    price: 0
-    stock: 0
     user: 0
     category: 0
 
@@ -134,16 +132,17 @@
 - model: models.variant
   pk: 1
   fields:
-    name: ""
     product: 0
+    price: 0
+    stock: 0
 
 ## VARIANTOPTIONS
 
 - model: models.variantoption
   pk: 1
   fields:
-    name: ""
-    stock: 0
+    title: ""
+    value: ""
     variant: 0
 
 ## FILES

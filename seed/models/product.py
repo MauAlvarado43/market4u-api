@@ -12,13 +12,6 @@ class Product(Model):
     name = models.CharField(max_length=100, blank=True)
     short_description = models.CharField(max_length=200, blank=True)
     description = models.TextField(blank=True)
-    price = models.FloatField(
-        default=0)
-    stock = models.IntegerField(
-        default=0)
-    photos = models.ManyToManyField(
-        'models.File', related_name='product_photoses', blank=False
-        )
 
     user = models.ForeignKey(
         'models.User', related_name='products',

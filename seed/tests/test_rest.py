@@ -249,8 +249,6 @@ class TestRest(APITestCase):
             "name": "",
             "short_description": "",
             "description": "",
-            "price": 128.0,
-            "stock": 128,
             "user_id":  1,
             "category_id":  1,
         }
@@ -262,8 +260,6 @@ class TestRest(APITestCase):
             "name": "",
             "short_description": "",
             "description": "",
-            "price": 128.0,
-            "stock": 128,
             "user_id":  1,
             "category_id":  1,
         }
@@ -452,16 +448,18 @@ class TestRest(APITestCase):
     
     def test_post_variant(self):
         data = {
-            "name": "",
             "product_id":  1,
+            "price": 128.0,
+            "stock": 128,
         }
         response = self.client.post('/api/variants/', data)
         self.assertEqual(response.status_code, status.HTTP_201_CREATED)
     
     def test_put_variant(self):
         data = {
-            "name": "",
             "product_id":  1,
+            "price": 128.0,
+            "stock": 128,
         }
         response = self.client.put('/api/variants/1/', data)
         self.assertEqual(response.status_code, status.HTTP_200_OK)
@@ -484,8 +482,8 @@ class TestRest(APITestCase):
     
     def test_post_variantoption(self):
         data = {
-            "name": "",
-            "stock": 128,
+            "title": "",
+            "value": "",
             "variant_id":  1,
         }
         response = self.client.post('/api/variantoptions/', data)
@@ -493,8 +491,8 @@ class TestRest(APITestCase):
     
     def test_put_variantoption(self):
         data = {
-            "name": "",
-            "stock": 128,
+            "title": "",
+            "value": "",
             "variant_id":  1,
         }
         response = self.client.put('/api/variantoptions/1/', data)

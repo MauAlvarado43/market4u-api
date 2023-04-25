@@ -7,7 +7,6 @@ __Seed builder__
 import graphene
 from app.models import Variantoption
 from app.models import Variant
-from app.models import File
 from seed.schema.types import Variantoption as VariantoptionType
 
 class SaveVariantoptionMutation(graphene.Mutation):
@@ -15,8 +14,8 @@ class SaveVariantoptionMutation(graphene.Mutation):
     variantoption = graphene.Field(VariantoptionType)
     
     class Arguments:
-        name = graphene.String(required=True)
-        stock = graphene.Int(required=True)
+        title = graphene.String(required=True)
+        value = graphene.String(required=True)
         variant = graphene.Int(required=True)
         pass
         
@@ -24,10 +23,10 @@ class SaveVariantoptionMutation(graphene.Mutation):
     def mutate(self, info, **kwargs):
         user = info.context.user
         variantoption = {}
-        if "name" in kwargs:
-            variantoption["name"] = kwargs["name"]
-        if "stock" in kwargs:
-            variantoption["stock"] = kwargs["stock"]
+        if "title" in kwargs:
+            variantoption["title"] = kwargs["title"]
+        if "value" in kwargs:
+            variantoption["value"] = kwargs["value"]
         if "variant" in kwargs:
             variant = Variant.filter_permissions(
                 Variant.objects,
@@ -47,8 +46,8 @@ class SetVariantoptionMutation(graphene.Mutation):
     
     class Arguments:
         id = graphene.Int(required=True)
-        name = graphene.String(required=False)
-        stock = graphene.Int(required=False)
+        title = graphene.String(required=False)
+        value = graphene.String(required=False)
         variant = graphene.Int(required=False)
         
     # pylint: disable=R0912,W0622
@@ -58,10 +57,10 @@ class SetVariantoptionMutation(graphene.Mutation):
             Variantoption.objects,
             Variantoption.permission_filters(user)) \
             .get(pk=kwargs["id"])
-        if "name" in kwargs:
-            variantoption.name = kwargs["name"]
-        if "stock" in kwargs:
-            variantoption.stock = kwargs["stock"]
+        if "title" in kwargs:
+            variantoption.title = kwargs["title"]
+        if "value" in kwargs:
+            variantoption.value = kwargs["value"]
         if "variant" in kwargs:
             variant = Variant.objects \
                 .get(pk=kwargs["variant"])

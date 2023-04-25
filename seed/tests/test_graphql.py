@@ -974,8 +974,6 @@ class TestGraphql(GraphQLTestCase):
                     name
                     shortDescription
                     description
-                    price
-                    stock
                     user {
                       id
                     }
@@ -1051,8 +1049,6 @@ class TestGraphql(GraphQLTestCase):
                     name
                     shortDescription
                     description
-                    price
-                    stock
                     user {
                       id
                     }
@@ -1074,8 +1070,6 @@ class TestGraphql(GraphQLTestCase):
                     name: "",
                     shortDescription: "",
                     description: "",
-                    price: 128.0,
-                    stock: 128,
                     user:  1,
                     category:  1,
                 ) {
@@ -1084,8 +1078,6 @@ class TestGraphql(GraphQLTestCase):
                         name
                         shortDescription
                         description
-                        price
-                        stock
                         user {
                           id
                         }
@@ -1108,8 +1100,6 @@ class TestGraphql(GraphQLTestCase):
                     name: "",
                     shortDescription: "",
                     description: "",
-                    price: 128.0,
-                    stock: 128,
                     user:  1,
                     category:  1,
 
@@ -1119,8 +1109,6 @@ class TestGraphql(GraphQLTestCase):
                         name
                         shortDescription
                         description
-                        price
-                        stock
                         user {
                           id
                         }
@@ -1852,7 +1840,8 @@ class TestGraphql(GraphQLTestCase):
             {
                 variants(query: "id=1", orderBy: "id", limit: 1){
                     id
-                    name
+                    price
+                    stock
                     product {
                       id
                     }
@@ -1922,7 +1911,8 @@ class TestGraphql(GraphQLTestCase):
             {
                 variant(id: 1){
                     id
-                    name
+                    price
+                    stock
                     product {
                       id
                     }
@@ -1938,12 +1928,14 @@ class TestGraphql(GraphQLTestCase):
             '''
             mutation {
                 saveVariant(
-                    name: "",
                     product:  1,
+                    price: 128.0,
+                    stock: 128,
                 ) {
                     variant {
                         id
-                        name
+                        price
+                        stock
                         product {
                           id
                         }
@@ -1960,13 +1952,15 @@ class TestGraphql(GraphQLTestCase):
             '''
             mutation {
                 setVariant(id:1
-                    name: "",
                     product:  1,
+                    price: 128.0,
+                    stock: 128,
 
                 ) {
                     variant {
                         id
-                        name
+                        price
+                        stock
                         product {
                           id
                         }
@@ -1995,8 +1989,8 @@ class TestGraphql(GraphQLTestCase):
             {
                 variantoptions(query: "id=1", orderBy: "id", limit: 1){
                     id
-                    name
-                    stock
+                    title
+                    value
                     variant {
                       id
                     }
@@ -2066,8 +2060,8 @@ class TestGraphql(GraphQLTestCase):
             {
                 variantoption(id: 1){
                     id
-                    name
-                    stock
+                    title
+                    value
                     variant {
                       id
                     }
@@ -2083,14 +2077,14 @@ class TestGraphql(GraphQLTestCase):
             '''
             mutation {
                 saveVariantoption(
-                    name: "",
-                    stock: 128,
+                    title: "",
+                    value: "",
                     variant:  1,
                 ) {
                     variantoption {
                         id
-                        name
-                        stock
+                        title
+                        value
                         variant {
                           id
                         }
@@ -2107,15 +2101,15 @@ class TestGraphql(GraphQLTestCase):
             '''
             mutation {
                 setVariantoption(id:1
-                    name: "",
-                    stock: 128,
+                    title: "",
+                    value: "",
                     variant:  1,
 
                 ) {
                     variantoption {
                         id
-                        name
-                        stock
+                        title
+                        value
                         variant {
                           id
                         }
