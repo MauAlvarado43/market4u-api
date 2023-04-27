@@ -977,6 +977,9 @@ class TestGraphql(GraphQLTestCase):
                     user {
                       id
                     }
+                    sales {
+                      id
+                    }
                     category {
                       id
                     }
@@ -1052,6 +1055,9 @@ class TestGraphql(GraphQLTestCase):
                     user {
                       id
                     }
+                    sales {
+                      id
+                    }
                     category {
                       id
                     }
@@ -1071,6 +1077,7 @@ class TestGraphql(GraphQLTestCase):
                     shortDescription: "",
                     description: "",
                     user:  1,
+                    sales:  1,
                     category:  1,
                 ) {
                     product {
@@ -1079,6 +1086,9 @@ class TestGraphql(GraphQLTestCase):
                         shortDescription
                         description
                         user {
+                          id
+                        }
+                        sales {
                           id
                         }
                         category {
@@ -1101,6 +1111,7 @@ class TestGraphql(GraphQLTestCase):
                     shortDescription: "",
                     description: "",
                     user:  1,
+                    sales:  1,
                     category:  1,
 
                 ) {
@@ -1110,6 +1121,9 @@ class TestGraphql(GraphQLTestCase):
                         shortDescription
                         description
                         user {
+                          id
+                        }
+                        sales {
                           id
                         }
                         category {
@@ -1298,10 +1312,10 @@ class TestGraphql(GraphQLTestCase):
                     disscount
                     startDate
                     endDate
-                    product {
+                    user {
                       id
                     }
-                    user {
+                    banner {
                       id
                     }
                 }
@@ -1373,10 +1387,10 @@ class TestGraphql(GraphQLTestCase):
                     disscount
                     startDate
                     endDate
-                    product {
+                    user {
                       id
                     }
-                    user {
+                    banner {
                       id
                     }
                 }
@@ -1394,18 +1408,18 @@ class TestGraphql(GraphQLTestCase):
                     disscount: 128.0,
                     startDate: "2020-01-01T12:00:00+00:00",
                     endDate: "2020-01-01T12:00:00+00:00",
-                    product:  1,
                     user:  1,
+                    banner: 1,
                 ) {
                     sale {
                         id
                         disscount
                         startDate
                         endDate
-                        product {
+                        user {
                           id
                         }
-                        user {
+                        banner {
                           id
                         }
                     }
@@ -1424,8 +1438,8 @@ class TestGraphql(GraphQLTestCase):
                     disscount: 128.0,
                     startDate: "2020-01-01T12:00:00+00:00",
                     endDate: "2020-01-01T12:00:00+00:00",
-                    product:  1,
                     user:  1,
+                    banner: 1,
 
                 ) {
                     sale {
@@ -1433,10 +1447,10 @@ class TestGraphql(GraphQLTestCase):
                         disscount
                         startDate
                         endDate
-                        product {
+                        user {
                           id
                         }
-                        user {
+                        banner {
                           id
                         }
                     }

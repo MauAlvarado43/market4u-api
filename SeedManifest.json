@@ -244,13 +244,12 @@
         },
         {
           "card": {
-            "has": "1",
-            "ref": "0..*"
+            "has": "0..*",
+            "ref": "1"
           },
           "is_fk": true,
           "name": "sales",
-          "type": "sale[]",
-          "write": false
+          "type": "sale"
         },
         {
           "card": {
@@ -318,12 +317,13 @@
         },
         {
           "card": {
-            "has": "0..*",
-            "ref": "1"
+            "has": "1",
+            "ref": "0..*"
           },
           "is_fk": true,
           "name": "product",
-          "type": "product"
+          "type": "product[]",
+          "write": false
         },
         {
           "card": {
@@ -333,6 +333,10 @@
           "is_fk": true,
           "name": "user",
           "type": "user"
+        },
+        {
+          "name": "banner",
+          "type": "file"
         }
       ],
       "name": "sale"
@@ -423,6 +427,7 @@
             "has": "1",
             "ref": "0..*"
           },
+          "empty": true,
           "is_fk": true,
           "name": "carts",
           "type": "cart[]",
@@ -433,6 +438,7 @@
             "has": "1",
             "ref": "0..*"
           },
+          "empty": true,
           "is_fk": true,
           "name": "products",
           "type": "product[]",
@@ -443,6 +449,7 @@
             "has": "1",
             "ref": "0..*"
           },
+          "empty": true,
           "is_fk": true,
           "name": "whishlist",
           "type": "product[]",
@@ -453,6 +460,7 @@
             "has": "1",
             "ref": "0..*"
           },
+          "empty": true,
           "is_fk": true,
           "name": "sales",
           "type": "sale[]",
@@ -463,6 +471,7 @@
             "has": "1",
             "ref": "0..*"
           },
+          "empty": true,
           "is_fk": true,
           "name": "shippings",
           "type": "shipping[]",

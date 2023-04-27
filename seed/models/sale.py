@@ -16,13 +16,17 @@ class Sale(Model):
         blank=False, null=False, default=datetime.now)
     end_date = models.DateTimeField(
         blank=False, null=False, default=datetime.now)
+    banner = models.ForeignKey(
+        'models.File', related_name='sale_banners',
+        blank=False, null=False, on_delete=models.PROTECT)
 
-    product = models.ForeignKey(
-        'models.Product', related_name='sales',
-        blank=False, null=False, on_delete=models.CASCADE)
     user = models.ForeignKey(
         'models.User', related_name='sales',
         blank=False, null=False, on_delete=models.CASCADE)
+    
+    @property
+    def product(self):
+        return self.products.all()
 
     class Meta:
         db_table = '_sale'

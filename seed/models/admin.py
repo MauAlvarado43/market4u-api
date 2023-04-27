@@ -177,6 +177,8 @@ class Admin:
                     'disscount',
                     'start_date',
                     'end_date',
+                    'banner',
+                    'banner',
                     'product',
                     'user',
                 )

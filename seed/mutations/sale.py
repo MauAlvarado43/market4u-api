@@ -6,8 +6,8 @@ __Seed builder__
 
 import graphene
 from app.models import Sale
-from app.models import Product
 from app.models import User
+from app.models import File
 from seed.schema.types import Sale as SaleType
 
 class SaveSaleMutation(graphene.Mutation):
@@ -18,7 +18,7 @@ class SaveSaleMutation(graphene.Mutation):
         disscount = graphene.Float(required=True)
         startDate = graphene.DateTime(required=True)
         endDate = graphene.DateTime(required=True)
-        product = graphene.Int(required=True)
+        banner = graphene.Int(required=True)
         user = graphene.Int(required=True)
         pass
         
@@ -32,18 +32,18 @@ class SaveSaleMutation(graphene.Mutation):
             sale["start_date"] = kwargs["startDate"]
         if "endDate" in kwargs:
             sale["end_date"] = kwargs["endDate"]
-        if "product" in kwargs:
-            product = Product.filter_permissions(
-                Product.objects,
-                Product.permission_filters(user)) \
-                .get(pk=kwargs["product"])
-            sale["product"] = product
         if "user" in kwargs:
             user = User.filter_permissions(
                 User.objects,
                 User.permission_filters(user)) \
                 .get(pk=kwargs["user"])
             sale["user"] = user
+        if "banner" in kwargs:
+            banner = File.filter_permissions(
+                File.objects,
+                File.permission_filters(user)) \
+                .get(pk=kwargs["banner"])
+            sale["banner"] = banner
         sale = \
             Sale.objects.create(**sale)
         sale.save()
@@ -60,7 +60,7 @@ class SetSaleMutation(graphene.Mutation):
         disscount = graphene.Float(required=False)
         startDate = graphene.DateTime(required=False)
         endDate = graphene.DateTime(required=False)
-        product = graphene.Int(required=False)
+        banner = graphene.Int(required=False)
         user = graphene.Int(required=False)
         
     # pylint: disable=R0912,W0622
@@ -76,14 +76,14 @@ class SetSaleMutation(graphene.Mutation):
             sale.start_date = kwargs["startDate"]
         if "endDate" in kwargs:
             sale.end_date = kwargs["endDate"]
-        if "product" in kwargs:
-            product = Product.objects \
-                .get(pk=kwargs["product"])
-            sale.product = product
         if "user" in kwargs:
             user = User.objects \
                 .get(pk=kwargs["user"])
             sale.user = user
+        if "banner" in kwargs:
+            banner = File.objects \
+                .get(pk=kwargs["banner"])
+            sale.banner = banner
         sale.save()
     
         return SetSaleMutation(

@@ -73,6 +73,7 @@
     short_description: ""
     description: ""
     user: 0
+    sales: 0
     category: 0
 
 ## PURCHASES
@@ -93,8 +94,8 @@
     disscount: 0
     start_date: "2020-01-01"
     end_date: "2020-01-01"
-    product: 0
     user: 0
+    banner: 0
 
 ## SHIPPINGS
 

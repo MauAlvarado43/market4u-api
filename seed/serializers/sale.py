@@ -6,16 +6,22 @@ __Seed builder__
 
 from rest_framework import serializers
 from app.models import Sale
-from app.models import Product
 from app.models import User
+from app.models import File
+from seed.serializers.file import FileSerializer
 
 class SaleSerializer(serializers.ModelSerializer):
+    
+    banner = FileSerializer(read_only=True)
 
-    product_id = serializers.PrimaryKeyRelatedField(
-        source='product', queryset=Product.objects.all(),
-        required=True, allow_null=False)
+    product_ids = serializers.PrimaryKeyRelatedField(
+        many=True, source='products', read_only=True)
+
     user_id = serializers.PrimaryKeyRelatedField(
         source='user', queryset=User.objects.all(),
+        required=True, allow_null=False)
+    banner_id = serializers.PrimaryKeyRelatedField(
+        source='banner', queryset=File.objects.all(),
         required=True, allow_null=False)
 
     class Meta:
@@ -27,6 +33,8 @@ class SaleSerializer(serializers.ModelSerializer):
             'disscount',
             'start_date',
             'end_date',
-            'product_id',
+            'banner',
+            'banner_id',
+            'product_ids',
             'user_id',  
         )
