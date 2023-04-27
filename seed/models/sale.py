@@ -10,6 +10,7 @@ from seed.models.model import Model
 
 class Sale(Model):
 
+    name = models.CharField(max_length=100, blank=True)
     disscount = models.FloatField(
         default=0)
     start_date = models.DateTimeField(

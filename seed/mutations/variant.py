@@ -17,6 +17,7 @@ class SaveVariantMutation(graphene.Mutation):
     class Arguments:
         price = graphene.Float(required=True)
         stock = graphene.Int(required=True)
+        shipment = graphene.Float(required=True)
         product = graphene.Int(required=True)
         pass
         
@@ -28,6 +29,8 @@ class SaveVariantMutation(graphene.Mutation):
             variant["price"] = kwargs["price"]
         if "stock" in kwargs:
             variant["stock"] = kwargs["stock"]
+        if "shipment" in kwargs:
+            variant["shipment"] = kwargs["shipment"]
         if "product" in kwargs:
             product = Product.filter_permissions(
                 Product.objects,
@@ -49,6 +52,7 @@ class SetVariantMutation(graphene.Mutation):
         id = graphene.Int(required=True)
         price = graphene.Float(required=False)
         stock = graphene.Int(required=False)
+        shipment = graphene.Float(required=False)
         product = graphene.Int(required=False)
         
     # pylint: disable=R0912,W0622
@@ -62,6 +66,8 @@ class SetVariantMutation(graphene.Mutation):
             variant.price = kwargs["price"]
         if "stock" in kwargs:
             variant.stock = kwargs["stock"]
+        if "shipment" in kwargs:
+            variant.shipment = kwargs["shipment"]
         if "product" in kwargs:
             product = Product.objects \
                 .get(pk=kwargs["product"])

@@ -91,6 +91,7 @@
 - model: models.sale
   pk: 1
   fields:
+    name: ""
     disscount: 0
     start_date: "2020-01-01"
     end_date: "2020-01-01"
@@ -136,6 +137,7 @@
     product: 0
     price: 0
     stock: 0
+    shipment: 0
 
 ## VARIANTOPTIONS
 

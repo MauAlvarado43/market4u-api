@@ -302,6 +302,11 @@
     {
       "attrs": [
         {
+          "length": "100",
+          "name": "name",
+          "type": "string"
+        },
+        {
           "name": "disscount",
           "type": "float"
         },
@@ -513,6 +518,10 @@
           "name": "photos",
           "type": "file[]",
           "write": false
+        },
+        {
+          "name": "shipment",
+          "type": "float"
         }
       ],
       "name": "variant"

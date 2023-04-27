@@ -15,6 +15,7 @@ class SaveSaleMutation(graphene.Mutation):
     sale = graphene.Field(SaleType)
     
     class Arguments:
+        name = graphene.String(required=True)
         disscount = graphene.Float(required=True)
         startDate = graphene.DateTime(required=True)
         endDate = graphene.DateTime(required=True)
@@ -26,6 +27,8 @@ class SaveSaleMutation(graphene.Mutation):
     def mutate(self, info, **kwargs):
         user = info.context.user
         sale = {}
+        if "name" in kwargs:
+            sale["name"] = kwargs["name"]
         if "disscount" in kwargs:
             sale["disscount"] = kwargs["disscount"]
         if "startDate" in kwargs:
@@ -57,6 +60,7 @@ class SetSaleMutation(graphene.Mutation):
     
     class Arguments:
         id = graphene.Int(required=True)
+        name = graphene.String(required=False)
         disscount = graphene.Float(required=False)
         startDate = graphene.DateTime(required=False)
         endDate = graphene.DateTime(required=False)
@@ -70,6 +74,8 @@ class SetSaleMutation(graphene.Mutation):
             Sale.objects,
             Sale.permission_filters(user)) \
             .get(pk=kwargs["id"])
+        if "name" in kwargs:
+            sale.name = kwargs["name"]
         if "disscount" in kwargs:
             sale.disscount = kwargs["disscount"]
         if "startDate" in kwargs:

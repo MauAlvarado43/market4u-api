@@ -322,6 +322,7 @@ class TestRest(APITestCase):
     
     def test_post_sale(self):
         data = {
+            "name": "",
             "disscount": 128.0,
             "start_date": "2020-01-01T12:00:00+00:00",
             "end_date": "2020-01-01T12:00:00+00:00",
@@ -333,6 +334,7 @@ class TestRest(APITestCase):
     
     def test_put_sale(self):
         data = {
+            "name": "",
             "disscount": 128.0,
             "start_date": "2020-01-01T12:00:00+00:00",
             "end_date": "2020-01-01T12:00:00+00:00",
@@ -453,6 +455,7 @@ class TestRest(APITestCase):
             "product_id":  1,
             "price": 128.0,
             "stock": 128,
+            "shipment": 128.0,
         }
         response = self.client.post('/api/variants/', data)
         self.assertEqual(response.status_code, status.HTTP_201_CREATED)
@@ -462,6 +465,7 @@ class TestRest(APITestCase):
             "product_id":  1,
             "price": 128.0,
             "stock": 128,
+            "shipment": 128.0,
         }
         response = self.client.put('/api/variants/1/', data)
         self.assertEqual(response.status_code, status.HTTP_200_OK)
