@@ -302,6 +302,11 @@
     {
       "attrs": [
         {
+          "length": "100",
+          "name": "name",
+          "type": "string"
+        },
+        {
           "name": "disscount",
           "type": "float"
         },

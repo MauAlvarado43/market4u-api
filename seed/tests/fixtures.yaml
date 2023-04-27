@@ -100,6 +100,7 @@
   pk: 1
   fields:
     created_at: "2020-01-01"
+    name: ""
     disscount: 128.0
     start_date: "2020-01-01"
     end_date: "2020-01-01"

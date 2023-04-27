@@ -174,6 +174,7 @@ class Admin:
                 fields = (
                     'id',
                     'created_at',
+                    'name',
                     'disscount',
                     'start_date',
                     'end_date',

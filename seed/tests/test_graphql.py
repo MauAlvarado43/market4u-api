@@ -1309,6 +1309,7 @@ class TestGraphql(GraphQLTestCase):
             {
                 sales(query: "id=1", orderBy: "id", limit: 1){
                     id
+                    name
                     disscount
                     startDate
                     endDate
@@ -1384,6 +1385,7 @@ class TestGraphql(GraphQLTestCase):
             {
                 sale(id: 1){
                     id
+                    name
                     disscount
                     startDate
                     endDate
@@ -1405,6 +1407,7 @@ class TestGraphql(GraphQLTestCase):
             '''
             mutation {
                 saveSale(
+                    name: "",
                     disscount: 128.0,
                     startDate: "2020-01-01T12:00:00+00:00",
                     endDate: "2020-01-01T12:00:00+00:00",
@@ -1413,6 +1416,7 @@ class TestGraphql(GraphQLTestCase):
                 ) {
                     sale {
                         id
+                        name
                         disscount
                         startDate
                         endDate
@@ -1435,6 +1439,7 @@ class TestGraphql(GraphQLTestCase):
             '''
             mutation {
                 setSale(id:1
+                    name: "",
                     disscount: 128.0,
                     startDate: "2020-01-01T12:00:00+00:00",
                     endDate: "2020-01-01T12:00:00+00:00",
@@ -1444,6 +1449,7 @@ class TestGraphql(GraphQLTestCase):
                 ) {
                     sale {
                         id
+                        name
                         disscount
                         startDate
                         endDate

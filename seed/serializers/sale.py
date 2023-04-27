@@ -30,6 +30,7 @@ class SaleSerializer(serializers.ModelSerializer):
             'id',
             'created_at',
             'hash',
+            'name',
             'disscount',
             'start_date',
             'end_date',
