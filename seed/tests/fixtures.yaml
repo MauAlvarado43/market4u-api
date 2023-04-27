@@ -80,6 +80,7 @@
     short_description: ""
     description: ""
     user: 1
+    sales: 1
     category: 1
 
 ## PURCHASES
@@ -102,8 +103,8 @@
     disscount: 128.0
     start_date: "2020-01-01"
     end_date: "2020-01-01"
-    product: 1
     user: 1
+    banner: 1
 
 ## SHIPPINGS
 

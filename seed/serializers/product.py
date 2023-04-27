@@ -7,19 +7,21 @@ __Seed builder__
 from rest_framework import serializers
 from app.models import Product
 from app.models import User
+from app.models import Sale
 from app.models import Category
 
 class ProductSerializer(serializers.ModelSerializer):
 
     opinion_ids = serializers.PrimaryKeyRelatedField(
         many=True, source='opinions', read_only=True)
-    sale_ids = serializers.PrimaryKeyRelatedField(
-        many=True, source='sales', read_only=True)
     variant_ids = serializers.PrimaryKeyRelatedField(
         many=True, source='variants', read_only=True)
 
     user_id = serializers.PrimaryKeyRelatedField(
         source='user', queryset=User.objects.all(),
+        required=True, allow_null=False)
+    sales_id = serializers.PrimaryKeyRelatedField(
+        source='sales', queryset=Sale.objects.all(),
         required=True, allow_null=False)
     category_id = serializers.PrimaryKeyRelatedField(
         source='category', queryset=Category.objects.all(),
@@ -36,7 +38,7 @@ class ProductSerializer(serializers.ModelSerializer):
             'description',
             'user_id',
             'opinion_ids',
-            'sale_ids',
+            'sales_id',
             'category_id',
             'variant_ids',  
         )

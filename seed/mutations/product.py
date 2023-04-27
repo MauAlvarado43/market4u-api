@@ -7,6 +7,7 @@ __Seed builder__
 import graphene
 from app.models import Product
 from app.models import User
+from app.models import Sale
 from app.models import Category
 from seed.schema.types import Product as ProductType
 
@@ -19,6 +20,7 @@ class SaveProductMutation(graphene.Mutation):
         shortDescription = graphene.String(required=True)
         description = graphene.String(required=True)
         user = graphene.Int(required=True)
+        sales = graphene.Int(required=True)
         category = graphene.Int(required=True)
         pass
         
@@ -38,6 +40,12 @@ class SaveProductMutation(graphene.Mutation):
                 User.permission_filters(user)) \
                 .get(pk=kwargs["user"])
             product["user"] = user
+        if "sales" in kwargs:
+            sales = Sale.filter_permissions(
+                Sale.objects,
+                Sale.permission_filters(user)) \
+                .get(pk=kwargs["sales"])
+            product["sales"] = sales
         if "category" in kwargs:
             category = Category.filter_permissions(
                 Category.objects,
@@ -61,6 +69,7 @@ class SetProductMutation(graphene.Mutation):
         shortDescription = graphene.String(required=False)
         description = graphene.String(required=False)
         user = graphene.Int(required=False)
+        sales = graphene.Int(required=False)
         category = graphene.Int(required=False)
         
     # pylint: disable=R0912,W0622
@@ -80,6 +89,10 @@ class SetProductMutation(graphene.Mutation):
             user = User.objects \
                 .get(pk=kwargs["user"])
             product.user = user
+        if "sales" in kwargs:
+            sales = Sale.objects \
+                .get(pk=kwargs["sales"])
+            product.sales = sales
         if "category" in kwargs:
             category = Category.objects \
                 .get(pk=kwargs["category"])

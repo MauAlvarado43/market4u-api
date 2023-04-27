@@ -16,6 +16,9 @@ class Product(Model):
     user = models.ForeignKey(
         'models.User', related_name='products',
         blank=False, null=False, on_delete=models.CASCADE)
+    sales = models.ForeignKey(
+        'models.Sale', related_name='products',
+        blank=False, null=False, on_delete=models.CASCADE)
     category = models.ForeignKey(
         'models.Category', related_name='products',
         blank=False, null=False, on_delete=models.CASCADE)
@@ -23,9 +26,6 @@ class Product(Model):
     @property
     def opinions(self):
         return self.opinions.all()
-    @property
-    def sales(self):
-        return self.sales.all()
     @property
     def variants(self):
         return self.variants.all()

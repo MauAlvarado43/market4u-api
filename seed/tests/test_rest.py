@@ -250,6 +250,7 @@ class TestRest(APITestCase):
             "short_description": "",
             "description": "",
             "user_id":  1,
+            "sales_id":  1,
             "category_id":  1,
         }
         response = self.client.post('/api/products/', data)
@@ -261,6 +262,7 @@ class TestRest(APITestCase):
             "short_description": "",
             "description": "",
             "user_id":  1,
+            "sales_id":  1,
             "category_id":  1,
         }
         response = self.client.put('/api/products/1/', data)
@@ -323,8 +325,8 @@ class TestRest(APITestCase):
             "disscount": 128.0,
             "start_date": "2020-01-01T12:00:00+00:00",
             "end_date": "2020-01-01T12:00:00+00:00",
-            "product_id":  1,
             "user_id":  1,
+            "banner_id": 1,
         }
         response = self.client.post('/api/sales/', data)
         self.assertEqual(response.status_code, status.HTTP_201_CREATED)
@@ -334,8 +336,8 @@ class TestRest(APITestCase):
             "disscount": 128.0,
             "start_date": "2020-01-01T12:00:00+00:00",
             "end_date": "2020-01-01T12:00:00+00:00",
-            "product_id":  1,
             "user_id":  1,
+            "banner_id": 1,
         }
         response = self.client.put('/api/sales/1/', data)
         self.assertEqual(response.status_code, status.HTTP_200_OK)
