@@ -32,6 +32,7 @@ class VariantSerializer(serializers.ModelSerializer):
             'price',
             'stock',
             'photos',
+            'shipment',
             'photo_ids',
             'option_ids',
             'product_id',  

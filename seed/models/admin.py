@@ -243,6 +243,7 @@ class Admin:
                     'price',
                     'stock',
                     'photos',
+                    'shipment',
                     'photos',
                     'options',
                     'product',

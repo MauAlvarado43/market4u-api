@@ -137,6 +137,7 @@
     product: 0
     price: 0
     stock: 0
+    shipment: 0
 
 ## VARIANTOPTIONS
 

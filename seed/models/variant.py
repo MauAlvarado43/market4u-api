@@ -16,6 +16,8 @@ class Variant(Model):
     photos = models.ManyToManyField(
         'models.File', related_name='variant_photoses', blank=False
         )
+    shipment = models.FloatField(
+        default=0)
 
     product = models.ForeignKey(
         'models.Product', related_name='variants',

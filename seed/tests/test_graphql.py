@@ -1862,6 +1862,7 @@ class TestGraphql(GraphQLTestCase):
                     id
                     price
                     stock
+                    shipment
                     product {
                       id
                     }
@@ -1933,6 +1934,7 @@ class TestGraphql(GraphQLTestCase):
                     id
                     price
                     stock
+                    shipment
                     product {
                       id
                     }
@@ -1951,11 +1953,13 @@ class TestGraphql(GraphQLTestCase):
                     product:  1,
                     price: 128.0,
                     stock: 128,
+                    shipment: 128.0,
                 ) {
                     variant {
                         id
                         price
                         stock
+                        shipment
                         product {
                           id
                         }
@@ -1975,12 +1979,14 @@ class TestGraphql(GraphQLTestCase):
                     product:  1,
                     price: 128.0,
                     stock: 128,
+                    shipment: 128.0,
 
                 ) {
                     variant {
                         id
                         price
                         stock
+                        shipment
                         product {
                           id
                         }
