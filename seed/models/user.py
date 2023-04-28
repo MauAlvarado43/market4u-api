@@ -12,7 +12,8 @@ class User(AbstractUser, Model):
     
     TYPES = (
         ('SUPERADMIN', 'SUPERADMIN'),
-        ('ADMIN;SELLER', 'ADMIN;SELLER'),
+        ('ADMIN', 'ADMIN'),
+        ('SELLER', 'SELLER'),
         ('NORMAL', 'NORMAL'),
     )
 
@@ -25,6 +26,8 @@ class User(AbstractUser, Model):
     photo = models.ForeignKey(
         'models.File', related_name='user_photos',
         blank=False, null=False, on_delete=models.PROTECT)
+    token = models.CharField(max_length=40, blank=True)
+    code = models.CharField(max_length=10, blank=True)
 
     company = models.ForeignKey(
         'models.Company', related_name='users',

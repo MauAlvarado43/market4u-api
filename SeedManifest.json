@@ -408,7 +408,8 @@
           "name": "type",
           "options": [
             "SUPERADMIN",
-            "ADMIN;SELLER",
+            "ADMIN",
+            "SELLER",
             "NORMAL"
           ],
           "type": "enum"
@@ -481,6 +482,16 @@
           "name": "shippings",
           "type": "shipping[]",
           "write": false
+        },
+        {
+          "length": "40",
+          "name": "token",
+          "type": "string"
+        },
+        {
+          "length": "10",
+          "name": "code",
+          "type": "string"
         }
       ],
       "name": "user"

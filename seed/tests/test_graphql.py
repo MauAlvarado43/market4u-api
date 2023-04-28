@@ -1667,6 +1667,8 @@ class TestGraphql(GraphQLTestCase):
                     address
                     active
                     type
+                    token
+                    code
                     photo {
                       id
                     }
@@ -1747,6 +1749,8 @@ class TestGraphql(GraphQLTestCase):
                     address
                     active
                     type
+                    token
+                    code
                     photo {
                       id
                     }
@@ -1776,6 +1780,8 @@ class TestGraphql(GraphQLTestCase):
                     type: "SUPERADMIN",
                     photo: 1,
                     company:  1,
+                    token: "",
+                    code: "",
                 ) {
                     user {
                         id
@@ -1787,6 +1793,8 @@ class TestGraphql(GraphQLTestCase):
                         address
                         active
                         type
+                        token
+                        code
                         photo {
                           id
                         }
@@ -1817,6 +1825,8 @@ class TestGraphql(GraphQLTestCase):
                     type: "SUPERADMIN",
                     photo: 1,
                     company:  1,
+                    token: "",
+                    code: "",
 
                 ) {
                     user {
@@ -1829,6 +1839,8 @@ class TestGraphql(GraphQLTestCase):
                         address
                         active
                         type
+                        token
+                        code
                         photo {
                           id
                         }

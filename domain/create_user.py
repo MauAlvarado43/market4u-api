@@ -1,0 +1,498 @@
+import os
+from datetime import timedelta
+from rest_framework import status
+import domain.utils.http_codes as codes
+
+from django.conf import settings
+from django.utils import timezone
+from django.utils.crypto import get_random_string
+from django.utils.html import strip_tags
+
+from app.celery import send_mail_async
+from app.models import User
+
+DURATION_MINUTES_TOKEN = 20
+INITIAL_STARS = 1000
+INITIAL_CASH = 1000
+
+HTML_TEMPLATE = """
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <style type="text/css">
+      /* FONTS */
+      @media screen {{
+        @font-face {{
+          font-family: "Lato";
+          font-style: normal;
+          font-weight: 400;
+          src: local("Lato Regular"), local("Lato-Regular"),
+            url(https://fonts.gstatic.com/s/lato/v11/qIIYRU-oROkIk8vfvxw6QvesZW2xOQ-xsNqO47m55DA.woff)
+              format("woff");
+        
+
+        @font-face {{
+          font-family: "Lato";
+          font-style: normal;
+          font-weight: 700;
+          src: local("Lato Bold"), local("Lato-Bold"),
+            url(https://fonts.gstatic.com/s/lato/v11/qdgUG4U09HnJwhYI-uK18wLUuEpTyoUstqEm5AMlJo4.woff)
+              format("woff");
+        }}
+
+        @font-face {{
+          font-family: "Lato";
+          font-style: italic;
+          font-weight: 400;
+          src: local("Lato Italic"), local("Lato-Italic"),
+            url(https://fonts.gstatic.com/s/lato/v11/RYyZNoeFgb0l7W3Vu1aSWOvvDin1pK8aKteLpeZ5c0A.woff)
+              format("woff");
+        }}
+
+        @font-face {{
+          font-family: "Lato";
+          font-style: italic;
+          font-weight: 700;
+          src: local("Lato Bold Italic"), local("Lato-BoldItalic"),
+            url(https://fonts.gstatic.com/s/lato/v11/HkF_qI1x_noxlxhrhMQYELO3LdcAZYWl9Si6vvxL-qU.woff)
+              format("woff");
+        }}
+      }}
+
+      /* CLIENT-SPECIFIC STYLES */
+      body,
+      table,
+      td,
+      a {{
+        -webkit-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
+      }}
+      table,
+      td {{
+        mso-table-lspace: 0pt;
+        mso-table-rspace: 0pt;
+      }}
+      img {{
+        -ms-interpolation-mode: bicubic;
+      }}
+
+      /* RESET STYLES */
+      img {{
+        border: 0;
+        height: auto;
+        line-height: 100%;
+        outline: none;
+        text-decoration: none;
+      }}
+      table {{
+        border-collapse: collapse !important;
+      }}
+      body {{
+        height: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        width: 100% !important;
+      }}
+
+      /* iOS BLUE LINKS */
+      a[x-apple-data-detectors] {{
+        color: inherit !important;
+        text-decoration: none !important;
+        font-size: inherit !important;
+        font-family: inherit !important;
+        font-weight: inherit !important;
+        line-height: inherit !important;
+      }}
+
+      /* MOBILE STYLES */
+      @media screen and (max-width: 600px) {{
+        h1 {{
+          font-size: 32px !important;
+          line-height: 32px !important;
+        }}
+      }}
+
+      /* ANDROID CENTER FIX */
+      div[style*="margin: 16px 0;"] {{
+        margin: 0 !important;
+      }}
+    </style>
+  </head>
+  <body
+    style="
+      background-color: #f4f4f4;
+      margin: 0 !important;
+      padding: 0 !important;
+    "
+  >
+    <!-- HIDDEN PREHEADER TEXT -->
+    <div
+      style="
+        display: none;
+        font-size: 1px;
+        color: #fefefe;
+        line-height: 1px;
+        font-family: 'Lato', Helvetica, Arial, sans-serif;
+        max-height: 0px;
+        max-width: 0px;
+        opacity: 0;
+        overflow: hidden;
+      "
+    >
+      {preheader}
+    </div>
+
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <!-- LOGO -->
+      <tr>
+        <td bgcolor="#7d35e8" align="center">
+          <table
+            border="0"
+            cellpadding="0"
+            cellspacing="0"
+            width="100%"
+            style="max-width: 600px"
+          >
+            <tr>
+              <td
+                align="center"
+                valign="top"
+                style="padding: 40px 10px 40px 10px"
+              >
+                <a href="{site_url}" target="_blank">
+                  <img
+                    alt="Logo"
+                    src="http://localhost:3003/theme/svg/logos/logo-white.svg"
+                    style="
+                      display: block;
+                      width: 30%;
+                      font-family: 'Lato', Helvetica, Arial, sans-serif;
+                      color: #ffffff;
+                      font-size: 18px;
+                    "
+                    border="0"
+                  />
+                </a>
+              </td>
+            </tr>
+          </table>
+
+        </td>
+      </tr>
+      <!-- HERO -->
+      <tr>
+        <td bgcolor="#7d35e8" align="center" style="padding: 0px 10px 0px 10px">
+          <table
+            border="0"
+            cellpadding="0"
+            cellspacing="0"
+            width="100%"
+            style="max-width: 600px"
+          >
+            <tr>
+              <td
+                bgcolor="#ffffff"
+                align="center"
+                valign="top"
+                style="
+                  padding: 40px 20px 20px 20px;
+                  border-radius: 4px 4px 0px 0px;
+                  color: #111111;
+                  font-family: 'Lato', Helvetica, Arial, sans-serif;
+                  font-size: 48px;
+                  font-weight: 400;
+                  letter-spacing: 4px;
+                  line-height: 48px;
+                "
+              >
+                <h1 style="font-size: 40px; font-weight: 400; margin: 0">
+                  {title}
+                </h1>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <!-- COPY BLOCK -->
+      <tr>
+        <td bgcolor="#f4f4f4" align="center" style="padding: 0px 10px 0px 10px">
+          <table
+            border="0"
+            cellpadding="0"
+            cellspacing="0"
+            width="100%"
+            style="max-width: 600px"
+          >
+            <!-- COPY -->
+            <tr>
+              <td
+                bgcolor="#ffffff"
+                align="left"
+                style="
+                  padding: 20px 30px 40px 30px;
+                  color: #666666;
+                  font-family: 'Lato', Helvetica, Arial, sans-serif;
+                  font-size: 18px;
+                  font-weight: 400;
+                  line-height: 25px;
+                "
+              >
+                <p style="margin: 0">
+                  {body}
+                </p>
+              </td>
+            </tr>
+            <!-- BULLETPROOF BUTTON -->
+            <tr>
+              <td bgcolor="#ffffff" align="left">
+                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td
+                      bgcolor="#ffffff"
+                      align="center"
+                      style="padding: 20px 30px 60px 30px"
+                    >
+                      <table border="0" cellspacing="0" cellpadding="0">
+                        <tr>
+                          <td
+                            align="center"
+                            style="border-radius: 3px"
+                            bgcolor="#000000"
+                          >
+                            <a
+                              href="{verify_url}"
+                              target="_blank"
+                              style="
+                                font-size: 20px;
+                                font-family: Helvetica, Arial, sans-serif;
+                                color: #ffffff;
+                                text-decoration: none;
+                                color: #ffffff;
+                                text-decoration: none;
+                                padding: 15px 25px;
+                                border-radius: 2px;
+                                border: 1px solid #000000;
+                                display: inline-block;
+                              "
+                              >{name_button}</a
+                            >
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <!-- COPY -->
+            <tr>
+              <td
+                bgcolor="#ffffff"
+                align="left"
+                style="
+                  padding: 0px 30px 0px 30px;
+                  color: #666666;
+                  font-family: 'Lato', Helvetica, Arial, sans-serif;
+                  font-size: 18px;
+                  font-weight: 400;
+                  line-height: 25px;
+                "
+              >
+                <p style="margin: 0">
+                  Si eso no funcionó, copia y pega el siguiente link en tu 
+                  navegador: 
+                </p>
+              </td>
+            </tr>
+            <!-- COPY -->
+            <tr>
+              <td
+                bgcolor="#ffffff"
+                align="left"
+                style="
+                  padding: 20px 30px 20px 30px;
+                  color: #666666;
+                  font-family: 'Lato', Helvetica, Arial, sans-serif;
+                  font-size: 18px;
+                  font-weight: 400;
+                  line-height: 25px;
+                "
+              >
+                <p style="margin: 0">
+                  <a
+                    href="{verify_url}"
+                    target="_blank"
+                    style="color: #7d35e8"
+                    >{verify_url}</a
+                  >
+                </p>
+              </td>
+            </tr>
+            <!-- COPY -->
+            <tr>
+              <td
+                bgcolor="#ffffff"
+                align="left"
+                style="
+                  padding: 0px 30px 20px 30px;
+                  color: #666666;
+                  font-family: 'Lato', Helvetica, Arial, sans-serif;
+                  font-size: 18px;
+                  font-weight: 400;
+                  line-height: 25px;
+                "
+              >
+                <p style="margin: 0">
+                </p>
+              </td>
+            </tr>
+            <!-- COPY -->
+            <tr>
+              <td
+                bgcolor="#ffffff"
+                align="left"
+                style="
+                  padding: 0px 30px 40px 30px;
+                  border-radius: 0px 0px 4px 4px;
+                  color: #666666;
+                  font-family: 'Lato', Helvetica, Arial, sans-serif;
+                  font-size: 18px;
+                  font-weight: 400;
+                  line-height: 25px;
+                "
+              >
+                <p style="margin: 0">Saludos,<br />Fantasy</p>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr style="height: 50px;"></tr>
+    </table>
+  </body>
+</html>
+
+
+"""
+
+
+def send_mail(subject, preheader, title, body, name_button, path, to_email, token):
+    verify_url = f"{os.getenv('CLIENT_URL')}/{path}/{token}"
+
+    html_message = HTML_TEMPLATE.format(
+        preheader=preheader,
+        site_url=os.getenv("CLIENT_URL"),
+        title=title,
+        body=body,
+        verify_url=verify_url,
+        name_button=name_button,
+    )
+    plain_message = strip_tags(html_message)
+    from_email = settings.EMAIL_HOST_USER
+
+    send_mail_async.delay(
+        subject, plain_message, from_email, [to_email], html_message=html_message
+    )
+
+
+def registry(first_name, last_name, email, password):
+    expiration_date = timezone.now() + timedelta(minutes=DURATION_MINUTES_TOKEN)
+    token = get_random_string(length=32)
+
+    if User.objects.filter(email=email).exists():
+        return status.HTTP_401_UNAUTHORIZED
+
+    else:
+        user = User.objects.create_user(
+            first_name=first_name,
+            last_name=last_name,
+            stars=INITIAL_STARS,
+            cash=INITIAL_CASH,
+            email=email,
+            username=email,
+            verify_token=token,
+            verify_token_expiration=expiration_date,
+        )
+
+        user.set_password(password)
+        user.save()
+    
+    # TODO TEMP DISABLE
+    subject_html_mail = "[Fantasy] Verificación de correo"
+    preheader_html_mail = "¡Estamos encantados de tenerte aquí! Prepárate para sumergirte en tu nueva cuenta."
+    title_html_mail = f"!Bienvenido {first_name}!"
+    body_html_mail = """
+        Estamos emocionados de que comiences. Primero, necesitas
+        confirmar tu cuenta. Solo presiona el bóton de abajo.
+    """
+    name_button = "Confirmar Cuenta"
+    path = "verify_email"
+
+    send_mail(
+        subject_html_mail,
+        preheader_html_mail,
+        title_html_mail,
+        body_html_mail,
+        name_button,
+        path,
+        email,
+        token,
+    )
+    
+    return status.HTTP_200_OK
+
+
+def registry_verify(token, code):
+    user = User.objects.get(token=token)
+
+    if user.token_verified:
+        return status.HTTP_200_OK
+
+    if timezone.now() <= user.verify_token_expiration:
+        user.token_verified = True
+        user.save()
+        return status.HTTP_200_OK
+
+    else:
+        return codes.CODE_421_TOKEN_EXPIRED
+
+
+def registry_generate(token):
+    user = User.objects.get(verify_token=token)
+
+    new_token = get_random_string(length=32)
+    expiration_date = timezone.now() + timedelta(minutes=DURATION_MINUTES_TOKEN)
+
+    user.verify_token = new_token
+    user.verify_token_expiration = expiration_date
+    user.save()
+
+    subject_html_mail = "[Market4U] Verificación de correo"
+    preheader_html_mail = (
+        "¡Has solicitado un nuevo correo! Prepárate para regresar al partido."
+    )
+    title_html_mail = f"!Hola {user.first_name}!"
+    body_html_mail = """
+        Hace poco hemos recibido una solicitud de restablecimiento para
+        verificar tu cuenta. Para verificar su cuenta solo presiona 
+        el bóton de abajo.
+    """
+    name_button = "Confirmar Cuenta"
+    path = "verify_email"
+
+    send_mail(
+        subject_html_mail,
+        preheader_html_mail,
+        title_html_mail,
+        body_html_mail,
+        name_button,
+        path,
+        user.email,
+        new_token,
+    )
+    return status.HTTP_200_OK

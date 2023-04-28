@@ -221,6 +221,8 @@ class Admin:
                     'active',
                     'type',
                     'photo',
+                    'token',
+                    'code',
                     'photo',
                     'company',
                     'carts',

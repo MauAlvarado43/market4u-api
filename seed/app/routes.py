@@ -13,8 +13,8 @@ def get_category_viewset():
     return SeedViewSet.CategoryViewSet
 
 def get_company_viewset():
-    import seed.routes.companies as SeedViewSet
-    return SeedViewSet.CompanyViewSet
+    import routes.companies as ExtendViewSet
+    return ExtendViewSet.CompanyViewSet
 
 def get_message_viewset():
     import seed.routes.messages as SeedViewSet

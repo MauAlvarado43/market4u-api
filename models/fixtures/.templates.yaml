@@ -125,9 +125,11 @@
     is_staff: false
     address: ""
     active: false
-    type: "SUPERADMIN|ADMIN;SELLER|NORMAL|"
+    type: "SUPERADMIN|ADMIN|SELLER|NORMAL|"
     photo: 0
     company: 0
+    token: ""
+    code: ""
 
 ## VARIANTS
 

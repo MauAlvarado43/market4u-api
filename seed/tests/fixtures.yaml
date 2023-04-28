@@ -141,6 +141,8 @@
     type: "SUPERADMIN"
     photo: 1
     company: 1
+    token: ""
+    code: ""
 
 ## VARIANTS
 
