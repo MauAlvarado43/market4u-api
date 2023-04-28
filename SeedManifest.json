@@ -247,8 +247,9 @@
             "has": "0..*",
             "ref": "1"
           },
+          "empty": true,
           "is_fk": true,
-          "name": "sales",
+          "name": "sale",
           "type": "sale"
         },
         {
@@ -340,6 +341,7 @@
           "type": "user"
         },
         {
+          "empty": true,
           "name": "banner",
           "type": "file"
         }
@@ -414,6 +416,7 @@
           "type": "enum"
         },
         {
+          "empty": true,
           "name": "photo",
           "type": "file"
         },

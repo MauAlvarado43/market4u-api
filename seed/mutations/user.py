@@ -24,7 +24,7 @@ class SaveUserMutation(graphene.Mutation):
         address = graphene.String(required=True)
         active = graphene.Boolean(required=True)
         type = graphene.String(required=True)
-        photo = graphene.Int(required=True)
+        photo = graphene.Int(required=False)
         company = graphene.Int(required=False)
         pass
         

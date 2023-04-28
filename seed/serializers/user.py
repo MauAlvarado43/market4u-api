@@ -30,7 +30,7 @@ class UserSerializer(serializers.ModelSerializer):
         required=False, allow_null=True)
     photo_id = serializers.PrimaryKeyRelatedField(
         source='photo', queryset=File.objects.all(),
-        required=True, allow_null=False)
+        required=False, allow_null=True)
 
     class Meta:
         model = User

@@ -22,7 +22,7 @@ class SaleSerializer(serializers.ModelSerializer):
         required=True, allow_null=False)
     banner_id = serializers.PrimaryKeyRelatedField(
         source='banner', queryset=File.objects.all(),
-        required=True, allow_null=False)
+        required=False, allow_null=True)
 
     class Meta:
         model = Sale

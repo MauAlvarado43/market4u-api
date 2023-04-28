@@ -80,7 +80,7 @@
     short_description: ""
     description: ""
     user: 1
-    sales: 1
+    sale: 1
     category: 1
 
 ## PURCHASES

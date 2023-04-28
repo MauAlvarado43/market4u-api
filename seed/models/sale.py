@@ -19,7 +19,7 @@ class Sale(Model):
         blank=False, null=False, default=datetime.now)
     banner = models.ForeignKey(
         'models.File', related_name='sale_banners',
-        blank=False, null=False, on_delete=models.PROTECT)
+        blank=True, null=True, on_delete=models.PROTECT)
 
     user = models.ForeignKey(
         'models.User', related_name='sales',

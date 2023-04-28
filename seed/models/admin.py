@@ -143,7 +143,7 @@ class Admin:
                     'description',
                     'user',
                     'opinions',
-                    'sales',
+                    'sale',
                     'category',
                     'variants',
                 )

@@ -250,7 +250,7 @@ class TestRest(APITestCase):
             "short_description": "",
             "description": "",
             "user_id":  1,
-            "sales_id":  1,
+            "sale_id":  1,
             "category_id":  1,
         }
         response = self.client.post('/api/products/', data)
@@ -262,7 +262,7 @@ class TestRest(APITestCase):
             "short_description": "",
             "description": "",
             "user_id":  1,
-            "sales_id":  1,
+            "sale_id":  1,
             "category_id":  1,
         }
         response = self.client.put('/api/products/1/', data)

@@ -24,7 +24,7 @@ class User(AbstractUser, Model):
         blank=False)
     photo = models.ForeignKey(
         'models.File', related_name='user_photos',
-        blank=False, null=False, on_delete=models.PROTECT)
+        blank=True, null=True, on_delete=models.PROTECT)
 
     company = models.ForeignKey(
         'models.Company', related_name='users',

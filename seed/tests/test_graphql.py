@@ -977,7 +977,7 @@ class TestGraphql(GraphQLTestCase):
                     user {
                       id
                     }
-                    sales {
+                    sale {
                       id
                     }
                     category {
@@ -1055,7 +1055,7 @@ class TestGraphql(GraphQLTestCase):
                     user {
                       id
                     }
-                    sales {
+                    sale {
                       id
                     }
                     category {
@@ -1077,7 +1077,7 @@ class TestGraphql(GraphQLTestCase):
                     shortDescription: "",
                     description: "",
                     user:  1,
-                    sales:  1,
+                    sale:  1,
                     category:  1,
                 ) {
                     product {
@@ -1088,7 +1088,7 @@ class TestGraphql(GraphQLTestCase):
                         user {
                           id
                         }
-                        sales {
+                        sale {
                           id
                         }
                         category {
@@ -1111,7 +1111,7 @@ class TestGraphql(GraphQLTestCase):
                     shortDescription: "",
                     description: "",
                     user:  1,
-                    sales:  1,
+                    sale:  1,
                     category:  1,
 
                 ) {
@@ -1123,7 +1123,7 @@ class TestGraphql(GraphQLTestCase):
                         user {
                           id
                         }
-                        sales {
+                        sale {
                           id
                         }
                         category {
