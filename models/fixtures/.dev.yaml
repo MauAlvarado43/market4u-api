@@ -19,8 +19,17 @@
     is_staff: true
     address: ""
     active: false
-    type: "SUPERADMIN"
     photo: 10000
+    type: "SUPERADMIN"
+    company: null
+    street: ""
+    city: ""
+    cp: 128
+    municipality: ""
+    state: "AGUASCALIENTES"
+    cologn: ""
+    telephone: ""
+    born_date: "2020-01-01"
 
 ## FILES
 

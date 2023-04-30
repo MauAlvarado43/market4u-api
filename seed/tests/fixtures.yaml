@@ -30,11 +30,17 @@
     name: ""
     common_name: ""
     rfc: ""
-    address: ""
+    cp: 128
     phone: ""
     email: ""
     active: false
     photo: 1
+    municipality: ""
+    state: "AGUASCALIENTES"
+    cologn: ""
+    website: ""
+    street: ""
+    city: ""
 
 ## MESSAGES
 
@@ -138,9 +144,17 @@
     date_joined: "2020-01-01"
     address: ""
     active: false
-    type: "SUPERADMIN"
     photo: 1
+    type: "SUPERADMIN"
     company: 1
+    street: ""
+    city: ""
+    cp: 128
+    municipality: ""
+    state: "AGUASCALIENTES"
+    cologn: ""
+    telephone: ""
+    born_date: "2020-01-01"
 
 ## VARIANTS
 

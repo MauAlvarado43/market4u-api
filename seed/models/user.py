@@ -4,6 +4,7 @@ __Seed builder__
   Modify via builder
 """
 
+from datetime import datetime
 from django.contrib.auth.models import AbstractUser
 from django.db import models
 from seed.models.model import Model
@@ -12,19 +13,66 @@ class User(AbstractUser, Model):
     
     TYPES = (
         ('SUPERADMIN', 'SUPERADMIN'),
-        ('ADMIN;SELLER', 'ADMIN;SELLER'),
+        ('ADMIN', 'ADMIN'),
+        ('SELLER', 'SELLER'),
         ('NORMAL', 'NORMAL'),
+    )
+    STATES = (
+        ('AGUASCALIENTES', 'AGUASCALIENTES'),
+        ('BAJA CALIFORNIA', 'BAJA CALIFORNIA'),
+        ('BAJA CALIFORNIA SUR', 'BAJA CALIFORNIA SUR'),
+        ('CAMPECHE', 'CAMPECHE'),
+        ('COAHUILA', 'COAHUILA'),
+        ('COLIMA', 'COLIMA'),
+        ('CHIAPAS', 'Chiapas'),
+        ('CHIHUAHUA', 'CHIHUAHUA'),
+        ('DURANGO', 'DURANGO'),
+        ('CIUDAD DE MEXICO', 'CIUDAD DE MEXICO'),
+        ('GUANAJUATO', 'GUANAJUATO'),
+        ('GUERRERO', 'GUERRERO'),
+        ('HIDALGO', 'HIDALGO'),
+        ('JALISCO', 'JALISCO'),
+        ('MEXICO', 'MEXICO'),
+        ('MICHOACAN', 'MICHOACAN'),
+        ('MORELOS', 'MORELOS'),
+        ('NAYARIT', 'NAYARIT'),
+        ('NUEVO LEON', 'NUEVO LEON'),
+        ('OAXACA', 'OAXACA'),
+        ('PUEBLA', 'PUEBLA'),
+        ('QUERETARO', 'QUERETARO'),
+        ('QUINTANA ROO', 'QUINTANA ROO'),
+        ('SAN LUIS POTOSI', 'SAN LUIS POTOSI'),
+        ('SINALOA', 'SINALOA'),
+        ('SONORA', 'SONORA'),
+        ('TABASCO', 'TABASCO'),
+        ('TAMAULIPAS', 'TAMAULIPAS'),
+        ('TLAXCALA', 'TLAXCALA'),
+        ('VERACRUZ', 'VERACRUZ'),
+        ('YUCATAN', 'YUCATAN'),
+        ('ZACATECAS', 'ZACATECAS'),
     )
 
     address = models.CharField(max_length=200, blank=True)
     active = models.BooleanField(
         default=False)
-    type = models.CharField(
-        max_length=64, choices=TYPES,
-        blank=False)
     photo = models.ForeignKey(
         'models.File', related_name='user_photos',
         blank=True, null=True, on_delete=models.PROTECT)
+    type = models.CharField(
+        max_length=64, choices=TYPES,
+        blank=False)
+    street = models.CharField(max_length=100, blank=True)
+    city = models.CharField(max_length=100, blank=True)
+    cp = models.IntegerField(
+        default=0)
+    municipality = models.CharField(max_length=100, blank=True)
+    state = models.CharField(
+        max_length=64, choices=STATES,
+        blank=False)
+    cologn = models.CharField(max_length=100, blank=True)
+    telephone = models.CharField(max_length=100, blank=True)
+    born_date = models.DateTimeField(
+        blank=False, null=False, default=datetime.now)
 
     company = models.ForeignKey(
         'models.Company', related_name='users',

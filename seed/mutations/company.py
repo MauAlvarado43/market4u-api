@@ -17,11 +17,17 @@ class SaveCompanyMutation(graphene.Mutation):
         name = graphene.String(required=True)
         commonName = graphene.String(required=True)
         rfc = graphene.String(required=True)
-        address = graphene.String(required=True)
+        cp = graphene.Int(required=True)
         phone = graphene.String(required=True)
         email = graphene.String(required=True)
         active = graphene.Boolean(required=True)
         photo = graphene.Int(required=True)
+        municipality = graphene.String(required=True)
+        state = graphene.String(required=True)
+        cologn = graphene.String(required=True)
+        website = graphene.String(required=True)
+        street = graphene.String(required=True)
+        city = graphene.String(required=True)
         pass
         
     # pylint: disable=R0912,W0622
@@ -34,14 +40,26 @@ class SaveCompanyMutation(graphene.Mutation):
             company["common_name"] = kwargs["commonName"]
         if "rfc" in kwargs:
             company["rfc"] = kwargs["rfc"]
-        if "address" in kwargs:
-            company["address"] = kwargs["address"]
+        if "cp" in kwargs:
+            company["cp"] = kwargs["cp"]
         if "phone" in kwargs:
             company["phone"] = kwargs["phone"]
         if "email" in kwargs:
             company["email"] = kwargs["email"]
         if "active" in kwargs:
             company["active"] = kwargs["active"]
+        if "municipality" in kwargs:
+            company["municipality"] = kwargs["municipality"]
+        if "state" in kwargs:
+            company["state"] = kwargs["state"]
+        if "cologn" in kwargs:
+            company["cologn"] = kwargs["cologn"]
+        if "website" in kwargs:
+            company["website"] = kwargs["website"]
+        if "street" in kwargs:
+            company["street"] = kwargs["street"]
+        if "city" in kwargs:
+            company["city"] = kwargs["city"]
         if "photo" in kwargs:
             photo = File.filter_permissions(
                 File.objects,
@@ -64,11 +82,17 @@ class SetCompanyMutation(graphene.Mutation):
         name = graphene.String(required=False)
         commonName = graphene.String(required=False)
         rfc = graphene.String(required=False)
-        address = graphene.String(required=False)
+        cp = graphene.Int(required=False)
         phone = graphene.String(required=False)
         email = graphene.String(required=False)
         active = graphene.Boolean(required=False)
         photo = graphene.Int(required=False)
+        municipality = graphene.String(required=False)
+        state = graphene.String(required=False)
+        cologn = graphene.String(required=False)
+        website = graphene.String(required=False)
+        street = graphene.String(required=False)
+        city = graphene.String(required=False)
         
     # pylint: disable=R0912,W0622
     def mutate(self, info, **kwargs):
@@ -83,14 +107,26 @@ class SetCompanyMutation(graphene.Mutation):
             company.common_name = kwargs["commonName"]
         if "rfc" in kwargs:
             company.rfc = kwargs["rfc"]
-        if "address" in kwargs:
-            company.address = kwargs["address"]
+        if "cp" in kwargs:
+            company.cp = kwargs["cp"]
         if "phone" in kwargs:
             company.phone = kwargs["phone"]
         if "email" in kwargs:
             company.email = kwargs["email"]
         if "active" in kwargs:
             company.active = kwargs["active"]
+        if "municipality" in kwargs:
+            company.municipality = kwargs["municipality"]
+        if "state" in kwargs:
+            company.state = kwargs["state"]
+        if "cologn" in kwargs:
+            company.cologn = kwargs["cologn"]
+        if "website" in kwargs:
+            company.website = kwargs["website"]
+        if "street" in kwargs:
+            company.street = kwargs["street"]
+        if "city" in kwargs:
+            company.city = kwargs["city"]
         if "photo" in kwargs:
             photo = File.objects \
                 .get(pk=kwargs["photo"])

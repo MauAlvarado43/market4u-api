@@ -23,8 +23,16 @@ class SaveUserMutation(graphene.Mutation):
         password = graphene.String(required=True)
         address = graphene.String(required=True)
         active = graphene.Boolean(required=True)
-        type = graphene.String(required=True)
         photo = graphene.Int(required=False)
+        type = graphene.String(required=True)
+        street = graphene.String(required=True)
+        city = graphene.String(required=True)
+        cp = graphene.Int(required=True)
+        municipality = graphene.String(required=True)
+        state = graphene.String(required=True)
+        cologn = graphene.String(required=True)
+        telephone = graphene.String(required=True)
+        bornDate = graphene.DateTime(required=True)
         company = graphene.Int(required=False)
         pass
         
@@ -48,6 +56,22 @@ class SaveUserMutation(graphene.Mutation):
             user["active"] = kwargs["active"]
         if "type" in kwargs:
             user["type"] = kwargs["type"]
+        if "street" in kwargs:
+            user["street"] = kwargs["street"]
+        if "city" in kwargs:
+            user["city"] = kwargs["city"]
+        if "cp" in kwargs:
+            user["cp"] = kwargs["cp"]
+        if "municipality" in kwargs:
+            user["municipality"] = kwargs["municipality"]
+        if "state" in kwargs:
+            user["state"] = kwargs["state"]
+        if "cologn" in kwargs:
+            user["cologn"] = kwargs["cologn"]
+        if "telephone" in kwargs:
+            user["telephone"] = kwargs["telephone"]
+        if "bornDate" in kwargs:
+            user["born_date"] = kwargs["bornDate"]
         if "photo" in kwargs:
             photo = File.filter_permissions(
                 File.objects,
@@ -82,8 +106,16 @@ class SetUserMutation(graphene.Mutation):
         password = graphene.String(required=False)
         address = graphene.String(required=False)
         active = graphene.Boolean(required=False)
-        type = graphene.String(required=False)
         photo = graphene.Int(required=False)
+        type = graphene.String(required=False)
+        street = graphene.String(required=False)
+        city = graphene.String(required=False)
+        cp = graphene.Int(required=False)
+        municipality = graphene.String(required=False)
+        state = graphene.String(required=False)
+        cologn = graphene.String(required=False)
+        telephone = graphene.String(required=False)
+        bornDate = graphene.DateTime(required=False)
         company = graphene.Int(required=False)
         
     # pylint: disable=R0912,W0622
@@ -111,6 +143,22 @@ class SetUserMutation(graphene.Mutation):
             user.active = kwargs["active"]
         if "type" in kwargs:
             user.type = kwargs["type"]
+        if "street" in kwargs:
+            user.street = kwargs["street"]
+        if "city" in kwargs:
+            user.city = kwargs["city"]
+        if "cp" in kwargs:
+            user.cp = kwargs["cp"]
+        if "municipality" in kwargs:
+            user.municipality = kwargs["municipality"]
+        if "state" in kwargs:
+            user.state = kwargs["state"]
+        if "cologn" in kwargs:
+            user.cologn = kwargs["cologn"]
+        if "telephone" in kwargs:
+            user.telephone = kwargs["telephone"]
+        if "bornDate" in kwargs:
+            user.born_date = kwargs["bornDate"]
         if "photo" in kwargs:
             photo = File.objects \
                 .get(pk=kwargs["photo"])

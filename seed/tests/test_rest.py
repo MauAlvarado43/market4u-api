@@ -95,11 +95,17 @@ class TestRest(APITestCase):
             "name": "",
             "common_name": "",
             "rfc": "",
-            "address": "",
+            "cp": 128,
             "phone": "",
             "email": "",
             "active": False,
             "photo_id": 1,
+            "municipality": "",
+            "state": "AGUASCALIENTES",
+            "cologn": "",
+            "website": "",
+            "street": "",
+            "city": "",
         }
         response = self.client.post('/api/companies/', data)
         self.assertEqual(response.status_code, status.HTTP_201_CREATED)
@@ -109,11 +115,17 @@ class TestRest(APITestCase):
             "name": "",
             "common_name": "",
             "rfc": "",
-            "address": "",
+            "cp": 128,
             "phone": "",
             "email": "",
             "active": False,
             "photo_id": 1,
+            "municipality": "",
+            "state": "AGUASCALIENTES",
+            "cologn": "",
+            "website": "",
+            "street": "",
+            "city": "",
         }
         response = self.client.put('/api/companies/1/', data)
         self.assertEqual(response.status_code, status.HTTP_200_OK)
@@ -410,9 +422,17 @@ class TestRest(APITestCase):
             "is_active": False,
             "address": "",
             "active": False,
-            "type": "SUPERADMIN",
             "photo_id": 1,
+            "type": "SUPERADMIN",
             "company_id":  1,
+            "street": "",
+            "city": "",
+            "cp": 128,
+            "municipality": "",
+            "state": "AGUASCALIENTES",
+            "cologn": "",
+            "telephone": "",
+            "born_date": "2020-01-01T12:00:00+00:00",
         }
         response = self.client.post('/api/users/', data)
         self.assertEqual(response.status_code, status.HTTP_201_CREATED)
@@ -427,9 +447,17 @@ class TestRest(APITestCase):
             "is_active": False,
             "address": "",
             "active": False,
-            "type": "SUPERADMIN",
             "photo_id": 1,
+            "type": "SUPERADMIN",
             "company_id":  1,
+            "street": "",
+            "city": "",
+            "cp": 128,
+            "municipality": "",
+            "state": "AGUASCALIENTES",
+            "cologn": "",
+            "telephone": "",
+            "born_date": "2020-01-01T12:00:00+00:00",
         }
         response = self.client.put('/api/users/1/', data)
         self.assertEqual(response.status_code, status.HTTP_200_OK)

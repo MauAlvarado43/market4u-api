@@ -308,10 +308,16 @@ class TestGraphql(GraphQLTestCase):
                     name
                     commonName
                     rfc
-                    address
+                    cp
                     phone
                     email
                     active
+                    municipality
+                    state
+                    cologn
+                    website
+                    street
+                    city
                     photo {
                       id
                     }
@@ -384,10 +390,16 @@ class TestGraphql(GraphQLTestCase):
                     name
                     commonName
                     rfc
-                    address
+                    cp
                     phone
                     email
                     active
+                    municipality
+                    state
+                    cologn
+                    website
+                    street
+                    city
                     photo {
                       id
                     }
@@ -406,21 +418,33 @@ class TestGraphql(GraphQLTestCase):
                     name: "",
                     commonName: "",
                     rfc: "",
-                    address: "",
+                    cp: 128,
                     phone: "",
                     email: "",
                     active: false,
                     photo: 1,
+                    municipality: "",
+                    state: "AGUASCALIENTES",
+                    cologn: "",
+                    website: "",
+                    street: "",
+                    city: "",
                 ) {
                     company {
                         id
                         name
                         commonName
                         rfc
-                        address
+                        cp
                         phone
                         email
                         active
+                        municipality
+                        state
+                        cologn
+                        website
+                        street
+                        city
                         photo {
                           id
                         }
@@ -440,11 +464,17 @@ class TestGraphql(GraphQLTestCase):
                     name: "",
                     commonName: "",
                     rfc: "",
-                    address: "",
+                    cp: 128,
                     phone: "",
                     email: "",
                     active: false,
                     photo: 1,
+                    municipality: "",
+                    state: "AGUASCALIENTES",
+                    cologn: "",
+                    website: "",
+                    street: "",
+                    city: "",
 
                 ) {
                     company {
@@ -452,10 +482,16 @@ class TestGraphql(GraphQLTestCase):
                         name
                         commonName
                         rfc
-                        address
+                        cp
                         phone
                         email
                         active
+                        municipality
+                        state
+                        cologn
+                        website
+                        street
+                        city
                         photo {
                           id
                         }
@@ -1667,6 +1703,14 @@ class TestGraphql(GraphQLTestCase):
                     address
                     active
                     type
+                    street
+                    city
+                    cp
+                    municipality
+                    state
+                    cologn
+                    telephone
+                    bornDate
                     photo {
                       id
                     }
@@ -1747,6 +1791,14 @@ class TestGraphql(GraphQLTestCase):
                     address
                     active
                     type
+                    street
+                    city
+                    cp
+                    municipality
+                    state
+                    cologn
+                    telephone
+                    bornDate
                     photo {
                       id
                     }
@@ -1773,9 +1825,17 @@ class TestGraphql(GraphQLTestCase):
                     isActive: true,
                     address: "",
                     active: false,
-                    type: "SUPERADMIN",
                     photo: 1,
+                    type: "SUPERADMIN",
                     company:  1,
+                    street: "",
+                    city: "",
+                    cp: 128,
+                    municipality: "",
+                    state: "AGUASCALIENTES",
+                    cologn: "",
+                    telephone: "",
+                    bornDate: "2020-01-01T12:00:00+00:00",
                 ) {
                     user {
                         id
@@ -1787,6 +1847,14 @@ class TestGraphql(GraphQLTestCase):
                         address
                         active
                         type
+                        street
+                        city
+                        cp
+                        municipality
+                        state
+                        cologn
+                        telephone
+                        bornDate
                         photo {
                           id
                         }
@@ -1814,9 +1882,17 @@ class TestGraphql(GraphQLTestCase):
                     isActive: true,
                     address: "",
                     active: false,
-                    type: "SUPERADMIN",
                     photo: 1,
+                    type: "SUPERADMIN",
                     company:  1,
+                    street: "",
+                    city: "",
+                    cp: 128,
+                    municipality: "",
+                    state: "AGUASCALIENTES",
+                    cologn: "",
+                    telephone: "",
+                    bornDate: "2020-01-01T12:00:00+00:00",
 
                 ) {
                     user {
@@ -1829,6 +1905,14 @@ class TestGraphql(GraphQLTestCase):
                         address
                         active
                         type
+                        street
+                        city
+                        cp
+                        municipality
+                        state
+                        cologn
+                        telephone
+                        bornDate
                         photo {
                           id
                         }
