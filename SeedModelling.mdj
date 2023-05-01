@@ -273,22 +273,6 @@
 											"subViews": [
 												{
 													"_type": "ERDColumnView",
-													"_id": "AAAAAAGHOCSORL5ZGQ0=",
-													"_parent": {
-														"$ref": "AAAAAAGHMv8X1e1QR7A="
-													},
-													"model": {
-														"$ref": "AAAAAAGHOCSOJL5W65I="
-													},
-													"visible": false,
-													"font": "Arial;13;0",
-													"left": 389,
-													"top": 324,
-													"width": 171.6962890625,
-													"height": 13
-												},
-												{
-													"_type": "ERDColumnView",
 													"_id": "AAAAAAGHMxDoee99C74=",
 													"_parent": {
 														"$ref": "AAAAAAGHMv8X1e1QR7A="
@@ -298,7 +282,7 @@
 													},
 													"font": "Arial;13;0",
 													"left": 397,
-													"top": 350,
+													"top": 348,
 													"width": 171.6962890625,
 													"height": 13
 												},
@@ -313,7 +297,7 @@
 													},
 													"font": "Arial;13;0",
 													"left": 397,
-													"top": 365,
+													"top": 363,
 													"width": 171.6962890625,
 													"height": 13
 												},
@@ -328,7 +312,7 @@
 													},
 													"font": "Arial;13;0",
 													"left": 397,
-													"top": 380,
+													"top": 378,
 													"width": 171.6962890625,
 													"height": 13
 												},
@@ -343,7 +327,7 @@
 													},
 													"font": "Arial;13;0",
 													"left": 397,
-													"top": 395,
+													"top": 393,
 													"width": 171.6962890625,
 													"height": 13
 												},
@@ -358,7 +342,7 @@
 													},
 													"font": "Arial;13;0",
 													"left": 397,
-													"top": 410,
+													"top": 408,
 													"width": 171.6962890625,
 													"height": 13
 												},
@@ -373,7 +357,7 @@
 													},
 													"font": "Arial;13;0",
 													"left": 397,
-													"top": 425,
+													"top": 423,
 													"width": 171.6962890625,
 													"height": 13
 												},
@@ -388,7 +372,7 @@
 													},
 													"font": "Arial;13;0",
 													"left": 397,
-													"top": 440,
+													"top": 438,
 													"width": 171.6962890625,
 													"height": 13
 												},
@@ -403,7 +387,7 @@
 													},
 													"font": "Arial;13;0",
 													"left": 397,
-													"top": 455,
+													"top": 453,
 													"width": 171.6962890625,
 													"height": 13
 												},
@@ -418,7 +402,7 @@
 													},
 													"font": "Arial;13;0",
 													"left": 397,
-													"top": 470,
+													"top": 468,
 													"width": 171.6962890625,
 													"height": 13
 												},
@@ -433,7 +417,7 @@
 													},
 													"font": "Arial;13;0",
 													"left": 397,
-													"top": 485,
+													"top": 483,
 													"width": 171.6962890625,
 													"height": 13
 												},
@@ -464,7 +448,7 @@
 													},
 													"font": "Arial;13;0",
 													"left": 397,
-													"top": 500,
+													"top": 498,
 													"width": 171.6962890625,
 													"height": 13
 												},
@@ -479,7 +463,7 @@
 													},
 													"font": "Arial;13;0",
 													"left": 397,
-													"top": 515,
+													"top": 513,
 													"width": 171.6962890625,
 													"height": 13
 												},
@@ -494,7 +478,7 @@
 													},
 													"font": "Arial;13;0",
 													"left": 397,
-													"top": 530,
+													"top": 528,
 													"width": 171.6962890625,
 													"height": 13
 												},
@@ -509,7 +493,7 @@
 													},
 													"font": "Arial;13;0",
 													"left": 397,
-													"top": 545,
+													"top": 543,
 													"width": 171.6962890625,
 													"height": 13
 												},
@@ -524,22 +508,7 @@
 													},
 													"font": "Arial;13;0",
 													"left": 397,
-													"top": 560,
-													"width": 171.6962890625,
-													"height": 13
-												},
-												{
-													"_type": "ERDColumnView",
-													"_id": "AAAAAAGH0C39s7uWz6M=",
-													"_parent": {
-														"$ref": "AAAAAAGHMv8X1e1QR7A="
-													},
-													"model": {
-														"$ref": "AAAAAAGH0C39pruT/vk="
-													},
-													"font": "Arial;13;0",
-													"left": 397,
-													"top": 575,
+													"top": 558,
 													"width": 171.6962890625,
 													"height": 13
 												}
@@ -548,14 +517,14 @@
 											"left": 392,
 											"top": 343,
 											"width": 181.6962890625,
-											"height": 250
+											"height": 233
 										}
 									],
 									"font": "Arial;13;0",
 									"left": 392,
 									"top": 320,
 									"width": 181.6962890625,
-									"height": 273,
+									"height": 256,
 									"nameLabel": {
 										"$ref": "AAAAAAGHMv8X1e1Pz5c="
 									},
@@ -1935,7 +1904,7 @@
 											"visible": false,
 											"font": "Arial;13;0",
 											"left": 500,
-											"top": 609,
+											"top": 600,
 											"height": 13,
 											"alpha": 1.5707963267948966,
 											"distance": 15,
@@ -1952,7 +1921,7 @@
 											},
 											"font": "Arial;13;0",
 											"left": 501,
-											"top": 611,
+											"top": 594,
 											"height": 13,
 											"alpha": 0.5235987755982988,
 											"distance": 30,
@@ -1986,7 +1955,7 @@
 										"$ref": "AAAAAAGHMv8X1e1OwM4="
 									},
 									"lineStyle": 2,
-									"points": "486:592;486:640",
+									"points": "486:575;486:640",
 									"nameLabel": {
 										"$ref": "AAAAAAGHMwGPt+5ZI24="
 									},
@@ -3619,16 +3588,6 @@
 							"columns": [
 								{
 									"_type": "ERDColumn",
-									"_id": "AAAAAAGHOCSOJL5W65I=",
-									"_parent": {
-										"$ref": "AAAAAAGHMv8X1O1MwbE="
-									},
-									"name": "address",
-									"type": "string",
-									"length": "200"
-								},
-								{
-									"_type": "ERDColumn",
 									"_id": "AAAAAAGHMxDoZu961Wg=",
 									"_parent": {
 										"$ref": "AAAAAAGHMv8X1O1MwbE="
@@ -3717,7 +3676,7 @@
 										"$ref": "AAAAAAGHMv8X1O1MwbE="
 									},
 									"name": "state",
-									"documentation": "options: [AGUASCALIENTES,BAJA CALIFORNIA,BAJA CALIFORNIA SUR,CAMPECHE,COAHUILA,COLIMA, Chiapas,CHIHUAHUA,DURANGO,CIUDAD DE MEXICO, GUANAJUATO,GUERRERO,HIDALGO,JALISCO,MEXICO, MICHOACAN,MORELOS,NAYARIT,NUEVO LEON,OAXACA,PUEBLA,QUERETARO,QUINTANA ROO,SAN LUIS POTOSI,SINALOA,SONORA,TABASCO,TAMAULIPAS,TLAXCALA,VERACRUZ,YUCATAN,ZACATECAS]",
+									"documentation": "options: [NS,AGUASCALIENTES,BAJA CALIFORNIA,BAJA CALIFORNIA SUR,CAMPECHE,COAHUILA,COLIMA, Chiapas,CHIHUAHUA,DURANGO,CIUDAD DE MEXICO, GUANAJUATO,GUERRERO,HIDALGO,JALISCO,MEXICO, MICHOACAN,MORELOS,NAYARIT,NUEVO LEON,OAXACA,PUEBLA,QUERETARO,QUINTANA ROO,SAN LUIS POTOSI,SINALOA,SONORA,TABASCO,TAMAULIPAS,TLAXCALA,VERACRUZ,YUCATAN,ZACATECAS]",
 									"type": "enum",
 									"length": 0
 								},
@@ -3795,16 +3754,6 @@
 									"type": "Shipping[]",
 									"length": 0,
 									"nullable": true
-								},
-								{
-									"_type": "ERDColumn",
-									"_id": "AAAAAAGH0C39pruT/vk=",
-									"_parent": {
-										"$ref": "AAAAAAGHMv8X1O1MwbE="
-									},
-									"name": "born_date",
-									"type": "date",
-									"length": 0
 								}
 							]
 						},
@@ -3953,7 +3902,7 @@
 										"$ref": "AAAAAAGHMv8q7e1Zze0="
 									},
 									"name": "state",
-									"documentation": "options: [AGUASCALIENTES,BAJA CALIFORNIA,BAJA CALIFORNIA SUR,CAMPECHE,COAHUILA,COLIMA, Chiapas,CHIHUAHUA,DURANGO,CIUDAD DE MEXICO, GUANAJUATO,GUERRERO,HIDALGO,JALISCO,MEXICO, MICHOACAN,MORELOS,NAYARIT,NUEVO LEON,OAXACA,PUEBLA,QUERETARO,QUINTANA ROO,SAN LUIS POTOSI,SINALOA,SONORA,TABASCO,TAMAULIPAS,TLAXCALA,VERACRUZ,YUCATAN,ZACATECAS]",
+									"documentation": "options: [NS,AGUASCALIENTES,BAJA CALIFORNIA,BAJA CALIFORNIA SUR,CAMPECHE,COAHUILA,COLIMA, Chiapas,CHIHUAHUA,DURANGO,CIUDAD DE MEXICO, GUANAJUATO,GUERRERO,HIDALGO,JALISCO,MEXICO, MICHOACAN,MORELOS,NAYARIT,NUEVO LEON,OAXACA,PUEBLA,QUERETARO,QUINTANA ROO,SAN LUIS POTOSI,SINALOA,SONORA,TABASCO,TAMAULIPAS,TLAXCALA,VERACRUZ,YUCATAN,ZACATECAS]",
 									"type": "enum",
 									"length": 0
 								},

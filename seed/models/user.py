@@ -4,7 +4,6 @@ __Seed builder__
   Modify via builder
 """
 
-from datetime import datetime
 from django.contrib.auth.models import AbstractUser
 from django.db import models
 from seed.models.model import Model
@@ -18,6 +17,7 @@ class User(AbstractUser, Model):
         ('NORMAL', 'NORMAL'),
     )
     STATES = (
+        ('NS', 'NS'),
         ('AGUASCALIENTES', 'AGUASCALIENTES'),
         ('BAJA CALIFORNIA', 'BAJA CALIFORNIA'),
         ('BAJA CALIFORNIA SUR', 'BAJA CALIFORNIA SUR'),
@@ -52,7 +52,6 @@ class User(AbstractUser, Model):
         ('ZACATECAS', 'ZACATECAS'),
     )
 
-    address = models.CharField(max_length=200, blank=True)
     active = models.BooleanField(
         default=False)
     photo = models.ForeignKey(
@@ -71,8 +70,6 @@ class User(AbstractUser, Model):
         blank=False)
     cologn = models.CharField(max_length=100, blank=True)
     telephone = models.CharField(max_length=100, blank=True)
-    born_date = models.DateTimeField(
-        blank=False, null=False, default=datetime.now)
 
     company = models.ForeignKey(
         'models.Company', related_name='users',

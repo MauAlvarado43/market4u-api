@@ -111,6 +111,7 @@
         {
           "name": "state",
           "options": [
+            "NS",
             "AGUASCALIENTES",
             "BAJA CALIFORNIA",
             "BAJA CALIFORNIA SUR",
@@ -459,11 +460,6 @@
     {
       "attrs": [
         {
-          "length": "200",
-          "name": "address",
-          "type": "string"
-        },
-        {
           "default": "false",
           "name": "active",
           "type": "boolean"
@@ -515,6 +511,7 @@
         {
           "name": "state",
           "options": [
+            "NS",
             "AGUASCALIENTES",
             "BAJA CALIFORNIA",
             "BAJA CALIFORNIA SUR",
@@ -614,11 +611,6 @@
           "name": "shippings",
           "type": "shipping[]",
           "write": false
-        },
-        {
-          "default": "now",
-          "name": "born_date",
-          "type": "date"
         }
       ],
       "name": "user"
