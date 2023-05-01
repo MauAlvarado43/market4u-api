@@ -6,7 +6,9 @@
   },
   "extend": {
     "models": [],
-    "routes": [],
+    "routes": [
+      "product"
+    ],
     "schema_types": [],
     "serializers": []
   },

@@ -29,8 +29,8 @@ def get_payment_viewset():
     return SeedViewSet.PaymentViewSet
 
 def get_product_viewset():
-    import seed.routes.products as SeedViewSet
-    return SeedViewSet.ProductViewSet
+    import routes.products as ExtendViewSet
+    return ExtendViewSet.ProductViewSet
 
 def get_purchase_viewset():
     import seed.routes.purchases as SeedViewSet
