@@ -6,7 +6,9 @@
   },
   "extend": {
     "models": [],
-    "routes": [],
+    "routes": [
+      "user"
+    ],
     "schema_types": [],
     "serializers": []
   },

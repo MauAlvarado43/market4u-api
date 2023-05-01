@@ -24,7 +24,7 @@ class User(AbstractUser, Model):
         ('CAMPECHE', 'CAMPECHE'),
         ('COAHUILA', 'COAHUILA'),
         ('COLIMA', 'COLIMA'),
-        ('CHIAPAS', 'Chiapas'),
+        ('CHIAPAS', 'CHIAPAS'),
         ('CHIHUAHUA', 'CHIHUAHUA'),
         ('DURANGO', 'DURANGO'),
         ('CIUDAD DE MEXICO', 'CIUDAD DE MEXICO'),

@@ -20,7 +20,7 @@
     active: false
     photo: 10000
     type: "SUPERADMIN"
-    company: 0
+    company: null
     street: ""
     city: ""
     cp: 128
