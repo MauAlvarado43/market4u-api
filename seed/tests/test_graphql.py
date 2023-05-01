@@ -424,7 +424,7 @@ class TestGraphql(GraphQLTestCase):
                     active: false,
                     photo: 1,
                     municipality: "",
-                    state: "AGUASCALIENTES",
+                    state: "NS",
                     cologn: "",
                     website: "",
                     street: "",
@@ -470,7 +470,7 @@ class TestGraphql(GraphQLTestCase):
                     active: false,
                     photo: 1,
                     municipality: "",
-                    state: "AGUASCALIENTES",
+                    state: "NS",
                     cologn: "",
                     website: "",
                     street: "",
@@ -1700,7 +1700,6 @@ class TestGraphql(GraphQLTestCase):
                     lastName
                     email
                     isActive
-                    address
                     active
                     type
                     street
@@ -1710,7 +1709,6 @@ class TestGraphql(GraphQLTestCase):
                     state
                     cologn
                     telephone
-                    bornDate
                     photo {
                       id
                     }
@@ -1788,7 +1786,6 @@ class TestGraphql(GraphQLTestCase):
                     lastName
                     email
                     isActive
-                    address
                     active
                     type
                     street
@@ -1798,7 +1795,6 @@ class TestGraphql(GraphQLTestCase):
                     state
                     cologn
                     telephone
-                    bornDate
                     photo {
                       id
                     }
@@ -1823,7 +1819,6 @@ class TestGraphql(GraphQLTestCase):
                     email: "email@test.com",
                     password: "pbkdf2_sha256$150000$jMOqkdOUpor5$kU/QofjBsopM+CdCnU2+pROhtnxd5CZc7NhUiXNTMc0=",
                     isActive: true,
-                    address: "",
                     active: false,
                     photo: 1,
                     type: "SUPERADMIN",
@@ -1832,10 +1827,9 @@ class TestGraphql(GraphQLTestCase):
                     city: "",
                     cp: 128,
                     municipality: "",
-                    state: "AGUASCALIENTES",
+                    state: "NS",
                     cologn: "",
                     telephone: "",
-                    bornDate: "2020-01-01T12:00:00+00:00",
                 ) {
                     user {
                         id
@@ -1844,7 +1838,6 @@ class TestGraphql(GraphQLTestCase):
                         lastName
                         email
                         isActive
-                        address
                         active
                         type
                         street
@@ -1854,7 +1847,6 @@ class TestGraphql(GraphQLTestCase):
                         state
                         cologn
                         telephone
-                        bornDate
                         photo {
                           id
                         }
@@ -1880,7 +1872,6 @@ class TestGraphql(GraphQLTestCase):
                     email: "email_1@test.com",
                     password: "pbkdf2_sha256$150000$jMOqkdOUpor5$kU/QofjBsopM+CdCnU2+pROhtnxd5CZc7NhUiXNTMc0=",
                     isActive: true,
-                    address: "",
                     active: false,
                     photo: 1,
                     type: "SUPERADMIN",
@@ -1889,10 +1880,9 @@ class TestGraphql(GraphQLTestCase):
                     city: "",
                     cp: 128,
                     municipality: "",
-                    state: "AGUASCALIENTES",
+                    state: "NS",
                     cologn: "",
                     telephone: "",
-                    bornDate: "2020-01-01T12:00:00+00:00",
 
                 ) {
                     user {
@@ -1902,7 +1892,6 @@ class TestGraphql(GraphQLTestCase):
                         lastName
                         email
                         isActive
-                        address
                         active
                         type
                         street
@@ -1912,7 +1901,6 @@ class TestGraphql(GraphQLTestCase):
                         state
                         cologn
                         telephone
-                        bornDate
                         photo {
                           id
                         }

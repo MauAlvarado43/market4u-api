@@ -36,7 +36,7 @@
     active: false
     photo: 1
     municipality: ""
-    state: "AGUASCALIENTES"
+    state: "NS"
     cologn: ""
     website: ""
     street: ""
@@ -142,7 +142,6 @@
     is_staff: false
     last_login: "2020-01-01"
     date_joined: "2020-01-01"
-    address: ""
     active: false
     photo: 1
     type: "SUPERADMIN"
@@ -151,10 +150,9 @@
     city: ""
     cp: 128
     municipality: ""
-    state: "AGUASCALIENTES"
+    state: "NS"
     cologn: ""
     telephone: ""
-    born_date: "2020-01-01"
 
 ## VARIANTS
 

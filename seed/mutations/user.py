@@ -21,7 +21,6 @@ class SaveUserMutation(graphene.Mutation):
         email = graphene.String(required=True)
         isActive = graphene.Boolean(required=True)
         password = graphene.String(required=True)
-        address = graphene.String(required=True)
         active = graphene.Boolean(required=True)
         photo = graphene.Int(required=False)
         type = graphene.String(required=True)
@@ -32,7 +31,6 @@ class SaveUserMutation(graphene.Mutation):
         state = graphene.String(required=True)
         cologn = graphene.String(required=True)
         telephone = graphene.String(required=True)
-        bornDate = graphene.DateTime(required=True)
         company = graphene.Int(required=False)
         pass
         
@@ -50,8 +48,6 @@ class SaveUserMutation(graphene.Mutation):
             user["email"] = kwargs["email"]
         if "isActive" in kwargs:
             user["is_active"] = kwargs["isActive"]
-        if "address" in kwargs:
-            user["address"] = kwargs["address"]
         if "active" in kwargs:
             user["active"] = kwargs["active"]
         if "type" in kwargs:
@@ -70,8 +66,6 @@ class SaveUserMutation(graphene.Mutation):
             user["cologn"] = kwargs["cologn"]
         if "telephone" in kwargs:
             user["telephone"] = kwargs["telephone"]
-        if "bornDate" in kwargs:
-            user["born_date"] = kwargs["bornDate"]
         if "photo" in kwargs:
             photo = File.filter_permissions(
                 File.objects,
@@ -104,7 +98,6 @@ class SetUserMutation(graphene.Mutation):
         email = graphene.String(required=False)
         isActive = graphene.Boolean(required=False)
         password = graphene.String(required=False)
-        address = graphene.String(required=False)
         active = graphene.Boolean(required=False)
         photo = graphene.Int(required=False)
         type = graphene.String(required=False)
@@ -115,7 +108,6 @@ class SetUserMutation(graphene.Mutation):
         state = graphene.String(required=False)
         cologn = graphene.String(required=False)
         telephone = graphene.String(required=False)
-        bornDate = graphene.DateTime(required=False)
         company = graphene.Int(required=False)
         
     # pylint: disable=R0912,W0622
@@ -137,8 +129,6 @@ class SetUserMutation(graphene.Mutation):
             user.is_active = kwargs["isActive"]
         if "password" in kwargs:
             user.set_password(kwargs["password"])
-        if "address" in kwargs:
-            user.address = kwargs["address"]
         if "active" in kwargs:
             user.active = kwargs["active"]
         if "type" in kwargs:
@@ -157,8 +147,6 @@ class SetUserMutation(graphene.Mutation):
             user.cologn = kwargs["cologn"]
         if "telephone" in kwargs:
             user.telephone = kwargs["telephone"]
-        if "bornDate" in kwargs:
-            user.born_date = kwargs["bornDate"]
         if "photo" in kwargs:
             photo = File.objects \
                 .get(pk=kwargs["photo"])

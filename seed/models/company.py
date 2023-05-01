@@ -10,6 +10,7 @@ from seed.models.model import Model
 class Company(Model):
     
     STATES = (
+        ('NS', 'NS'),
         ('AGUASCALIENTES', 'AGUASCALIENTES'),
         ('BAJA CALIFORNIA', 'BAJA CALIFORNIA'),
         ('BAJA CALIFORNIA SUR', 'BAJA CALIFORNIA SUR'),

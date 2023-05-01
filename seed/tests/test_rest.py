@@ -101,7 +101,7 @@ class TestRest(APITestCase):
             "active": False,
             "photo_id": 1,
             "municipality": "",
-            "state": "AGUASCALIENTES",
+            "state": "NS",
             "cologn": "",
             "website": "",
             "street": "",
@@ -121,7 +121,7 @@ class TestRest(APITestCase):
             "active": False,
             "photo_id": 1,
             "municipality": "",
-            "state": "AGUASCALIENTES",
+            "state": "NS",
             "cologn": "",
             "website": "",
             "street": "",
@@ -420,7 +420,6 @@ class TestRest(APITestCase):
             "email": "email_1@test.com",
             "password": "pbkdf2_sha256$150000$jMOqkdOUpor5$kU/QofjBsopM+CdCnU2+pROhtnxd5CZc7NhUiXNTMc0=",
             "is_active": False,
-            "address": "",
             "active": False,
             "photo_id": 1,
             "type": "SUPERADMIN",
@@ -429,10 +428,9 @@ class TestRest(APITestCase):
             "city": "",
             "cp": 128,
             "municipality": "",
-            "state": "AGUASCALIENTES",
+            "state": "NS",
             "cologn": "",
             "telephone": "",
-            "born_date": "2020-01-01T12:00:00+00:00",
         }
         response = self.client.post('/api/users/', data)
         self.assertEqual(response.status_code, status.HTTP_201_CREATED)
@@ -445,7 +443,6 @@ class TestRest(APITestCase):
             "email": "email_1@test.com",
             "password": "pbkdf2_sha256$150000$jMOqkdOUpor5$kU/QofjBsopM+CdCnU2+pROhtnxd5CZc7NhUiXNTMc0=",
             "is_active": False,
-            "address": "",
             "active": False,
             "photo_id": 1,
             "type": "SUPERADMIN",
@@ -454,10 +451,9 @@ class TestRest(APITestCase):
             "city": "",
             "cp": 128,
             "municipality": "",
-            "state": "AGUASCALIENTES",
+            "state": "NS",
             "cologn": "",
             "telephone": "",
-            "born_date": "2020-01-01T12:00:00+00:00",
         }
         response = self.client.put('/api/users/1/', data)
         self.assertEqual(response.status_code, status.HTTP_200_OK)
