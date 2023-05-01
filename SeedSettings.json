@@ -7,7 +7,11 @@
   "extend": {
     "models": [],
     "routes": [
+<<<<<<< HEAD
       "user"
+=======
+      "product"
+>>>>>>> 63d8f3cbf6c5eec491bb717e2ab0ddcb895e0bac
     ],
     "schema_types": [],
     "serializers": []
