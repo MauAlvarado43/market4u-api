@@ -69,6 +69,7 @@
     type: "DEBIT|CREDIT|"
     user: 0
     address: ""
+    bank: ""
 
 ## PRODUCTS
 

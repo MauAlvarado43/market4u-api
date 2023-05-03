@@ -24,5 +24,6 @@ class PaymentSerializer(serializers.ModelSerializer):
             'expire_date',
             'type',
             'address',
+            'bank',
             'user_id',  
         )

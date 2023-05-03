@@ -75,6 +75,7 @@
     type: "DEBIT"
     user: 1
     address: ""
+    bank: ""
 
 ## PRODUCTS
 

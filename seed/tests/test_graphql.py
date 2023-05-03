@@ -850,6 +850,7 @@ class TestGraphql(GraphQLTestCase):
                     expireDate
                     type
                     address
+                    bank
                     user {
                       id
                     }
@@ -923,6 +924,7 @@ class TestGraphql(GraphQLTestCase):
                     expireDate
                     type
                     address
+                    bank
                     user {
                       id
                     }
@@ -943,6 +945,7 @@ class TestGraphql(GraphQLTestCase):
                     type: "DEBIT",
                     user:  1,
                     address: "",
+                    bank: "",
                 ) {
                     payment {
                         id
@@ -950,6 +953,7 @@ class TestGraphql(GraphQLTestCase):
                         expireDate
                         type
                         address
+                        bank
                         user {
                           id
                         }
@@ -971,6 +975,7 @@ class TestGraphql(GraphQLTestCase):
                     type: "DEBIT",
                     user:  1,
                     address: "",
+                    bank: "",
 
                 ) {
                     payment {
@@ -979,6 +984,7 @@ class TestGraphql(GraphQLTestCase):
                         expireDate
                         type
                         address
+                        bank
                         user {
                           id
                         }

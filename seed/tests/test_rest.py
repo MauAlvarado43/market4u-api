@@ -225,6 +225,7 @@ class TestRest(APITestCase):
             "type": "DEBIT",
             "user_id":  1,
             "address": "",
+            "bank": "",
         }
         response = self.client.post('/api/payments/', data)
         self.assertEqual(response.status_code, status.HTTP_201_CREATED)
@@ -236,6 +237,7 @@ class TestRest(APITestCase):
             "type": "DEBIT",
             "user_id":  1,
             "address": "",
+            "bank": "",
         }
         response = self.client.put('/api/payments/1/', data)
         self.assertEqual(response.status_code, status.HTTP_200_OK)

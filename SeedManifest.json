@@ -266,6 +266,11 @@
           "length": "200",
           "name": "address",
           "type": "string"
+        },
+        {
+          "length": "100",
+          "name": "bank",
+          "type": "string"
         }
       ],
       "name": "payment"

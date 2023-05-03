@@ -6,13 +6,7 @@
   },
   "extend": {
     "models": [],
-    "routes": [
-<<<<<<< HEAD
-      "user"
-=======
-      "product"
->>>>>>> 63d8f3cbf6c5eec491bb717e2ab0ddcb895e0bac
-    ],
+    "routes": [],
     "schema_types": [],
     "serializers": []
   },
@@ -24,5 +18,5 @@
   "last_build_version": "0.6.2",
   "platform": "django",
   "project_description": "This repository holds the source code of Market4U",
-  "project_name": "Market4U"
+  "project_name": "Market4u"
 }

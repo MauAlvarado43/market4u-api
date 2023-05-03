@@ -131,6 +131,7 @@ class Admin:
                     'expire_date',
                     'type',
                     'address',
+                    'bank',
                     'user',
                 )
         

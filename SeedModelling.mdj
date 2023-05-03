@@ -1459,20 +1459,35 @@
 													"top": 728,
 													"width": 168.82080078125,
 													"height": 13
+												},
+												{
+													"_type": "ERDColumnView",
+													"_id": "AAAAAAGH3nQhNeW70/k=",
+													"_parent": {
+														"$ref": "AAAAAAGHMv+ZXe2eQoY="
+													},
+													"model": {
+														"$ref": "AAAAAAGH3nQhHOW4NzE="
+													},
+													"font": "Arial;13;0",
+													"left": 405,
+													"top": 743,
+													"width": 168.82080078125,
+													"height": 13
 												}
 											],
 											"font": "Arial;13;0",
 											"left": 400,
 											"top": 663,
 											"width": 178.82080078125,
-											"height": 83
+											"height": 98
 										}
 									],
 									"font": "Arial;13;0",
 									"left": 400,
 									"top": 640,
 									"width": 178.82080078125,
-									"height": 106,
+									"height": 121,
 									"nameLabel": {
 										"$ref": "AAAAAAGHMv+ZXe2dyEY="
 									},
@@ -4416,6 +4431,16 @@
 									"name": "address",
 									"type": "string",
 									"length": "200"
+								},
+								{
+									"_type": "ERDColumn",
+									"_id": "AAAAAAGH3nQhHOW4NzE=",
+									"_parent": {
+										"$ref": "AAAAAAGHMv+ZXO2aW8c="
+									},
+									"name": "bank",
+									"type": "string",
+									"length": "100"
 								}
 							]
 						},
