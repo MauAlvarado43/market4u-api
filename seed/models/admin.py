@@ -222,7 +222,7 @@ class Admin:
                     'type',
                     'photo',
                     'token',
-                    'code',
+                    'token_verified',
                     'photo',
                     'company',
                     'carts',

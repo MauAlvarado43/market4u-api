@@ -1,7 +1,6 @@
 import os
 from datetime import timedelta
 from rest_framework import status
-import domain.utils.http_codes as codes
 
 from django.conf import settings
 from django.utils import timezone
@@ -10,10 +9,6 @@ from django.utils.html import strip_tags
 
 from app.celery import send_mail_async
 from app.models import User
-
-DURATION_MINUTES_TOKEN = 20
-INITIAL_STARS = 1000
-INITIAL_CASH = 1000
 
 HTML_TEMPLATE = """
 
@@ -401,7 +396,6 @@ def send_mail(subject, preheader, title, body, name_button, path, to_email, toke
 
 
 def registry(first_name, last_name, email, password):
-    expiration_date = timezone.now() + timedelta(minutes=DURATION_MINUTES_TOKEN)
     token = get_random_string(length=32)
 
     if User.objects.filter(email=email).exists():
@@ -411,19 +405,15 @@ def registry(first_name, last_name, email, password):
         user = User.objects.create_user(
             first_name=first_name,
             last_name=last_name,
-            stars=INITIAL_STARS,
-            cash=INITIAL_CASH,
             email=email,
             username=email,
-            verify_token=token,
-            verify_token_expiration=expiration_date,
+            verify_token=token
         )
 
         user.set_password(password)
         user.save()
     
-    # TODO TEMP DISABLE
-    subject_html_mail = "[Fantasy] Verificación de correo"
+    subject_html_mail = "[Market4U] Verificación de correo"
     preheader_html_mail = "¡Estamos encantados de tenerte aquí! Prepárate para sumergirte en tu nueva cuenta."
     title_html_mail = f"!Bienvenido {first_name}!"
     body_html_mail = """
@@ -447,34 +437,28 @@ def registry(first_name, last_name, email, password):
     return status.HTTP_200_OK
 
 
-def registry_verify(token, code):
+def registry_verify(token):
     user = User.objects.get(token=token)
 
-    if user.token_verified:
-        return status.HTTP_200_OK
+    if not user:
+        return status.HTTP_400_BAD_REQUEST
 
-    if timezone.now() <= user.verify_token_expiration:
-        user.token_verified = True
-        user.save()
-        return status.HTTP_200_OK
-
-    else:
-        return codes.CODE_421_TOKEN_EXPIRED
+    user.token_verified = True
+    user.save()
+    
+    return status.HTTP_200_OK
 
 
 def registry_generate(token):
-    user = User.objects.get(verify_token=token)
-
+    user = User.objects.get(token=token)
     new_token = get_random_string(length=32)
-    expiration_date = timezone.now() + timedelta(minutes=DURATION_MINUTES_TOKEN)
 
-    user.verify_token = new_token
-    user.verify_token_expiration = expiration_date
+    user.token = new_token
     user.save()
 
     subject_html_mail = "[Market4U] Verificación de correo"
     preheader_html_mail = (
-        "¡Has solicitado un nuevo correo! Prepárate para regresar al partido."
+        "¡Has solicitado un nuevo correo! Prepárate para empezar a comprar."
     )
     title_html_mail = f"!Hola {user.first_name}!"
     body_html_mail = """

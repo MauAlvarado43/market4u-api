@@ -14,6 +14,9 @@ from django.shortcuts import get_object_or_404
 from seed.util.request_util import has_fields_or_400
 from app.models import User
 from app.serializers import UserSerializer
+from domain.create_user import registry, registry_verify, registry_generate
+from domain.utils import http_codes
+from domain.recover_password import send_token_password, restore_password
 
 
 class UserViewSet(SeedRoute.UserViewSet):
@@ -27,6 +30,7 @@ class UserViewSet(SeedRoute.UserViewSet):
         password = data["password"]
 
         user = authenticate(username=email, password=password)
+        company = user.company
 
         try:
             token = Token.objects.get(user=user)
@@ -34,8 +38,14 @@ class UserViewSet(SeedRoute.UserViewSet):
             print(error)
             token = Token.objects.create(user=user)
 
+        if user.token_verified:
+            return Response(status=status.HTTP_200_OK, 
+            data={"key": token.key, "user": user.id, "company": None if company is None else company.id})
+
+        return Response(status=http_codes.CODE_420_TOKEN_NOT_VERIFIED)
+
     @action(detail=False, methods=["POST"])
-    def registry(self, request):
+    def signup(self, request):
         data = request.data
         has_fields_or_400(data, "first_name", "last_name", "email", "password")
 
@@ -50,14 +60,22 @@ class UserViewSet(SeedRoute.UserViewSet):
     @action(detail=False, methods=["POST"])
     def registry_verify(self, request):
         data = request.data
-        has_fields_or_400(data, "token", "code")
+        has_fields_or_400(data, "token")
 
         token = data["token"]
-        code = data["code"]
 
         http_code = registry_verify(token)
         return Response(status=http_code)
-    
+
+    @action(detail=False, methods=["POST"])
+    def registry_generate(self, request):
+        data = request.data
+        has_fields_or_400(data, "token")
+
+        token = data["token"]
+        code = registry_generate(token)
+        return Response(status=code)
+
     @action(detail=False, methods=["POST"])
     def recover_password(self, request):
         data = request.data

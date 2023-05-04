@@ -1668,7 +1668,7 @@ class TestGraphql(GraphQLTestCase):
                     active
                     type
                     token
-                    code
+                    tokenVerified
                     photo {
                       id
                     }
@@ -1750,7 +1750,7 @@ class TestGraphql(GraphQLTestCase):
                     active
                     type
                     token
-                    code
+                    tokenVerified
                     photo {
                       id
                     }
@@ -1781,7 +1781,7 @@ class TestGraphql(GraphQLTestCase):
                     photo: 1,
                     company:  1,
                     token: "",
-                    code: "",
+                    tokenVerified: false,
                 ) {
                     user {
                         id
@@ -1794,7 +1794,7 @@ class TestGraphql(GraphQLTestCase):
                         active
                         type
                         token
-                        code
+                        tokenVerified
                         photo {
                           id
                         }
@@ -1826,7 +1826,7 @@ class TestGraphql(GraphQLTestCase):
                     photo: 1,
                     company:  1,
                     token: "",
-                    code: "",
+                    tokenVerified: false,
 
                 ) {
                     user {
@@ -1840,7 +1840,7 @@ class TestGraphql(GraphQLTestCase):
                         active
                         type
                         token
-                        code
+                        tokenVerified
                         photo {
                           id
                         }

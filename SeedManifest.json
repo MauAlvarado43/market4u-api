@@ -489,9 +489,9 @@
           "type": "string"
         },
         {
-          "length": "10",
-          "name": "code",
-          "type": "string"
+          "default": "false",
+          "name": "token_verified",
+          "type": "boolean"
         }
       ],
       "name": "user"

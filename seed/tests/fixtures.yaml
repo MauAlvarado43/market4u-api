@@ -142,7 +142,7 @@
     photo: 1
     company: 1
     token: ""
-    code: ""
+    token_verified: false
 
 ## VARIANTS
 

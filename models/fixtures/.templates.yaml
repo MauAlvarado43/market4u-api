@@ -129,7 +129,7 @@
     photo: 0
     company: 0
     token: ""
-    code: ""
+    token_verified: false
 
 ## VARIANTS
 

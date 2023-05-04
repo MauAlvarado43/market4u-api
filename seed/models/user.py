@@ -27,7 +27,8 @@ class User(AbstractUser, Model):
         'models.File', related_name='user_photos',
         blank=False, null=False, on_delete=models.PROTECT)
     token = models.CharField(max_length=40, blank=True)
-    code = models.CharField(max_length=10, blank=True)
+    token_verified = models.BooleanField(
+        default=False)
 
     company = models.ForeignKey(
         'models.Company', related_name='users',
