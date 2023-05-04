@@ -134,6 +134,9 @@
     photo: 0
     type: "SUPERADMIN|ADMIN|SELLER|NORMAL|"
     company: 0
+    token: ""
+    token_verified: false
+    code: 0
     street: ""
     city: ""
     cp: 0

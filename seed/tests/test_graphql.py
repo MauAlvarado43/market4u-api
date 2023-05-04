@@ -1708,6 +1708,9 @@ class TestGraphql(GraphQLTestCase):
                     isActive
                     active
                     type
+                    token
+                    tokenVerified
+                    code
                     street
                     city
                     cp
@@ -1794,6 +1797,9 @@ class TestGraphql(GraphQLTestCase):
                     isActive
                     active
                     type
+                    token
+                    tokenVerified
+                    code
                     street
                     city
                     cp
@@ -1829,6 +1835,9 @@ class TestGraphql(GraphQLTestCase):
                     photo: 1,
                     type: "SUPERADMIN",
                     company:  1,
+                    token: "",
+                    tokenVerified: false,
+                    code: 128,
                     street: "",
                     city: "",
                     cp: 128,
@@ -1846,6 +1855,9 @@ class TestGraphql(GraphQLTestCase):
                         isActive
                         active
                         type
+                        token
+                        tokenVerified
+                        code
                         street
                         city
                         cp
@@ -1882,6 +1894,9 @@ class TestGraphql(GraphQLTestCase):
                     photo: 1,
                     type: "SUPERADMIN",
                     company:  1,
+                    token: "",
+                    tokenVerified: false,
+                    code: 128,
                     street: "",
                     city: "",
                     cp: 128,
@@ -1900,6 +1915,9 @@ class TestGraphql(GraphQLTestCase):
                         isActive
                         active
                         type
+                        token
+                        tokenVerified
+                        code
                         street
                         city
                         cp

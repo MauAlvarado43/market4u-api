@@ -616,6 +616,21 @@
           "name": "shippings",
           "type": "shipping[]",
           "write": false
+        },
+        {
+          "length": "40",
+          "name": "token",
+          "type": "string"
+        },
+        {
+          "default": "false",
+          "name": "token_verified",
+          "type": "boolean"
+        },
+        {
+          "empty": true,
+          "name": "code",
+          "type": "int"
         }
       ],
       "name": "user"

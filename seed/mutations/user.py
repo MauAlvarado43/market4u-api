@@ -24,6 +24,9 @@ class SaveUserMutation(graphene.Mutation):
         active = graphene.Boolean(required=True)
         photo = graphene.Int(required=False)
         type = graphene.String(required=True)
+        token = graphene.String(required=True)
+        tokenVerified = graphene.Boolean(required=True)
+        code = graphene.Int(required=False)
         street = graphene.String(required=True)
         city = graphene.String(required=True)
         cp = graphene.Int(required=True)
@@ -52,6 +55,12 @@ class SaveUserMutation(graphene.Mutation):
             user["active"] = kwargs["active"]
         if "type" in kwargs:
             user["type"] = kwargs["type"]
+        if "token" in kwargs:
+            user["token"] = kwargs["token"]
+        if "tokenVerified" in kwargs:
+            user["token_verified"] = kwargs["tokenVerified"]
+        if "code" in kwargs:
+            user["code"] = kwargs["code"]
         if "street" in kwargs:
             user["street"] = kwargs["street"]
         if "city" in kwargs:
@@ -100,6 +109,9 @@ class SetUserMutation(graphene.Mutation):
         password = graphene.String(required=False)
         active = graphene.Boolean(required=False)
         photo = graphene.Int(required=False)
+        token = graphene.String(required=False)
+        tokenVerified = graphene.Boolean(required=False)
+        code = graphene.Int(required=False)
         type = graphene.String(required=False)
         street = graphene.String(required=False)
         city = graphene.String(required=False)
@@ -133,6 +145,12 @@ class SetUserMutation(graphene.Mutation):
             user.active = kwargs["active"]
         if "type" in kwargs:
             user.type = kwargs["type"]
+        if "token" in kwargs:
+            user.token = kwargs["token"]
+        if "tokenVerified" in kwargs:
+            user.token_verified = kwargs["tokenVerified"]
+        if "code" in kwargs:
+            user.code = kwargs["code"]
         if "street" in kwargs:
             user.street = kwargs["street"]
         if "city" in kwargs:

@@ -6,7 +6,10 @@
   },
   "extend": {
     "models": [],
-    "routes": [],
+    "routes": [
+      "company",
+      "user"
+    ],
     "schema_types": [],
     "serializers": []
   },

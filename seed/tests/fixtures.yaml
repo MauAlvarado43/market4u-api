@@ -147,6 +147,9 @@
     photo: 1
     type: "SUPERADMIN"
     company: 1
+    token: ""
+    token_verified: false
+    code: 128
     street: ""
     city: ""
     cp: 128

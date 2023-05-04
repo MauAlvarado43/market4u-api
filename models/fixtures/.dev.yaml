@@ -19,6 +19,9 @@
     is_staff: true
     active: false
     photo: 10000
+    token: ""
+    token_verified: false
+    code: 128
     type: "SUPERADMIN"
     company: null
     street: ""
