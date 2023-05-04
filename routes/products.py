@@ -16,7 +16,7 @@ from domain.save_variants import save_variants
 
 class ProductViewSet(SeedRoute.ProductViewSet):
     
-    @action(methods = ['POST'], detail = False)
+    @action(detail = False, methods = ['POST'])
     def create_product(self, request):
         
         has_fields_or_400(request.data, 'user', 'name', 'short_description', 'description', 'category')

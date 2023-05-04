@@ -19,11 +19,8 @@
     is_staff: true
     active: false
     photo: 10000
-    token: ""
-    token_verified: false
-    code: 128
     type: "SUPERADMIN"
-    company: null
+    company: 0
     street: ""
     city: ""
     cp: 128
@@ -31,6 +28,9 @@
     state: "NS"
     cologn: ""
     telephone: ""
+    token: ""
+    token_verified: false
+    code: 128
 
 ## FILES
 

@@ -749,8 +749,7 @@ def registry(first_name, last_name, email, password):
         title_html_mail,
         body_html_mail,
         verification_code,
-        email,
-        token,
+        email
     )
     
     return {"status": status.HTTP_200_OK, "token": token}

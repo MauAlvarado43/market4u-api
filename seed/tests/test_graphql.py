@@ -1708,9 +1708,6 @@ class TestGraphql(GraphQLTestCase):
                     isActive
                     active
                     type
-                    token
-                    tokenVerified
-                    code
                     street
                     city
                     cp
@@ -1718,6 +1715,9 @@ class TestGraphql(GraphQLTestCase):
                     state
                     cologn
                     telephone
+                    token
+                    tokenVerified
+                    code
                     photo {
                       id
                     }
@@ -1797,9 +1797,6 @@ class TestGraphql(GraphQLTestCase):
                     isActive
                     active
                     type
-                    token
-                    tokenVerified
-                    code
                     street
                     city
                     cp
@@ -1807,6 +1804,9 @@ class TestGraphql(GraphQLTestCase):
                     state
                     cologn
                     telephone
+                    token
+                    tokenVerified
+                    code
                     photo {
                       id
                     }
@@ -1835,9 +1835,6 @@ class TestGraphql(GraphQLTestCase):
                     photo: 1,
                     type: "SUPERADMIN",
                     company:  1,
-                    token: "",
-                    tokenVerified: false,
-                    code: 128,
                     street: "",
                     city: "",
                     cp: 128,
@@ -1845,6 +1842,9 @@ class TestGraphql(GraphQLTestCase):
                     state: "NS",
                     cologn: "",
                     telephone: "",
+                    token: "",
+                    tokenVerified: false,
+                    code: 128,
                 ) {
                     user {
                         id
@@ -1855,9 +1855,6 @@ class TestGraphql(GraphQLTestCase):
                         isActive
                         active
                         type
-                        token
-                        tokenVerified
-                        code
                         street
                         city
                         cp
@@ -1865,6 +1862,9 @@ class TestGraphql(GraphQLTestCase):
                         state
                         cologn
                         telephone
+                        token
+                        tokenVerified
+                        code
                         photo {
                           id
                         }
@@ -1894,9 +1894,6 @@ class TestGraphql(GraphQLTestCase):
                     photo: 1,
                     type: "SUPERADMIN",
                     company:  1,
-                    token: "",
-                    tokenVerified: false,
-                    code: 128,
                     street: "",
                     city: "",
                     cp: 128,
@@ -1904,6 +1901,9 @@ class TestGraphql(GraphQLTestCase):
                     state: "NS",
                     cologn: "",
                     telephone: "",
+                    token: "",
+                    tokenVerified: false,
+                    code: 128,
 
                 ) {
                     user {
@@ -1915,9 +1915,6 @@ class TestGraphql(GraphQLTestCase):
                         isActive
                         active
                         type
-                        token
-                        tokenVerified
-                        code
                         street
                         city
                         cp
@@ -1925,6 +1922,9 @@ class TestGraphql(GraphQLTestCase):
                         state
                         cologn
                         telephone
+                        token
+                        tokenVerified
+                        code
                         photo {
                           id
                         }

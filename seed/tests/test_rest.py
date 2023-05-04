@@ -426,9 +426,6 @@ class TestRest(APITestCase):
             "photo_id": 1,
             "type": "SUPERADMIN",
             "company_id":  1,
-            "token": "",
-            "token_verified": False,
-            "code": 128,
             "street": "",
             "city": "",
             "cp": 128,
@@ -436,6 +433,9 @@ class TestRest(APITestCase):
             "state": "NS",
             "cologn": "",
             "telephone": "",
+            "token": "",
+            "token_verified": False,
+            "code": 128,
         }
         response = self.client.post('/api/users/', data)
         self.assertEqual(response.status_code, status.HTTP_201_CREATED)
@@ -452,9 +452,6 @@ class TestRest(APITestCase):
             "photo_id": 1,
             "type": "SUPERADMIN",
             "company_id":  1,
-            "token": "",
-            "token_verified": False,
-            "code": 128,
             "street": "",
             "city": "",
             "cp": 128,
@@ -462,6 +459,9 @@ class TestRest(APITestCase):
             "state": "NS",
             "cologn": "",
             "telephone": "",
+            "token": "",
+            "token_verified": False,
+            "code": 128,
         }
         response = self.client.put('/api/users/1/', data)
         self.assertEqual(response.status_code, status.HTTP_200_OK)

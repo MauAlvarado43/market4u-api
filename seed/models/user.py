@@ -54,17 +54,12 @@ class User(AbstractUser, Model):
 
     active = models.BooleanField(
         default=False)
+    photo = models.ForeignKey(
+        'models.File', related_name='user_photos',
+        blank=True, null=True, on_delete=models.PROTECT)
     type = models.CharField(
         max_length=64, choices=TYPES,
         blank=False)
-    photo = models.ForeignKey(
-        'models.File', related_name='user_photos',
-        blank=False, null=False, on_delete=models.PROTECT)
-    token = models.CharField(max_length=40, blank=True)
-    token_verified = models.BooleanField(
-        default=False)
-    code = models.IntegerField(
-        default=0)
     street = models.CharField(max_length=100, blank=True)
     city = models.CharField(max_length=100, blank=True)
     cp = models.IntegerField(
@@ -75,6 +70,11 @@ class User(AbstractUser, Model):
         blank=False)
     cologn = models.CharField(max_length=100, blank=True)
     telephone = models.CharField(max_length=100, blank=True)
+    token = models.CharField(max_length=40, blank=True)
+    token_verified = models.BooleanField(
+        default=False)
+    code = models.IntegerField(
+        default=0)
 
     company = models.ForeignKey(
         'models.Company', related_name='users',

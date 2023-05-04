@@ -8,6 +8,7 @@
     "models": [],
     "routes": [
       "company",
+      "product",
       "user"
     ],
     "schema_types": [],

@@ -24,9 +24,6 @@ class SaveUserMutation(graphene.Mutation):
         active = graphene.Boolean(required=True)
         photo = graphene.Int(required=False)
         type = graphene.String(required=True)
-        token = graphene.String(required=True)
-        tokenVerified = graphene.Boolean(required=True)
-        code = graphene.Int(required=False)
         street = graphene.String(required=True)
         city = graphene.String(required=True)
         cp = graphene.Int(required=True)
@@ -34,6 +31,9 @@ class SaveUserMutation(graphene.Mutation):
         state = graphene.String(required=True)
         cologn = graphene.String(required=True)
         telephone = graphene.String(required=True)
+        token = graphene.String(required=True)
+        tokenVerified = graphene.Boolean(required=True)
+        code = graphene.Int(required=True)
         company = graphene.Int(required=False)
         pass
         
@@ -55,12 +55,6 @@ class SaveUserMutation(graphene.Mutation):
             user["active"] = kwargs["active"]
         if "type" in kwargs:
             user["type"] = kwargs["type"]
-        if "token" in kwargs:
-            user["token"] = kwargs["token"]
-        if "tokenVerified" in kwargs:
-            user["token_verified"] = kwargs["tokenVerified"]
-        if "code" in kwargs:
-            user["code"] = kwargs["code"]
         if "street" in kwargs:
             user["street"] = kwargs["street"]
         if "city" in kwargs:
@@ -75,6 +69,12 @@ class SaveUserMutation(graphene.Mutation):
             user["cologn"] = kwargs["cologn"]
         if "telephone" in kwargs:
             user["telephone"] = kwargs["telephone"]
+        if "token" in kwargs:
+            user["token"] = kwargs["token"]
+        if "tokenVerified" in kwargs:
+            user["token_verified"] = kwargs["tokenVerified"]
+        if "code" in kwargs:
+            user["code"] = kwargs["code"]
         if "photo" in kwargs:
             photo = File.filter_permissions(
                 File.objects,
@@ -109,9 +109,6 @@ class SetUserMutation(graphene.Mutation):
         password = graphene.String(required=False)
         active = graphene.Boolean(required=False)
         photo = graphene.Int(required=False)
-        token = graphene.String(required=False)
-        tokenVerified = graphene.Boolean(required=False)
-        code = graphene.Int(required=False)
         type = graphene.String(required=False)
         street = graphene.String(required=False)
         city = graphene.String(required=False)
@@ -120,6 +117,9 @@ class SetUserMutation(graphene.Mutation):
         state = graphene.String(required=False)
         cologn = graphene.String(required=False)
         telephone = graphene.String(required=False)
+        token = graphene.String(required=False)
+        tokenVerified = graphene.Boolean(required=False)
+        code = graphene.Int(required=False)
         company = graphene.Int(required=False)
         
     # pylint: disable=R0912,W0622
@@ -145,12 +145,6 @@ class SetUserMutation(graphene.Mutation):
             user.active = kwargs["active"]
         if "type" in kwargs:
             user.type = kwargs["type"]
-        if "token" in kwargs:
-            user.token = kwargs["token"]
-        if "tokenVerified" in kwargs:
-            user.token_verified = kwargs["tokenVerified"]
-        if "code" in kwargs:
-            user.code = kwargs["code"]
         if "street" in kwargs:
             user.street = kwargs["street"]
         if "city" in kwargs:
@@ -165,6 +159,12 @@ class SetUserMutation(graphene.Mutation):
             user.cologn = kwargs["cologn"]
         if "telephone" in kwargs:
             user.telephone = kwargs["telephone"]
+        if "token" in kwargs:
+            user.token = kwargs["token"]
+        if "tokenVerified" in kwargs:
+            user.token_verified = kwargs["tokenVerified"]
+        if "code" in kwargs:
+            user.code = kwargs["code"]
         if "photo" in kwargs:
             photo = File.objects \
                 .get(pk=kwargs["photo"])
