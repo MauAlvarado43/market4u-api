@@ -143,6 +143,7 @@
     company: 1
     token: ""
     token_verified: false
+    code: 128
 
 ## VARIANTS
 

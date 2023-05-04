@@ -45,8 +45,8 @@ def get_shipping_viewset():
     return SeedViewSet.ShippingViewSet
 
 def get_user_viewset():
-    import seed.routes.users as SeedViewSet
-    return SeedViewSet.UserViewSet
+    import routes.users as ExtendViewSet
+    return ExtendViewSet.UserViewSet
 
 def get_variant_viewset():
     import seed.routes.variants as SeedViewSet

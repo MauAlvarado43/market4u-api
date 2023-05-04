@@ -29,6 +29,8 @@ class User(AbstractUser, Model):
     token = models.CharField(max_length=40, blank=True)
     token_verified = models.BooleanField(
         default=False)
+    code = models.IntegerField(
+        default=0)
 
     company = models.ForeignKey(
         'models.Company', related_name='users',

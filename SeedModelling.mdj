@@ -450,20 +450,35 @@
 													"top": 537,
 													"width": 183.99169921875,
 													"height": 13
+												},
+												{
+													"_type": "ERDColumnView",
+													"_id": "AAAAAAGH5LVz6eJOJSg=",
+													"_parent": {
+														"$ref": "AAAAAAGHMv8X1e1QR7A="
+													},
+													"model": {
+														"$ref": "AAAAAAGH5LVz2+JLROU="
+													},
+													"font": "Arial;13;0",
+													"left": 397,
+													"top": 552,
+													"width": 183.99169921875,
+													"height": 13
 												}
 											],
 											"font": "Arial;13;0",
 											"left": 392,
 											"top": 367,
 											"width": 193.99169921875,
-											"height": 188
+											"height": 203
 										}
 									],
 									"font": "Arial;13;0",
 									"left": 392,
 									"top": 344,
 									"width": 193.99169921875,
-									"height": 211,
+									"height": 226,
 									"nameLabel": {
 										"$ref": "AAAAAAGHMv8X1e1Pz5c="
 									},
@@ -1753,7 +1768,7 @@
 											"visible": false,
 											"font": "Arial;13;0",
 											"left": 500,
-											"top": 590,
+											"top": 597,
 											"height": 13,
 											"alpha": 1.5707963267948966,
 											"distance": 15,
@@ -1770,7 +1785,7 @@
 											},
 											"font": "Arial;13;0",
 											"left": 501,
-											"top": 573,
+											"top": 588,
 											"height": 13,
 											"alpha": 0.5235987755982988,
 											"distance": 30,
@@ -1804,7 +1819,7 @@
 										"$ref": "AAAAAAGHMv8X1e1OwM4="
 									},
 									"lineStyle": 2,
-									"points": "486:554;486:640",
+									"points": "486:569;486:640",
 									"nameLabel": {
 										"$ref": "AAAAAAGHMwGPt+5ZI24="
 									},
@@ -3561,6 +3576,17 @@
 									"name": "token_verified",
 									"type": "boolean",
 									"length": 0
+								},
+								{
+									"_type": "ERDColumn",
+									"_id": "AAAAAAGH5LVz2+JLROU=",
+									"_parent": {
+										"$ref": "AAAAAAGHMv8X1O1MwbE="
+									},
+									"name": "code",
+									"type": "int",
+									"length": 0,
+									"nullable": true
 								}
 							]
 						},

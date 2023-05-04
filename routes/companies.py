@@ -26,5 +26,12 @@ class CompanyViewSet(SeedRoute.CompanyViewSet):
         email = data["email"]
         password = data["password"]
 
-        code = registry(first_name, last_name, email, password)
-        return Response(status=code)
+        # code = registry(first_name, last_name, email, password)
+        return Response(status=200)
+    
+    @action(detail=False, methods=["POST"])
+    def noservice(self, request):
+        return Response(status=200)
+        
+    
+

@@ -223,6 +223,7 @@ class Admin:
                     'photo',
                     'token',
                     'token_verified',
+                    'code',
                     'photo',
                     'company',
                     'carts',

@@ -492,6 +492,11 @@
           "default": "false",
           "name": "token_verified",
           "type": "boolean"
+        },
+        {
+          "empty": true,
+          "name": "code",
+          "type": "int"
         }
       ],
       "name": "user"

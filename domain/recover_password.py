@@ -4,7 +4,7 @@ from datetime import timedelta
 from django.utils.crypto import get_random_string
 from rest_framework import status
 import domain.utils.http_codes as codes
-from domain.create_user import send_mail
+from domain.create_user import send_mail_token
 
 
 def send_token_password(email):
@@ -34,7 +34,7 @@ def send_token_password(email):
     name_button = "Recupera tu contraseña"
     path = "restore_password"
 
-    send_mail(
+    send_mail_token(
         subject_html_mail,
         preheader_html_mail,
         title_html_mail,
@@ -42,7 +42,7 @@ def send_token_password(email):
         name_button,
         path,
         email,
-        token,
+        token
     )
 
     return status.HTTP_200_OK
@@ -50,13 +50,12 @@ def send_token_password(email):
 
 def restore_password(token, new_password):
 
-    user = User.objects.get(verify_token=token)
+    user = User.objects.get(token=token)
 
     if not user:
         return status.HTTP_401_UNAUTHORIZED
     
     user.set_password(new_password)
-    user.verify_token = ""
     user.save()
 
     return status.HTTP_200_OK

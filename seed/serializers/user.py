@@ -49,6 +49,7 @@ class UserSerializer(serializers.ModelSerializer):
             'photo',
             'token',
             'token_verified',
+            'code',
             'photo_id',
             'company_id',
             'cart_ids',

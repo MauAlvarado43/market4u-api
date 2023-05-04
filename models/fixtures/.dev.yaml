@@ -21,9 +21,9 @@
     active: false
     type: "SUPERADMIN"
     photo: 10000
-    company: 0
     token: ""
     token_verified: false
+    code: 128
 
 ## FILES
 

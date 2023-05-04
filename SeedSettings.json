@@ -7,7 +7,8 @@
   "extend": {
     "models": [],
     "routes": [
-      "company"
+      "company",
+      "user"
     ],
     "schema_types": [],
     "serializers": []

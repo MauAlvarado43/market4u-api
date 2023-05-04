@@ -130,6 +130,7 @@
     company: 0
     token: ""
     token_verified: false
+    code: 0
 
 ## VARIANTS
 

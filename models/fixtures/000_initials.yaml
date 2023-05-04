@@ -1,0 +1,4 @@
+- model: models.File
+  pk: 10001
+  fields:
+    url: "https://img.freepik.com/free-icon/user_318-159711.jpg"

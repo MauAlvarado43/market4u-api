@@ -27,6 +27,7 @@ class SaveUserMutation(graphene.Mutation):
         photo = graphene.Int(required=True)
         token = graphene.String(required=True)
         tokenVerified = graphene.Boolean(required=True)
+        code = graphene.Int(required=False)
         company = graphene.Int(required=False)
         pass
         
@@ -54,6 +55,8 @@ class SaveUserMutation(graphene.Mutation):
             user["token"] = kwargs["token"]
         if "tokenVerified" in kwargs:
             user["token_verified"] = kwargs["tokenVerified"]
+        if "code" in kwargs:
+            user["code"] = kwargs["code"]
         if "photo" in kwargs:
             photo = File.filter_permissions(
                 File.objects,
@@ -92,6 +95,7 @@ class SetUserMutation(graphene.Mutation):
         photo = graphene.Int(required=False)
         token = graphene.String(required=False)
         tokenVerified = graphene.Boolean(required=False)
+        code = graphene.Int(required=False)
         company = graphene.Int(required=False)
         
     # pylint: disable=R0912,W0622
@@ -123,6 +127,8 @@ class SetUserMutation(graphene.Mutation):
             user.token = kwargs["token"]
         if "tokenVerified" in kwargs:
             user.token_verified = kwargs["tokenVerified"]
+        if "code" in kwargs:
+            user.code = kwargs["code"]
         if "photo" in kwargs:
             photo = File.objects \
                 .get(pk=kwargs["photo"])
