@@ -17,6 +17,7 @@ from app.serializers import UserSerializer
 from domain.create_user import registry, registry_generate, registry_verify
 from domain.recover_password import send_token_password, restore_password
 from domain.utils import http_codes
+from domain.update_user import update_info
 
 class UserViewSet(SeedRoute.UserViewSet):
     
@@ -95,4 +96,14 @@ class UserViewSet(SeedRoute.UserViewSet):
         new_password = data["new_password"]
         code = restore_password(token, new_password)
         return Response(status=code)
+    
+    @action(detail=False, methods=['POST'])
+    def update_user(self, request):
+      data=request.data
+      print(data)
+      has_fields_or_400(data, 'user_id', 'city', 'cologn', 'cp', 'email', 'firstName', 'lastName', 'municipality', 
+                        'state', 'street', 'telephone', 'type', 'password', 'company')
+      update_info(data['user_id'], data['city'], data['cologn'], data['cp'], data['email'], data['firstName'], data['password'],
+                  data['lastName'], data['municipality'], data['state'], data['street'], data['telephone'], data['type'], data['company'])
+      return Response(status=status.HTTP_200_OK)
     

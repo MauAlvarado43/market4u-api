@@ -16,9 +16,9 @@ class Product(Model):
     user = models.ForeignKey(
         'models.User', related_name='products',
         blank=False, null=False, on_delete=models.CASCADE)
-    sales = models.ForeignKey(
+    sale = models.ForeignKey(
         'models.Sale', related_name='products',
-        blank=False, null=False, on_delete=models.CASCADE)
+        blank=True, null=True, on_delete=models.CASCADE)
     category = models.ForeignKey(
         'models.Category', related_name='products',
         blank=False, null=False, on_delete=models.CASCADE)

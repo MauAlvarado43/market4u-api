@@ -18,6 +18,7 @@ class SavePaymentMutation(graphene.Mutation):
         expireDate = graphene.String(required=True)
         type = graphene.String(required=True)
         address = graphene.String(required=True)
+        bank = graphene.String(required=True)
         user = graphene.Int(required=True)
         pass
         
@@ -33,6 +34,8 @@ class SavePaymentMutation(graphene.Mutation):
             payment["type"] = kwargs["type"]
         if "address" in kwargs:
             payment["address"] = kwargs["address"]
+        if "bank" in kwargs:
+            payment["bank"] = kwargs["bank"]
         if "user" in kwargs:
             user = User.filter_permissions(
                 User.objects,
@@ -56,6 +59,7 @@ class SetPaymentMutation(graphene.Mutation):
         expireDate = graphene.String(required=False)
         type = graphene.String(required=False)
         address = graphene.String(required=False)
+        bank = graphene.String(required=False)
         user = graphene.Int(required=False)
         
     # pylint: disable=R0912,W0622
@@ -73,6 +77,8 @@ class SetPaymentMutation(graphene.Mutation):
             payment.type = kwargs["type"]
         if "address" in kwargs:
             payment.address = kwargs["address"]
+        if "bank" in kwargs:
+            payment.bank = kwargs["bank"]
         if "user" in kwargs:
             user = User.objects \
                 .get(pk=kwargs["user"])

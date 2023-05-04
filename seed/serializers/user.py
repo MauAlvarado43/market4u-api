@@ -30,7 +30,7 @@ class UserSerializer(serializers.ModelSerializer):
         required=False, allow_null=True)
     photo_id = serializers.PrimaryKeyRelatedField(
         source='photo', queryset=File.objects.all(),
-        required=True, allow_null=False)
+        required=False, allow_null=True)
 
     class Meta:
         model = User
@@ -43,13 +43,19 @@ class UserSerializer(serializers.ModelSerializer):
             'last_name',
             'email',
             'is_active',
-            'address',
             'active',
-            'type',
             'photo',
             'token',
             'token_verified',
             'code',
+            'type',
+            'street',
+            'city',
+            'cp',
+            'municipality',
+            'state',
+            'cologn',
+            'telephone',
             'photo_id',
             'company_id',
             'cart_ids',

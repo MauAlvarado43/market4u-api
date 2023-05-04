@@ -95,11 +95,17 @@ class TestRest(APITestCase):
             "name": "",
             "common_name": "",
             "rfc": "",
-            "address": "",
+            "cp": 128,
             "phone": "",
             "email": "",
             "active": False,
             "photo_id": 1,
+            "municipality": "",
+            "state": "NS",
+            "cologn": "",
+            "website": "",
+            "street": "",
+            "city": "",
         }
         response = self.client.post('/api/companies/', data)
         self.assertEqual(response.status_code, status.HTTP_201_CREATED)
@@ -109,11 +115,17 @@ class TestRest(APITestCase):
             "name": "",
             "common_name": "",
             "rfc": "",
-            "address": "",
+            "cp": 128,
             "phone": "",
             "email": "",
             "active": False,
             "photo_id": 1,
+            "municipality": "",
+            "state": "NS",
+            "cologn": "",
+            "website": "",
+            "street": "",
+            "city": "",
         }
         response = self.client.put('/api/companies/1/', data)
         self.assertEqual(response.status_code, status.HTTP_200_OK)
@@ -213,6 +225,7 @@ class TestRest(APITestCase):
             "type": "DEBIT",
             "user_id":  1,
             "address": "",
+            "bank": "",
         }
         response = self.client.post('/api/payments/', data)
         self.assertEqual(response.status_code, status.HTTP_201_CREATED)
@@ -224,6 +237,7 @@ class TestRest(APITestCase):
             "type": "DEBIT",
             "user_id":  1,
             "address": "",
+            "bank": "",
         }
         response = self.client.put('/api/payments/1/', data)
         self.assertEqual(response.status_code, status.HTTP_200_OK)
@@ -250,7 +264,7 @@ class TestRest(APITestCase):
             "short_description": "",
             "description": "",
             "user_id":  1,
-            "sales_id":  1,
+            "sale_id":  1,
             "category_id":  1,
         }
         response = self.client.post('/api/products/', data)
@@ -262,7 +276,7 @@ class TestRest(APITestCase):
             "short_description": "",
             "description": "",
             "user_id":  1,
-            "sales_id":  1,
+            "sale_id":  1,
             "category_id":  1,
         }
         response = self.client.put('/api/products/1/', data)
@@ -408,14 +422,20 @@ class TestRest(APITestCase):
             "email": "email_1@test.com",
             "password": "pbkdf2_sha256$150000$jMOqkdOUpor5$kU/QofjBsopM+CdCnU2+pROhtnxd5CZc7NhUiXNTMc0=",
             "is_active": False,
-            "address": "",
             "active": False,
-            "type": "SUPERADMIN",
             "photo_id": 1,
+            "type": "SUPERADMIN",
             "company_id":  1,
             "token": "",
             "token_verified": False,
             "code": 128,
+            "street": "",
+            "city": "",
+            "cp": 128,
+            "municipality": "",
+            "state": "NS",
+            "cologn": "",
+            "telephone": "",
         }
         response = self.client.post('/api/users/', data)
         self.assertEqual(response.status_code, status.HTTP_201_CREATED)
@@ -428,14 +448,20 @@ class TestRest(APITestCase):
             "email": "email_1@test.com",
             "password": "pbkdf2_sha256$150000$jMOqkdOUpor5$kU/QofjBsopM+CdCnU2+pROhtnxd5CZc7NhUiXNTMc0=",
             "is_active": False,
-            "address": "",
             "active": False,
-            "type": "SUPERADMIN",
             "photo_id": 1,
+            "type": "SUPERADMIN",
             "company_id":  1,
             "token": "",
             "token_verified": False,
             "code": 128,
+            "street": "",
+            "city": "",
+            "cp": 128,
+            "municipality": "",
+            "state": "NS",
+            "cologn": "",
+            "telephone": "",
         }
         response = self.client.put('/api/users/1/', data)
         self.assertEqual(response.status_code, status.HTTP_200_OK)

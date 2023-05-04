@@ -17,13 +17,20 @@
     is_active: true
     is_superuser: true
     is_staff: true
-    address: ""
     active: false
-    type: "SUPERADMIN"
     photo: 10000
     token: ""
     token_verified: false
     code: 128
+    type: "SUPERADMIN"
+    company: null
+    street: ""
+    city: ""
+    cp: 128
+    municipality: ""
+    state: "NS"
+    cologn: ""
+    telephone: ""
 
 ## FILES
 

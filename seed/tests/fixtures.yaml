@@ -30,11 +30,17 @@
     name: ""
     common_name: ""
     rfc: ""
-    address: ""
+    cp: 128
     phone: ""
     email: ""
     active: false
     photo: 1
+    municipality: ""
+    state: "NS"
+    cologn: ""
+    website: ""
+    street: ""
+    city: ""
 
 ## MESSAGES
 
@@ -69,6 +75,7 @@
     type: "DEBIT"
     user: 1
     address: ""
+    bank: ""
 
 ## PRODUCTS
 
@@ -80,7 +87,7 @@
     short_description: ""
     description: ""
     user: 1
-    sales: 1
+    sale: 1
     category: 1
 
 ## PURCHASES
@@ -136,14 +143,20 @@
     is_staff: false
     last_login: "2020-01-01"
     date_joined: "2020-01-01"
-    address: ""
     active: false
-    type: "SUPERADMIN"
     photo: 1
+    type: "SUPERADMIN"
     company: 1
     token: ""
     token_verified: false
     code: 128
+    street: ""
+    city: ""
+    cp: 128
+    municipality: ""
+    state: "NS"
+    cologn: ""
+    telephone: ""
 
 ## VARIANTS
 

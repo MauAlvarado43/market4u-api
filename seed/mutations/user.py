@@ -21,13 +21,19 @@ class SaveUserMutation(graphene.Mutation):
         email = graphene.String(required=True)
         isActive = graphene.Boolean(required=True)
         password = graphene.String(required=True)
-        address = graphene.String(required=True)
         active = graphene.Boolean(required=True)
+        photo = graphene.Int(required=False)
         type = graphene.String(required=True)
-        photo = graphene.Int(required=True)
         token = graphene.String(required=True)
         tokenVerified = graphene.Boolean(required=True)
         code = graphene.Int(required=False)
+        street = graphene.String(required=True)
+        city = graphene.String(required=True)
+        cp = graphene.Int(required=True)
+        municipality = graphene.String(required=True)
+        state = graphene.String(required=True)
+        cologn = graphene.String(required=True)
+        telephone = graphene.String(required=True)
         company = graphene.Int(required=False)
         pass
         
@@ -45,8 +51,6 @@ class SaveUserMutation(graphene.Mutation):
             user["email"] = kwargs["email"]
         if "isActive" in kwargs:
             user["is_active"] = kwargs["isActive"]
-        if "address" in kwargs:
-            user["address"] = kwargs["address"]
         if "active" in kwargs:
             user["active"] = kwargs["active"]
         if "type" in kwargs:
@@ -57,6 +61,20 @@ class SaveUserMutation(graphene.Mutation):
             user["token_verified"] = kwargs["tokenVerified"]
         if "code" in kwargs:
             user["code"] = kwargs["code"]
+        if "street" in kwargs:
+            user["street"] = kwargs["street"]
+        if "city" in kwargs:
+            user["city"] = kwargs["city"]
+        if "cp" in kwargs:
+            user["cp"] = kwargs["cp"]
+        if "municipality" in kwargs:
+            user["municipality"] = kwargs["municipality"]
+        if "state" in kwargs:
+            user["state"] = kwargs["state"]
+        if "cologn" in kwargs:
+            user["cologn"] = kwargs["cologn"]
+        if "telephone" in kwargs:
+            user["telephone"] = kwargs["telephone"]
         if "photo" in kwargs:
             photo = File.filter_permissions(
                 File.objects,
@@ -89,13 +107,19 @@ class SetUserMutation(graphene.Mutation):
         email = graphene.String(required=False)
         isActive = graphene.Boolean(required=False)
         password = graphene.String(required=False)
-        address = graphene.String(required=False)
         active = graphene.Boolean(required=False)
-        type = graphene.String(required=False)
         photo = graphene.Int(required=False)
         token = graphene.String(required=False)
         tokenVerified = graphene.Boolean(required=False)
         code = graphene.Int(required=False)
+        type = graphene.String(required=False)
+        street = graphene.String(required=False)
+        city = graphene.String(required=False)
+        cp = graphene.Int(required=False)
+        municipality = graphene.String(required=False)
+        state = graphene.String(required=False)
+        cologn = graphene.String(required=False)
+        telephone = graphene.String(required=False)
         company = graphene.Int(required=False)
         
     # pylint: disable=R0912,W0622
@@ -117,8 +141,6 @@ class SetUserMutation(graphene.Mutation):
             user.is_active = kwargs["isActive"]
         if "password" in kwargs:
             user.set_password(kwargs["password"])
-        if "address" in kwargs:
-            user.address = kwargs["address"]
         if "active" in kwargs:
             user.active = kwargs["active"]
         if "type" in kwargs:
@@ -129,6 +151,20 @@ class SetUserMutation(graphene.Mutation):
             user.token_verified = kwargs["tokenVerified"]
         if "code" in kwargs:
             user.code = kwargs["code"]
+        if "street" in kwargs:
+            user.street = kwargs["street"]
+        if "city" in kwargs:
+            user.city = kwargs["city"]
+        if "cp" in kwargs:
+            user.cp = kwargs["cp"]
+        if "municipality" in kwargs:
+            user.municipality = kwargs["municipality"]
+        if "state" in kwargs:
+            user.state = kwargs["state"]
+        if "cologn" in kwargs:
+            user.cologn = kwargs["cologn"]
+        if "telephone" in kwargs:
+            user.telephone = kwargs["telephone"]
         if "photo" in kwargs:
             photo = File.objects \
                 .get(pk=kwargs["photo"])

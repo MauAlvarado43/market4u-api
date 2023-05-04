@@ -20,9 +20,9 @@ class ProductSerializer(serializers.ModelSerializer):
     user_id = serializers.PrimaryKeyRelatedField(
         source='user', queryset=User.objects.all(),
         required=True, allow_null=False)
-    sales_id = serializers.PrimaryKeyRelatedField(
-        source='sales', queryset=Sale.objects.all(),
-        required=True, allow_null=False)
+    sale_id = serializers.PrimaryKeyRelatedField(
+        source='sale', queryset=Sale.objects.all(),
+        required=False, allow_null=True)
     category_id = serializers.PrimaryKeyRelatedField(
         source='category', queryset=Category.objects.all(),
         required=True, allow_null=False)
@@ -38,7 +38,7 @@ class ProductSerializer(serializers.ModelSerializer):
             'description',
             'user_id',
             'opinion_ids',
-            'sales_id',
+            'sale_id',
             'category_id',
             'variant_ids',  
         )

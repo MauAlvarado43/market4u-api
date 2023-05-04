@@ -27,11 +27,17 @@
     name: ""
     common_name: ""
     rfc: ""
-    address: ""
+    cp: 0
     phone: ""
     email: ""
     active: false
     photo: 0
+    municipality: ""
+    state: "NS|AGUASCALIENTES|BAJA CALIFORNIA|BAJA CALIFORNIA SUR|CAMPECHE|COAHUILA|COLIMA|CHIAPAS|CHIHUAHUA|DURANGO|CIUDAD DE MEXICO|GUANAJUATO|GUERRERO|HIDALGO|JALISCO|MEXICO|MICHOACAN|MORELOS|NAYARIT|NUEVO LEON|OAXACA|PUEBLA|QUERETARO|QUINTANA ROO|SAN LUIS POTOSI|SINALOA|SONORA|TABASCO|TAMAULIPAS|TLAXCALA|VERACRUZ|YUCATAN|ZACATECAS|"
+    cologn: ""
+    website: ""
+    street: ""
+    city: ""
 
 ## MESSAGES
 
@@ -63,6 +69,7 @@
     type: "DEBIT|CREDIT|"
     user: 0
     address: ""
+    bank: ""
 
 ## PRODUCTS
 
@@ -73,7 +80,7 @@
     short_description: ""
     description: ""
     user: 0
-    sales: 0
+    sale: 0
     category: 0
 
 ## PURCHASES
@@ -123,14 +130,20 @@
     is_active: true
     is_superuser: false
     is_staff: false
-    address: ""
     active: false
-    type: "SUPERADMIN|ADMIN|SELLER|NORMAL|"
     photo: 0
+    type: "SUPERADMIN|ADMIN|SELLER|NORMAL|"
     company: 0
     token: ""
     token_verified: false
     code: 0
+    street: ""
+    city: ""
+    cp: 0
+    municipality: ""
+    state: "NS|AGUASCALIENTES|BAJA CALIFORNIA|BAJA CALIFORNIA SUR|CAMPECHE|COAHUILA|COLIMA|CHIAPAS|CHIHUAHUA|DURANGO|CIUDAD DE MEXICO|GUANAJUATO|GUERRERO|HIDALGO|JALISCO|MEXICO|MICHOACAN|MORELOS|NAYARIT|NUEVO LEON|OAXACA|PUEBLA|QUERETARO|QUINTANA ROO|SAN LUIS POTOSI|SINALOA|SONORA|TABASCO|TAMAULIPAS|TLAXCALA|VERACRUZ|YUCATAN|ZACATECAS|"
+    cologn: ""
+    telephone: ""
 
 ## VARIANTS
 

@@ -71,9 +71,8 @@
           "type": "string"
         },
         {
-          "length": "100",
-          "name": "address",
-          "type": "string"
+          "name": "cp",
+          "type": "int"
         },
         {
           "length": "20",
@@ -103,6 +102,70 @@
           "name": "users",
           "type": "user[]",
           "write": false
+        },
+        {
+          "length": "100",
+          "name": "municipality",
+          "type": "string"
+        },
+        {
+          "name": "state",
+          "options": [
+            "NS",
+            "AGUASCALIENTES",
+            "BAJA CALIFORNIA",
+            "BAJA CALIFORNIA SUR",
+            "CAMPECHE",
+            "COAHUILA",
+            "COLIMA",
+            "Chiapas",
+            "CHIHUAHUA",
+            "DURANGO",
+            "CIUDAD DE MEXICO",
+            "GUANAJUATO",
+            "GUERRERO",
+            "HIDALGO",
+            "JALISCO",
+            "MEXICO",
+            "MICHOACAN",
+            "MORELOS",
+            "NAYARIT",
+            "NUEVO LEON",
+            "OAXACA",
+            "PUEBLA",
+            "QUERETARO",
+            "QUINTANA ROO",
+            "SAN LUIS POTOSI",
+            "SINALOA",
+            "SONORA",
+            "TABASCO",
+            "TAMAULIPAS",
+            "TLAXCALA",
+            "VERACRUZ",
+            "YUCATAN",
+            "ZACATECAS"
+          ],
+          "type": "enum"
+        },
+        {
+          "length": "100",
+          "name": "cologn",
+          "type": "string"
+        },
+        {
+          "length": "100",
+          "name": "website",
+          "type": "string"
+        },
+        {
+          "length": "100",
+          "name": "street",
+          "type": "string"
+        },
+        {
+          "length": "100",
+          "name": "city",
+          "type": "string"
         }
       ],
       "name": "company"
@@ -203,6 +266,11 @@
           "length": "200",
           "name": "address",
           "type": "string"
+        },
+        {
+          "length": "100",
+          "name": "bank",
+          "type": "string"
         }
       ],
       "name": "payment"
@@ -247,8 +315,9 @@
             "has": "0..*",
             "ref": "1"
           },
+          "empty": true,
           "is_fk": true,
-          "name": "sales",
+          "name": "sale",
           "type": "sale"
         },
         {
@@ -340,6 +409,7 @@
           "type": "user"
         },
         {
+          "empty": true,
           "name": "banner",
           "type": "file"
         }
@@ -395,14 +465,14 @@
     {
       "attrs": [
         {
-          "length": "200",
-          "name": "address",
-          "type": "string"
-        },
-        {
           "default": "false",
           "name": "active",
           "type": "boolean"
+        },
+        {
+          "empty": true,
+          "name": "photo",
+          "type": "file"
         },
         {
           "name": "type",
@@ -415,10 +485,6 @@
           "type": "enum"
         },
         {
-          "name": "photo",
-          "type": "file"
-        },
-        {
           "card": {
             "has": "0..*",
             "ref": "1"
@@ -427,6 +493,74 @@
           "is_fk": true,
           "name": "company",
           "type": "company"
+        },
+        {
+          "length": "100",
+          "name": "street",
+          "type": "string"
+        },
+        {
+          "length": "100",
+          "name": "city",
+          "type": "string"
+        },
+        {
+          "name": "cp",
+          "type": "int"
+        },
+        {
+          "length": "100",
+          "name": "municipality",
+          "type": "string"
+        },
+        {
+          "name": "state",
+          "options": [
+            "NS",
+            "AGUASCALIENTES",
+            "BAJA CALIFORNIA",
+            "BAJA CALIFORNIA SUR",
+            "CAMPECHE",
+            "COAHUILA",
+            "COLIMA",
+            "CHIAPAS",
+            "CHIHUAHUA",
+            "DURANGO",
+            "CIUDAD DE MEXICO",
+            "GUANAJUATO",
+            "GUERRERO",
+            "HIDALGO",
+            "JALISCO",
+            "MEXICO",
+            "MICHOACAN",
+            "MORELOS",
+            "NAYARIT",
+            "NUEVO LEON",
+            "OAXACA",
+            "PUEBLA",
+            "QUERETARO",
+            "QUINTANA ROO",
+            "SAN LUIS POTOSI",
+            "SINALOA",
+            "SONORA",
+            "TABASCO",
+            "TAMAULIPAS",
+            "TLAXCALA",
+            "VERACRUZ",
+            "YUCATAN",
+            "ZACATECAS"
+          ],
+          "type": "enum"
+        },
+        {
+          "length": "100",
+          "name": "cologn",
+          "type": "string"
+        },
+        {
+          "length": "100",
+          "name": "telephone",
+          "type": "string"
         },
         {
           "card": {

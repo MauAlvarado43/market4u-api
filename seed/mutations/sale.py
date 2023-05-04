@@ -19,7 +19,7 @@ class SaveSaleMutation(graphene.Mutation):
         disscount = graphene.Float(required=True)
         startDate = graphene.DateTime(required=True)
         endDate = graphene.DateTime(required=True)
-        banner = graphene.Int(required=True)
+        banner = graphene.Int(required=False)
         user = graphene.Int(required=True)
         pass
         
