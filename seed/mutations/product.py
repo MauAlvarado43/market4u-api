@@ -6,7 +6,7 @@ __Seed builder__
 
 import graphene
 from app.models import Product
-from app.models import User
+from app.models import Company
 from app.models import Sale
 from app.models import Category
 from seed.schema.types import Product as ProductType
@@ -19,7 +19,7 @@ class SaveProductMutation(graphene.Mutation):
         name = graphene.String(required=True)
         shortDescription = graphene.String(required=True)
         description = graphene.String(required=True)
-        user = graphene.Int(required=True)
+        company = graphene.Int(required=True)
         sale = graphene.Int(required=False)
         category = graphene.Int(required=True)
         pass
@@ -34,12 +34,12 @@ class SaveProductMutation(graphene.Mutation):
             product["short_description"] = kwargs["shortDescription"]
         if "description" in kwargs:
             product["description"] = kwargs["description"]
-        if "user" in kwargs:
-            user = User.filter_permissions(
-                User.objects,
-                User.permission_filters(user)) \
-                .get(pk=kwargs["user"])
-            product["user"] = user
+        if "company" in kwargs:
+            company = Company.filter_permissions(
+                Company.objects,
+                Company.permission_filters(user)) \
+                .get(pk=kwargs["company"])
+            product["company"] = company
         if "sale" in kwargs:
             sale = Sale.filter_permissions(
                 Sale.objects,
@@ -68,7 +68,7 @@ class SetProductMutation(graphene.Mutation):
         name = graphene.String(required=False)
         shortDescription = graphene.String(required=False)
         description = graphene.String(required=False)
-        user = graphene.Int(required=False)
+        company = graphene.Int(required=False)
         sale = graphene.Int(required=False)
         category = graphene.Int(required=False)
         
@@ -85,10 +85,10 @@ class SetProductMutation(graphene.Mutation):
             product.short_description = kwargs["shortDescription"]
         if "description" in kwargs:
             product.description = kwargs["description"]
-        if "user" in kwargs:
-            user = User.objects \
-                .get(pk=kwargs["user"])
-            product.user = user
+        if "company" in kwargs:
+            company = Company.objects \
+                .get(pk=kwargs["company"])
+            product.company = company
         if "sale" in kwargs:
             sale = Sale.objects \
                 .get(pk=kwargs["sale"])

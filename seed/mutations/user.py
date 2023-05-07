@@ -7,6 +7,7 @@ __Seed builder__
 import graphene
 from app.models import User
 from app.models import Company
+from app.models import Product
 from app.models import File
 from seed.schema.types import User as UserType
 
@@ -35,6 +36,7 @@ class SaveUserMutation(graphene.Mutation):
         tokenVerified = graphene.Boolean(required=True)
         code = graphene.Int(required=True)
         company = graphene.Int(required=False)
+        wishlist = graphene.List(graphene.Int)
         pass
         
     # pylint: disable=R0912,W0622
@@ -90,6 +92,14 @@ class SaveUserMutation(graphene.Mutation):
         user = \
             User.objects.create(**user)
         if "password" in kwargs: user.set_password(kwargs["password"])
+        if "wishlist" in kwargs:
+            user.wishlist.clear()
+            for wishlist_id in kwargs["wishlist"]:
+                wishlist = Product.filter_permissions(
+                    Product.objects,
+                    Product.permission_filters(user)) \
+                    .get(pk=wishlist_id)
+                user.wishlist.add(wishlist)
         user.save()
     
         return SaveUserMutation(
@@ -121,6 +131,7 @@ class SetUserMutation(graphene.Mutation):
         tokenVerified = graphene.Boolean(required=False)
         code = graphene.Int(required=False)
         company = graphene.Int(required=False)
+        wishlist = graphene.List(graphene.Int)
         
     # pylint: disable=R0912,W0622
     def mutate(self, info, **kwargs):
@@ -173,6 +184,11 @@ class SetUserMutation(graphene.Mutation):
             company = Company.objects \
                 .get(pk=kwargs["company"])
             user.company = company
+        if "wishlist" in kwargs:
+            user.wishlist.clear()
+            for wishlist_id in kwargs["wishlist"]:
+                wishlist = Product.objects.get(pk=wishlist_id)
+                user.wishlist.add(wishlist)
         user.save()
     
         return SetUserMutation(

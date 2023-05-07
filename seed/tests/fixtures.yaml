@@ -86,7 +86,7 @@
     name: ""
     short_description: ""
     description: ""
-    user: 1
+    company: 1
     sale: 1
     category: 1
 
@@ -111,7 +111,7 @@
     disscount: 128.0
     start_date: "2020-01-01"
     end_date: "2020-01-01"
-    user: 1
+    company: 1
     banner: 1
 
 ## SHIPPINGS
@@ -154,6 +154,7 @@
     state: "NS"
     cologn: ""
     telephone: ""
+    wishlist: [1]
     token: ""
     token_verified: false
     code: 128

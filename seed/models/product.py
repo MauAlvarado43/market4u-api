@@ -13,8 +13,8 @@ class Product(Model):
     short_description = models.CharField(max_length=200, blank=True)
     description = models.TextField(blank=True)
 
-    user = models.ForeignKey(
-        'models.User', related_name='products',
+    company = models.ForeignKey(
+        'models.Company', related_name='products',
         blank=False, null=False, on_delete=models.CASCADE)
     sale = models.ForeignKey(
         'models.Sale', related_name='products',

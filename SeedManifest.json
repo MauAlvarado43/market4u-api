@@ -297,8 +297,8 @@
             "ref": "1"
           },
           "is_fk": true,
-          "name": "user",
-          "type": "user"
+          "name": "company",
+          "type": "company"
         },
         {
           "card": {
@@ -405,8 +405,8 @@
             "ref": "1"
           },
           "is_fk": true,
-          "name": "user",
-          "type": "user"
+          "name": "company",
+          "type": "company"
         },
         {
           "empty": true,
@@ -575,36 +575,13 @@
         },
         {
           "card": {
-            "has": "1",
+            "has": "0..*",
             "ref": "0..*"
           },
           "empty": true,
           "is_fk": true,
-          "name": "products",
-          "type": "product[]",
-          "write": false
-        },
-        {
-          "card": {
-            "has": "1",
-            "ref": "0..*"
-          },
-          "empty": true,
-          "is_fk": true,
-          "name": "whishlist",
-          "type": "product[]",
-          "write": false
-        },
-        {
-          "card": {
-            "has": "1",
-            "ref": "0..*"
-          },
-          "empty": true,
-          "is_fk": true,
-          "name": "sales",
-          "type": "sale[]",
-          "write": false
+          "name": "wishlist",
+          "type": "product[]"
         },
         {
           "card": {

@@ -148,7 +148,7 @@ class Admin:
                     'name',
                     'short_description',
                     'description',
-                    'user',
+                    'company',
                     'opinions',
                     'sale',
                     'category',
@@ -188,7 +188,7 @@ class Admin:
                     'banner',
                     'banner',
                     'product',
-                    'user',
+                    'company',
                 )
         
         class ShippingResource(resources.ModelResource):
@@ -240,9 +240,7 @@ class Admin:
                     'photo',
                     'company',
                     'carts',
-                    'products',
-                    'whishlist',
-                    'sales',
+                    'wishlist',
                     'shippings',
                 )
         

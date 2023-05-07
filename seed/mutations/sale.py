@@ -6,7 +6,7 @@ __Seed builder__
 
 import graphene
 from app.models import Sale
-from app.models import User
+from app.models import Company
 from app.models import File
 from seed.schema.types import Sale as SaleType
 
@@ -20,7 +20,7 @@ class SaveSaleMutation(graphene.Mutation):
         startDate = graphene.DateTime(required=True)
         endDate = graphene.DateTime(required=True)
         banner = graphene.Int(required=False)
-        user = graphene.Int(required=True)
+        company = graphene.Int(required=True)
         pass
         
     # pylint: disable=R0912,W0622
@@ -35,12 +35,12 @@ class SaveSaleMutation(graphene.Mutation):
             sale["start_date"] = kwargs["startDate"]
         if "endDate" in kwargs:
             sale["end_date"] = kwargs["endDate"]
-        if "user" in kwargs:
-            user = User.filter_permissions(
-                User.objects,
-                User.permission_filters(user)) \
-                .get(pk=kwargs["user"])
-            sale["user"] = user
+        if "company" in kwargs:
+            company = Company.filter_permissions(
+                Company.objects,
+                Company.permission_filters(user)) \
+                .get(pk=kwargs["company"])
+            sale["company"] = company
         if "banner" in kwargs:
             banner = File.filter_permissions(
                 File.objects,
@@ -65,7 +65,7 @@ class SetSaleMutation(graphene.Mutation):
         startDate = graphene.DateTime(required=False)
         endDate = graphene.DateTime(required=False)
         banner = graphene.Int(required=False)
-        user = graphene.Int(required=False)
+        company = graphene.Int(required=False)
         
     # pylint: disable=R0912,W0622
     def mutate(self, info, **kwargs):
@@ -82,10 +82,10 @@ class SetSaleMutation(graphene.Mutation):
             sale.start_date = kwargs["startDate"]
         if "endDate" in kwargs:
             sale.end_date = kwargs["endDate"]
-        if "user" in kwargs:
-            user = User.objects \
-                .get(pk=kwargs["user"])
-            sale.user = user
+        if "company" in kwargs:
+            company = Company.objects \
+                .get(pk=kwargs["company"])
+            sale.company = company
         if "banner" in kwargs:
             banner = File.objects \
                 .get(pk=kwargs["banner"])

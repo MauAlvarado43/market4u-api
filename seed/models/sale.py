@@ -21,8 +21,8 @@ class Sale(Model):
         'models.File', related_name='sale_banners',
         blank=True, null=True, on_delete=models.PROTECT)
 
-    user = models.ForeignKey(
-        'models.User', related_name='sales',
+    company = models.ForeignKey(
+        'models.Company', related_name='sales',
         blank=False, null=False, on_delete=models.CASCADE)
     
     @property

@@ -79,19 +79,13 @@ class User(AbstractUser, Model):
     company = models.ForeignKey(
         'models.Company', related_name='users',
         blank=True, null=True, on_delete=models.CASCADE)
+    wishlist = models.ManyToManyField(
+        'models.Product', related_name='wishlist_users', blank=True,
+        db_table='_user__wishlist')
     
     @property
     def carts(self):
         return self.buyer_carts.all()
-    @property
-    def products(self):
-        return self.products.all()
-    @property
-    def whishlist(self):
-        return self.products.all()
-    @property
-    def sales(self):
-        return self.sales.all()
     @property
     def shippings(self):
         return self.seller_shippings.all()

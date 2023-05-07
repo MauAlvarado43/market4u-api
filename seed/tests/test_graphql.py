@@ -1016,7 +1016,7 @@ class TestGraphql(GraphQLTestCase):
                     name
                     shortDescription
                     description
-                    user {
+                    company {
                       id
                     }
                     sale {
@@ -1094,7 +1094,7 @@ class TestGraphql(GraphQLTestCase):
                     name
                     shortDescription
                     description
-                    user {
+                    company {
                       id
                     }
                     sale {
@@ -1118,7 +1118,7 @@ class TestGraphql(GraphQLTestCase):
                     name: "",
                     shortDescription: "",
                     description: "",
-                    user:  1,
+                    company:  1,
                     sale:  1,
                     category:  1,
                 ) {
@@ -1127,7 +1127,7 @@ class TestGraphql(GraphQLTestCase):
                         name
                         shortDescription
                         description
-                        user {
+                        company {
                           id
                         }
                         sale {
@@ -1152,7 +1152,7 @@ class TestGraphql(GraphQLTestCase):
                     name: "",
                     shortDescription: "",
                     description: "",
-                    user:  1,
+                    company:  1,
                     sale:  1,
                     category:  1,
 
@@ -1162,7 +1162,7 @@ class TestGraphql(GraphQLTestCase):
                         name
                         shortDescription
                         description
-                        user {
+                        company {
                           id
                         }
                         sale {
@@ -1355,7 +1355,7 @@ class TestGraphql(GraphQLTestCase):
                     disscount
                     startDate
                     endDate
-                    user {
+                    company {
                       id
                     }
                     banner {
@@ -1431,7 +1431,7 @@ class TestGraphql(GraphQLTestCase):
                     disscount
                     startDate
                     endDate
-                    user {
+                    company {
                       id
                     }
                     banner {
@@ -1453,7 +1453,7 @@ class TestGraphql(GraphQLTestCase):
                     disscount: 128.0,
                     startDate: "2020-01-01T12:00:00+00:00",
                     endDate: "2020-01-01T12:00:00+00:00",
-                    user:  1,
+                    company:  1,
                     banner: 1,
                 ) {
                     sale {
@@ -1462,7 +1462,7 @@ class TestGraphql(GraphQLTestCase):
                         disscount
                         startDate
                         endDate
-                        user {
+                        company {
                           id
                         }
                         banner {
@@ -1485,7 +1485,7 @@ class TestGraphql(GraphQLTestCase):
                     disscount: 128.0,
                     startDate: "2020-01-01T12:00:00+00:00",
                     endDate: "2020-01-01T12:00:00+00:00",
-                    user:  1,
+                    company:  1,
                     banner: 1,
 
                 ) {
@@ -1495,7 +1495,7 @@ class TestGraphql(GraphQLTestCase):
                         disscount
                         startDate
                         endDate
-                        user {
+                        company {
                           id
                         }
                         banner {
@@ -1724,6 +1724,9 @@ class TestGraphql(GraphQLTestCase):
                     company {
                       id
                     }
+                    wishlist {
+                      id
+                    }
                 }
             }
             ''', headers=self.headers)
@@ -1813,6 +1816,9 @@ class TestGraphql(GraphQLTestCase):
                     company {
                       id
                     }
+                    wishlist {
+                      id
+                    }
                 }
             }
             ''', headers=self.headers)
@@ -1842,6 +1848,7 @@ class TestGraphql(GraphQLTestCase):
                     state: "NS",
                     cologn: "",
                     telephone: "",
+                    wishlist: [1],
                     token: "",
                     tokenVerified: false,
                     code: 128,
@@ -1869,6 +1876,9 @@ class TestGraphql(GraphQLTestCase):
                           id
                         }
                         company {
+                          id
+                        }
+                        wishlist {
                           id
                         }
                     }
@@ -1901,6 +1911,7 @@ class TestGraphql(GraphQLTestCase):
                     state: "NS",
                     cologn: "",
                     telephone: "",
+                    wishlist: [1],
                     token: "",
                     tokenVerified: false,
                     code: 128,
@@ -1929,6 +1940,9 @@ class TestGraphql(GraphQLTestCase):
                           id
                         }
                         company {
+                          id
+                        }
+                        wishlist {
                           id
                         }
                     }

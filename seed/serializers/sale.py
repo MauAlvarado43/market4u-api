@@ -6,7 +6,7 @@ __Seed builder__
 
 from rest_framework import serializers
 from app.models import Sale
-from app.models import User
+from app.models import Company
 from app.models import File
 from seed.serializers.file import FileSerializer
 
@@ -17,8 +17,8 @@ class SaleSerializer(serializers.ModelSerializer):
     product_ids = serializers.PrimaryKeyRelatedField(
         many=True, source='products', read_only=True)
 
-    user_id = serializers.PrimaryKeyRelatedField(
-        source='user', queryset=User.objects.all(),
+    company_id = serializers.PrimaryKeyRelatedField(
+        source='company', queryset=Company.objects.all(),
         required=True, allow_null=False)
     banner_id = serializers.PrimaryKeyRelatedField(
         source='banner', queryset=File.objects.all(),
@@ -37,5 +37,5 @@ class SaleSerializer(serializers.ModelSerializer):
             'banner',
             'banner_id',
             'product_ids',
-            'user_id',  
+            'company_id',  
         )

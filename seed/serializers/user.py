@@ -7,6 +7,7 @@ __Seed builder__
 from rest_framework import serializers
 from app.models import User
 from app.models import Company
+from app.models import Product
 from app.models import File
 from seed.serializers.file import FileSerializer
 
@@ -16,17 +17,14 @@ class UserSerializer(serializers.ModelSerializer):
 
     cart_ids = serializers.PrimaryKeyRelatedField(
         many=True, source='buyer_carts', read_only=True)
-    product_ids = serializers.PrimaryKeyRelatedField(
-        many=True, source='products', read_only=True)
-    whishlist_ids = serializers.PrimaryKeyRelatedField(
-        many=True, source='products', read_only=True)
-    sale_ids = serializers.PrimaryKeyRelatedField(
-        many=True, source='sales', read_only=True)
     shipping_ids = serializers.PrimaryKeyRelatedField(
         many=True, source='seller_shippings', read_only=True)
 
     company_id = serializers.PrimaryKeyRelatedField(
         source='company', queryset=Company.objects.all(),
+        required=False, allow_null=True)
+    wishlist_ids = serializers.PrimaryKeyRelatedField(
+        many=True, source='wishlist', queryset=Product.objects.all(),
         required=False, allow_null=True)
     photo_id = serializers.PrimaryKeyRelatedField(
         source='photo', queryset=File.objects.all(),
@@ -59,8 +57,6 @@ class UserSerializer(serializers.ModelSerializer):
             'photo_id',
             'company_id',
             'cart_ids',
-            'product_ids',
-            'whishlist_ids',
-            'sale_ids',
+            'wishlist_ids',
             'shipping_ids',  
         )

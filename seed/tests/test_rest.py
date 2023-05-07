@@ -263,7 +263,7 @@ class TestRest(APITestCase):
             "name": "",
             "short_description": "",
             "description": "",
-            "user_id":  1,
+            "company_id":  1,
             "sale_id":  1,
             "category_id":  1,
         }
@@ -275,7 +275,7 @@ class TestRest(APITestCase):
             "name": "",
             "short_description": "",
             "description": "",
-            "user_id":  1,
+            "company_id":  1,
             "sale_id":  1,
             "category_id":  1,
         }
@@ -340,7 +340,7 @@ class TestRest(APITestCase):
             "disscount": 128.0,
             "start_date": "2020-01-01T12:00:00+00:00",
             "end_date": "2020-01-01T12:00:00+00:00",
-            "user_id":  1,
+            "company_id":  1,
             "banner_id": 1,
         }
         response = self.client.post('/api/sales/', data)
@@ -352,7 +352,7 @@ class TestRest(APITestCase):
             "disscount": 128.0,
             "start_date": "2020-01-01T12:00:00+00:00",
             "end_date": "2020-01-01T12:00:00+00:00",
-            "user_id":  1,
+            "company_id":  1,
             "banner_id": 1,
         }
         response = self.client.put('/api/sales/1/', data)
@@ -433,6 +433,7 @@ class TestRest(APITestCase):
             "state": "NS",
             "cologn": "",
             "telephone": "",
+            "wishlist_ids": [1],
             "token": "",
             "token_verified": False,
             "code": 128,
@@ -459,6 +460,7 @@ class TestRest(APITestCase):
             "state": "NS",
             "cologn": "",
             "telephone": "",
+            "wishlist_ids": [1],
             "token": "",
             "token_verified": False,
             "code": 128,
