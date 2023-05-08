@@ -1,0 +1,231 @@
+- model: models.user
+  pk: 10000
+  fields:
+    password: pbkdf2_sha256$260000$ZpS2W25OyuWpm3VYdnIB6L$gojQXtFTNWEtjsRNkDlIEq3dpSNwKEFzSiHQhbz/WVo=
+    last_login: 2023-05-08 02:11:58.936964+00:00
+    is_superuser: true
+    username: admin@email.com
+    first_name: Admin
+    last_name: Django
+    email: admin@email.com
+    is_staff: true
+    is_active: true
+    date_joined: 2023-05-08 02:03:49.353024+00:00
+    created_at: null
+    updated_at: null
+    hash: ''
+    active: false
+    photo: 10000
+    type: SUPERADMIN
+    street: ''
+    city: ''
+    cp: 128
+    municipality: ''
+    state: NS
+    cologn: ''
+    telephone: ''
+    token: ''
+    token_verified: false
+    code: 128
+    company: null
+    groups: []
+    user_permissions: []
+    wishlist: []
+- model: models.user
+  pk: 10001
+  fields:
+    password: pbkdf2_sha256$260000$ZpS2W25OyuWpm3VYdnIB6L$gojQXtFTNWEtjsRNkDlIEq3dpSNwKEFzSiHQhbz/WVo=
+    last_login: null
+    is_superuser: false
+    username: pidosok320@soombo.com
+    first_name: Caelus
+    last_name: Borja
+    email: pidosok320@soombo.com
+    is_staff: false
+    is_active: true
+    date_joined: 2023-05-08 02:43:49+00:00
+    created_at: 2023-05-08 02:44:55.983149+00:00
+    updated_at: 2023-05-08 02:44:55.983191+00:00
+    hash: '2039455011150543268'
+    active: false
+    photo: null
+    type: NORMAL
+    street: ''
+    city: ''
+    cp: 0
+    municipality: ''
+    state: MEXICO
+    cologn: ''
+    telephone: ''
+    token: ''
+    token_verified: true
+    code: 0
+    company: null
+    groups: []
+    user_permissions: []
+    wishlist: []
+- model: models.user
+  pk: 10002
+  fields:
+    password: pbkdf2_sha256$260000$ZpS2W25OyuWpm3VYdnIB6L$gojQXtFTNWEtjsRNkDlIEq3dpSNwKEFzSiHQhbz/WVo=
+    last_login: null
+    is_superuser: false
+    username: zapsututru@gufum.com
+    first_name: Stelle
+    last_name: Cardiel
+    email: zapsututru@gufum.com
+    is_staff: false
+    is_active: true
+    date_joined: 2023-05-08 02:45:22+00:00
+    created_at: 2023-05-08 02:46:12.245728+00:00
+    updated_at: 2023-05-08 02:46:12.245756+00:00
+    hash: '5593953927658672166'
+    active: false
+    photo: null
+    type: NORMAL
+    street: ''
+    city: ''
+    cp: 0
+    municipality: ''
+    state: CIUDAD DE MEXICO
+    cologn: ''
+    telephone: ''
+    token: ''
+    token_verified: true
+    code: 0
+    company: null
+    groups: []
+    user_permissions: []
+    wishlist: []
+- model: models.user
+  pk: 10003
+  fields:
+    password: pbkdf2_sha256$260000$ZpS2W25OyuWpm3VYdnIB6L$gojQXtFTNWEtjsRNkDlIEq3dpSNwKEFzSiHQhbz/WVo=
+    last_login: null
+    is_superuser: false
+    username: suqd.myzlw8@xuneh.com
+    first_name: Noé
+    last_name: Villegas
+    email: suqd.myzlw8@xuneh.com
+    is_staff: false
+    is_active: true
+    date_joined: 2023-05-08 02:55:07+00:00
+    created_at: 2023-05-08 02:56:35.135566+00:00
+    updated_at: 2023-05-08 02:56:35.135599+00:00
+    hash: '-1065918926585694115'
+    active: false
+    photo: null
+    type: ADMIN
+    street: ''
+    city: ''
+    cp: 0
+    municipality: ''
+    state: CIUDAD DE MEXICO
+    cologn: ''
+    telephone: ''
+    token: ''
+    token_verified: true
+    code: 0
+    company: 1
+    groups: []
+    user_permissions: []
+    wishlist: []
+- model: models.user
+  pk: 10004
+  fields:
+    password: pbkdf2_sha256$260000$ZpS2W25OyuWpm3VYdnIB6L$gojQXtFTNWEtjsRNkDlIEq3dpSNwKEFzSiHQhbz/WVo=
+    last_login: null
+    is_superuser: false
+    username: pelololy@clout.wiki
+    first_name: Diego
+    last_name: Brando
+    email: pelololy@clout.wiki
+    is_staff: false
+    is_active: true
+    date_joined: 2023-05-08 02:56:51+00:00
+    created_at: 2023-05-08 02:58:52.348227+00:00
+    updated_at: 2023-05-08 02:58:52.348261+00:00
+    hash: '3682701079016610471'
+    active: false
+    photo: null
+    type: SELLER
+    street: ''
+    city: ''
+    cp: 0
+    municipality: ''
+    state: CIUDAD DE MEXICO
+    cologn: ''
+    telephone: ''
+    token: ''
+    token_verified: true
+    code: 0
+    company: 1
+    groups: []
+    user_permissions: []
+    wishlist: []
+- model: models.user
+  pk: 10005
+  fields:
+    password: pbkdf2_sha256$260000$ZpS2W25OyuWpm3VYdnIB6L$gojQXtFTNWEtjsRNkDlIEq3dpSNwKEFzSiHQhbz/WVo=
+    last_login: null
+    is_superuser: false
+    username: mojywe@lyft.live
+    first_name: Steven
+    last_name: Steel
+    email: mojywe@lyft.live
+    is_staff: false
+    is_active: true
+    date_joined: 2023-05-08 02:59:27+00:00
+    created_at: 2023-05-08 03:00:14.413831+00:00
+    updated_at: 2023-05-08 03:00:14.413870+00:00
+    hash: '701142118786668926'
+    active: false
+    photo: null
+    type: ADMIN
+    street: ''
+    city: ''
+    cp: 0
+    municipality: ''
+    state: CIUDAD DE MEXICO
+    cologn: ''
+    telephone: ''
+    token: ''
+    token_verified: true
+    code: 0
+    company: 2
+    groups: []
+    user_permissions: []
+    wishlist: []
+- model: models.user
+  pk: 10006
+  fields:
+    password: pbkdf2_sha256$260000$ZpS2W25OyuWpm3VYdnIB6L$gojQXtFTNWEtjsRNkDlIEq3dpSNwKEFzSiHQhbz/WVo=
+    last_login: null
+    is_superuser: false
+    username: xodeqeli@finews.biz
+    first_name: Domenico
+    last_name: Pucci
+    email: xodeqeli@finews.biz
+    is_staff: false
+    is_active: true
+    date_joined: 2023-05-08 03:01:01+00:00
+    created_at: 2023-05-08 03:02:37.757512+00:00
+    updated_at: 2023-05-08 03:02:37.757542+00:00
+    hash: '-8332432755843670739'
+    active: false
+    photo: null
+    type: SELLER
+    street: ''
+    city: ''
+    cp: 0
+    municipality: ''
+    state: CIUDAD DE MEXICO
+    cologn: ''
+    telephone: ''
+    token: ''
+    token_verified: true
+    code: 0
+    company: 2
+    groups: []
+    user_permissions: []
+    wishlist: []

@@ -1,0 +1,40 @@
+- model: models.company
+  pk: 1
+  fields:
+    created_at: 2023-05-08 02:52:02.427296+00:00
+    updated_at: 2023-05-08 02:52:02.427343+00:00
+    hash: '-4626875999070769405'
+    name: Levi Strauss & Co.
+    common_name: Levi's
+    rfc: ''
+    cp: 0
+    phone: ''
+    email: ''
+    active: false
+    photo: 10002
+    municipality: ''
+    state: CIUDAD DE MEXICO
+    cologn: ''
+    website: ''
+    street: ''
+    city: ''
+- model: models.company
+  pk: 2
+  fields:
+    created_at: 2023-05-08 02:54:09.666790+00:00
+    updated_at: 2023-05-08 02:54:09.666847+00:00
+    hash: '325241155422234028'
+    name: Adidas AG
+    common_name: Adidas
+    rfc: ''
+    cp: 0
+    phone: ''
+    email: ''
+    active: false
+    photo: 10003
+    municipality: ''
+    state: CIUDAD DE MEXICO
+    cologn: ''
+    website: ''
+    street: ''
+    city: ''

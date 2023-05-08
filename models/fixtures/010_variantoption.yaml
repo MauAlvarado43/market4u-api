@@ -1,0 +1,396 @@
+- model: models.variantoption
+  pk: 1
+  fields:
+    created_at: 2023-05-08 03:24:22.737987+00:00
+    updated_at: 2023-05-08 03:24:22.738048+00:00
+    hash: '-3126996334441547436'
+    title: Color
+    value: All Blue
+    variant: 1
+- model: models.variantoption
+  pk: 2
+  fields:
+    created_at: 2023-05-08 03:24:51.157147+00:00
+    updated_at: 2023-05-08 03:24:51.157198+00:00
+    hash: '-1998142227042377094'
+    title: Talla
+    value: M
+    variant: 1
+- model: models.variantoption
+  pk: 3
+  fields:
+    created_at: 2023-05-08 03:26:35.627686+00:00
+    updated_at: 2023-05-08 03:26:35.627764+00:00
+    hash: '-9148970250100382721'
+    title: Color
+    value: All Blue
+    variant: 1
+- model: models.variantoption
+  pk: 4
+  fields:
+    created_at: 2023-05-08 03:26:48.672303+00:00
+    updated_at: 2023-05-08 03:26:57.510280+00:00
+    hash: '-3938937604153407921'
+    title: Talla
+    value: XL
+    variant: 1
+- model: models.variantoption
+  pk: 5
+  fields:
+    created_at: 2023-05-08 03:31:00.722956+00:00
+    updated_at: 2023-05-08 03:31:00.723006+00:00
+    hash: '-4630086027893284599'
+    title: Color
+    value: Floral/2 azul/azul marino
+    variant: 3
+- model: models.variantoption
+  pk: 6
+  fields:
+    created_at: 2023-05-08 03:31:10.186843+00:00
+    updated_at: 2023-05-08 03:31:10.186896+00:00
+    hash: '-6005120757293479913'
+    title: Talla
+    value: M
+    variant: 3
+- model: models.variantoption
+  pk: 7
+  fields:
+    created_at: 2023-05-08 03:31:58.212293+00:00
+    updated_at: 2023-05-08 03:31:58.212334+00:00
+    hash: '1083062516188094985'
+    title: Color
+    value: Floral/2 azul/azul marino
+    variant: 4
+- model: models.variantoption
+  pk: 8
+  fields:
+    created_at: 2023-05-08 03:32:09.244578+00:00
+    updated_at: 2023-05-08 03:32:09.244621+00:00
+    hash: '-8712925761971966094'
+    title: Talla
+    value: XL
+    variant: 4
+- model: models.variantoption
+  pk: 9
+  fields:
+    created_at: 2023-05-08 03:35:43.493939+00:00
+    updated_at: 2023-05-08 03:35:43.493989+00:00
+    hash: '178270312835592841'
+    title: Color
+    value: Sequoia RT
+    variant: 5
+- model: models.variantoption
+  pk: 10
+  fields:
+    created_at: 2023-05-08 03:35:58.321557+00:00
+    updated_at: 2023-05-08 03:35:58.321601+00:00
+    hash: '-5954289420238086380'
+    title: Talla
+    value: 29W x 32L
+    variant: 5
+- model: models.variantoption
+  pk: 11
+  fields:
+    created_at: 2023-05-08 03:38:19.928290+00:00
+    updated_at: 2023-05-08 03:38:19.928354+00:00
+    hash: '-5419379129390306533'
+    title: Color
+    value: Sequoia RT
+    variant: 6
+- model: models.variantoption
+  pk: 12
+  fields:
+    created_at: 2023-05-08 03:38:45.208997+00:00
+    updated_at: 2023-05-08 03:38:45.209054+00:00
+    hash: '-1417126825982198183'
+    title: Talla
+    value: 30W x 32L
+    variant: 6
+- model: models.variantoption
+  pk: 13
+  fields:
+    created_at: 2023-05-08 03:40:40.450064+00:00
+    updated_at: 2023-05-08 03:40:40.450108+00:00
+    hash: '8813768131750871940'
+    title: Color
+    value: INLUSTRIS
+    variant: 7
+- model: models.variantoption
+  pk: 14
+  fields:
+    created_at: 2023-05-08 03:41:00.219299+00:00
+    updated_at: 2023-05-08 03:41:00.219344+00:00
+    hash: '-532089326296020405'
+    title: Talla
+    value: 32W x 34L
+    variant: 7
+- model: models.variantoption
+  pk: 15
+  fields:
+    created_at: 2023-05-08 03:44:39.742777+00:00
+    updated_at: 2023-05-08 03:44:39.742825+00:00
+    hash: '3911129921605865977'
+    title: Color
+    value: Biscotti
+    variant: 8
+- model: models.variantoption
+  pk: 16
+  fields:
+    created_at: 2023-05-08 03:44:49.614947+00:00
+    updated_at: 2023-05-08 03:44:49.615147+00:00
+    hash: '8116368169868620081'
+    title: Talla
+    value: M
+    variant: 8
+- model: models.variantoption
+  pk: 17
+  fields:
+    created_at: 2023-05-08 03:46:18.437810+00:00
+    updated_at: 2023-05-08 03:46:18.438022+00:00
+    hash: '-101277966788596188'
+    title: Color
+    value: Rojo
+    variant: 9
+- model: models.variantoption
+  pk: 18
+  fields:
+    created_at: 2023-05-08 03:46:30.028577+00:00
+    updated_at: 2023-05-08 03:46:30.028675+00:00
+    hash: '-3646329735270822028'
+    title: Talla
+    value: XL
+    variant: 9
+- model: models.variantoption
+  pk: 19
+  fields:
+    created_at: 2023-05-08 03:50:04.603248+00:00
+    updated_at: 2023-05-08 03:50:04.603323+00:00
+    hash: '-8502703567624756690'
+    title: Color
+    value: Allure
+    variant: 10
+- model: models.variantoption
+  pk: 20
+  fields:
+    created_at: 2023-05-08 03:50:14.161698+00:00
+    updated_at: 2023-05-08 03:50:14.161743+00:00
+    hash: '-3593895446836824847'
+    title: Talla
+    value: XL
+    variant: 10
+- model: models.variantoption
+  pk: 21
+  fields:
+    created_at: 2023-05-08 03:51:29.116308+00:00
+    updated_at: 2023-05-08 03:51:29.116353+00:00
+    hash: '6770514707057442844'
+    title: Color
+    value: White 17
+    variant: 11
+- model: models.variantoption
+  pk: 22
+  fields:
+    created_at: 2023-05-08 03:51:51.647719+00:00
+    updated_at: 2023-05-08 03:51:51.647767+00:00
+    hash: '2365937344434278879'
+    title: Talla
+    value: CH
+    variant: 11
+- model: models.variantoption
+  pk: 23
+  fields:
+    created_at: 2023-05-08 03:54:37.587191+00:00
+    updated_at: 2023-05-08 03:54:37.587247+00:00
+    hash: '5927205302736113584'
+    title: Color
+    value: Negro
+    variant: 12
+- model: models.variantoption
+  pk: 24
+  fields:
+    created_at: 2023-05-08 03:54:50.031579+00:00
+    updated_at: 2023-05-08 03:54:50.031622+00:00
+    hash: '-5471992799523984990'
+    title: Talla
+    value: 27.5 cm
+    variant: 12
+- model: models.variantoption
+  pk: 25
+  fields:
+    created_at: 2023-05-08 03:56:23.574758+00:00
+    updated_at: 2023-05-08 03:56:23.575677+00:00
+    hash: '-3777100021507818946'
+    title: Color
+    value: Negro
+    variant: 13
+- model: models.variantoption
+  pk: 26
+  fields:
+    created_at: 2023-05-08 03:56:36.762598+00:00
+    updated_at: 2023-05-08 03:56:36.762644+00:00
+    hash: '-2115408967725781877'
+    title: Talla
+    value: 29.0 cm
+    variant: 13
+- model: models.variantoption
+  pk: 27
+  fields:
+    created_at: 2023-05-08 04:05:47.716120+00:00
+    updated_at: 2023-05-08 04:05:47.716167+00:00
+    hash: '-5754578483768275815'
+    title: Color
+    value: medium grey heather/black
+    variant: 14
+- model: models.variantoption
+  pk: 28
+  fields:
+    created_at: 2023-05-08 04:05:57.838621+00:00
+    updated_at: 2023-05-08 04:05:57.838673+00:00
+    hash: '5742401513611384058'
+    title: Talla
+    value: M
+    variant: 14
+- model: models.variantoption
+  pk: 29
+  fields:
+    created_at: 2023-05-08 04:07:27.095336+00:00
+    updated_at: 2023-05-08 04:07:27.095447+00:00
+    hash: '3355662796264357397'
+    title: Color
+    value: black/white
+    variant: 15
+- model: models.variantoption
+  pk: 30
+  fields:
+    created_at: 2023-05-08 04:07:40.790768+00:00
+    updated_at: 2023-05-08 04:07:40.790837+00:00
+    hash: '-5803961366664228532'
+    title: Talla
+    value: L
+    variant: 15
+- model: models.variantoption
+  pk: 31
+  fields:
+    created_at: 2023-05-08 04:09:30.601325+00:00
+    updated_at: 2023-05-08 04:09:30.601383+00:00
+    hash: '-4587794352731021115'
+    title: Color
+    value: Blanco/Azul Lucido/Menta Pulse
+    variant: 16
+- model: models.variantoption
+  pk: 32
+  fields:
+    created_at: 2023-05-08 04:09:56.576487+00:00
+    updated_at: 2023-05-08 04:09:56.576602+00:00
+    hash: '-2879535145673437669'
+    title: Talla
+    value: 27.5 cm
+    variant: 16
+- model: models.variantoption
+  pk: 33
+  fields:
+    created_at: 2023-05-08 04:11:58.406277+00:00
+    updated_at: 2023-05-08 04:11:58.406322+00:00
+    hash: '-7003100754932509555'
+    title: Color
+    value: Negro/Carbon/Blanco-Rojo
+    variant: 17
+- model: models.variantoption
+  pk: 34
+  fields:
+    created_at: 2023-05-08 04:12:09.244520+00:00
+    updated_at: 2023-05-08 04:12:09.244560+00:00
+    hash: '3544163822863742711'
+    title: Talla
+    value: 30.0 cm
+    variant: 17
+- model: models.variantoption
+  pk: 35
+  fields:
+    created_at: 2023-05-08 04:13:54.520403+00:00
+    updated_at: 2023-05-08 04:14:38.792603+00:00
+    hash: '3590437037233216207'
+    title: Nombre del estilo
+    value: Fuerza de Equipo
+    variant: 18
+- model: models.variantoption
+  pk: 36
+  fields:
+    created_at: 2023-05-08 04:14:56.757561+00:00
+    updated_at: 2023-05-08 04:14:56.757621+00:00
+    hash: '-1060601523665447409'
+    title: Tamaño
+    value: 100 ml
+    variant: 18
+- model: models.variantoption
+  pk: 37
+  fields:
+    created_at: 2023-05-08 04:16:00.311473+00:00
+    updated_at: 2023-05-08 04:16:00.311546+00:00
+    hash: '9109320587202322201'
+    title: Nombre del estilo
+    value: Prepárate
+    variant: 19
+- model: models.variantoption
+  pk: 38
+  fields:
+    created_at: 2023-05-08 04:16:15.976134+00:00
+    updated_at: 2023-05-08 04:16:15.976176+00:00
+    hash: '-2744172626750262690'
+    title: Tamaño
+    value: 100 ml
+    variant: 19
+- model: models.variantoption
+  pk: 39
+  fields:
+    created_at: 2023-05-08 04:18:13.064181+00:00
+    updated_at: 2023-05-08 04:18:13.064233+00:00
+    hash: '2555555908024236720'
+    title: Color
+    value: Wonder Taupe Beige/Jersey Grey/Rose Gold
+    variant: 20
+- model: models.variantoption
+  pk: 40
+  fields:
+    created_at: 2023-05-08 04:19:53.161461+00:00
+    updated_at: 2023-05-08 04:19:53.161520+00:00
+    hash: '1898007339175634847'
+    title: Color
+    value: Rosa intenso
+    variant: 21
+- model: models.variantoption
+  pk: 41
+  fields:
+    created_at: 2023-05-08 04:21:39.030316+00:00
+    updated_at: 2023-05-08 04:21:39.030417+00:00
+    hash: '-7734157429680458986'
+    title: Color
+    value: Equipo Azul Marino
+    variant: 22
+- model: models.variantoption
+  pk: 42
+  fields:
+    created_at: 2023-05-08 04:21:50.150331+00:00
+    updated_at: 2023-05-08 04:21:50.150389+00:00
+    hash: '-752629213327018524'
+    title: Talla
+    value: XS
+    variant: 22
+- model: models.variantoption
+  pk: 43
+  fields:
+    created_at: 2023-05-08 04:22:57.046423+00:00
+    updated_at: 2023-05-08 04:22:57.046488+00:00
+    hash: '8703362960675671013'
+    title: Color
+    value: Grey Four Melange
+    variant: 23
+- model: models.variantoption
+  pk: 44
+  fields:
+    created_at: 2023-05-08 04:23:07.835049+00:00
+    updated_at: 2023-05-08 04:23:07.835096+00:00
+    hash: '-4911328988227544303'
+    title: Talla
+    value: XL
+    variant: 23

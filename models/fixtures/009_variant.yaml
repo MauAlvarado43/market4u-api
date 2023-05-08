@@ -1,0 +1,342 @@
+- model: models.variant
+  pk: 1
+  fields:
+    created_at: 2023-05-08 03:23:36.955984+00:00
+    updated_at: 2023-05-08 03:23:36.956050+00:00
+    hash: '-1837131364729314740'
+    price: 502.0
+    stock: 30
+    shipment: 0.0
+    product: 1
+    photos:
+    - 10004
+    - 10005
+    - 10006
+    - 10007
+    - 10008
+- model: models.variant
+  pk: 2
+  fields:
+    created_at: 2023-05-08 03:26:14.283559+00:00
+    updated_at: 2023-05-08 03:26:14.283600+00:00
+    hash: '-6523658109167831773'
+    price: 516.0
+    stock: 30
+    shipment: 0.0
+    product: 1
+    photos:
+    - 10004
+    - 10005
+    - 10006
+    - 10007
+    - 10008
+- model: models.variant
+  pk: 3
+  fields:
+    created_at: 2023-05-08 03:30:25.198223+00:00
+    updated_at: 2023-05-08 03:30:25.198359+00:00
+    hash: '6817514628404698693'
+    price: 552.0
+    stock: 30
+    shipment: 0.0
+    product: 1
+    photos:
+    - 10009
+    - 10010
+    - 10011
+    - 10012
+    - 10013
+- model: models.variant
+  pk: 4
+  fields:
+    created_at: 2023-05-08 03:31:39.495042+00:00
+    updated_at: 2023-05-08 03:31:39.495174+00:00
+    hash: '4109850257573786709'
+    price: 491.0
+    stock: 30
+    shipment: 0.0
+    product: 1
+    photos:
+    - 10009
+    - 10010
+    - 10011
+    - 10012
+    - 10013
+- model: models.variant
+  pk: 5
+  fields:
+    created_at: 2023-05-08 03:35:12.396704+00:00
+    updated_at: 2023-05-08 03:35:12.397486+00:00
+    hash: '-4470763184640309133'
+    price: 999.0
+    stock: 3
+    shipment: 0.0
+    product: 2
+    photos:
+    - 10014
+    - 10015
+- model: models.variant
+  pk: 6
+  fields:
+    created_at: 2023-05-08 03:38:05.468620+00:00
+    updated_at: 2023-05-08 03:38:05.468683+00:00
+    hash: '-4288094570147942847'
+    price: 999.0
+    stock: 3
+    shipment: 0.0
+    product: 2
+    photos:
+    - 10014
+    - 10015
+- model: models.variant
+  pk: 7
+  fields:
+    created_at: 2023-05-08 03:40:17.610103+00:00
+    updated_at: 2023-05-08 03:40:17.610157+00:00
+    hash: '3249190373787785406'
+    price: 999.0
+    stock: 3
+    shipment: 0.0
+    product: 2
+    photos:
+    - 10016
+    - 10017
+- model: models.variant
+  pk: 8
+  fields:
+    created_at: 2023-05-08 03:44:20.015712+00:00
+    updated_at: 2023-05-08 03:44:20.015783+00:00
+    hash: '7890910081265777351'
+    price: 1920.0
+    stock: 10
+    shipment: 0.0
+    product: 3
+    photos:
+    - 10018
+    - 10019
+    - 10020
+- model: models.variant
+  pk: 9
+  fields:
+    created_at: 2023-05-08 03:46:03.364093+00:00
+    updated_at: 2023-05-08 03:46:03.364147+00:00
+    hash: '2143256180958674543'
+    price: 1928.0
+    stock: 30
+    shipment: 0.0
+    product: 3
+    photos:
+    - 10021
+    - 10022
+    - 10023
+- model: models.variant
+  pk: 10
+  fields:
+    created_at: 2023-05-08 03:49:47.333878+00:00
+    updated_at: 2023-05-08 03:49:47.333985+00:00
+    hash: '7815600500681099623'
+    price: 882.0
+    stock: 3
+    shipment: 0.0
+    product: 4
+    photos:
+    - 10024
+    - 10025
+    - 10026
+- model: models.variant
+  pk: 11
+  fields:
+    created_at: 2023-05-08 03:51:14.526768+00:00
+    updated_at: 2023-05-08 03:51:14.526807+00:00
+    hash: '4351511620258924513'
+    price: 1254.0
+    stock: 6
+    shipment: 0.0
+    product: 4
+    photos:
+    - 10027
+    - 10028
+    - 10029
+- model: models.variant
+  pk: 12
+  fields:
+    created_at: 2023-05-08 03:54:24.864672+00:00
+    updated_at: 2023-05-08 03:54:24.864719+00:00
+    hash: '6242043600804486432'
+    price: 1599.0
+    stock: 2
+    shipment: 0.0
+    product: 5
+    photos:
+    - 10030
+    - 10031
+    - 10032
+    - 10033
+    - 10034
+    - 10035
+    - 10036
+- model: models.variant
+  pk: 13
+  fields:
+    created_at: 2023-05-08 03:56:02.965067+00:00
+    updated_at: 2023-05-08 03:56:02.965222+00:00
+    hash: '4173409765258236558'
+    price: 1799.0
+    stock: 1
+    shipment: 0.0
+    product: 5
+    photos:
+    - 10030
+    - 10031
+    - 10032
+    - 10033
+    - 10034
+    - 10035
+    - 10036
+- model: models.variant
+  pk: 14
+  fields:
+    created_at: 2023-05-08 04:05:22.619749+00:00
+    updated_at: 2023-05-08 04:05:22.619824+00:00
+    hash: '3856973566575596494'
+    price: 504.0
+    stock: 10
+    shipment: 0.0
+    product: 6
+    photos:
+    - 10037
+    - 10038
+    - 10039
+- model: models.variant
+  pk: 15
+  fields:
+    created_at: 2023-05-08 04:07:12.728506+00:00
+    updated_at: 2023-05-08 04:07:12.728547+00:00
+    hash: '-3529607801917154285'
+    price: 1239.0
+    stock: 2
+    shipment: 0.0
+    product: 6
+    photos:
+    - 10040
+    - 10041
+    - 10042
+    - 10043
+- model: models.variant
+  pk: 16
+  fields:
+    created_at: 2023-05-08 04:09:16.090764+00:00
+    updated_at: 2023-05-08 04:09:16.090807+00:00
+    hash: '8496439711942318454'
+    price: 1635.0
+    stock: 1
+    shipment: 0.0
+    product: 7
+    photos:
+    - 10048
+    - 10044
+    - 10045
+    - 10046
+    - 10047
+- model: models.variant
+  pk: 17
+  fields:
+    created_at: 2023-05-08 04:11:45.564979+00:00
+    updated_at: 2023-05-08 04:11:45.565126+00:00
+    hash: '4940905923288422873'
+    price: 1537.0
+    stock: 1
+    shipment: 0.0
+    product: 7
+    photos:
+    - 10049
+    - 10050
+    - 10051
+    - 10052
+- model: models.variant
+  pk: 18
+  fields:
+    created_at: 2023-05-08 04:13:17.203399+00:00
+    updated_at: 2023-05-08 04:13:17.203463+00:00
+    hash: '880026578990447809'
+    price: 145.0
+    stock: 10
+    shipment: 0.0
+    product: 8
+    photos:
+    - 10053
+    - 10054
+- model: models.variant
+  pk: 19
+  fields:
+    created_at: 2023-05-08 04:15:44.610994+00:00
+    updated_at: 2023-05-08 04:15:44.611059+00:00
+    hash: '-1160263549222784779'
+    price: 165.0
+    stock: 6
+    shipment: 0.0
+    product: 8
+    photos:
+    - 10056
+    - 10057
+    - 10055
+- model: models.variant
+  pk: 20
+  fields:
+    created_at: 2023-05-08 04:17:52.608749+00:00
+    updated_at: 2023-05-08 04:19:31.077887+00:00
+    hash: '-8572307083892470733'
+    price: 428.0
+    stock: 30
+    shipment: 0.0
+    product: 9
+    photos:
+    - 10058
+    - 10059
+    - 10060
+    - 10061
+    - 10062
+- model: models.variant
+  pk: 21
+  fields:
+    created_at: 2023-05-08 04:19:23.563329+00:00
+    updated_at: 2023-05-08 04:19:23.563449+00:00
+    hash: '4437153522009188606'
+    price: 994.0
+    stock: 5
+    shipment: 0.0
+    product: 9
+    photos:
+    - 10063
+    - 10064
+    - 10065
+    - 10066
+    - 10067
+- model: models.variant
+  pk: 22
+  fields:
+    created_at: 2023-05-08 04:21:21.868789+00:00
+    updated_at: 2023-05-08 04:21:21.868856+00:00
+    hash: '-6099079501721821865'
+    price: 1027.0
+    stock: 3
+    shipment: 0.0
+    product: 10
+    photos:
+    - 10068
+    - 10069
+    - 10070
+    - 10071
+- model: models.variant
+  pk: 23
+  fields:
+    created_at: 2023-05-08 04:22:38.025972+00:00
+    updated_at: 2023-05-08 04:22:38.026126+00:00
+    hash: '-7048327673781245876'
+    price: 1001.0
+    stock: 30
+    shipment: 0.0
+    product: 10
+    photos:
+    - 10072
+    - 10073

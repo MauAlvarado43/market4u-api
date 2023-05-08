@@ -1,0 +1,163 @@
+- model: models.product
+  pk: 1
+  fields:
+    created_at: 2023-05-08 03:13:38.386961+00:00
+    updated_at: 2023-05-08 03:13:38.387060+00:00
+    hash: '-1957440102607093987'
+    name: Levi's Clásico Ropa Interior de Hombres para para Hombre
+    short_description: Ropa interior para hombre
+    description: "100 % Algodón\r\nCierre de elástico\r\nLavar a máquina\r\nLevis\
+      \ - Calzoncillos tipo bóxer para hombre (4 unidades)\r\nEsta ropa interior multipack\
+      \ para hombre tiene una cintura elástica y cómoda con el auténtico logotipo\
+      \ de Levi.\r\nTejido de mezcla de algodón suave y transpirable, 57% algodón,\
+      \ 38% poliéster, 5% elastano. Tejido elástico con una sensación suave y agradable.\
+      \ Formbeständig und schnell trocknend. Sin Fly, Fake Fly\r\nDe moda y elegante\
+      \ pero cómodo durante todo el día. No se desliza con costuras lisas y planas.\r\
+      \nGran ajuste, consulte la tabla de tallas para que coincida con Los paquetes\
+      \ están disponibles en diferentes tamaños y colores. Lavable a máquina."
+    company: 1
+    sale: null
+    category: 1
+- model: models.product
+  pk: 2
+  fields:
+    created_at: 2023-05-08 03:33:36.133804+00:00
+    updated_at: 2023-05-08 03:33:36.133857+00:00
+    hash: '6629984072604062832'
+    name: 511 Slim Fit, Hombre
+    short_description: Un delgado y moderno con espacio para moverse, los pantalones
+      vaqueros 511™ Slim Fit Stretch son un clásico desde ahora.
+    description: "99% algodón, 1% elastano\r\nCierre de Cremallera\r\nLavar a máquina\r\
+      \nPierna ajustada desde la cadera hasta el tobillo\r\nAjustados pero con gran\
+      \ comodidad y libertad de movimiento\r\nElaborados con algodón orgánico"
+    company: 1
+    sale: null
+    category: 1
+- model: models.product
+  pk: 3
+  fields:
+    created_at: 2023-05-08 03:43:02.092155+00:00
+    updated_at: 2023-05-08 04:29:48.497076+00:00
+    hash: '7969061379069632303'
+    name: Levi's Chamarra de Motocicleta de Piel sintética con cinturón para Mujer
+    short_description: Chamarra clásica asimétrica de piel sintética con cinturón
+    description: "100% poliéster\r\nRevestimiento de Poliuretano\r\nCierre de Cremallera\r\
+      \nLavado a máquina\r\nFuncionalidad: cierre de cierre frontal combinado con\
+      \ un bolsillo con cierre en el pecho y dos cremalleras inferiores para un almacenamiento\
+      \ viable y un mantenimiento seguro; la carcasa exterior es resistente al agua,\
+      \ lo que permite un fácil cuidado\r\nCaracterísticas elegantes: cierre frontal\
+      \ central asimétrica con solapas a presión y charreteras para mayor detalle\r\
+      \nVersatilidad: la piel sintética hace de esta chamarra un básico en el clóset\
+      \ de cada mujer; es perfecta para la transición entre estaciones o para usar\
+      \ como una pieza de capas"
+    company: 1
+    sale: 1
+    category: 1
+- model: models.product
+  pk: 4
+  fields:
+    created_at: 2023-05-08 03:48:26.929062+00:00
+    updated_at: 2023-05-08 03:48:26.929146+00:00
+    hash: '2588814334918890873'
+    name: Levi's Sunset One Pocket Standard Dress Shirt para Hombre
+    short_description: Con la misma forma de bolsillo sunset de 1902 que las camisetas
+      de los archivos de levi's®, nuestra sunset one pocket es tan atemporal como
+      versátil.
+    description: "100% Algodón\r\nCierre de No Closure\r\n100% Algodón\r\nCamisa Corte\
+      \ Slim\r\nCuello Regular\r\nManga Larga\r\nBolsillo Al Frente"
+    company: 1
+    sale: null
+    category: 1
+- model: models.product
+  pk: 5
+  fields:
+    created_at: 2023-05-08 03:52:41.838242+00:00
+    updated_at: 2023-05-08 03:52:41.838321+00:00
+    hash: '-3762400557297559866'
+    name: Levi's Capital.11 Botas para Hombre
+    short_description: Botas Levis Negro
+    description: "Piel\r\nSuela de Material Sintético\r\nEl eje mide aproximadamente\
+      \ media pierna desde el arco\r\nBota Estilo Roper De Piel Con Aplicaciones En\
+      \ Piel Sintetica, Y Herrajes En Acabado avejentado Y Suela Tr Bicolor\r\nBotas\
+      \ de Piel\r\nBotas de Cierre y Hebilla"
+    company: 1
+    sale: null
+    category: 2
+- model: models.product
+  pk: 6
+  fields:
+    created_at: 2023-05-08 03:59:41.138102+00:00
+    updated_at: 2023-05-08 03:59:41.138156+00:00
+    hash: '-5658011681063938923'
+    name: Adidas Sport Sweatshirt para Mens
+    short_description: Esta sudadera con capucha con un aspecto atemporal nunca pasa
+      desapercibido, como tú.
+    description: "Ajuste regular\r\nCapucha ajustable con cordón\r\npuños y dobladillos\
+      \ acanalados"
+    company: 2
+    sale: null
+    category: 1
+- model: models.product
+  pk: 7
+  fields:
+    created_at: 2023-05-08 04:00:39.139565+00:00
+    updated_at: 2023-05-08 04:32:39.220628+00:00
+    hash: '6025440482675716678'
+    name: Adidas Hoops 3.0 Mid Zapatillas de básquetbol para Hombre
+    short_description: Inspirados en la madera dura, estos tenis adidas para hombre
+      tienen un aspecto clásico de corte medio.
+    description: "Caucho\r\nSuela de Caucho\r\nTenis de baloncesto de corte medio\
+      \ para hombre con un aspecto clásico\r\nParte superior duradera: la parte superior\
+      \ de piel sintético es suave y duradera\r\nAlta tracción: la icónica suela de\
+      \ goma ofrece un gran agarre"
+    company: 2
+    sale: 2
+    category: 2
+- model: models.product
+  pk: 8
+  fields:
+    created_at: 2023-05-08 04:02:09.193569+00:00
+    updated_at: 2023-05-08 04:02:09.193637+00:00
+    hash: '-1255418945162534764'
+    name: Adidas Team Force By Adidas For Men, Spray, 3.4-Ounce Bottle
+    short_description: Perfume para hombre
+    description: "Eau De Toilette\r\nAdidas Team Force by Coty for Men\r\n3.4 oz Eau\
+      \ De Toilette Spray\r\nAdidas"
+    company: 2
+    sale: null
+    category: 3
+- model: models.product
+  pk: 9
+  fields:
+    created_at: 2023-05-08 04:03:12.355106+00:00
+    updated_at: 2023-05-08 04:03:12.355156+00:00
+    hash: '1974291188911060923'
+    name: adidas Alliance 2 Mochila, Mochila Alliance 2
+    short_description: Perfecto para cuando necesitas un poco de almacenamiento adicional
+      para zapatos o ropa o se puede llevar solo como una alternativa de mochila.
+    description: "98% poliéster, 2% licra\r\nRevestimiento de Poliéster\r\nCierre\
+      \ de Cordón\r\nLavado a mano\r\nFácil apertura con cordón duradero\r\nBolsillo\
+      \ con cierre para objetos de valor para guardar tu teléfono y cosas pequeñas\r\
+      \nMarca de 3 rayas atrevida"
+    company: 2
+    sale: null
+    category: 4
+- model: models.product
+  pk: 10
+  fields:
+    created_at: 2023-05-08 04:03:54.304228+00:00
+    updated_at: 2023-05-08 04:03:54.304283+00:00
+    hash: '-8919911965907011935'
+    name: Adidas Tiro 21 - Pantalones de Deporte Pantalones para Hombre
+    short_description: Estos pantalones deportivos adidas para hombre tienen un ajuste
+      cónico inspirado en el fútbol y 3 rayas en las piernas para un estilo clásico
+      y deportivo.
+    description: "Pantalones deportivos cónicos para hombre para comodidad diaria\r\
+      \nEl ajuste cónico regular es cómodo y espacioso pero estrecho en el tobillo\r\
+      \nCordón en la cintura elástica para un ajuste ajustable. Absorbe la humedad\r\
+      \nBolsillos laterales con cierre que proporcionan un almacenamiento seguro\r\
+      \nEste producto está fabricado con contenido reciclado como parte de nuestra\
+      \ ambición de acabar con los residuos de plástico"
+    company: 2
+    sale: null
+    category: 1

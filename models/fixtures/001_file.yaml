@@ -1,0 +1,684 @@
+- model: models.file
+  pk: 10000
+  fields:
+    created_at: null
+    updated_at: null
+    hash: ''
+    url: https://seedb.s3.amazonaws.com/dummy.jpg
+    size: 0
+    name: ''
+- model: models.file
+  pk: 10001
+  fields:
+    created_at: null
+    updated_at: null
+    hash: ''
+    url: https://img.freepik.com/free-icon/user_318-159711.jpg
+    size: 0
+    name: ''
+- model: models.file
+  pk: 10002
+  fields:
+    created_at: 2023-05-08 02:51:56.734976+00:00
+    updated_at: 2023-05-08 02:54:25.270471+00:00
+    hash: '-2003614592180161371'
+    url: https://w7.pngwing.com/pngs/1/523/png-transparent-levi-strauss-co-jeans-clothing-denim-business-jeans-love-text-logo.png
+    size: 0
+    name: Levis_logo.png
+- model: models.file
+  pk: 10003
+  fields:
+    created_at: 2023-05-08 02:54:01.290803+00:00
+    updated_at: 2023-05-08 02:54:01.290905+00:00
+    hash: '815746203440727036'
+    url: https://graffica.info/wp-content/uploads/2022/12/Adidas-Logo-1971.jpeg
+    size: 0
+    name: Adidas_logo.png
+- model: models.file
+  pk: 10004
+  fields:
+    created_at: 2023-05-08 03:18:53.692356+00:00
+    updated_at: 2023-05-08 03:18:53.692451+00:00
+    hash: '9222177907270734678'
+    url: https://m.media-amazon.com/images/I/71WIZJj9iWL._AC_SX679_.jpg
+    size: 0
+    name: null
+- model: models.file
+  pk: 10005
+  fields:
+    created_at: 2023-05-08 03:21:31.880380+00:00
+    updated_at: 2023-05-08 03:21:31.880444+00:00
+    hash: '-6269428516176522470'
+    url: https://m.media-amazon.com/images/I/71+nlIIqM6L._AC_SX679_.jpg
+    size: 0
+    name: null
+- model: models.file
+  pk: 10006
+  fields:
+    created_at: 2023-05-08 03:21:42.264483+00:00
+    updated_at: 2023-05-08 03:21:42.264542+00:00
+    hash: '4177317452803432172'
+    url: https://m.media-amazon.com/images/I/71MtansrYML._AC_SX679_.jpg
+    size: 0
+    name: null
+- model: models.file
+  pk: 10007
+  fields:
+    created_at: 2023-05-08 03:21:54.424140+00:00
+    updated_at: 2023-05-08 03:21:54.424197+00:00
+    hash: '7973183156888696859'
+    url: https://m.media-amazon.com/images/I/71m+BsKSN+L._AC_SX679_.jpg
+    size: 0
+    name: null
+- model: models.file
+  pk: 10008
+  fields:
+    created_at: 2023-05-08 03:22:13.752481+00:00
+    updated_at: 2023-05-08 03:22:13.752519+00:00
+    hash: '2537268083135996153'
+    url: https://m.media-amazon.com/images/I/611GPXKVJML._AC_SX679_.jpg
+    size: 0
+    name: null
+- model: models.file
+  pk: 10009
+  fields:
+    created_at: 2023-05-08 03:28:56.420519+00:00
+    updated_at: 2023-05-08 03:28:56.420558+00:00
+    hash: '2689664521888095246'
+    url: https://m.media-amazon.com/images/I/61yLSIQf6ZL._AC_SX679_.jpg
+    size: 0
+    name: null
+- model: models.file
+  pk: 10010
+  fields:
+    created_at: 2023-05-08 03:29:36.613989+00:00
+    updated_at: 2023-05-08 03:29:36.614070+00:00
+    hash: '5635231438745547883'
+    url: https://m.media-amazon.com/images/I/81ONaP+vRSL._AC_SX679_.jpg
+    size: 0
+    name: null
+- model: models.file
+  pk: 10011
+  fields:
+    created_at: 2023-05-08 03:29:48.614365+00:00
+    updated_at: 2023-05-08 03:29:48.614527+00:00
+    hash: '6786292865722884109'
+    url: https://m.media-amazon.com/images/I/61VaqvzlOSL._AC_SX679_.jpg
+    size: 0
+    name: null
+- model: models.file
+  pk: 10012
+  fields:
+    created_at: 2023-05-08 03:29:57.271143+00:00
+    updated_at: 2023-05-08 03:29:57.271244+00:00
+    hash: '-4348060066224370174'
+    url: https://m.media-amazon.com/images/I/51z8FCYlpeL._AC_SX679_.jpg
+    size: 0
+    name: null
+- model: models.file
+  pk: 10013
+  fields:
+    created_at: 2023-05-08 03:30:10.607969+00:00
+    updated_at: 2023-05-08 03:30:10.608021+00:00
+    hash: '-8064187806620136875'
+    url: https://m.media-amazon.com/images/I/61P24FDcG5L._AC_SX679_.jpg
+    size: 0
+    name: null
+- model: models.file
+  pk: 10014
+  fields:
+    created_at: 2023-05-08 03:34:53.825603+00:00
+    updated_at: 2023-05-08 03:34:53.825679+00:00
+    hash: '-85263455949309972'
+    url: https://m.media-amazon.com/images/I/91ml9P0k0qL._AC_SX466_.jpg
+    size: 0
+    name: null
+- model: models.file
+  pk: 10015
+  fields:
+    created_at: 2023-05-08 03:35:03.156028+00:00
+    updated_at: 2023-05-08 03:35:03.156072+00:00
+    hash: '7289551548703302657'
+    url: https://m.media-amazon.com/images/I/81n496Q5-0L._AC_SX466_.jpg
+    size: 0
+    name: null
+- model: models.file
+  pk: 10016
+  fields:
+    created_at: 2023-05-08 03:39:49.548891+00:00
+    updated_at: 2023-05-08 03:39:49.549255+00:00
+    hash: '5233257633024716662'
+    url: https://m.media-amazon.com/images/I/91UNH4bd6zS._AC_SX466_.jpg
+    size: 0
+    name: null
+- model: models.file
+  pk: 10017
+  fields:
+    created_at: 2023-05-08 03:39:59.091466+00:00
+    updated_at: 2023-05-08 03:39:59.091508+00:00
+    hash: '4280379745685075722'
+    url: https://m.media-amazon.com/images/I/91a2YmuVTwS._AC_SX466_.jpg
+    size: 0
+    name: null
+- model: models.file
+  pk: 10018
+  fields:
+    created_at: 2023-05-08 03:43:48.310712+00:00
+    updated_at: 2023-05-08 03:43:48.310949+00:00
+    hash: '-3389029886378172236'
+    url: https://m.media-amazon.com/images/I/91fEIiIM7FL._AC_SY741_.jpg
+    size: 0
+    name: null
+- model: models.file
+  pk: 10019
+  fields:
+    created_at: 2023-05-08 03:43:57.178379+00:00
+    updated_at: 2023-05-08 03:43:57.178432+00:00
+    hash: '5756680033281496747'
+    url: https://m.media-amazon.com/images/I/81qpe4m4h6L._AC_SY741_.jpg
+    size: 0
+    name: null
+- model: models.file
+  pk: 10020
+  fields:
+    created_at: 2023-05-08 03:44:08.147911+00:00
+    updated_at: 2023-05-08 03:44:08.148032+00:00
+    hash: '216154440010111506'
+    url: https://m.media-amazon.com/images/I/81n1qTfDrOL._AC_SY741_.jpg
+    size: 0
+    name: null
+- model: models.file
+  pk: 10021
+  fields:
+    created_at: 2023-05-08 03:45:40.372109+00:00
+    updated_at: 2023-05-08 03:45:40.372153+00:00
+    hash: '-7736373163804966687'
+    url: https://m.media-amazon.com/images/I/81HXNfI7dwL._AC_SX679_.jpg
+    size: 0
+    name: null
+- model: models.file
+  pk: 10022
+  fields:
+    created_at: 2023-05-08 03:45:47.729854+00:00
+    updated_at: 2023-05-08 03:45:47.729896+00:00
+    hash: '-7741863973389329376'
+    url: https://m.media-amazon.com/images/I/81XWZlxMB0L._AC_SX679_.jpg
+    size: 0
+    name: null
+- model: models.file
+  pk: 10023
+  fields:
+    created_at: 2023-05-08 03:45:57.766240+00:00
+    updated_at: 2023-05-08 03:45:57.766336+00:00
+    hash: '-2086439824324002222'
+    url: https://m.media-amazon.com/images/I/81gMttchLBL._AC_SX679_.jpg
+    size: 0
+    name: null
+- model: models.file
+  pk: 10024
+  fields:
+    created_at: 2023-05-08 03:49:20.895780+00:00
+    updated_at: 2023-05-08 03:49:20.895835+00:00
+    hash: '-1597944284509832861'
+    url: https://m.media-amazon.com/images/I/81a6QreHzOL._AC_SX569_.jpg
+    size: 0
+    name: null
+- model: models.file
+  pk: 10025
+  fields:
+    created_at: 2023-05-08 03:49:29.270206+00:00
+    updated_at: 2023-05-08 03:49:29.270290+00:00
+    hash: '-5563184759087163683'
+    url: https://m.media-amazon.com/images/I/81rUUIZUdRL._AC_SX569_.jpg
+    size: 0
+    name: null
+- model: models.file
+  pk: 10026
+  fields:
+    created_at: 2023-05-08 03:49:42.304582+00:00
+    updated_at: 2023-05-08 03:49:42.304627+00:00
+    hash: '-7096142398272618821'
+    url: https://m.media-amazon.com/images/I/81GbMSt1yJL._AC_SX569_.jpg
+    size: 0
+    name: null
+- model: models.file
+  pk: 10027
+  fields:
+    created_at: 2023-05-08 03:50:50.463469+00:00
+    updated_at: 2023-05-08 03:50:50.463557+00:00
+    hash: '6359111576426852327'
+    url: https://m.media-amazon.com/images/I/81Ovod8X0SL._AC_SX569_.jpg
+    size: 0
+    name: null
+- model: models.file
+  pk: 10028
+  fields:
+    created_at: 2023-05-08 03:51:01.088462+00:00
+    updated_at: 2023-05-08 03:51:01.088515+00:00
+    hash: '1701637142195873790'
+    url: https://m.media-amazon.com/images/I/812mTEUHBTL._AC_SX569_.jpg
+    size: 0
+    name: null
+- model: models.file
+  pk: 10029
+  fields:
+    created_at: 2023-05-08 03:51:08.100417+00:00
+    updated_at: 2023-05-08 03:51:08.100465+00:00
+    hash: '-3864626092181099925'
+    url: https://m.media-amazon.com/images/I/81841+IlUxL._AC_SX569_.jpg
+    size: 0
+    name: null
+- model: models.file
+  pk: 10030
+  fields:
+    created_at: 2023-05-08 03:53:18.682844+00:00
+    updated_at: 2023-05-08 03:53:18.683025+00:00
+    hash: '-6080060900863657620'
+    url: https://m.media-amazon.com/images/I/81B3NnP0aFL._AC_SY575_.jpg
+    size: 0
+    name: null
+- model: models.file
+  pk: 10031
+  fields:
+    created_at: 2023-05-08 03:53:26.837721+00:00
+    updated_at: 2023-05-08 03:53:26.837773+00:00
+    hash: '-1593471637726433915'
+    url: https://m.media-amazon.com/images/I/71la5A5vLyL._AC_SY695_.jpg
+    size: 0
+    name: null
+- model: models.file
+  pk: 10032
+  fields:
+    created_at: 2023-05-08 03:53:39.165120+00:00
+    updated_at: 2023-05-08 03:53:39.165196+00:00
+    hash: '3371237010715208836'
+    url: https://m.media-amazon.com/images/I/71FtMVaoyZL._AC_SY695_.jpg
+    size: 0
+    name: null
+- model: models.file
+  pk: 10033
+  fields:
+    created_at: 2023-05-08 03:53:46.356381+00:00
+    updated_at: 2023-05-08 03:53:46.356429+00:00
+    hash: '-9189894731512135086'
+    url: https://m.media-amazon.com/images/I/818fxPx9jlL._AC_SX575_.jpg
+    size: 0
+    name: null
+- model: models.file
+  pk: 10034
+  fields:
+    created_at: 2023-05-08 03:53:56.434505+00:00
+    updated_at: 2023-05-08 03:53:56.434582+00:00
+    hash: '-8719523306873663500'
+    url: https://m.media-amazon.com/images/I/61u9hkf9DvL._AC_SX575_.jpg
+    size: 0
+    name: null
+- model: models.file
+  pk: 10035
+  fields:
+    created_at: 2023-05-08 03:54:05.583405+00:00
+    updated_at: 2023-05-08 03:54:05.583541+00:00
+    hash: '-6204154361330041420'
+    url: https://m.media-amazon.com/images/I/815byA02wXL._AC_SX575_.jpg
+    size: 0
+    name: null
+- model: models.file
+  pk: 10036
+  fields:
+    created_at: 2023-05-08 03:54:14.938183+00:00
+    updated_at: 2023-05-08 03:54:14.938236+00:00
+    hash: '3249239606001388621'
+    url: https://m.media-amazon.com/images/I/81GLCvaPdhL._AC_SY575_.jpg
+    size: 0
+    name: null
+- model: models.file
+  pk: 10037
+  fields:
+    created_at: 2023-05-08 04:04:53.792687+00:00
+    updated_at: 2023-05-08 04:04:53.792736+00:00
+    hash: '-1026595571758482014'
+    url: https://m.media-amazon.com/images/I/81EEnlqFnXL._AC_SX679_.jpg
+    size: 0
+    name: null
+- model: models.file
+  pk: 10038
+  fields:
+    created_at: 2023-05-08 04:05:04.648754+00:00
+    updated_at: 2023-05-08 04:05:04.648815+00:00
+    hash: '9021820753863968697'
+    url: https://m.media-amazon.com/images/I/71d8vbzP6TL._AC_SX679_.jpg
+    size: 0
+    name: null
+- model: models.file
+  pk: 10039
+  fields:
+    created_at: 2023-05-08 04:05:14.714303+00:00
+    updated_at: 2023-05-08 04:05:14.714379+00:00
+    hash: '-2195935554048699152'
+    url: https://m.media-amazon.com/images/I/71XZgEukAvL._AC_SX679_.jpg
+    size: 0
+    name: null
+- model: models.file
+  pk: 10040
+  fields:
+    created_at: 2023-05-08 04:06:40.091919+00:00
+    updated_at: 2023-05-08 04:06:40.092063+00:00
+    hash: '6478041514996472776'
+    url: https://m.media-amazon.com/images/I/412KlYwkXbL._AC_SX679_.jpg
+    size: 0
+    name: null
+- model: models.file
+  pk: 10041
+  fields:
+    created_at: 2023-05-08 04:06:46.623332+00:00
+    updated_at: 2023-05-08 04:06:46.623388+00:00
+    hash: '-1518437898748582680'
+    url: https://m.media-amazon.com/images/I/41q1hSvU7uL._AC_SX679_.jpg
+    size: 0
+    name: null
+- model: models.file
+  pk: 10042
+  fields:
+    created_at: 2023-05-08 04:06:56.217989+00:00
+    updated_at: 2023-05-08 04:06:56.224273+00:00
+    hash: '1680710843083126462'
+    url: https://m.media-amazon.com/images/I/41-pL-gnN2L._AC_SX679_.jpg
+    size: 0
+    name: null
+- model: models.file
+  pk: 10043
+  fields:
+    created_at: 2023-05-08 04:07:02.628181+00:00
+    updated_at: 2023-05-08 04:07:02.628224+00:00
+    hash: '-2043871260270319228'
+    url: https://m.media-amazon.com/images/I/41UFipMAowL._AC_SX679_.jpg
+    size: 0
+    name: null
+- model: models.file
+  pk: 10044
+  fields:
+    created_at: 2023-05-08 04:08:26.048741+00:00
+    updated_at: 2023-05-08 04:08:26.048801+00:00
+    hash: '2338899306463925159'
+    url: https://m.media-amazon.com/images/I/81bYvDspKPL._AC_SX575_.jpg
+    size: 0
+    name: null
+- model: models.file
+  pk: 10045
+  fields:
+    created_at: 2023-05-08 04:08:35.997990+00:00
+    updated_at: 2023-05-08 04:08:35.998087+00:00
+    hash: '-8766111112459887689'
+    url: https://m.media-amazon.com/images/I/71qiRn1iGAL._AC_SY695_.jpg
+    size: 0
+    name: null
+- model: models.file
+  pk: 10046
+  fields:
+    created_at: 2023-05-08 04:08:46.510354+00:00
+    updated_at: 2023-05-08 04:08:46.510399+00:00
+    hash: '3699884198079176334'
+    url: https://m.media-amazon.com/images/I/710MoUHB7rL._AC_SY695_.jpg
+    size: 0
+    name: null
+- model: models.file
+  pk: 10047
+  fields:
+    created_at: 2023-05-08 04:08:59.552747+00:00
+    updated_at: 2023-05-08 04:08:59.552798+00:00
+    hash: '2002510032797622766'
+    url: https://m.media-amazon.com/images/I/71aADWttz-L._AC_SX575_.jpg
+    size: 0
+    name: null
+- model: models.file
+  pk: 10048
+  fields:
+    created_at: 2023-05-08 04:09:11.192788+00:00
+    updated_at: 2023-05-08 04:09:11.192835+00:00
+    hash: '4263741674096481310'
+    url: https://m.media-amazon.com/images/I/713ZUzgegHL._AC_SX575_.jpg
+    size: 0
+    name: null
+- model: models.file
+  pk: 10049
+  fields:
+    created_at: 2023-05-08 04:10:58.903196+00:00
+    updated_at: 2023-05-08 04:10:58.903243+00:00
+    hash: '-5192344933157142733'
+    url: https://m.media-amazon.com/images/I/51pTmE50cvL._AC_SX575_.jpg
+    size: 0
+    name: null
+- model: models.file
+  pk: 10050
+  fields:
+    created_at: 2023-05-08 04:11:09.972394+00:00
+    updated_at: 2023-05-08 04:11:09.972451+00:00
+    hash: '8947630189579435595'
+    url: https://m.media-amazon.com/images/I/5190B-ZIPpL._AC_SX575_.jpg
+    size: 0
+    name: null
+- model: models.file
+  pk: 10051
+  fields:
+    created_at: 2023-05-08 04:11:23.028349+00:00
+    updated_at: 2023-05-08 04:11:23.028433+00:00
+    hash: '2492697281682312308'
+    url: https://m.media-amazon.com/images/I/51SK8LDwCFL._AC_SX575_.jpg
+    size: 0
+    name: null
+- model: models.file
+  pk: 10052
+  fields:
+    created_at: 2023-05-08 04:11:32.247576+00:00
+    updated_at: 2023-05-08 04:11:32.247644+00:00
+    hash: '-3952349936610527026'
+    url: https://m.media-amazon.com/images/I/51SQi3EHoRL._AC_SX575_.jpg
+    size: 0
+    name: null
+- model: models.file
+  pk: 10053
+  fields:
+    created_at: 2023-05-08 04:12:58.462411+00:00
+    updated_at: 2023-05-08 04:12:58.462551+00:00
+    hash: '4971972544064735877'
+    url: https://m.media-amazon.com/images/I/71OI4m1AFHL._AC_SX522_.jpg
+    size: 0
+    name: null
+- model: models.file
+  pk: 10054
+  fields:
+    created_at: 2023-05-08 04:13:05.833365+00:00
+    updated_at: 2023-05-08 04:13:05.833438+00:00
+    hash: '-7697882293338234717'
+    url: https://m.media-amazon.com/images/I/813aGsqpZgL._AC_SX522_.jpg
+    size: 0
+    name: null
+- model: models.file
+  pk: 10055
+  fields:
+    created_at: 2023-05-08 04:15:19.710110+00:00
+    updated_at: 2023-05-08 04:15:19.710180+00:00
+    hash: '-9002893110047023251'
+    url: https://m.media-amazon.com/images/I/51gsU5jbfgL._AC_SY879_.jpg
+    size: 0
+    name: null
+- model: models.file
+  pk: 10056
+  fields:
+    created_at: 2023-05-08 04:15:26.244009+00:00
+    updated_at: 2023-05-08 04:15:26.244069+00:00
+    hash: '5665255993218757538'
+    url: https://m.media-amazon.com/images/I/51nt6VkLhFL._AC_SX522_.jpg
+    size: 0
+    name: null
+- model: models.file
+  pk: 10057
+  fields:
+    created_at: 2023-05-08 04:15:41.040457+00:00
+    updated_at: 2023-05-08 04:15:41.040559+00:00
+    hash: '5766815614905753254'
+    url: https://m.media-amazon.com/images/I/61DI9ZYoOtL._AC_SX522_.jpg
+    size: 0
+    name: null
+- model: models.file
+  pk: 10058
+  fields:
+    created_at: 2023-05-08 04:17:09.441628+00:00
+    updated_at: 2023-05-08 04:17:09.441722+00:00
+    hash: '2699341032863858489'
+    url: https://m.media-amazon.com/images/I/91-gjiGjvpL._AC_SX679_.jpg
+    size: 0
+    name: null
+- model: models.file
+  pk: 10059
+  fields:
+    created_at: 2023-05-08 04:17:18.369455+00:00
+    updated_at: 2023-05-08 04:17:18.369500+00:00
+    hash: '-421574454734251634'
+    url: https://m.media-amazon.com/images/I/81PPfu5yuOL._AC_SX679_.jpg
+    size: 0
+    name: null
+- model: models.file
+  pk: 10060
+  fields:
+    created_at: 2023-05-08 04:17:25.271862+00:00
+    updated_at: 2023-05-08 04:17:25.271916+00:00
+    hash: '8600112213157895121'
+    url: https://m.media-amazon.com/images/I/91A2qzC4kWL._AC_SX679_.jpg
+    size: 0
+    name: null
+- model: models.file
+  pk: 10061
+  fields:
+    created_at: 2023-05-08 04:17:33.242178+00:00
+    updated_at: 2023-05-08 04:17:33.242235+00:00
+    hash: '4133969974342823654'
+    url: https://m.media-amazon.com/images/I/91RjUD7scmL._AC_SX679_.jpg
+    size: 0
+    name: null
+- model: models.file
+  pk: 10062
+  fields:
+    created_at: 2023-05-08 04:17:43.300592+00:00
+    updated_at: 2023-05-08 04:17:43.300908+00:00
+    hash: '1464887831177351233'
+    url: https://m.media-amazon.com/images/I/91qzTs1ziOL._AC_SX679_.jpg
+    size: 0
+    name: null
+- model: models.file
+  pk: 10063
+  fields:
+    created_at: 2023-05-08 04:18:43.725205+00:00
+    updated_at: 2023-05-08 04:18:43.725239+00:00
+    hash: '-7541144432727604444'
+    url: https://m.media-amazon.com/images/I/A1xruPQIb6L._AC_SX569_.jpg
+    size: 0
+    name: null
+- model: models.file
+  pk: 10064
+  fields:
+    created_at: 2023-05-08 04:18:51.393639+00:00
+    updated_at: 2023-05-08 04:18:51.393681+00:00
+    hash: '-6270531039475932965'
+    url: https://m.media-amazon.com/images/I/81isDtW1nIL._AC_SX679_.jpg
+    size: 0
+    name: null
+- model: models.file
+  pk: 10065
+  fields:
+    created_at: 2023-05-08 04:18:58.840674+00:00
+    updated_at: 2023-05-08 04:18:58.840788+00:00
+    hash: '8752173593899309950'
+    url: https://m.media-amazon.com/images/I/91reQDE6kBL._AC_SY741_.jpg
+    size: 0
+    name: null
+- model: models.file
+  pk: 10066
+  fields:
+    created_at: 2023-05-08 04:19:05.589966+00:00
+    updated_at: 2023-05-08 04:19:05.590029+00:00
+    hash: '9121379176465482595'
+    url: https://m.media-amazon.com/images/I/81a9yGG4lhL._AC_SX679_.jpg
+    size: 0
+    name: null
+- model: models.file
+  pk: 10067
+  fields:
+    created_at: 2023-05-08 04:19:14.385089+00:00
+    updated_at: 2023-05-08 04:19:14.385135+00:00
+    hash: '-7658713558202058204'
+    url: https://m.media-amazon.com/images/I/71IszrvMWZL._AC_SY741_.jpg
+    size: 0
+    name: null
+- model: models.file
+  pk: 10068
+  fields:
+    created_at: 2023-05-08 04:20:54.328647+00:00
+    updated_at: 2023-05-08 04:20:54.328711+00:00
+    hash: '8076741092801566759'
+    url: https://m.media-amazon.com/images/I/71+3y6KHNRL._AC_SY879_.jpg
+    size: 0
+    name: null
+- model: models.file
+  pk: 10069
+  fields:
+    created_at: 2023-05-08 04:21:00.890264+00:00
+    updated_at: 2023-05-08 04:21:00.890403+00:00
+    hash: '6065556609518911091'
+    url: https://m.media-amazon.com/images/I/51Paob2e8LL._AC_SX679_.jpg
+    size: 0
+    name: null
+- model: models.file
+  pk: 10070
+  fields:
+    created_at: 2023-05-08 04:21:08.765020+00:00
+    updated_at: 2023-05-08 04:21:08.765090+00:00
+    hash: '-8601345788761180355'
+    url: https://m.media-amazon.com/images/I/61llCrQ4l1L._AC_SX679_.jpg
+    size: 0
+    name: null
+- model: models.file
+  pk: 10071
+  fields:
+    created_at: 2023-05-08 04:21:18.003056+00:00
+    updated_at: 2023-05-08 04:21:18.003100+00:00
+    hash: '5785065232314309179'
+    url: https://m.media-amazon.com/images/I/71oSg0gSiML._AC_SX679_.jpg
+    size: 0
+    name: null
+- model: models.file
+  pk: 10072
+  fields:
+    created_at: 2023-05-08 04:22:26.649944+00:00
+    updated_at: 2023-05-08 04:22:26.649995+00:00
+    hash: '823790888621364981'
+    url: https://m.media-amazon.com/images/I/81Xq6xcuiEL._AC_SY879_.jpg
+    size: 0
+    name: null
+- model: models.file
+  pk: 10073
+  fields:
+    created_at: 2023-05-08 04:22:33.850483+00:00
+    updated_at: 2023-05-08 04:22:33.850656+00:00
+    hash: '144887714667370356'
+    url: https://m.media-amazon.com/images/I/81DysJtnTXL._AC_SY879_.jpg
+    size: 0
+    name: null
+- model: models.file
+  pk: 10074
+  fields:
+    created_at: 2023-05-08 04:28:22.765505+00:00
+    updated_at: 2023-05-08 04:28:22.765618+00:00
+    hash: '1639297625915004898'
+    url: https://levisco.vteximg.com.br/arquivos/MAIN_HOME_MADRES_DESK.jpg
+    size: 0
+    name: null
+- model: models.file
+  pk: 10075
+  fields:
+    created_at: 2023-05-08 04:32:14.476395+00:00
+    updated_at: 2023-05-08 04:32:14.476477+00:00
+    hash: '-791855934036908997'
+    url: https://assetspwa.liverpool.com.mx/assets/digital/landing/adidas/img/banner-calzado-220223.png
+    size: 0
+    name: null

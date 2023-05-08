@@ -1,0 +1,28 @@
+- model: models.category
+  pk: 1
+  fields:
+    created_at: 2023-05-08 03:11:16.065608+00:00
+    updated_at: 2023-05-08 03:11:16.065666+00:00
+    hash: '6819381421073076322'
+    name: Ropa
+- model: models.category
+  pk: 2
+  fields:
+    created_at: 2023-05-08 03:52:38.052761+00:00
+    updated_at: 2023-05-08 03:52:38.052808+00:00
+    hash: '5685618689750028931'
+    name: Calzado
+- model: models.category
+  pk: 3
+  fields:
+    created_at: 2023-05-08 04:02:04.744910+00:00
+    updated_at: 2023-05-08 04:02:04.744975+00:00
+    hash: '7200476729907885490'
+    name: Fragancia
+- model: models.category
+  pk: 4
+  fields:
+    created_at: 2023-05-08 04:03:09.400745+00:00
+    updated_at: 2023-05-08 04:03:09.400785+00:00
+    hash: '4837811764496184137'
+    name: Bolsas y Maletas
