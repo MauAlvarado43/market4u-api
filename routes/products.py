@@ -23,12 +23,13 @@ class ProductViewSet(SeedRoute.ProductViewSet):
 
         user = get_object_or_404(User, pk = request.data['user'])
         category = get_object_or_404(Category, pk = request.data['category'])
+        company = user.company
 
         product = Product.objects.create(
             name = request.data['name'],
             short_description = request.data['short_description'],
             description = request.data['description'],
-            user = user,
+            company = company,
             category = category
         )
         product.save()
@@ -50,7 +51,7 @@ class ProductViewSet(SeedRoute.ProductViewSet):
         category = get_object_or_404(Category, pk = request.data['category'])
         product = get_object_or_404(Product, pk = request.data['product'])
 
-        if product.user.id != user.id:
+        if product.company.id != user.company.id:
             return Response(status = status.HTTP_401_UNAUTHORIZED)
         
         product.name = request.data['name']
