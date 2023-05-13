@@ -13,6 +13,9 @@ def update_info_superadmin(user_id, city, cologn, cp, email, firstName, password
     user.street = street
     user.telephone = telephone
     user.type = type
+    user.company = None
+    if(company != None):
+        user.company = Company.objects.get(id=company)
     if(password != ''):
-            user.set_password(password)
+        user.set_password(password)
     user.save()
