@@ -19,6 +19,10 @@ from domain.recover_password import send_token_password, restore_password
 from domain.utils import http_codes
 from domain.update_user import update_info
 
+from domain.update_user_superadmin import update_info_superadmin
+from domain.update_user_normal import update_info_normal
+from domain.create_user_superadmin import create_info_superadmin
+
 class UserViewSet(SeedRoute.UserViewSet):
     
 
@@ -108,3 +112,26 @@ class UserViewSet(SeedRoute.UserViewSet):
                   data['lastName'], data['municipality'], data['state'], data['street'], data['telephone'], data['type'], data['company'])
       return Response(status=status.HTTP_200_OK)
     
+    @action(detail=False, methods=['POST'])
+    def update_user_superadmin(self,request):
+        data = request.data
+        print(data)
+        has_fields_or_400(data, 'user_id', 'city', 'cologn', 'cp', 'email', 'firstName', 'lastName', 'municipality', 'state', 'street', 'telephone', 'type', 'password', 'company')
+        update_info_superadmin(data['user_id'], data['city'], data['cologn'], data['cp'], data['email'], data['firstName'], data['password'],data['lastName'], data['municipality'], data['state'], data['street'], data['telephone'], data['type'], data['company'])
+        return Response(status=status.HTTP_200_OK)
+    
+    @action(detail=False, methods=['POST'])
+    def update_user_normal(self,request):
+        data = request.data
+        print(data)
+        has_fields_or_400(data, 'user_id', 'city', 'cologn', 'cp', 'email', 'firstName', 'lastName', 'municipality', 'state', 'street', 'telephone', 'type', 'password', 'company')
+        update_info_normal(data['user_id'], data['city'], data['cologn'], data['cp'], data['email'], data['firstName'], data['password'],data['lastName'], data['municipality'], data['state'], data['street'], data['telephone'], data['type'], data['company'])
+        return Response(status=status.HTTP_200_OK)
+    
+    @action(detail=False, methods=['POST'])
+    def create_user_superadmin(self,request):
+        data = request.data
+        print(data)
+        has_fields_or_400(data, 'city', 'cologn', 'cp', 'email', 'firstName', 'lastName', 'municipality', 'state', 'street', 'telephone', 'type', 'password', 'company')
+        create_info_superadmin( data['city'], data['cologn'], data['cp'], data['email'], data['firstName'], data['password'],data['lastName'], data['municipality'], data['state'], data['street'], data['telephone'], data['type'], data['company'])
+        return Response(status=status.HTTP_200_OK)

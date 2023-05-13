@@ -14,6 +14,9 @@ from app.models import Product, User, Category, Sale, Variant, Variantoption, Fi
 from app.serializers import ProductSerializer
 from domain.save_variants import save_variants
 
+from domain.update_info_product import update_info_null_product
+from domain.nullable_products import change_value
+
 class ProductViewSet(SeedRoute.ProductViewSet):
     
     @action(detail = False, methods = ['POST'])
@@ -68,3 +71,19 @@ class ProductViewSet(SeedRoute.ProductViewSet):
         for variant in product.variants.all(): variant.delete()
         response = save_variants(request, product)
         return response
+    
+    @action(detail=False, methods=['POST'])
+    def update_product_null(self,request):
+        data = request.data
+        print(data)
+        has_fields_or_400(data,'product_id')
+        update_info_null_product(data['product_id'])
+        return Response(status=status.HTTP_200_OK)
+    ########
+    @action(detail=False, methods=["POST"])
+    def nullable_products(self,request):
+        data = request.data 
+        print(data)
+        has_fields_or_400(data,'sale_id')
+        change_value(data['sale_id'])
+        return Response(status=status.HTTP_200_OK)
