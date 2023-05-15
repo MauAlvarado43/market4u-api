@@ -22,6 +22,7 @@ from domain.update_user import update_info
 from domain.update_user_superadmin import update_info_superadmin
 from domain.update_user_normal import update_info_normal
 from domain.create_user_superadmin import create_info_superadmin
+from domain.create_user_company import create_info_company
 
 class UserViewSet(SeedRoute.UserViewSet):
     
@@ -35,7 +36,6 @@ class UserViewSet(SeedRoute.UserViewSet):
         password = data["password"]
 
         user = authenticate(username=email, password=password)
-        print(user)
         company = user.company
 
         try:
@@ -115,15 +115,13 @@ class UserViewSet(SeedRoute.UserViewSet):
     @action(detail=False, methods=['POST'])
     def update_user_superadmin(self,request):
         data = request.data
-        print(data)
-        has_fields_or_400(data, 'user_id', 'city', 'cologn', 'cp', 'email', 'firstName', 'lastName', 'municipality', 'state', 'street', 'telephone', 'type', 'password', 'company')
-        update_info_superadmin(data['user_id'], data['city'], data['cologn'], data['cp'], data['email'], data['firstName'], data['password'],data['lastName'], data['municipality'], data['state'], data['street'], data['telephone'], data['type'], data['company'])
+        has_fields_or_400(data, 'user_id', 'city', 'cologn', 'company_id', 'cp', 'email', 'firstName', 'lastName', 'municipality', 'state', 'street', 'telephone', 'type', 'username', 'password')
+        update_info_superadmin(data['user_id'], data['city'], data['cologn'], data['company_id'], data['cp'], data['email'], data['firstName'], data['lastName'], data['municipality'], data['state'], data['street'], data['telephone'], data['type'], data['username'], data['password'])
         return Response(status=status.HTTP_200_OK)
     
     @action(detail=False, methods=['POST'])
     def update_user_normal(self,request):
         data = request.data
-        print(data)
         has_fields_or_400(data, 'user_id', 'city', 'cologn', 'cp', 'email', 'firstName', 'lastName', 'municipality', 'state', 'street', 'telephone', 'type', 'password', 'company')
         update_info_normal(data['user_id'], data['city'], data['cologn'], data['cp'], data['email'], data['firstName'], data['password'],data['lastName'], data['municipality'], data['state'], data['street'], data['telephone'], data['type'], data['company'])
         return Response(status=status.HTTP_200_OK)
@@ -131,7 +129,13 @@ class UserViewSet(SeedRoute.UserViewSet):
     @action(detail=False, methods=['POST'])
     def create_user_superadmin(self,request):
         data = request.data
-        print(data)
-        has_fields_or_400(data, 'city', 'cologn', 'cp', 'email', 'firstName', 'lastName', 'municipality', 'state', 'street', 'telephone', 'type', 'password', 'company')
-        create_info_superadmin( data['city'], data['cologn'], data['cp'], data['email'], data['firstName'], data['password'],data['lastName'], data['municipality'], data['state'], data['street'], data['telephone'], data['type'], data['company'])
+        has_fields_or_400(data, 'city', 'cologn', 'company_id', 'cp', 'email', 'firstName', 'lastName', 'municipality', 'password', 'state', 'street', 'telephone', 'type')
+        create_info_superadmin( data['city'], data['cologn'], data['company_id'], data['cp'], data['email'], data['firstName'], data['lastName'], data['municipality'], data['password'], data['state'], data['street'], data['telephone'], data['type'])
+        return Response(status=status.HTTP_200_OK)
+    
+    @action(detail=False, methods=['POST'])
+    def create_user_company(self,request):
+        data = request.data
+        has_fields_or_400(data, 'city', 'cologn', 'company_id', 'cp', 'email', 'firstName', 'lastName', 'municipality', 'password', 'state', 'street', 'telephone', 'type')
+        create_info_company( data['city'], data['cologn'], data['company_id'], data['cp'], data['email'], data['firstName'], data['lastName'], data['municipality'], data['password'], data['state'], data['street'], data['telephone'], data['type'])
         return Response(status=status.HTTP_200_OK)
