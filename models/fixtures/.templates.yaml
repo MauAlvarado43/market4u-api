@@ -78,6 +78,7 @@
   fields:
     name: ""
     short_description: ""
+    sku: ""
     description: ""
     company: 0
     sale: 0

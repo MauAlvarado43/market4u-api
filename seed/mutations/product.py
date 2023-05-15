@@ -18,6 +18,7 @@ class SaveProductMutation(graphene.Mutation):
     class Arguments:
         name = graphene.String(required=True)
         shortDescription = graphene.String(required=True)
+        sku = graphene.String(required=True)
         description = graphene.String(required=True)
         company = graphene.Int(required=True)
         sale = graphene.Int(required=False)
@@ -32,6 +33,8 @@ class SaveProductMutation(graphene.Mutation):
             product["name"] = kwargs["name"]
         if "shortDescription" in kwargs:
             product["short_description"] = kwargs["shortDescription"]
+        if "sku" in kwargs:
+            product["sku"] = kwargs["sku"]
         if "description" in kwargs:
             product["description"] = kwargs["description"]
         if "company" in kwargs:
@@ -67,6 +70,7 @@ class SetProductMutation(graphene.Mutation):
         id = graphene.Int(required=True)
         name = graphene.String(required=False)
         shortDescription = graphene.String(required=False)
+        sku = graphene.String(required=False)
         description = graphene.String(required=False)
         company = graphene.Int(required=False)
         sale = graphene.Int(required=False)
@@ -83,6 +87,8 @@ class SetProductMutation(graphene.Mutation):
             product.name = kwargs["name"]
         if "shortDescription" in kwargs:
             product.short_description = kwargs["shortDescription"]
+        if "sku" in kwargs:
+            product.sku = kwargs["sku"]
         if "description" in kwargs:
             product.description = kwargs["description"]
         if "company" in kwargs:

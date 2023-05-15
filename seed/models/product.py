@@ -11,6 +11,7 @@ class Product(Model):
 
     name = models.CharField(max_length=100, blank=True)
     short_description = models.CharField(max_length=200, blank=True)
+    sku = models.CharField(max_length=100, blank=True)
     description = models.TextField(blank=True)
 
     company = models.ForeignKey(

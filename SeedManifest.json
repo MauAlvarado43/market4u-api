@@ -288,6 +288,11 @@
           "type": "string"
         },
         {
+          "length": "100",
+          "name": "sku",
+          "type": "string"
+        },
+        {
           "name": "description",
           "type": "text"
         },

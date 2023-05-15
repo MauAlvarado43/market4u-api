@@ -147,6 +147,7 @@ class Admin:
                     'created_at',
                     'name',
                     'short_description',
+                    'sku',
                     'description',
                     'company',
                     'opinions',

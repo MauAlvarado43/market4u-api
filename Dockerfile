@@ -16,5 +16,10 @@ ENV TZ=America/Mexico_City
 
 COPY requirements.txt .
 COPY seed/requirements.txt seed/
+RUN apk update && apk add cmake make g++ libstdc++ libgcc libuv-dev openssl-dev gfortran openblas-dev libgfortran libgomp lapack-dev meson ninja libc-dev linux-headers cython
+# RUN apk add py3-numpy py3-pandas libressl-dev libxml2 libxml2-dev libxslt libxslt-dev libjpeg-turbo-dev zlib-dev
+RUN pip install cython
+RUN pip install numpy==1.17.4
+RUN pip install pandas==0.25.3
 RUN pip install -r requirements.txt
 COPY . .

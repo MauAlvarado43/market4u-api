@@ -1015,6 +1015,7 @@ class TestGraphql(GraphQLTestCase):
                     id
                     name
                     shortDescription
+                    sku
                     description
                     company {
                       id
@@ -1093,6 +1094,7 @@ class TestGraphql(GraphQLTestCase):
                     id
                     name
                     shortDescription
+                    sku
                     description
                     company {
                       id
@@ -1117,6 +1119,7 @@ class TestGraphql(GraphQLTestCase):
                 saveProduct(
                     name: "",
                     shortDescription: "",
+                    sku: "",
                     description: "",
                     company:  1,
                     sale:  1,
@@ -1126,6 +1129,7 @@ class TestGraphql(GraphQLTestCase):
                         id
                         name
                         shortDescription
+                        sku
                         description
                         company {
                           id
@@ -1151,6 +1155,7 @@ class TestGraphql(GraphQLTestCase):
                 setProduct(id:1
                     name: "",
                     shortDescription: "",
+                    sku: "",
                     description: "",
                     company:  1,
                     sale:  1,
@@ -1161,6 +1166,7 @@ class TestGraphql(GraphQLTestCase):
                         id
                         name
                         shortDescription
+                        sku
                         description
                         company {
                           id

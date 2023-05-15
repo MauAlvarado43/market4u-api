@@ -35,6 +35,7 @@ class ProductSerializer(serializers.ModelSerializer):
             'hash',
             'name',
             'short_description',
+            'sku',
             'description',
             'company_id',
             'opinion_ids',

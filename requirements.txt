@@ -3,3 +3,5 @@
 #  Include custom dependencies
 #  Examples:
 #     PyPDF2==1.26.0
+
+pyECLAT==1.0.2

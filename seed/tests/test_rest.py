@@ -262,6 +262,7 @@ class TestRest(APITestCase):
         data = {
             "name": "",
             "short_description": "",
+            "sku": "",
             "description": "",
             "company_id":  1,
             "sale_id":  1,
@@ -274,6 +275,7 @@ class TestRest(APITestCase):
         data = {
             "name": "",
             "short_description": "",
+            "sku": "",
             "description": "",
             "company_id":  1,
             "sale_id":  1,

@@ -85,6 +85,7 @@
     created_at: "2020-01-01"
     name: ""
     short_description: ""
+    sku: ""
     description: ""
     company: 1
     sale: 1
