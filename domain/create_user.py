@@ -727,6 +727,7 @@ def registry(first_name, last_name, email, password):
             username=email,
             type="NORMAL",
             token=token,
+            state="NS",
             token_verified=False,
             photo=photo,
             code=int(code)

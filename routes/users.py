@@ -115,8 +115,8 @@ class UserViewSet(SeedRoute.UserViewSet):
     @action(detail=False, methods=['POST'])
     def update_user_superadmin(self,request):
         data = request.data
-        has_fields_or_400(data, 'user_id', 'city', 'cologn', 'company_id', 'cp', 'email', 'firstName', 'lastName', 'municipality', 'state', 'street', 'telephone', 'type', 'username', 'password')
-        update_info_superadmin(data['user_id'], data['city'], data['cologn'], data['company_id'], data['cp'], data['email'], data['firstName'], data['lastName'], data['municipality'], data['state'], data['street'], data['telephone'], data['type'], data['username'], data['password'])
+        has_fields_or_400(data, 'user_id', 'company_id', 'email', 'firstName', 'lastName', 'type', 'username', 'password')
+        update_info_superadmin(data['user_id'], data['company_id'], data['email'], data['firstName'], data['lastName'], data['type'], data['username'], data['password'])
         return Response(status=status.HTTP_200_OK)
     
     @action(detail=False, methods=['POST'])
@@ -129,8 +129,8 @@ class UserViewSet(SeedRoute.UserViewSet):
     @action(detail=False, methods=['POST'])
     def create_user_superadmin(self,request):
         data = request.data
-        has_fields_or_400(data, 'city', 'cologn', 'company_id', 'cp', 'email', 'firstName', 'lastName', 'municipality', 'password', 'state', 'street', 'telephone', 'type')
-        create_info_superadmin( data['city'], data['cologn'], data['company_id'], data['cp'], data['email'], data['firstName'], data['lastName'], data['municipality'], data['password'], data['state'], data['street'], data['telephone'], data['type'])
+        has_fields_or_400(data, 'company_id', 'email', 'firstName', 'lastName', 'password', 'type')
+        create_info_superadmin(data['company_id'], data['email'], data['firstName'], data['lastName'], data['password'], data['type'])
         return Response(status=status.HTTP_200_OK)
     
     @action(detail=False, methods=['POST'])
