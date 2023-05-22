@@ -6,7 +6,11 @@
   },
   "extend": {
     "models": [],
+    "route": [
+      "cart"
+    ],
     "routes": [
+      "cart",
       "company",
       "product",
       "user"

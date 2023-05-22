@@ -5,8 +5,8 @@ __Seed builder__
 """
 
 def get_cart_viewset():
-    import seed.routes.carts as SeedViewSet
-    return SeedViewSet.CartViewSet
+    import routes.carts as ExtendViewSet
+    return ExtendViewSet.CartViewSet
 
 def get_category_viewset():
     import seed.routes.categories as SeedViewSet
