@@ -23,6 +23,8 @@ from domain.update_user_superadmin import update_info_superadmin
 from domain.update_user_normal import update_info_normal
 from domain.create_user_superadmin import create_info_superadmin
 from domain.create_user_company import create_info_company
+from domain.add_products_wishlist import add_products_wishlist
+
 
 class UserViewSet(SeedRoute.UserViewSet):
     
@@ -139,3 +141,10 @@ class UserViewSet(SeedRoute.UserViewSet):
         has_fields_or_400(data, 'city', 'cologn', 'company_id', 'cp', 'email', 'firstName', 'lastName', 'municipality', 'password', 'state', 'street', 'telephone', 'type')
         create_info_company( data['city'], data['cologn'], data['company_id'], data['cp'], data['email'], data['firstName'], data['lastName'], data['municipality'], data['password'], data['state'], data['street'], data['telephone'], data['type'])
         return Response(status=status.HTTP_200_OK)
+
+    @action(detail=False, methods=['POST'])
+    def add_products_wishlist(self,request):
+        data=request.data
+        has_fields_or_400(data, 'user_id', 'product_id')
+        exist_product = add_products_wishlist(data['user_id'], data['product_id'])
+        return Response(status=status.HTTP_200_OK, data={'exist_product': exist_product})
