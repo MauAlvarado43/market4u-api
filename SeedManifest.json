@@ -442,7 +442,8 @@
           "options": [
             "CREATED",
             "SENT",
-            "COMPLETED"
+            "COMPLETED",
+            "CANCELED"
           ],
           "type": "enum"
         },
