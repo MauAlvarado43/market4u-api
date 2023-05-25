@@ -114,7 +114,7 @@
     info: ""
     folio: ""
     address: ""
-    status: "CREATED|SENT|COMPLETED|"
+    status: "CREATED|SENT|COMPLETED|CANCELED|"
     seller: 0
     cart: 0
 

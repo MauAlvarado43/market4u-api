@@ -13,6 +13,7 @@ class Shipping(Model):
         ('CREATED', 'CREATED'),
         ('SENT', 'SENT'),
         ('COMPLETED', 'COMPLETED'),
+        ('CANCELED', 'CANCELED'),
     )
 
     info = models.TextField(blank=True)

@@ -4717,7 +4717,7 @@
 										"$ref": "AAAAAAGHR8gjswBx8bY="
 									},
 									"name": "status",
-									"documentation": "options: [CREATED,SENT,COMPLETED]",
+									"documentation": "options: [CREATED, SENT, COMPLETED, CANCELED]",
 									"type": "enum",
 									"length": 0
 								},
