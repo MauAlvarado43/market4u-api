@@ -3,25 +3,25 @@ from django.utils.crypto import get_random_string
 from app.serializers import ProductSerializer, VariantSerializer
 from app.models import Shipping, Purchase, Cart, User, Product, Variant, Payment
 
-def create_purchase(user_id, products = [], delivery = {}, payment = {}):
+def create_purchase(user_id, products = [], delivery = {}, payment_raw = {}):
 
     user = User.objects.get(id=user_id)
     cart = Cart.objects.create(
         buyer = user,
-        payment = json.dumps(payment)
+        payment = json.dumps(payment_raw)
     )
-    if payment["save"]:
-        payment = Payment.objects.filter(card_number=payment["cardNumber"])
+    if payment_raw["save"]:
+        payment = Payment.objects.filter(card_number=payment_raw["cardNumber"])
         if payment.exists():
             pass
         else:
             Payment.objects.create(
-                card_number=payment["cardNumber"],
-                expire_date=payment["expireDate"],
-                type=payment["type"],
-                address=payment["address"],
-                bank=payment["bank"],
-                name=payment["name"],
+                card_number=payment_raw["cardNumber"],
+                expire_date=payment_raw["expireDate"],
+                type=payment_raw["type"],
+                address=payment_raw["address"],
+                bank=payment_raw["bank"],
+                name=payment_raw["name"],
                 user=user
             )
 
