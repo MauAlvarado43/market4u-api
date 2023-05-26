@@ -6,17 +6,21 @@ __Seed builder__
 
 from rest_framework import serializers
 from app.models import Shipping
-from app.models import User
 from app.models import Cart
+from app.models import User
+from app.models import Company
 
 class ShippingSerializer(serializers.ModelSerializer):
 
-    seller_id = serializers.PrimaryKeyRelatedField(
-        source='seller', queryset=User.objects.all(),
-        required=True, allow_null=False)
     cart_id = serializers.PrimaryKeyRelatedField(
         source='cart', queryset=Cart.objects.all(),
         required=True, allow_null=False)
+    buyer_id = serializers.PrimaryKeyRelatedField(
+        source='buyer', queryset=User.objects.all(),
+        required=False, allow_null=True)
+    company_id = serializers.PrimaryKeyRelatedField(
+        source='company', queryset=Company.objects.all(),
+        required=False, allow_null=True)
 
     class Meta:
         model = Shipping
@@ -28,6 +32,7 @@ class ShippingSerializer(serializers.ModelSerializer):
             'folio',
             'address',
             'status',
-            'seller_id',
-            'cart_id',  
+            'cart_id',
+            'buyer_id',
+            'company_id',  
         )

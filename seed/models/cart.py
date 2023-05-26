@@ -9,11 +9,10 @@ from seed.models.model import Model
 
 class Cart(Model):
 
+    payment = models.TextField(blank=True)
+
     buyer = models.ForeignKey(
         'models.User', related_name='buyer_carts',
-        blank=False, null=False, on_delete=models.CASCADE)
-    payment = models.ForeignKey(
-        'models.Payment', related_name='carts',
         blank=False, null=False, on_delete=models.CASCADE)
     
     @property

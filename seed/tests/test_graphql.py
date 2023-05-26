@@ -25,10 +25,8 @@ class TestGraphql(GraphQLTestCase):
             {
                 carts(query: "id=1", orderBy: "id", limit: 1){
                     id
+                    payment
                     buyer {
-                      id
-                    }
-                    payment {
                       id
                     }
                 }
@@ -97,10 +95,8 @@ class TestGraphql(GraphQLTestCase):
             {
                 cart(id: 1){
                     id
+                    payment
                     buyer {
-                      id
-                    }
-                    payment {
                       id
                     }
                 }
@@ -116,14 +112,12 @@ class TestGraphql(GraphQLTestCase):
             mutation {
                 saveCart(
                     buyer:  1,
-                    payment:  1,
+                    payment: "",
                 ) {
                     cart {
                         id
+                        payment
                         buyer {
-                          id
-                        }
-                        payment {
                           id
                         }
                     }
@@ -140,15 +134,13 @@ class TestGraphql(GraphQLTestCase):
             mutation {
                 setCart(id:1
                     buyer:  1,
-                    payment:  1,
+                    payment: "",
 
                 ) {
                     cart {
                         id
+                        payment
                         buyer {
-                          id
-                        }
-                        payment {
                           id
                         }
                     }
@@ -1542,10 +1534,13 @@ class TestGraphql(GraphQLTestCase):
                     folio
                     address
                     status
-                    seller {
+                    cart {
                       id
                     }
-                    cart {
+                    buyer {
+                      id
+                    }
+                    company {
                       id
                     }
                 }
@@ -1618,10 +1613,13 @@ class TestGraphql(GraphQLTestCase):
                     folio
                     address
                     status
-                    seller {
+                    cart {
                       id
                     }
-                    cart {
+                    buyer {
+                      id
+                    }
+                    company {
                       id
                     }
                 }
@@ -1640,8 +1638,9 @@ class TestGraphql(GraphQLTestCase):
                     folio: "",
                     address: "",
                     status: "CREATED",
-                    seller:  1,
                     cart:  1,
+                    buyer:  1,
+                    company:  1,
                 ) {
                     shipping {
                         id
@@ -1649,10 +1648,13 @@ class TestGraphql(GraphQLTestCase):
                         folio
                         address
                         status
-                        seller {
+                        cart {
                           id
                         }
-                        cart {
+                        buyer {
+                          id
+                        }
+                        company {
                           id
                         }
                     }
@@ -1672,8 +1674,9 @@ class TestGraphql(GraphQLTestCase):
                     folio: "",
                     address: "",
                     status: "CREATED",
-                    seller:  1,
                     cart:  1,
+                    buyer:  1,
+                    company:  1,
 
                 ) {
                     shipping {
@@ -1682,10 +1685,13 @@ class TestGraphql(GraphQLTestCase):
                         folio
                         address
                         status
-                        seller {
+                        cart {
                           id
                         }
-                        cart {
+                        buyer {
+                          id
+                        }
+                        company {
                           id
                         }
                     }

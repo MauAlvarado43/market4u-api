@@ -10,7 +10,7 @@
   pk: 1
   fields:
     buyer: 0
-    payment: 0
+    payment: ""
 
 ## CATEGORIES
 
@@ -116,8 +116,9 @@
     folio: ""
     address: ""
     status: "CREATED|SENT|COMPLETED|CANCELED|"
-    seller: 0
     cart: 0
+    buyer: 0
+    company: 0
 
 ## USERS
 

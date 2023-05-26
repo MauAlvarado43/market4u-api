@@ -18,17 +18,20 @@ class Shipping(Model):
 
     info = models.TextField(blank=True)
     folio = models.CharField(max_length=200, blank=True)
-    address = models.CharField(max_length=200, blank=True)
+    address = models.TextField(blank=True)
     status = models.CharField(
         max_length=64, choices=STATUSES,
         blank=False)
 
-    seller = models.ForeignKey(
-        'models.User', related_name='seller_shippings',
-        blank=False, null=False, on_delete=models.CASCADE)
     cart = models.ForeignKey(
         'models.Cart', related_name='shippings',
         blank=False, null=False, on_delete=models.CASCADE)
+    buyer = models.ForeignKey(
+        'models.User', related_name='buyer_shippings',
+        blank=True, null=True, on_delete=models.CASCADE)
+    company = models.ForeignKey(
+        'models.Company', related_name='shippings',
+        blank=True, null=True, on_delete=models.CASCADE)
 
     class Meta:
         db_table = '_shipping'

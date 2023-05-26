@@ -87,7 +87,7 @@ class User(AbstractUser, Model):
         return self.buyer_carts.all()
     @property
     def shippings(self):
-        return self.seller_shippings.all()
+        return self.buyer_shippings.all()
 
     class Meta:
         db_table = '_user'

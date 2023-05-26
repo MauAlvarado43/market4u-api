@@ -31,7 +31,7 @@ class TestRest(APITestCase):
     def test_post_cart(self):
         data = {
             "buyer_id":  1,
-            "payment_id":  1,
+            "payment": "",
         }
         response = self.client.post('/api/carts/', data)
         self.assertEqual(response.status_code, status.HTTP_201_CREATED)
@@ -39,7 +39,7 @@ class TestRest(APITestCase):
     def test_put_cart(self):
         data = {
             "buyer_id":  1,
-            "payment_id":  1,
+            "payment": "",
         }
         response = self.client.put('/api/carts/1/', data)
         self.assertEqual(response.status_code, status.HTTP_200_OK)
@@ -384,8 +384,9 @@ class TestRest(APITestCase):
             "folio": "",
             "address": "",
             "status": "CREATED",
-            "seller_id":  1,
             "cart_id":  1,
+            "buyer_id":  1,
+            "company_id":  1,
         }
         response = self.client.post('/api/shippings/', data)
         self.assertEqual(response.status_code, status.HTTP_201_CREATED)
@@ -396,8 +397,9 @@ class TestRest(APITestCase):
             "folio": "",
             "address": "",
             "status": "CREATED",
-            "seller_id":  1,
             "cart_id":  1,
+            "buyer_id":  1,
+            "company_id":  1,
         }
         response = self.client.put('/api/shippings/1/', data)
         self.assertEqual(response.status_code, status.HTTP_200_OK)

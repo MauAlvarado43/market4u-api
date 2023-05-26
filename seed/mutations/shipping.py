@@ -6,8 +6,9 @@ __Seed builder__
 
 import graphene
 from app.models import Shipping
-from app.models import User
 from app.models import Cart
+from app.models import User
+from app.models import Company
 from seed.schema.types import Shipping as ShippingType
 
 class SaveShippingMutation(graphene.Mutation):
@@ -19,8 +20,9 @@ class SaveShippingMutation(graphene.Mutation):
         folio = graphene.String(required=True)
         address = graphene.String(required=True)
         status = graphene.String(required=True)
-        seller = graphene.Int(required=True)
         cart = graphene.Int(required=True)
+        buyer = graphene.Int(required=False)
+        company = graphene.Int(required=False)
         pass
         
     # pylint: disable=R0912,W0622
@@ -35,18 +37,24 @@ class SaveShippingMutation(graphene.Mutation):
             shipping["address"] = kwargs["address"]
         if "status" in kwargs:
             shipping["status"] = kwargs["status"]
-        if "seller" in kwargs:
-            seller = User.filter_permissions(
-                User.objects,
-                User.permission_filters(user)) \
-                .get(pk=kwargs["seller"])
-            shipping["seller"] = seller
         if "cart" in kwargs:
             cart = Cart.filter_permissions(
                 Cart.objects,
                 Cart.permission_filters(user)) \
                 .get(pk=kwargs["cart"])
             shipping["cart"] = cart
+        if "buyer" in kwargs:
+            buyer = User.filter_permissions(
+                User.objects,
+                User.permission_filters(user)) \
+                .get(pk=kwargs["buyer"])
+            shipping["buyer"] = buyer
+        if "company" in kwargs:
+            company = Company.filter_permissions(
+                Company.objects,
+                Company.permission_filters(user)) \
+                .get(pk=kwargs["company"])
+            shipping["company"] = company
         shipping = \
             Shipping.objects.create(**shipping)
         shipping.save()
@@ -64,8 +72,9 @@ class SetShippingMutation(graphene.Mutation):
         folio = graphene.String(required=False)
         address = graphene.String(required=False)
         status = graphene.String(required=False)
-        seller = graphene.Int(required=False)
         cart = graphene.Int(required=False)
+        buyer = graphene.Int(required=False)
+        company = graphene.Int(required=False)
         
     # pylint: disable=R0912,W0622
     def mutate(self, info, **kwargs):
@@ -82,14 +91,18 @@ class SetShippingMutation(graphene.Mutation):
             shipping.address = kwargs["address"]
         if "status" in kwargs:
             shipping.status = kwargs["status"]
-        if "seller" in kwargs:
-            seller = User.objects \
-                .get(pk=kwargs["seller"])
-            shipping.seller = seller
         if "cart" in kwargs:
             cart = Cart.objects \
                 .get(pk=kwargs["cart"])
             shipping.cart = cart
+        if "buyer" in kwargs:
+            buyer = User.objects \
+                .get(pk=kwargs["buyer"])
+            shipping.buyer = buyer
+        if "company" in kwargs:
+            company = Company.objects \
+                .get(pk=kwargs["company"])
+            shipping.company = company
         shipping.save()
     
         return SetShippingMutation(

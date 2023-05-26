@@ -38,8 +38,8 @@ class Admin:
                 fields = (
                     'id',
                     'created_at',
-                    'buyer',
                     'payment',
+                    'buyer',
                     'shippings',
                 )
         
@@ -207,8 +207,9 @@ class Admin:
                     'folio',
                     'address',
                     'status',
-                    'seller',
                     'cart',
+                    'buyer',
+                    'company',
                 )
         
         class UserResource(resources.ModelResource):

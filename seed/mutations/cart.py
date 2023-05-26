@@ -7,7 +7,6 @@ __Seed builder__
 import graphene
 from app.models import Cart
 from app.models import User
-from app.models import Payment
 from seed.schema.types import Cart as CartType
 
 class SaveCartMutation(graphene.Mutation):
@@ -15,26 +14,22 @@ class SaveCartMutation(graphene.Mutation):
     cart = graphene.Field(CartType)
     
     class Arguments:
+        payment = graphene.String(required=True)
         buyer = graphene.Int(required=True)
-        payment = graphene.Int(required=True)
         pass
         
     # pylint: disable=R0912,W0622
     def mutate(self, info, **kwargs):
         user = info.context.user
         cart = {}
+        if "payment" in kwargs:
+            cart["payment"] = kwargs["payment"]
         if "buyer" in kwargs:
             buyer = User.filter_permissions(
                 User.objects,
                 User.permission_filters(user)) \
                 .get(pk=kwargs["buyer"])
             cart["buyer"] = buyer
-        if "payment" in kwargs:
-            payment = Payment.filter_permissions(
-                Payment.objects,
-                Payment.permission_filters(user)) \
-                .get(pk=kwargs["payment"])
-            cart["payment"] = payment
         cart = \
             Cart.objects.create(**cart)
         cart.save()
@@ -48,8 +43,8 @@ class SetCartMutation(graphene.Mutation):
     
     class Arguments:
         id = graphene.Int(required=True)
+        payment = graphene.String(required=False)
         buyer = graphene.Int(required=False)
-        payment = graphene.Int(required=False)
         
     # pylint: disable=R0912,W0622
     def mutate(self, info, **kwargs):
@@ -58,14 +53,12 @@ class SetCartMutation(graphene.Mutation):
             Cart.objects,
             Cart.permission_filters(user)) \
             .get(pk=kwargs["id"])
+        if "payment" in kwargs:
+            cart.payment = kwargs["payment"]
         if "buyer" in kwargs:
             buyer = User.objects \
                 .get(pk=kwargs["buyer"])
             cart.buyer = buyer
-        if "payment" in kwargs:
-            payment = Payment.objects \
-                .get(pk=kwargs["payment"])
-            cart.payment = payment
         cart.save()
     
         return SetCartMutation(

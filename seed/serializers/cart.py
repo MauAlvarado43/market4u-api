@@ -7,7 +7,6 @@ __Seed builder__
 from rest_framework import serializers
 from app.models import Cart
 from app.models import User
-from app.models import Payment
 
 class CartSerializer(serializers.ModelSerializer):
 
@@ -17,9 +16,6 @@ class CartSerializer(serializers.ModelSerializer):
     buyer_id = serializers.PrimaryKeyRelatedField(
         source='buyer', queryset=User.objects.all(),
         required=True, allow_null=False)
-    payment_id = serializers.PrimaryKeyRelatedField(
-        source='payment', queryset=Payment.objects.all(),
-        required=True, allow_null=False)
 
     class Meta:
         model = Cart
@@ -27,7 +23,7 @@ class CartSerializer(serializers.ModelSerializer):
             'id',
             'created_at',
             'hash',
+            'payment',
             'buyer_id',
-            'payment_id',
             'shipping_ids',  
         )

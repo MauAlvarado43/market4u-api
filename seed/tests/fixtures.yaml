@@ -11,7 +11,7 @@
   fields:
     created_at: "2020-01-01"
     buyer: 1
-    payment: 1
+    payment: ""
 
 ## CATEGORIES
 
@@ -126,8 +126,9 @@
     folio: ""
     address: ""
     status: "CREATED"
-    seller: 1
     cart: 1
+    buyer: 1
+    company: 1
 
 ## USERS
 

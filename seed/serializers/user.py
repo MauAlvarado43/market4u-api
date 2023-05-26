@@ -18,7 +18,7 @@ class UserSerializer(serializers.ModelSerializer):
     cart_ids = serializers.PrimaryKeyRelatedField(
         many=True, source='buyer_carts', read_only=True)
     shipping_ids = serializers.PrimaryKeyRelatedField(
-        many=True, source='seller_shippings', read_only=True)
+        many=True, source='buyer_shippings', read_only=True)
 
     company_id = serializers.PrimaryKeyRelatedField(
         source='company', queryset=Company.objects.all(),
