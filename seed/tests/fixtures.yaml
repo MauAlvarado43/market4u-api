@@ -76,6 +76,7 @@
     user: 1
     address: ""
     bank: ""
+    name: ""
 
 ## PRODUCTS
 
@@ -150,7 +151,7 @@
     company: 1
     street: ""
     city: ""
-    cp: 128
+    cp: ""
     municipality: ""
     state: "NS"
     cologn: ""

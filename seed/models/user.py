@@ -62,8 +62,7 @@ class User(AbstractUser, Model):
         blank=False)
     street = models.CharField(max_length=100, blank=True)
     city = models.CharField(max_length=100, blank=True)
-    cp = models.IntegerField(
-        default=0)
+    cp = models.CharField(max_length=50, blank=True)
     municipality = models.CharField(max_length=100, blank=True)
     state = models.CharField(
         max_length=64, choices=STATES,

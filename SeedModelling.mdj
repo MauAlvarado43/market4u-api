@@ -1504,20 +1504,35 @@
 													"top": 959,
 													"width": 168.82080078125,
 													"height": 13
+												},
+												{
+													"_type": "ERDColumnView",
+													"_id": "AAAAAAGIVb1iEBhoYpM=",
+													"_parent": {
+														"$ref": "AAAAAAGHMv+ZXe2eQoY="
+													},
+													"model": {
+														"$ref": "AAAAAAGIVb1h8xhlvVs="
+													},
+													"font": "Arial;13;0",
+													"left": 413,
+													"top": 974,
+													"width": 168.82080078125,
+													"height": 13
 												}
 											],
 											"font": "Arial;13;0",
 											"left": 408,
 											"top": 879,
 											"width": 178.82080078125,
-											"height": 98
+											"height": 113
 										}
 									],
 									"font": "Arial;13;0",
 									"left": 408,
 									"top": 856,
 									"width": 178.82080078125,
-									"height": 121,
+									"height": 136,
 									"nameLabel": {
 										"$ref": "AAAAAAGHMv+ZXe2dyEY="
 									},
@@ -3755,8 +3770,8 @@
 										"$ref": "AAAAAAGHMv8X1O1MwbE="
 									},
 									"name": "cp",
-									"type": "int",
-									"length": 0
+									"type": "string",
+									"length": "50"
 								},
 								{
 									"_type": "ERDColumn",
@@ -4597,6 +4612,16 @@
 										"$ref": "AAAAAAGHMv+ZXO2aW8c="
 									},
 									"name": "bank",
+									"type": "string",
+									"length": "100"
+								},
+								{
+									"_type": "ERDColumn",
+									"_id": "AAAAAAGIVb1h8xhlvVs=",
+									"_parent": {
+										"$ref": "AAAAAAGHMv+ZXO2aW8c="
+									},
+									"name": "name",
 									"type": "string",
 									"length": "100"
 								}

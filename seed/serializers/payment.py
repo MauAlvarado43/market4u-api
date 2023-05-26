@@ -25,5 +25,6 @@ class PaymentSerializer(serializers.ModelSerializer):
             'type',
             'address',
             'bank',
+            'name',
             'user_id',  
         )

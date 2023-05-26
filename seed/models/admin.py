@@ -132,6 +132,7 @@ class Admin:
                     'type',
                     'address',
                     'bank',
+                    'name',
                     'user',
                 )
         

@@ -226,6 +226,7 @@ class TestRest(APITestCase):
             "user_id":  1,
             "address": "",
             "bank": "",
+            "name": "",
         }
         response = self.client.post('/api/payments/', data)
         self.assertEqual(response.status_code, status.HTTP_201_CREATED)
@@ -238,6 +239,7 @@ class TestRest(APITestCase):
             "user_id":  1,
             "address": "",
             "bank": "",
+            "name": "",
         }
         response = self.client.put('/api/payments/1/', data)
         self.assertEqual(response.status_code, status.HTTP_200_OK)
@@ -430,7 +432,7 @@ class TestRest(APITestCase):
             "company_id":  1,
             "street": "",
             "city": "",
-            "cp": 128,
+            "cp": "",
             "municipality": "",
             "state": "NS",
             "cologn": "",
@@ -457,7 +459,7 @@ class TestRest(APITestCase):
             "company_id":  1,
             "street": "",
             "city": "",
-            "cp": 128,
+            "cp": "",
             "municipality": "",
             "state": "NS",
             "cologn": "",

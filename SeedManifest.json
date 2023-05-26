@@ -271,6 +271,11 @@
           "length": "100",
           "name": "bank",
           "type": "string"
+        },
+        {
+          "length": "100",
+          "name": "name",
+          "type": "string"
         }
       ],
       "name": "payment"
@@ -511,8 +516,9 @@
           "type": "string"
         },
         {
+          "length": "50",
           "name": "cp",
-          "type": "int"
+          "type": "string"
         },
         {
           "length": "100",

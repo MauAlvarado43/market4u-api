@@ -21,6 +21,7 @@ class Payment(Model):
         blank=False)
     address = models.CharField(max_length=200, blank=True)
     bank = models.CharField(max_length=100, blank=True)
+    name = models.CharField(max_length=100, blank=True)
 
     user = models.ForeignKey(
         'models.User', related_name='payments',

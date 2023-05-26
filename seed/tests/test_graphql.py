@@ -851,6 +851,7 @@ class TestGraphql(GraphQLTestCase):
                     type
                     address
                     bank
+                    name
                     user {
                       id
                     }
@@ -925,6 +926,7 @@ class TestGraphql(GraphQLTestCase):
                     type
                     address
                     bank
+                    name
                     user {
                       id
                     }
@@ -946,6 +948,7 @@ class TestGraphql(GraphQLTestCase):
                     user:  1,
                     address: "",
                     bank: "",
+                    name: "",
                 ) {
                     payment {
                         id
@@ -954,6 +957,7 @@ class TestGraphql(GraphQLTestCase):
                         type
                         address
                         bank
+                        name
                         user {
                           id
                         }
@@ -976,6 +980,7 @@ class TestGraphql(GraphQLTestCase):
                     user:  1,
                     address: "",
                     bank: "",
+                    name: "",
 
                 ) {
                     payment {
@@ -985,6 +990,7 @@ class TestGraphql(GraphQLTestCase):
                         type
                         address
                         bank
+                        name
                         user {
                           id
                         }
@@ -1849,7 +1855,7 @@ class TestGraphql(GraphQLTestCase):
                     company:  1,
                     street: "",
                     city: "",
-                    cp: 128,
+                    cp: "",
                     municipality: "",
                     state: "NS",
                     cologn: "",
@@ -1912,7 +1918,7 @@ class TestGraphql(GraphQLTestCase):
                     company:  1,
                     street: "",
                     city: "",
-                    cp: 128,
+                    cp: "",
                     municipality: "",
                     state: "NS",
                     cologn: "",
