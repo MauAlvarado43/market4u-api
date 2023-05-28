@@ -16,6 +16,7 @@ from domain.save_variants import save_variants
 from domain.update_info_product import update_info_null_product
 from domain.nullable_products import change_value
 from domain.recomendatons import generate_recomendations, get_related_products
+from domain.models.chatbot import get_products
 
 class ProductViewSet(SeedRoute.ProductViewSet):
     
@@ -103,6 +104,13 @@ class ProductViewSet(SeedRoute.ProductViewSet):
         return Response(status=status.HTTP_200_OK)
     
     @action(detail=False, methods=["GET"])
-    def test_recomendations(self,request):
+    def test_recomendations(self, request):
         # generate_recomendations(200)
         return Response(status=status.HTTP_200_OK)
+    
+    @action(detail=False, methods=["POST"])
+    def get_chatbot_recomendations(self, request):
+        data = request.data 
+        has_fields_or_400(data,'message')
+        products = get_products(data['message'])
+        return Response({ "products": products }, status=status.HTTP_200_OK)
