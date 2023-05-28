@@ -9,8 +9,8 @@
   pk: 2
   fields:
     created_at: 2023-05-08 03:52:38.052761+00:00
-    updated_at: 2023-05-08 03:52:38.052808+00:00
-    hash: '5685618689750028931'
+    updated_at: 2023-05-22 04:42:39.744679+00:00
+    hash: '-208617495224359698'
     name: Calzado
 - model: models.category
   pk: 3
@@ -23,6 +23,41 @@
   pk: 4
   fields:
     created_at: 2023-05-08 04:03:09.400745+00:00
-    updated_at: 2023-05-08 04:03:09.400785+00:00
-    hash: '4837811764496184137'
+    updated_at: 2023-05-22 04:42:36.438498+00:00
+    hash: '-4120994992138408696'
     name: Bolsas y Maletas
+- model: models.category
+  pk: 5
+  fields:
+    created_at: 2023-05-22 03:32:34.163867+00:00
+    updated_at: 2023-05-22 04:42:32.867937+00:00
+    hash: '3449689303812395612'
+    name: Tecnología
+- model: models.category
+  pk: 6
+  fields:
+    created_at: 2023-05-22 03:53:04.750725+00:00
+    updated_at: 2023-05-22 04:42:29.730490+00:00
+    hash: '-1954458633660961701'
+    name: Café, té y otras bebidas
+- model: models.category
+  pk: 7
+  fields:
+    created_at: 2023-05-22 03:59:17.844592+00:00
+    updated_at: 2023-05-22 04:23:14.611170+00:00
+    hash: '-2299921902352187268'
+    name: Alimentos
+- model: models.category
+  pk: 8
+  fields:
+    created_at: 2023-05-22 04:11:34.923913+00:00
+    updated_at: 2023-05-22 04:47:00.296521+00:00
+    hash: '-4535830294636685685'
+    name: Cervezas, vinos y licores
+- model: models.category
+  pk: 9
+  fields:
+    created_at: 2023-05-22 04:35:23.086395+00:00
+    updated_at: 2023-05-22 04:51:14.030735+00:00
+    hash: '8589997746273725120'
+    name: Deportes

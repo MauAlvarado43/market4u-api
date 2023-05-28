@@ -394,3 +394,201 @@
     title: Talla
     value: XL
     variant: 23
+- model: models.variantoption
+  pk: 45
+  fields:
+    created_at: 2023-05-22 03:55:24.871843+00:00
+    updated_at: 2023-05-22 03:57:24.533624+00:00
+    hash: '8066110454038546336'
+    title: Configuración
+    value: Té
+    variant: 29
+- model: models.variantoption
+  pk: 46
+  fields:
+    created_at: 2023-05-22 03:57:19.597408+00:00
+    updated_at: 2023-05-22 03:57:19.597441+00:00
+    hash: '605462291824477234'
+    title: Configuración
+    value: Té + Té, 50 piezas
+    variant: 30
+- model: models.variantoption
+  pk: 47
+  fields:
+    created_at: 2023-05-22 04:15:02.227599+00:00
+    updated_at: 2023-05-22 04:15:02.227716+00:00
+    hash: '6509046273031329454'
+    title: Tamaño
+    value: 200 g (Paquete de 1)
+    variant: 36
+- model: models.variantoption
+  pk: 48
+  fields:
+    created_at: 2023-05-22 04:16:29.752360+00:00
+    updated_at: 2023-05-22 04:16:29.752388+00:00
+    hash: '-3621380108607162881'
+    title: Tamaño
+    value: 300 g (Paquete de 1)
+    variant: 37
+- model: models.variantoption
+  pk: 49
+  fields:
+    created_at: 2023-05-22 04:18:05.595120+00:00
+    updated_at: 2023-05-22 04:18:05.595142+00:00
+    hash: '-8606157033010878042'
+    title: Tamaño
+    value: 500 g (Paquete de 1)
+    variant: 38
+- model: models.variantoption
+  pk: 50
+  fields:
+    created_at: 2023-05-22 04:37:17.402643+00:00
+    updated_at: 2023-05-22 04:38:54.142991+00:00
+    hash: '-8251881618172083476'
+    title: Color
+    value: Blanco/Gris
+    variant: 42
+- model: models.variantoption
+  pk: 51
+  fields:
+    created_at: 2023-05-22 04:38:50.496885+00:00
+    updated_at: 2023-05-22 04:38:56.878754+00:00
+    hash: '2511032544854645064'
+    title: Tamaño
+    value: 12 onzas
+    variant: 42
+- model: models.variantoption
+  pk: 52
+  fields:
+    created_at: 2023-05-22 04:39:25.735248+00:00
+    updated_at: 2023-05-22 04:39:25.735272+00:00
+    hash: '-4994102859771507789'
+    title: Color
+    value: Negro/Gris
+    variant: 43
+- model: models.variantoption
+  pk: 53
+  fields:
+    created_at: 2023-05-22 04:39:44.752209+00:00
+    updated_at: 2023-05-22 04:39:44.752305+00:00
+    hash: '-9059468935177190350'
+    title: Tamaño
+    value: 14 oz
+    variant: 43
+- model: models.variantoption
+  pk: 54
+  fields:
+    created_at: 2023-05-22 04:40:21.865633+00:00
+    updated_at: 2023-05-22 04:40:21.865663+00:00
+    hash: '2103991999524583542'
+    title: Color
+    value: Rojo/Negro
+    variant: 44
+- model: models.variantoption
+  pk: 55
+  fields:
+    created_at: 2023-05-22 04:40:31.538857+00:00
+    updated_at: 2023-05-22 04:40:31.538883+00:00
+    hash: '-7525985582056243497'
+    title: Tamaño
+    value: 14 oz
+    variant: 44
+- model: models.variantoption
+  pk: 56
+  fields:
+    created_at: 2023-05-22 04:41:34.400771+00:00
+    updated_at: 2023-05-22 04:41:34.400807+00:00
+    hash: '1124730178353675639'
+    title: Color
+    value: Carbón vegetal
+    variant: 45
+- model: models.variantoption
+  pk: 57
+  fields:
+    created_at: 2023-05-22 04:41:53.818655+00:00
+    updated_at: 2023-05-22 04:41:53.818685+00:00
+    hash: '2311935099847631440'
+    title: Tamaño
+    value: 12 onzas
+    variant: 45
+- model: models.variantoption
+  pk: 58
+  fields:
+    created_at: 2023-05-22 04:43:34.041312+00:00
+    updated_at: 2023-05-22 04:43:34.041334+00:00
+    hash: '-5887108226069967662'
+    title: Color
+    value: Rojo
+    variant: 46
+- model: models.variantoption
+  pk: 59
+  fields:
+    created_at: 2023-05-22 04:43:58.209406+00:00
+    updated_at: 2023-05-22 04:43:58.209431+00:00
+    hash: '-7761885078902331432'
+    title: Talla
+    value: 28.0 cm
+    variant: 46
+- model: models.variantoption
+  pk: 60
+  fields:
+    created_at: 2023-05-22 04:44:50.277029+00:00
+    updated_at: 2023-05-22 04:44:50.277052+00:00
+    hash: '-2827721729432026857'
+    title: Color
+    value: Azul
+    variant: 47
+- model: models.variantoption
+  pk: 61
+  fields:
+    created_at: 2023-05-22 04:45:04.370298+00:00
+    updated_at: 2023-05-22 04:45:04.370322+00:00
+    hash: '1498451931518910142'
+    title: Talla
+    value: 27.0 cm
+    variant: 47
+- model: models.variantoption
+  pk: 62
+  fields:
+    created_at: 2023-05-22 04:45:59.391253+00:00
+    updated_at: 2023-05-22 04:45:59.391275+00:00
+    hash: '-1446794389604036331'
+    title: Color
+    value: Negro
+    variant: 48
+- model: models.variantoption
+  pk: 63
+  fields:
+    created_at: 2023-05-22 04:46:12.986755+00:00
+    updated_at: 2023-05-22 04:46:12.986834+00:00
+    hash: '2983136621349257358'
+    title: Talla
+    value: 29.0 cm
+    variant: 48
+- model: models.variantoption
+  pk: 64
+  fields:
+    created_at: 2023-05-22 04:47:51.905719+00:00
+    updated_at: 2023-05-22 04:47:51.905744+00:00
+    hash: '-8375196285500963512'
+    title: Color
+    value: Azul
+    variant: 49
+- model: models.variantoption
+  pk: 65
+  fields:
+    created_at: 2023-05-22 04:48:48.867521+00:00
+    updated_at: 2023-05-22 04:48:48.867557+00:00
+    hash: '3594617635891983327'
+    title: Color
+    value: Negro
+    variant: 50
+- model: models.variantoption
+  pk: 66
+  fields:
+    created_at: 2023-05-22 04:49:53.774029+00:00
+    updated_at: 2023-05-22 04:49:53.774053+00:00
+    hash: '-9096969084569091817'
+    title: Color
+    value: Rojo
+    variant: 51

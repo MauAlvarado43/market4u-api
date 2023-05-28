@@ -1,7 +1,7 @@
 import json
 from django.utils.crypto import get_random_string
 from app.serializers import ProductSerializer, VariantSerializer
-from app.models import Shipping, Purchase, Cart, User, Product, Variant, Payment
+from app.models import Shipping, Purchase, Cart, User, Product, Variant, Payment, Company
 
 def create_purchase(user_id, products = [], delivery = {}, payment_raw = {}):
 
@@ -39,15 +39,17 @@ def save_products(user, cart, delivery, products):
 
     for company_id in companies:
         products_company = get_products_by_company(products, company_id)
+        company = Company.objects.get(id=company_id)
         folio = get_random_string(length=15)
 
         shipping = Shipping.objects.create(
             info="",
             folio=folio,
-            address=json.dumps(delivery),
+            address=json.dumps(delivery, separators=(',', ':')),
             status="CREATED",
             cart=cart,
-            buyer=user
+            buyer=user,
+            company=company
         ) 
 
         for product_raw in products_company:
@@ -62,7 +64,7 @@ def save_products(user, cart, delivery, products):
 
             Purchase.objects.create(
                 amount=product_raw["amount"],
-                product=json.dumps(product_json),
+                product=json.dumps(product_json, separators=(',', ':')),
                 sale="",
                 shipping=shipping
             )

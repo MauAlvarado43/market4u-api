@@ -1,0 +1,60 @@
+- model: models.sale
+  pk: 1
+  fields:
+    created_at: 2023-05-08 04:29:16.828027+00:00
+    updated_at: 2023-05-08 04:29:16.828064+00:00
+    hash: '-7486284540269861255'
+    name: Regálale Levi´s a mamá
+    disscount: 50.0
+    start_date: 2023-05-08 04:27:52+00:00
+    end_date: 2023-05-14 04:27:52+00:00
+    banner: 10074
+    company: 1
+- model: models.sale
+  pk: 2
+  fields:
+    created_at: 2023-05-08 04:32:20.155430+00:00
+    updated_at: 2023-05-08 04:32:20.155487+00:00
+    hash: '5860645649151894719'
+    name: Calzado adidas descuento
+    disscount: 30.0
+    start_date: 2023-05-11 04:31:39+00:00
+    end_date: 2023-05-14 04:31:39+00:00
+    banner: 10075
+    company: 2
+- model: models.sale
+  pk: 3
+  fields:
+    created_at: 2023-05-22 03:23:35.335405+00:00
+    updated_at: 2023-05-22 03:23:35.335428+00:00
+    hash: '-3124545163921636367'
+    name: Hot sale
+    disscount: 30.0
+    start_date: 2023-05-23 03:22:08+00:00
+    end_date: 2023-05-27 03:22:08+00:00
+    banner: 10077
+    company: 3
+- model: models.sale
+  pk: 4
+  fields:
+    created_at: 2023-05-22 04:10:47.161578+00:00
+    updated_at: 2023-05-22 04:10:47.161608+00:00
+    hash: '-6190437570200940708'
+    name: Chocolate day
+    disscount: 15.0
+    start_date: 2023-05-23 04:10:00+00:00
+    end_date: 2023-05-27 04:10:00+00:00
+    banner: 10124
+    company: 5
+- model: models.sale
+  pk: 5
+  fields:
+    created_at: 2023-05-22 04:34:17.465567+00:00
+    updated_at: 2023-05-22 04:34:17.465603+00:00
+    hash: '-1237525575956833756'
+    name: Gym pal pro
+    disscount: 20.0
+    start_date: 2023-05-23 04:33:42+00:00
+    end_date: 2023-05-27 04:33:42+00:00
+    banner: 10153
+    company: 6

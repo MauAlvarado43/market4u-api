@@ -22,8 +22,8 @@
   pk: 2
   fields:
     created_at: 2023-05-08 02:54:09.666790+00:00
-    updated_at: 2023-05-08 02:54:09.666847+00:00
-    hash: '325241155422234028'
+    updated_at: 2023-05-22 03:20:39.791699+00:00
+    hash: '5478112349230458689'
     name: Adidas AG
     common_name: Adidas
     rfc: ''
@@ -34,6 +34,86 @@
     photo: 10003
     municipality: ''
     state: CIUDAD DE MEXICO
+    cologn: ''
+    website: ''
+    street: ''
+    city: ''
+- model: models.company
+  pk: 3
+  fields:
+    created_at: 2023-05-22 03:20:32.432493+00:00
+    updated_at: 2023-05-22 03:20:45.136442+00:00
+    hash: '6287044729705446476'
+    name: LG Electronics
+    common_name: LG
+    rfc: ''
+    cp: 0
+    phone: ''
+    email: ''
+    active: false
+    photo: 10076
+    municipality: ''
+    state: MEXICO
+    cologn: ''
+    website: ''
+    street: ''
+    city: ''
+- model: models.company
+  pk: 4
+  fields:
+    created_at: 2023-05-22 03:47:44.960463+00:00
+    updated_at: 2023-05-22 03:47:44.960485+00:00
+    hash: '2682596713689373758'
+    name: McCormick & Company
+    common_name: McCormick
+    rfc: ''
+    cp: 0
+    phone: ''
+    email: ''
+    active: false
+    photo: 10103
+    municipality: ''
+    state: MEXICO
+    cologn: ''
+    website: ''
+    street: ''
+    city: ''
+- model: models.company
+  pk: 5
+  fields:
+    created_at: 2023-05-22 04:07:12.652745+00:00
+    updated_at: 2023-05-22 04:07:12.652773+00:00
+    hash: '1548603856111696753'
+    name: Baileys Irish Cream
+    common_name: Baileys
+    rfc: ''
+    cp: 0
+    phone: ''
+    email: ''
+    active: false
+    photo: 10123
+    municipality: ''
+    state: MEXICO
+    cologn: ''
+    website: ''
+    street: ''
+    city: ''
+- model: models.company
+  pk: 6
+  fields:
+    created_at: 2023-05-22 04:31:07.087504+00:00
+    updated_at: 2023-05-22 04:31:07.087538+00:00
+    hash: '-5542662441774895187'
+    name: Everlast
+    common_name: Everlast
+    rfc: ''
+    cp: 0
+    phone: ''
+    email: ''
+    active: false
+    photo: 10152
+    municipality: ''
+    state: MEXICO
     cologn: ''
     website: ''
     street: ''

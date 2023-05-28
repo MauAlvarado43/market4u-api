@@ -1,0 +1,507 @@
+- model: models.product
+  pk: 1
+  fields:
+    created_at: 2023-05-08 03:13:38.386961+00:00
+    updated_at: 2023-05-08 03:13:38.387060+00:00
+    hash: '-1957440102607093987'
+    name: Levi's Clásico Ropa Interior de Hombres para para Hombre
+    short_description: Ropa interior para hombre
+    sku: ''
+    description: "100 % Algodón\r\nCierre de elástico\r\nLavar a máquina\r\nLevis\
+      \ - Calzoncillos tipo bóxer para hombre (4 unidades)\r\nEsta ropa interior multipack\
+      \ para hombre tiene una cintura elástica y cómoda con el auténtico logotipo\
+      \ de Levi.\r\nTejido de mezcla de algodón suave y transpirable, 57% algodón,\
+      \ 38% poliéster, 5% elastano. Tejido elástico con una sensación suave y agradable.\
+      \ Formbeständig und schnell trocknend. Sin Fly, Fake Fly\r\nDe moda y elegante\
+      \ pero cómodo durante todo el día. No se desliza con costuras lisas y planas.\r\
+      \nGran ajuste, consulte la tabla de tallas para que coincida con Los paquetes\
+      \ están disponibles en diferentes tamaños y colores. Lavable a máquina."
+    company: 1
+    sale: null
+    category: 1
+- model: models.product
+  pk: 2
+  fields:
+    created_at: 2023-05-08 03:33:36.133804+00:00
+    updated_at: 2023-05-22 03:06:46.067668+00:00
+    hash: '-5441172928020321272'
+    name: 511 Slim Fit, Hombre
+    short_description: Pantalones de mezclilla
+    sku: ''
+    description: "99% algodón, 1% elastano\r\nCierre de Cremallera\r\nLavar a máquina\r\
+      \nPierna ajustada desde la cadera hasta el tobillo\r\nAjustados pero con gran\
+      \ comodidad y libertad de movimiento\r\nElaborados con algodón orgánico"
+    company: 1
+    sale: null
+    category: 1
+- model: models.product
+  pk: 3
+  fields:
+    created_at: 2023-05-08 03:43:02.092155+00:00
+    updated_at: 2023-05-22 03:07:10.585261+00:00
+    hash: '2038915268512162845'
+    name: Levi's Chamarra de Motocicleta de Piel sintética con cinturón para Mujer
+    short_description: Chamarra piel sintética
+    sku: ''
+    description: "100% poliéster\r\nRevestimiento de Poliuretano\r\nCierre de Cremallera\r\
+      \nLavado a máquina\r\nFuncionalidad: cierre de cierre frontal combinado con\
+      \ un bolsillo con cierre en el pecho y dos cremalleras inferiores para un almacenamiento\
+      \ viable y un mantenimiento seguro; la carcasa exterior es resistente al agua,\
+      \ lo que permite un fácil cuidado\r\nCaracterísticas elegantes: cierre frontal\
+      \ central asimétrica con solapas a presión y charreteras para mayor detalle\r\
+      \nVersatilidad: la piel sintética hace de esta chamarra un básico en el clóset\
+      \ de cada mujer; es perfecta para la transición entre estaciones o para usar\
+      \ como una pieza de capas"
+    company: 1
+    sale: 1
+    category: 1
+- model: models.product
+  pk: 4
+  fields:
+    created_at: 2023-05-08 03:48:26.929062+00:00
+    updated_at: 2023-05-22 03:07:47.962623+00:00
+    hash: '-3619541408635409691'
+    name: Levi's Sunset One Pocket Standard Dress Shirt para Hombre
+    short_description: Camisa de algodón
+    sku: ''
+    description: "100% Algodón\r\nCierre de No Closure\r\nCamisa Corte Slim\r\nCuello\
+      \ Regular\r\nManga Larga\r\nBolsillo Al Frente"
+    company: 1
+    sale: null
+    category: 1
+- model: models.product
+  pk: 5
+  fields:
+    created_at: 2023-05-08 03:52:41.838242+00:00
+    updated_at: 2023-05-22 03:07:51.748431+00:00
+    hash: '-2473209693546708'
+    name: Levi's Capital.11 Botas para Hombre
+    short_description: Botas Levis Negro
+    sku: ''
+    description: "Piel\r\nSuela de Material Sintético\r\nEl eje mide aproximadamente\
+      \ media pierna desde el arco\r\nBota Estilo Roper De Piel Con Aplicaciones En\
+      \ Piel Sintetica, Y Herrajes En Acabado avejentado Y Suela Tr Bicolor\r\nBotas\
+      \ de Piel\r\nBotas de Cierre y Hebilla"
+    company: 1
+    sale: null
+    category: 2
+- model: models.product
+  pk: 6
+  fields:
+    created_at: 2023-05-08 03:59:41.138102+00:00
+    updated_at: 2023-05-22 03:08:16.592080+00:00
+    hash: '1531849409172228435'
+    name: Adidas Sport Sweatshirt para Mens
+    short_description: Sudadera
+    sku: ''
+    description: "Ajuste regular\r\nCapucha ajustable con cordón\r\npuños y dobladillos\
+      \ acanalados"
+    company: 2
+    sale: null
+    category: 1
+- model: models.product
+  pk: 7
+  fields:
+    created_at: 2023-05-08 04:00:39.139565+00:00
+    updated_at: 2023-05-22 03:08:30.619906+00:00
+    hash: '2060371247328927835'
+    name: Adidas Hoops 3.0 Mid Zapatillas de básquetbol para Hombre
+    short_description: Tenis de baloncesto
+    sku: ''
+    description: "Caucho\r\nSuela de Caucho\r\nTenis de baloncesto de corte medio\
+      \ para hombre con un aspecto clásico\r\nParte superior duradera: la parte superior\
+      \ de piel sintético es suave y duradera\r\nAlta tracción: la icónica suela de\
+      \ goma ofrece un gran agarre"
+    company: 2
+    sale: 2
+    category: 2
+- model: models.product
+  pk: 8
+  fields:
+    created_at: 2023-05-08 04:02:09.193569+00:00
+    updated_at: 2023-05-22 03:09:32.260543+00:00
+    hash: '-7380070568569327818'
+    name: Adidas Team Force By Adidas For Men, Spray, 3.4-Ounce Bottle
+    short_description: Perfume para hombre
+    sku: ''
+    description: "Eau De Toilette\r\nAdidas Team Force by Coty for Men\r\n3.4 oz Eau\
+      \ De Toilette Spray\r\nAdidas"
+    company: 2
+    sale: null
+    category: 3
+- model: models.product
+  pk: 9
+  fields:
+    created_at: 2023-05-08 04:03:12.355106+00:00
+    updated_at: 2023-05-22 03:09:56.465061+00:00
+    hash: '-4359503393415944548'
+    name: adidas Alliance 2 Mochila, Mochila Alliance 2
+    short_description: Mochila de poliestireno
+    sku: ''
+    description: "98% poliéster, 2% licra\r\nRevestimiento de Poliéster\r\nCierre\
+      \ de Cordón\r\nLavado a mano\r\nFácil apertura con cordón duradero\r\nBolsillo\
+      \ con cierre para objetos de valor para guardar tu teléfono y cosas pequeñas\r\
+      \nMarca de 3 rayas atrevida"
+    company: 2
+    sale: null
+    category: 4
+- model: models.product
+  pk: 10
+  fields:
+    created_at: 2023-05-08 04:03:54.304228+00:00
+    updated_at: 2023-05-22 03:10:05.977141+00:00
+    hash: '-4017864275662916270'
+    name: Adidas Tiro 21 - Pantalones de Deporte Pantalones para Hombre
+    short_description: Pantalones deportivos
+    sku: ''
+    description: "Pantalones deportivos cónicos para hombre para comodidad diaria\r\
+      \nEl ajuste cónico regular es cómodo y espacioso pero estrecho en el tobillo\r\
+      \nCordón en la cintura elástica para un ajuste ajustable. Absorbe la humedad\r\
+      \nBolsillos laterales con cierre que proporcionan un almacenamiento seguro\r\
+      \nEste producto está fabricado con contenido reciclado como parte de nuestra\
+      \ ambición de acabar con los residuos de plástico"
+    company: 2
+    sale: null
+    category: 1
+- model: models.product
+  pk: 11
+  fields:
+    created_at: 2023-05-22 03:32:36.757047+00:00
+    updated_at: 2023-05-22 03:32:36.757078+00:00
+    hash: '8032142964233357505'
+    name: CineBeam Proyector HU715Q
+    short_description: Proyector LG
+    sku: ''
+    description: "Tiro UltraCorto, Optimizador de brillo, Sistema Operativo WebOS\r\
+      \nLáser 4K UHD (3840 x 2160) 1) y 8,3 megapíxeles, Relación de contraste (Full\
+      \ On Full Off) 2,000,000:1, Brillo 2500 Ansi Lumenes\r\nCompatiblecon Apple\
+      \ AirPlay 2 y HomeKit, Estéreo incorporado de 20W + 20W\r\nWARPING mejorado\
+      \ de 4/9/15 puntos que admite funciones de deformación no solo de 4 esquinas\
+      \ sino también de 9 puntos y 15 puntos, puede ajustar la distorsión de la pantalla\
+      \ y configurar una pantalla más precisa.\r\nPuedes ajustar fácilmente el enfoque\
+      \ usando el control magic remote. Ya no es necesario acercarte al proyector\
+      \ ultracorto para enfocar."
+    company: 3
+    sale: 3
+    category: 5
+- model: models.product
+  pk: 12
+  fields:
+    created_at: 2023-05-22 03:35:59.519585+00:00
+    updated_at: 2023-05-22 03:35:59.519617+00:00
+    hash: '2151598364108696382'
+    name: LG Pantalla OLED TV 65" 4K
+    short_description: Smart TV
+    sku: ''
+    description: "4k oled\r\nColor negro perfecto\r\nFácil de usar\r\nProducto de\
+      \ calidad"
+    company: 3
+    sale: 3
+    category: 5
+- model: models.product
+  pk: 13
+  fields:
+    created_at: 2023-05-22 03:38:14.928541+00:00
+    updated_at: 2023-05-22 03:38:14.928567+00:00
+    hash: '-7436587368044529579'
+    name: LG XBOOM Go XG5
+    short_description: Bocina Bluetooth Portátil
+    sku: ''
+    description: "[Sonido Más Claro y Potente] Experimenta el sonido extraordinario\
+      \ de XBOOM Go. Todas las nuevas unidades ofrecen graves profundos y crean una\
+      \ respuesta de alta frecuencia. Siente bajos definidos incluso cuando bajas\
+      \ la música.\r\n[Aumenta la Diversión con un Sonido Más Fuerte] Con potente\
+      \ sonido de hasta 20 W puedes disfrutar de una experiencia de audio superior\
+      \ en todo momento, desde meditar hasta la fiesta con amigos.\r\n[18 horas de\
+      \ Batería] Disfruta de tu música hasta por 18 horas. Tu fiesta seguirá con ambiente\
+      \ hasta el día siguiente e incluso puedes cargar tu teléfono con XBOOM Go.\r\
+      \n[Uso en Interiores y Exteriores] Diseño resistente al agua y al polvo con\
+      \ IP67. Nunca tendrás que preocuparte por mantener la música en cualquier lugar\
+      \ al aire libre.\r\n[Iluminación Beat] Dale color a tu música. Reproduce música\
+      \ con 16 millones de colores de iluminación que se adapten a tu estado de ánimo.\
+      \ Usa My Pick para personalizar tu propia iluminación en la app XBOOM."
+    company: 3
+    sale: 3
+    category: 5
+- model: models.product
+  pk: 14
+  fields:
+    created_at: 2023-05-22 03:40:17.619870+00:00
+    updated_at: 2023-05-22 03:40:17.619895+00:00
+    hash: '-4984194602147099526'
+    name: LG Tone Free Fit TF7
+    short_description: Audífonos Inalámbricos Deportivos
+    sku: ''
+    description: "【Pueden Lavarse】IP67 a prueba de agua. Ejercítate a pesar del polvo,\
+      \ el sudor y la humedad. Disfruta de deportes extremos o acuáticos, corre o\
+      \ haz ejercicio mientras escuchas música con auriculares.\r\n【Ajuste Extremo】Diseño\
+      \ único y cómodo, solo ajústalos, y listo. Con solo 5,9g se acomodan y ajustan\
+      \ en tu oído externo sin hacer presión. Concéntrate en tus movimientos sin preocuparte\
+      \ de que los audífonos se caigan.\r\n【Audífonos UV de confianza】UVnano elimina\
+      \ el 99,9 % de las bacterias en solo 10 minutos. Refresca tus auriculares, cada\
+      \ vez que los cargues en el estuche, desde las puntas de gel hasta la malla\
+      \ interior.\r\n【Cancelación Activa de Ruido Mejorada】Concéntrate en tu entrenamiento\
+      \ y sumérgete en tu música. LG TONE Free elimina con precisión el ruido incluso\
+      \ cuando los micrófonos y las bocinas están juntos.\r\n【Multi Dispositivos y\
+      \ emparejamiento múltiple】Fácil de conectar y cambiar, empareje hasta 5 dispositivos.\
+      \ No tienes que volver a conectar manualmente los dispositivos. Puedes conectarte\
+      \ con dos dispositivos simultáneamente"
+    company: 3
+    sale: 3
+    category: 5
+- model: models.product
+  pk: 15
+  fields:
+    created_at: 2023-05-22 03:42:14.586738+00:00
+    updated_at: 2023-05-22 03:42:14.586765+00:00
+    hash: '-5560465247395601551'
+    name: LG - 34GL750-B
+    short_description: Monitor para juegos
+    sku: ''
+    description: "Compatible con NVIDIA G-Sync\r\nTecnología Adaptive-Sync, HDR10\r\
+      \n144Hz Refresh Rate, 1ms MBR\r\nResolución 2560 x 1080, panel IPS con sRGB\
+      \ 99%, Brillo 300cd\r\nConsumo de energía 52W (typ.) / 58W (max.)\r\nPanel curvo\
+      \ 3800R, profundidad del color 16.7M, Ángulo de visión 178º(R/L), 178º(U/D)\r\
+      \nHDMI 2, Salida de audifonos"
+    company: 3
+    sale: 3
+    category: 5
+- model: models.product
+  pk: 16
+  fields:
+    created_at: 2023-05-22 03:53:28.195962+00:00
+    updated_at: 2023-05-22 03:53:28.195987+00:00
+    hash: '-4823015593090502936'
+    name: McCormick Té de Limón 50 sobres
+    short_description: Té
+    sku: ''
+    description: Zacate Limón (Cymbopogon citartus)
+    company: 4
+    sale: null
+    category: 6
+- model: models.product
+  pk: 17
+  fields:
+    created_at: 2023-05-22 03:59:33.111880+00:00
+    updated_at: 2023-05-22 03:59:33.111907+00:00
+    hash: '4573192424548045854'
+    name: McCormick Mayonesa con Limón 725 g
+    short_description: Mayonesa
+    sku: ''
+    description: "Mayonesa con jugo de limón de 725 gramos.\r\nAdicionada con Omega\
+      \ 3 y vitamina E.\r\nCon más del 60% de Aceite de Soya.\r\nConsistencia perfecta.\r\
+      \nEn su presentación de 725 gramos."
+    company: 4
+    sale: null
+    category: 7
+- model: models.product
+  pk: 18
+  fields:
+    created_at: 2023-05-22 04:01:31.342329+00:00
+    updated_at: 2023-05-22 04:01:31.342353+00:00
+    hash: '4997481382115244115'
+    name: McCormick Cebolla en Polvo 70 g
+    short_description: Cebolla condimento
+    sku: ''
+    description: Cebolla deshidratada en polvo
+    company: 4
+    sale: null
+    category: 7
+- model: models.product
+  pk: 19
+  fields:
+    created_at: 2023-05-22 04:03:05.953266+00:00
+    updated_at: 2023-05-22 04:22:10.858961+00:00
+    hash: '9022027125687880316'
+    name: McCormick Canela Entera 750 g
+    short_description: Canela condimento
+    sku: ''
+    description: Corteza del árbol de la canela
+    company: 4
+    sale: null
+    category: 7
+- model: models.product
+  pk: 20
+  fields:
+    created_at: 2023-05-22 04:04:33.867875+00:00
+    updated_at: 2023-05-22 04:22:27.300772+00:00
+    hash: '-5545680812753232009'
+    name: McCormick Balance Conserva de Mango 235 g
+    short_description: Conserva de mango
+    sku: ''
+    description: Mango, azúcares añadidos (jarabe de maíz, azúcar), agua, pectina,
+      ácido cítrico, benzonato de sodio, sorbato de potasio y cloruro de calcio.
+    company: 4
+    sale: null
+    category: 7
+- model: models.product
+  pk: 21
+  fields:
+    created_at: 2023-05-22 04:11:37.127770+00:00
+    updated_at: 2023-05-22 04:22:20.074587+00:00
+    hash: '4108233186120117489'
+    name: Crema Baileys - 1 L
+    short_description: Licor de chocolate
+    sku: ''
+    description: "Crema\r\nPaís de Origen: Irlanda\r\n1 L"
+    company: 5
+    sale: 4
+    category: 8
+- model: models.product
+  pk: 22
+  fields:
+    created_at: 2023-05-22 04:13:49.835536+00:00
+    updated_at: 2023-05-22 04:13:49.835560+00:00
+    hash: '2057107357990228301'
+    name: Chocolate Turín Baileys
+    short_description: Chocolates con licor
+    sku: ''
+    description: 'INGREDIENTES: CHOCOLATE CON LECHE 65% (AZÚCARES AÑADIDOS (AZÚCAR),
+      LECHE ENTERA EN POLVO, MANTECA DE CACAO, PASTA DE CACAO, LECITINA DE SOYA, POLIGLICEROL
+      DE POLIRRICINOLEATO, SABORIZANTES ARTIFICIALES, SAL), RELLENO 35% (LICOR BAILEYS®
+      LA ORIGINAL CREMA IRLANDESA 12,5% (AGUA, CREMA, AZÚCARES AÑADIDOS (AZÚCAR),
+      SABORIZANTES NATURALES Y ARTIFICIALES, COLORANTE CARAMELO CLASE II, SÓLIDOS
+      DE LA LECHE, ALCOHOL ETÍLICO, MALTODEXTRINA, MONOESTEARATO DE GLICERILO, CITRATO
+      TRISÓDICO), MALTODEXTRINA, AZÚCARES AÑADIDOS (AZÚCAR, GLUCOSA, JARABE DE ALTA
+      FRUCTOSA), GOMA ARÁBIGA, GRASA VEGETAL, ALCOHOL ETÍLICO, LECHE ENTERA EN POLVO,
+      LECHE CONDENSADA AZUCARADA (LECHE PARCIALMENTE DESCREMADA, AZÚCARES AÑADIDOS
+      (AZÚCAR)), CARBONATO DE CALCIO, HEXAMETAFOSFATO DE SODIO, PIROFOSFATO DE SODIO,
+      POLISORBATO 60, MONO Y DIGLICÉRIDOS, ÁCIDO SÓRBICO, SORBATO DE POTASIO, SABORIZANTES
+      ARTIFICIALES).'
+    company: 5
+    sale: 4
+    category: 7
+- model: models.product
+  pk: 23
+  fields:
+    created_at: 2023-05-22 04:19:17.486019+00:00
+    updated_at: 2023-05-22 04:19:17.486053+00:00
+    hash: '-593781884054872018'
+    name: Café Coffee Mate Líquido Baileys
+    short_description: Sustituto de Crema
+    sku: ''
+    description: Agua, azúcares añadidos (azúcar), aceite vegetal hidrogenado, caseinato
+      de sodio, fosfato hidrogenado dipotásico, ésteres de glicerol de ácidos grasos
+      de diacetil tartárico, celulosa microcristalina, mono y diglicéridos, saborizante
+      artificial, carragenina y carboximetilcelulosa de sodio.
+    company: 5
+    sale: 4
+    category: 7
+- model: models.product
+  pk: 24
+  fields:
+    created_at: 2023-05-22 04:21:11.771964+00:00
+    updated_at: 2023-05-22 04:21:11.772003+00:00
+    hash: '4073560633882568520'
+    name: Crema De Whisky Baileys Colada 700 ml
+    short_description: Whisky
+    sku: ''
+    description: "TROPICAL: Esta edición de Baileys sabe a vacaciones tropicales,\
+      \ en una botella de 700 ml. Mezcla el licor de crema irlandesa número uno del\
+      \ mundo con la cremosidad del coco y la dulzura de la piña\r\nSABOR: Baileys\
+      \ Colada es una crema ligeramente amarilla con sabor a Baileys Original, mezclado\
+      \ con notas cremosas de coco y notas jugosas de piña. ¡Disfruta de la experencia\
+      \ tropical!\r\nEDICIÓN LIMITADA: Esta nueva variedad se suma a los meses de\
+      \ verano, para disfrutar de esta experiencia única solo, o con amigos y familia.\
+      \ ¡Para tus días de playa, piscina o simplemente del verano!\r\nRECETA: Meter\
+      \ en una licuadora 40 ml de Baileys Colada, 50 ml de zumo de piña, 50 ml de\
+      \ agua de coco y mucho hielo. Mezclarlo y servirlo en un vaso alto. Se puede\
+      \ decorar con un trozo de piña\r\nBAILEYS: Creado en 1974 en Irlanda, es el\
+      \ primer licor de crema y también el más apreciado, del mundo. Con un poco de\
+      \ magia, creamos la receta del Baileys que todo el mundo conoce y aprecia. Se\
+      \ vende en más de 160 países"
+    company: 5
+    sale: 4
+    category: 8
+- model: models.product
+  pk: 25
+  fields:
+    created_at: 2023-05-22 04:23:16.195503+00:00
+    updated_at: 2023-05-22 04:23:16.195528+00:00
+    hash: '6161801886802207923'
+    name: TURIN BAILEYS
+    short_description: Chocolate
+    sku: ''
+    description: 150 Gramos
+    company: 5
+    sale: 4
+    category: 7
+- model: models.product
+  pk: 26
+  fields:
+    created_at: 2023-05-22 04:35:26.101765+00:00
+    updated_at: 2023-05-22 04:35:26.101791+00:00
+    hash: '-1316284487636890258'
+    name: EVERLAST Powerlock2
+    short_description: Guantes de Entrenamiento de Boxeo
+    sku: ''
+    description: "Powerlock que conoces con actualizaciones modernas\r\nHecho de piel\
+      \ sintética de alta calidad, protección de núcleo de espuma de cuatro capas\r\
+      \nBarra de agarre ergonómica, palma de malla completa\r\nInnovador sistema de\
+      \ correa trasera giratoria, pulgar ergonómicamente asegurado\r\nForro interior\
+      \ de espuma de poliéster"
+    company: 6
+    sale: 5
+    category: 9
+- model: models.product
+  pk: 27
+  fields:
+    created_at: 2023-05-22 04:42:42.524812+00:00
+    updated_at: 2023-05-22 04:42:42.524845+00:00
+    hash: '8877345349691466148'
+    name: Everlast New Elite High
+    short_description: Zapatos de boxeo
+    sku: ''
+    description: "Suela de Caucho\r\nDiseño híbrido de calzado de boxeo para gimnasio\
+      \ y uso en anillo.\r\nConstruido con una suela técnica para máxima tracción,\
+      \ flexibilidad y apoyo. Innovador diseño de banda de rodadura que evita el deslizamiento\
+      \ y optimiza el movimiento lateral a lado.\r\nLa parte superior de malla de\
+      \ tela abierto mantiene los zapatos ligeros y cómodos.\r\nDiseño superior con\
+      \ correa de tobillo adicional que aumenta la estabilidad y el apoyo.\r\nTalla\
+      \ para hombre."
+    company: 6
+    sale: 5
+    category: 2
+- model: models.product
+  pk: 28
+  fields:
+    created_at: 2023-05-22 04:47:05.778639+00:00
+    updated_at: 2023-05-22 04:47:05.778665+00:00
+    hash: '7572833845757282122'
+    name: Everlast X4007A Costal tradicional
+    short_description: Costal de boxeo
+    sku: ''
+    description: "Costal de entrenamiento\r\nCostal 70lbs"
+    company: 6
+    sale: 5
+    category: 9
+- model: models.product
+  pk: 29
+  fields:
+    created_at: 2023-05-22 04:51:14.855157+00:00
+    updated_at: 2023-05-22 04:51:14.855225+00:00
+    hash: '4339523220172021500'
+    name: EVERLAST Everhide Mantis
+    short_description: Guantes de Sparring
+    sku: ''
+    description: "Color: Gray\r\nHecho de duro\r\nCojines de diseño curvo para mayor\
+      \ comodidad.\r\nEl agarre de palma levantado sostiene los guantes en su lugar\r\
+      \nUtilizar para desarrollar combinaciones de punzonado.\r\nGran ejercicio cardiovascular"
+    company: 6
+    sale: 5
+    category: 9
+- model: models.product
+  pk: 30
+  fields:
+    created_at: 2023-05-22 04:52:37.369099+00:00
+    updated_at: 2023-05-22 04:52:37.369125+00:00
+    hash: '5101888952242027047'
+    name: EVERLAST Guantes para Artes Marciales Mixtas
+    short_description: Guantes de combate
+    sku: ''
+    description: "Más de 1.9 cm de acolchado en los nudillos para mayor protección\
+      \ en las manos y puños\r\nCosturas reforzadas y orificios para los dedos\r\n\
+      Duradera correa con velcro para la muñeca\r\nPuño elástico para un ajuste profesional"
+    company: 6
+    sale: 5
+    category: 9
