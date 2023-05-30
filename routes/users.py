@@ -24,7 +24,7 @@ from domain.update_user_normal import update_info_normal
 from domain.create_user_superadmin import create_info_superadmin
 from domain.create_user_company import create_info_company
 from domain.add_products_wishlist import add_products_wishlist
-
+from domain.update_shipping import update_info_shipping
 
 class UserViewSet(SeedRoute.UserViewSet):
     
@@ -148,3 +148,10 @@ class UserViewSet(SeedRoute.UserViewSet):
         has_fields_or_400(data, 'user_id', 'product_id')
         exist_product = add_products_wishlist(data['user_id'], data['product_id'])
         return Response(status=status.HTTP_200_OK, data={'exist_product': exist_product})
+    
+    @action(detail=False, methods=['POST'])
+    def add_info_shipping(self,request):
+        data = request.data
+        has_fields_or_400(data,'shipping_id','info')
+        update_info_shipping(data['shipping_id'],data['info'])
+        return Response(status=status.HTTP_200_OK)
