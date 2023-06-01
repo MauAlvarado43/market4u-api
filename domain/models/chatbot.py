@@ -1,3 +1,4 @@
+from django.db.models import Q
 from app.models import Product, Category
 from app.serializers import SaleSerializer, FileSerializer
 import openai
@@ -53,7 +54,21 @@ def get_products(sentence):
     price_end = features["price_end"] if features["price_end"] is not None else 1000000
     variations = features["variations"] if features["variations"] is not None else []
 
-    products = Product.objects.filter(category__name__icontains=category, name__icontains=name, company__name__icontains=brand)
+    temp_variations = []
+    for variant in variations:
+        if variant["key"] is not None and variant["value"] is not None:
+            temp_variations.append(variant)
+
+    variations = temp_variations
+
+    if category == name: name = ""
+    for variant in variations:
+        if variant["key"] in name or variant["value"] in name: name = ""
+
+    products = Product.objects.filter(
+        Q(category__name__icontains=category, name__icontains=name, company__common_name__icontains=brand) | 
+        Q(category__name__icontains=category, name__icontains=name, company__name__icontains=brand)
+    )
     
     response = []
     appended = {}
@@ -125,6 +140,8 @@ def get_products(sentence):
             }
 
             for variant in product.variants.all():
+
+                if variant.price < price_start or variant.price > price_end: continue
                 
                 options = []
                 
@@ -138,7 +155,8 @@ def get_products(sentence):
                     "options": options
                 })
 
-            response.append(temp_product)
+            if len(temp_product["variants"]) > 0: 
+                response.append(temp_product)
 
     response = response[-5:]
 
