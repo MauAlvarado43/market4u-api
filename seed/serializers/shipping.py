@@ -32,6 +32,7 @@ class ShippingSerializer(serializers.ModelSerializer):
             'folio',
             'address',
             'status',
+            'total',
             'cart_id',
             'buyer_id',
             'company_id',  

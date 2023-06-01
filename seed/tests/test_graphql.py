@@ -1534,6 +1534,7 @@ class TestGraphql(GraphQLTestCase):
                     folio
                     address
                     status
+                    total
                     cart {
                       id
                     }
@@ -1613,6 +1614,7 @@ class TestGraphql(GraphQLTestCase):
                     folio
                     address
                     status
+                    total
                     cart {
                       id
                     }
@@ -1641,6 +1643,7 @@ class TestGraphql(GraphQLTestCase):
                     cart:  1,
                     buyer:  1,
                     company:  1,
+                    total: 128.0,
                 ) {
                     shipping {
                         id
@@ -1648,6 +1651,7 @@ class TestGraphql(GraphQLTestCase):
                         folio
                         address
                         status
+                        total
                         cart {
                           id
                         }
@@ -1677,6 +1681,7 @@ class TestGraphql(GraphQLTestCase):
                     cart:  1,
                     buyer:  1,
                     company:  1,
+                    total: 128.0,
 
                 ) {
                     shipping {
@@ -1685,6 +1690,7 @@ class TestGraphql(GraphQLTestCase):
                         folio
                         address
                         status
+                        total
                         cart {
                           id
                         }

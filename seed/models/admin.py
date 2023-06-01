@@ -207,6 +207,7 @@ class Admin:
                     'folio',
                     'address',
                     'status',
+                    'total',
                     'cart',
                     'buyer',
                     'company',

@@ -22,6 +22,8 @@ class Shipping(Model):
     status = models.CharField(
         max_length=64, choices=STATUSES,
         blank=False)
+    total = models.FloatField(
+        default=0)
 
     cart = models.ForeignKey(
         'models.Cart', related_name='shippings',

@@ -387,6 +387,7 @@ class TestRest(APITestCase):
             "cart_id":  1,
             "buyer_id":  1,
             "company_id":  1,
+            "total": 128.0,
         }
         response = self.client.post('/api/shippings/', data)
         self.assertEqual(response.status_code, status.HTTP_201_CREATED)
@@ -400,6 +401,7 @@ class TestRest(APITestCase):
             "cart_id":  1,
             "buyer_id":  1,
             "company_id":  1,
+            "total": 128.0,
         }
         response = self.client.put('/api/shippings/1/', data)
         self.assertEqual(response.status_code, status.HTTP_200_OK)

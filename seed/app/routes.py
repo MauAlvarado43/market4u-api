@@ -21,8 +21,8 @@ def get_message_viewset():
     return SeedViewSet.MessageViewSet
 
 def get_opinion_viewset():
-    import seed.routes.opinions as SeedViewSet
-    return SeedViewSet.OpinionViewSet
+    import routes.opinions as ExtendViewSet
+    return ExtendViewSet.OpinionViewSet
 
 def get_payment_viewset():
     import seed.routes.payments as SeedViewSet

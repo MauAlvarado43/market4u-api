@@ -36,7 +36,7 @@ class User(AbstractUser, Model):
         ('MICHOACAN', 'MICHOACAN'),
         ('MORELOS', 'MORELOS'),
         ('NAYARIT', 'NAYARIT'),
-        ('NUEVO LEON', 'NUEVO LEON'),
+        ('NUEVO_LEON', 'NUEVO_LEON'),
         ('OAXACA', 'OAXACA'),
         ('PUEBLA', 'PUEBLA'),
         ('QUERETARO', 'QUERETARO'),

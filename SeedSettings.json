@@ -7,11 +7,13 @@
   "extend": {
     "models": [],
     "route": [
-      "cart"
+      "cart",
+      "opinion"
     ],
     "routes": [
       "cart",
       "company",
+      "opinion",
       "product",
       "user"
     ],
