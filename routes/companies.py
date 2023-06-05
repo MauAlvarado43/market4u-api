@@ -12,6 +12,7 @@ from django.shortcuts import get_object_or_404
 from seed.util.request_util import has_fields_or_400
 from app.models import Company
 from app.serializers import CompanySerializer
+from domain.fiel_check import validate_keys
 
 class CompanyViewSet(SeedRoute.CompanyViewSet):
     
@@ -33,5 +34,8 @@ class CompanyViewSet(SeedRoute.CompanyViewSet):
     def noservice(self, request):
         return Response(status=200)
         
-    
-
+    @action(detail=False, methods=["POST"])
+    def validate_field(self, request):
+        data = request.data
+        has_fields_or_400(data, "certificate", "private_key", "password")
+        result = validate_keys(data["certificate"], data["private_key"], data["password"])
