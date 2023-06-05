@@ -47,8 +47,15 @@ class UserViewSet(SeedRoute.UserViewSet):
             token = Token.objects.create(user=user)
 
         if user.token_verified:
-            return Response(status=status.HTTP_200_OK, 
-            data={"key": token.key, "user": user.id, "company": None if company is None else company.id})
+            return Response(
+                status=status.HTTP_200_OK, 
+                data={
+                    "key": token.key, 
+                    "user": user.id, 
+                    "company": None if company is None else company.id,
+                    "type": user.type
+                }
+            )
 
         return Response(status=http_codes.CODE_420_TOKEN_NOT_VERIFIED)
 

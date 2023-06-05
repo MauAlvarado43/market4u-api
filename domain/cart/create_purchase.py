@@ -5,6 +5,10 @@ from app.models import Shipping, Purchase, Cart, User, Product, Variant, Payment
 
 def create_purchase(user_id, products = [], delivery = {}, payment_raw = {}):
 
+    for product in products:
+        if not validate_stock(product):
+            return 200, product["sku"] 
+
     user = User.objects.get(id=user_id)
     cart = Cart.objects.create(
         buyer = user,
@@ -26,7 +30,7 @@ def create_purchase(user_id, products = [], delivery = {}, payment_raw = {}):
             )
 
     save_products(user, cart, delivery, products)
-    return True
+    return 201, ""
 
 
 def save_products(user, cart, delivery, products):
@@ -64,13 +68,14 @@ def save_products(user, cart, delivery, products):
                 "category": CategorySerializer(category, many=False).data
             }
 
+            remove_stock(variant.id, product_raw["amount"])
+
             Purchase.objects.create(
                 amount=product_raw["amount"],
                 product=json.dumps(product_json),
                 sale="",
                 shipping=shipping
             )
-
 
 def get_products_by_company(products, company_id):
     filtered_products = []
@@ -79,3 +84,19 @@ def get_products_by_company(products, company_id):
             filtered_products.append(product)
 
     return filtered_products
+
+def validate_stock(product_raw):
+
+    amount = product_raw["amount"]
+    product = Product.objects.get(id=product_raw["id"])
+    variant = Variant.objects.get(id=product_raw["variant"]["id"])
+
+    if amount > variant.stock:
+        return False
+    
+    return True
+
+def remove_stock(variant_id, amount):
+    variant = Variant.objects.get(id=variant_id)
+    variant.stock -= amount
+    variant.save()

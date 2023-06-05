@@ -1,5 +1,5 @@
 from app.models import Company, User, File
-
+from domain.fiel_check import validate_keys
 
 def create_company(company_data, user_data, validation):
     
@@ -50,5 +50,5 @@ def create_company(company_data, user_data, validation):
     return 200
 
 def validate_fiel(validation):
-
-    return True
+    print(validation)
+    return validate_keys()

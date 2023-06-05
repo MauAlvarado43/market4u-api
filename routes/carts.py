@@ -49,5 +49,5 @@ class CartViewSet(SeedRoute.CartViewSet):
         payment = data["payment"]
         user = data["user"]
 
-        response = create_purchase(user, products, delivery, payment)
-        return Response(status=200, data=response)
+        response, message = create_purchase(user, products, delivery, payment)
+        return Response(status=response, data=message)
