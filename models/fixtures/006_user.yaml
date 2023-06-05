@@ -1,8 +1,8 @@
 - model: models.user
   pk: 10000
   fields:
-    password: pbkdf2_sha256$260000$VTmDlfoc4N5De8XehkpNOh$ZR3zTJpBWo1xL8V8veV/0/z4XHp4YL1EsoEKOvCWqCw=
-    last_login: 2023-05-22 03:05:25.704728+00:00
+    password: pbkdf2_sha256$260000$zZmFLUA8vAJegh6yFynPw5$3yp/ohxnRYDOVanHshHc43guAdNGP3zojQpmrgbdOxs=
+    last_login: 2023-05-30 03:45:41+00:00
     is_superuser: true
     username: admin@email.com
     first_name: Admin
@@ -10,22 +10,22 @@
     email: admin@email.com
     is_staff: true
     is_active: true
-    date_joined: 2023-05-22 00:16:48.404825+00:00
+    date_joined: 2023-05-30 03:44:39+00:00
     created_at: null
-    updated_at: null
-    hash: ''
+    updated_at: 2023-05-30 05:29:13.169750+00:00
+    hash: '-6228239806249030259'
     active: false
     photo: 10000
     type: SUPERADMIN
     street: ''
     city: ''
-    cp: 128
+    cp: ''
     municipality: ''
     state: NS
     cologn: ''
     telephone: ''
     token: ''
-    token_verified: false
+    token_verified: true
     code: 128
     company: null
     groups: []
@@ -45,14 +45,14 @@
     is_active: true
     date_joined: 2023-05-08 02:43:49+00:00
     created_at: 2023-05-08 02:44:55.983149+00:00
-    updated_at: 2023-05-08 02:44:55.983191+00:00
-    hash: '2039455011150543268'
+    updated_at: 2023-06-05 00:48:46.400178+00:00
+    hash: '3095343912708524947'
     active: false
     photo: null
     type: NORMAL
     street: ''
     city: ''
-    cp: 0
+    cp: '0'
     municipality: ''
     state: MEXICO
     cologn: ''
@@ -78,14 +78,14 @@
     is_active: true
     date_joined: 2023-05-08 02:45:22+00:00
     created_at: 2023-05-08 02:46:12.245728+00:00
-    updated_at: 2023-05-08 02:46:12.245756+00:00
-    hash: '5593953927658672166'
+    updated_at: 2023-06-05 00:49:05.011890+00:00
+    hash: '-3658424464736349359'
     active: false
     photo: null
     type: NORMAL
     street: ''
     city: ''
-    cp: 0
+    cp: '0'
     municipality: ''
     state: CIUDAD_DE_MEXICO
     cologn: ''
@@ -111,14 +111,14 @@
     is_active: true
     date_joined: 2023-05-08 02:55:07+00:00
     created_at: 2023-05-08 02:56:35.135566+00:00
-    updated_at: 2023-05-08 02:56:35.135599+00:00
-    hash: '-1065918926585694115'
+    updated_at: 2023-06-05 00:49:28.620660+00:00
+    hash: '7180211288531097787'
     active: false
     photo: null
     type: ADMIN
     street: ''
     city: ''
-    cp: 0
+    cp: '0'
     municipality: ''
     state: CIUDAD_DE_MEXICO
     cologn: ''
@@ -144,14 +144,14 @@
     is_active: true
     date_joined: 2023-05-08 02:56:51+00:00
     created_at: 2023-05-08 02:58:52.348227+00:00
-    updated_at: 2023-05-08 02:58:52.348261+00:00
-    hash: '3682701079016610471'
+    updated_at: 2023-06-05 00:49:22.610723+00:00
+    hash: '6349168659324085703'
     active: false
     photo: null
     type: SELLER
     street: ''
     city: ''
-    cp: 0
+    cp: '0'
     municipality: ''
     state: CIUDAD_DE_MEXICO
     cologn: ''
@@ -177,14 +177,14 @@
     is_active: true
     date_joined: 2023-05-08 02:59:27+00:00
     created_at: 2023-05-08 03:00:14.413831+00:00
-    updated_at: 2023-05-08 03:00:14.413870+00:00
-    hash: '701142118786668926'
+    updated_at: 2023-06-05 00:49:35.361068+00:00
+    hash: '-3982270856367377044'
     active: false
     photo: null
     type: ADMIN
     street: ''
     city: ''
-    cp: 0
+    cp: '0'
     municipality: ''
     state: CIUDAD_DE_MEXICO
     cologn: ''
@@ -210,14 +210,14 @@
     is_active: true
     date_joined: 2023-05-08 03:01:01+00:00
     created_at: 2023-05-08 03:02:37.757512+00:00
-    updated_at: 2023-05-22 03:26:07.538903+00:00
-    hash: '-893923841735325916'
+    updated_at: 2023-06-05 00:49:42.255331+00:00
+    hash: '-4267110435269630310'
     active: false
     photo: null
     type: SELLER
     street: ''
     city: ''
-    cp: 0
+    cp: '0'
     municipality: ''
     state: CIUDAD_DE_MEXICO
     cologn: ''
@@ -243,14 +243,14 @@
     is_active: true
     date_joined: 2023-05-22 03:26:09+00:00
     created_at: 2023-05-22 03:27:08.881265+00:00
-    updated_at: 2023-05-22 03:27:08.881280+00:00
-    hash: '5233842324320426108'
+    updated_at: 2023-06-05 00:49:49.483581+00:00
+    hash: '-6283067142622530139'
     active: false
     photo: null
     type: ADMIN
     street: ''
     city: ''
-    cp: 0
+    cp: '0'
     municipality: ''
     state: MEXICO
     cologn: ''
@@ -276,14 +276,14 @@
     is_active: true
     date_joined: 2023-05-22 03:28:20+00:00
     created_at: 2023-05-22 03:28:50.883037+00:00
-    updated_at: 2023-05-22 03:28:50.883051+00:00
-    hash: '-3359991906191733511'
+    updated_at: 2023-06-05 00:49:56.169949+00:00
+    hash: '4209346638126983746'
     active: false
     photo: null
     type: SELLER
     street: ''
     city: ''
-    cp: 0
+    cp: '0'
     municipality: ''
     state: MEXICO
     cologn: ''
@@ -309,14 +309,14 @@
     is_active: true
     date_joined: 2023-05-22 03:47:50+00:00
     created_at: 2023-05-22 03:49:14.741977+00:00
-    updated_at: 2023-05-22 03:49:14.742015+00:00
-    hash: '2708131345464666519'
+    updated_at: 2023-06-05 00:50:02.775788+00:00
+    hash: '-7341256884962373481'
     active: false
     photo: null
     type: ADMIN
     street: ''
     city: ''
-    cp: 0
+    cp: '0'
     municipality: ''
     state: MEXICO
     cologn: ''
@@ -342,14 +342,14 @@
     is_active: true
     date_joined: 2023-05-22 03:49:18+00:00
     created_at: 2023-05-22 03:49:59.651456+00:00
-    updated_at: 2023-05-22 03:49:59.651474+00:00
-    hash: '8965886934031780725'
+    updated_at: 2023-06-05 00:50:08.649764+00:00
+    hash: '6029121305492583842'
     active: false
     photo: null
     type: SELLER
     street: ''
     city: ''
-    cp: 0
+    cp: '0'
     municipality: ''
     state: MEXICO
     cologn: ''
@@ -375,14 +375,14 @@
     is_active: true
     date_joined: 2023-05-22 04:07:17+00:00
     created_at: 2023-05-22 04:08:12.185728+00:00
-    updated_at: 2023-05-22 04:08:12.185743+00:00
-    hash: '3255773995900077123'
+    updated_at: 2023-06-05 00:50:18.243709+00:00
+    hash: '8274929774779179138'
     active: false
     photo: null
     type: ADMIN
     street: ''
     city: ''
-    cp: 0
+    cp: '0'
     municipality: ''
     state: MEXICO
     cologn: ''
@@ -408,14 +408,14 @@
     is_active: true
     date_joined: 2023-05-22 04:08:14+00:00
     created_at: 2023-05-22 04:08:52.628787+00:00
-    updated_at: 2023-05-22 04:08:52.628801+00:00
-    hash: '-5072348425974407536'
+    updated_at: 2023-06-05 00:50:31.330509+00:00
+    hash: '8662263976455452704'
     active: false
     photo: null
     type: SELLER
     street: ''
     city: ''
-    cp: 0
+    cp: '0'
     municipality: ''
     state: MEXICO
     cologn: ''
@@ -441,14 +441,14 @@
     is_active: true
     date_joined: 2023-05-22 04:31:11+00:00
     created_at: 2023-05-22 04:32:21.243131+00:00
-    updated_at: 2023-05-22 04:32:21.243150+00:00
-    hash: '-2417240738521811033'
+    updated_at: 2023-06-05 00:50:45.431157+00:00
+    hash: '5669767933858859991'
     active: false
     photo: null
     type: ADMIN
     street: ''
     city: ''
-    cp: 0
+    cp: '0'
     municipality: ''
     state: MEXICO
     cologn: ''
@@ -474,14 +474,14 @@
     is_active: true
     date_joined: 2023-05-22 04:32:23+00:00
     created_at: 2023-05-22 04:32:59.180218+00:00
-    updated_at: 2023-05-22 04:32:59.180230+00:00
-    hash: '-8686190063986683786'
+    updated_at: 2023-06-05 00:50:51.085144+00:00
+    hash: '1113505448605494579'
     active: false
     photo: null
     type: SELLER
     street: ''
     city: ''
-    cp: 0
+    cp: '0'
     municipality: ''
     state: MEXICO
     cologn: ''
@@ -490,6 +490,72 @@
     token_verified: true
     code: 0
     company: 6
+    groups: []
+    user_permissions: []
+    wishlist: []
+- model: models.user
+  pk: 10016
+  fields:
+    password: pbkdf2_sha256$260000$ppR9p8m32VYubDrQdcbScM$XI3LWF8B32Duz6ZUaqUHZ+eRRdmf9cwSf/Ig/qqXxmE=
+    last_login: null
+    is_superuser: false
+    username: munguizragnarok@gmail.com
+    first_name: Erwin
+    last_name: Munguia
+    email: munguizragnarok@gmail.com
+    is_staff: false
+    is_active: true
+    date_joined: 2023-05-31 03:13:41+00:00
+    created_at: 2023-05-31 03:13:41.324770+00:00
+    updated_at: 2023-06-05 00:51:03.614309+00:00
+    hash: '-2229422698869709631'
+    active: false
+    photo: 10001
+    type: NORMAL
+    street: ''
+    city: ''
+    cp: ''
+    municipality: ''
+    state: MEXICO
+    cologn: ''
+    telephone: ''
+    token: 6lKU6ouo8BReWV83iXaB6hZyQSbuDiZB
+    token_verified: true
+    code: 96639
+    company: null
+    groups: []
+    user_permissions: []
+    wishlist: []
+- model: models.user
+  pk: 10017
+  fields:
+    password: pbkdf2_sha256$260000$V2uCr36EmmDgoFb94Jp6DG$zT0VFGNmo8wF3cszpcVcs3EhEBCWyeigFpbz5s2T310=
+    last_login: null
+    is_superuser: false
+    username: hgin_qubas99@padye.com
+    first_name: Johnny
+    last_name: Joestar
+    email: hgin_qubas99@padye.com
+    is_staff: false
+    is_active: true
+    date_joined: 2023-06-01 04:32:13+00:00
+    created_at: 2023-06-01 04:32:13.577181+00:00
+    updated_at: 2023-06-05 00:51:19.854067+00:00
+    hash: '3132350871260817059'
+    active: false
+    photo: 10001
+    type: NORMAL
+    street: ''
+    city: ''
+    cp: ''
+    municipality: ''
+    state: CIUDAD_DE_MEXICO
+    cologn: ''
+    telephone: ''
+    token: mFHt8U3DCqQRFimdV1wB98rgKlPzfvQf
+    token_verified: true
+    code: 30011
+    company: null
     groups: []
     user_permissions: []
     wishlist: []

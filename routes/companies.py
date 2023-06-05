@@ -13,22 +13,22 @@ from seed.util.request_util import has_fields_or_400
 from app.models import Company
 from app.serializers import CompanySerializer
 from domain.fiel_check import validate_keys
+from domain.create_company import create_company
 
 class CompanyViewSet(SeedRoute.CompanyViewSet):
     
-    # Registry a company
     @action(detail=False, methods=["POST"])
     def registry(self, request):
         data = request.data
-        has_fields_or_400(data, "first_name", "last_name", "email", "password")
+        has_fields_or_400(data, "company", "user", "validation")
 
-        first_name = data["first_name"]
-        last_name = data["last_name"]
-        email = data["email"]
-        password = data["password"]
+        company = data["company"]
+        user = data["user"]
+        validation = data["validation"]
 
-        # code = registry(first_name, last_name, email, password)
-        return Response(status=200)
+        print(data)
+        code = create_company(company, user, validation)
+        return Response(status=code)
     
     @action(detail=False, methods=["POST"])
     def noservice(self, request):
