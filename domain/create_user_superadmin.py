@@ -1,6 +1,7 @@
-from app.models import User
+from app.models import User, File
 
 def create_info_superadmin( company_id, email, firstName, lastName, password, type):
+    photo = File.objects.get(pk=10001)
     if(type == "NORMAL" or type == "SUPERADMIN"):
         user = User.objects.create(
                         city="", 
@@ -15,6 +16,7 @@ def create_info_superadmin( company_id, email, firstName, lastName, password, ty
                         street="", 
                         telephone="", 
                         type=type, 
+                        photo=photo,
                         token_verified=True)
         user.set_password(password) 
         user.save()
@@ -24,6 +26,7 @@ def create_info_superadmin( company_id, email, firstName, lastName, password, ty
                         cologn="",
                         token_verified=True,
                         cp=0,
+                        photo=photo,
                         username=email,
                         email=email,
                         first_name=firstName,
