@@ -161,20 +161,6 @@ HTML_TEMPLATE = """
                 valign="top"
                 style="padding: 40px 10px 40px 10px"
               >
-                <a href="{site_url}" target="_blank">
-                  <img
-                    alt="Logo"
-                    src="https://i.ibb.co/Rb2DkqH/Logo.jpg"
-                    style="
-                      display: block;
-                      width: 30%;
-                      font-family: 'Lato', Helvetica, Arial, sans-serif;
-                      color: #ffffff;
-                      font-size: 18px;
-                    "
-                    border="0"
-                  />
-                </a>
               </td>
             </tr>
           </table>
@@ -207,9 +193,25 @@ HTML_TEMPLATE = """
                   line-height: 48px;
                 "
               >
-                <h1 style="font-size: 40px; font-weight: 400; margin: 0">
+              
+                <a href="{site_url}" target="_blank" style="margin-bottom: 30px;">
+                  <img
+                    alt="Logo"
+                    src="https://i.ibb.co/PYDKsRf/market4u.png"
+                    style="
+                      display: block;
+                      width: 30%;
+                      font-family: 'Lato', Helvetica, Arial, sans-serif;
+                      color: #ffffff;
+                      font-size: 18px;
+                    "
+                    border="0"
+                  />
+                </a> <br/>
+
+                <h3 style="font-size: 40px; font-weight: 400; margin: 0">
                   {title}
-                </h1>
+                </h3>
               </td>
             </tr>
           </table>
@@ -268,6 +270,7 @@ HTML_TEMPLATE = """
                                 font-size: 20px;
                                 color: white;
                                 font-family: Helvetica, Arial, sans-serif;
+                                letter-spacing: 1rem;
                               "
                               >{verification_code}
                             </p>
@@ -468,7 +471,7 @@ HTML_TEMPLATE_TOKEN = """
                 <a href="{site_url}" target="_blank">
                   <img
                     alt="Logo"
-                    src="https://i.ibb.co/Rb2DkqH/Logo.jpg"
+                    src="https://i.ibb.co/PYDKsRf/market4u.png"
                     style="
                       display: block;
                       width: 30%;

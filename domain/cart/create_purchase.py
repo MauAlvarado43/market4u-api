@@ -30,7 +30,7 @@ def create_purchase(user_id, products = [], delivery = {}, payment_raw = {}):
             )
 
     save_products(user, cart, delivery, products)
-    return 201, ""
+    return 201, None
 
 
 def save_products(user, cart, delivery, products):
@@ -88,7 +88,6 @@ def get_products_by_company(products, company_id):
 def validate_stock(product_raw):
 
     amount = product_raw["amount"]
-    product = Product.objects.get(id=product_raw["id"])
     variant = Variant.objects.get(id=product_raw["variant"]["id"])
 
     if amount > variant.stock:

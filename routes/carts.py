@@ -50,4 +50,4 @@ class CartViewSet(SeedRoute.CartViewSet):
         user = data["user"]
 
         response, message = create_purchase(user, products, delivery, payment)
-        return Response(status=response, data=message)
+        return Response(status=response, data={"sku": message} if message is not None else {})

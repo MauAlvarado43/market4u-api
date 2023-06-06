@@ -57,7 +57,7 @@ class UserViewSet(SeedRoute.UserViewSet):
                 }
             )
 
-        return Response(status=http_codes.CODE_420_TOKEN_NOT_VERIFIED)
+        return Response(status=http_codes.CODE_220_TOKEN_NOT_VERIFIED, data={ "token": user.token })
 
     @action(detail=False, methods=["POST"])
     def signup(self, request):
