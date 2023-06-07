@@ -131,8 +131,8 @@ class UserViewSet(SeedRoute.UserViewSet):
     @action(detail=False, methods=['POST'])
     def update_user_normal(self,request):
         data = request.data
-        has_fields_or_400(data, 'user_id', 'email', 'firstName', 'lastName', 'type', 'password', 'company')
-        update_info_normal(data['user_id'], data['email'], data['firstName'], data['password'],data['lastName'], data['type'], data['company'])
+        has_fields_or_400(data, 'user_id', 'email', 'firstName', 'lastName', 'type', 'password', 'company_id')
+        update_info_normal(data['user_id'], data['email'], data['firstName'], data['password'],data['lastName'], data['type'], data['company_id'])
         return Response(status=status.HTTP_200_OK)
     
     @action(detail=False, methods=['POST'])
