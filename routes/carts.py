@@ -11,9 +11,10 @@ from rest_framework import permissions
 from django.shortcuts import get_object_or_404
 from seed.util.request_util import has_fields_or_400
 from app.models import Cart
-from app.serializers import ProductSerializer, VariantSerializer, CategorySerializer
+from app.serializers import ProductSerializer, VariantSerializer, CategorySerializer, SaleSerializer
 from app.models import Product, Variant, Category
 from domain.cart.create_purchase import create_purchase
+from django.utils import timezone
 
 class CartViewSet(SeedRoute.CartViewSet):
     
@@ -25,18 +26,30 @@ class CartViewSet(SeedRoute.CartViewSet):
 
         response = []
         for item in cart:
+
+            res = dict()
+
             product_id = item["product"]
             vartian_id = item["variant"]
             amount = item["amount"]
 
             product = Product.objects.get(pk=product_id)
             variant = Variant.objects.get(pk=vartian_id)
+            sale = product.sale
 
             serializer_products = ProductSerializer(product, many=False)
             serializer_variants = VariantSerializer(variant, many=False)
             serializer_category = CategorySerializer(product.category, many=False)
 
-            response.append({**serializer_products.data, "category": serializer_category.data, "variant": serializer_variants.data, "amount": amount})
+            res["category"] = serializer_category.data
+            res["variant"] = serializer_variants.data
+            res["amount"] = amount
+
+            if sale is not None:
+                if timezone.now() >= sale.start_date and timezone.now() <= sale.end_date:
+                    res["sale"] = SaleSerializer(sale, many=False).data
+
+            response.append({**serializer_products.data, **res})
 
         return Response(status=200, data=response)
     

@@ -38,6 +38,7 @@ class UserViewSet(SeedRoute.UserViewSet):
         password = data["password"]
 
         user = authenticate(username=email, password=password)
+        print(user)
         company = user.company
 
         try:

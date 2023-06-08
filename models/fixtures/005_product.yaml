@@ -2,11 +2,11 @@
   pk: 1
   fields:
     created_at: 2023-05-08 03:13:38.386961+00:00
-    updated_at: 2023-05-08 03:13:38.387060+00:00
-    hash: '-1957440102607093987'
+    updated_at: 2023-06-07 05:57:36.856072+00:00
+    hash: '-476513994627487924'
     name: Levi's Clásico Ropa Interior de Hombres para para Hombre
     short_description: Ropa interior para hombre
-    sku: ''
+    sku: 7WL10P2M31UM
     description: "100 % Algodón\r\nCierre de elástico\r\nLavar a máquina\r\nLevis\
       \ - Calzoncillos tipo bóxer para hombre (4 unidades)\r\nEsta ropa interior multipack\
       \ para hombre tiene una cintura elástica y cómoda con el auténtico logotipo\
@@ -23,11 +23,11 @@
   pk: 2
   fields:
     created_at: 2023-05-08 03:33:36.133804+00:00
-    updated_at: 2023-05-22 03:06:46.067668+00:00
-    hash: '-5441172928020321272'
+    updated_at: 2023-06-07 05:53:49.342772+00:00
+    hash: '-3166846524114078059'
     name: 511 Slim Fit, Hombre
     short_description: Pantalones de mezclilla
-    sku: ''
+    sku: HABIIFKYLC8U
     description: "99% algodón, 1% elastano\r\nCierre de Cremallera\r\nLavar a máquina\r\
       \nPierna ajustada desde la cadera hasta el tobillo\r\nAjustados pero con gran\
       \ comodidad y libertad de movimiento\r\nElaborados con algodón orgánico"
@@ -38,11 +38,11 @@
   pk: 3
   fields:
     created_at: 2023-05-08 03:43:02.092155+00:00
-    updated_at: 2023-05-22 03:07:10.585261+00:00
-    hash: '2038915268512162845'
+    updated_at: 2023-06-07 05:53:57.381665+00:00
+    hash: '-3352583711253007029'
     name: Levi's Chamarra de Motocicleta de Piel sintética con cinturón para Mujer
     short_description: Chamarra piel sintética
-    sku: ''
+    sku: 9LDL8BP1T1OI
     description: "100% poliéster\r\nRevestimiento de Poliuretano\r\nCierre de Cremallera\r\
       \nLavado a máquina\r\nFuncionalidad: cierre de cierre frontal combinado con\
       \ un bolsillo con cierre en el pecho y dos cremalleras inferiores para un almacenamiento\
@@ -59,11 +59,11 @@
   pk: 4
   fields:
     created_at: 2023-05-08 03:48:26.929062+00:00
-    updated_at: 2023-05-22 03:07:47.962623+00:00
-    hash: '-3619541408635409691'
+    updated_at: 2023-06-07 05:54:05.685535+00:00
+    hash: '-7605305814831971637'
     name: Levi's Sunset One Pocket Standard Dress Shirt para Hombre
     short_description: Camisa de algodón
-    sku: ''
+    sku: IFA5NSA5IZBG
     description: "100% Algodón\r\nCierre de No Closure\r\nCamisa Corte Slim\r\nCuello\
       \ Regular\r\nManga Larga\r\nBolsillo Al Frente"
     company: 1
@@ -73,11 +73,11 @@
   pk: 5
   fields:
     created_at: 2023-05-08 03:52:41.838242+00:00
-    updated_at: 2023-05-22 03:07:51.748431+00:00
-    hash: '-2473209693546708'
+    updated_at: 2023-06-07 05:54:14.285194+00:00
+    hash: '8952965973720355265'
     name: Levi's Capital.11 Botas para Hombre
     short_description: Botas Levis Negro
-    sku: ''
+    sku: 0H3GM09W78D3
     description: "Piel\r\nSuela de Material Sintético\r\nEl eje mide aproximadamente\
       \ media pierna desde el arco\r\nBota Estilo Roper De Piel Con Aplicaciones En\
       \ Piel Sintetica, Y Herrajes En Acabado avejentado Y Suela Tr Bicolor\r\nBotas\
@@ -89,11 +89,11 @@
   pk: 6
   fields:
     created_at: 2023-05-08 03:59:41.138102+00:00
-    updated_at: 2023-05-22 03:08:16.592080+00:00
-    hash: '1531849409172228435'
+    updated_at: 2023-06-07 05:54:25.056084+00:00
+    hash: '-7317788807928156293'
     name: Adidas Sport Sweatshirt para Mens
     short_description: Sudadera
-    sku: ''
+    sku: 0NFHUO02ZHAX
     description: "Ajuste regular\r\nCapucha ajustable con cordón\r\npuños y dobladillos\
       \ acanalados"
     company: 2
@@ -103,11 +103,11 @@
   pk: 7
   fields:
     created_at: 2023-05-08 04:00:39.139565+00:00
-    updated_at: 2023-05-22 03:08:30.619906+00:00
-    hash: '2060371247328927835'
+    updated_at: 2023-06-07 05:54:34.064603+00:00
+    hash: '3012329907121234004'
     name: Adidas Hoops 3.0 Mid Zapatillas de básquetbol para Hombre
     short_description: Tenis de baloncesto
-    sku: ''
+    sku: KHKAYYW6GNGI
     description: "Caucho\r\nSuela de Caucho\r\nTenis de baloncesto de corte medio\
       \ para hombre con un aspecto clásico\r\nParte superior duradera: la parte superior\
       \ de piel sintético es suave y duradera\r\nAlta tracción: la icónica suela de\
@@ -119,11 +119,11 @@
   pk: 8
   fields:
     created_at: 2023-05-08 04:02:09.193569+00:00
-    updated_at: 2023-05-22 03:09:32.260543+00:00
-    hash: '-7380070568569327818'
+    updated_at: 2023-06-07 05:54:41.720004+00:00
+    hash: '8483163374197028209'
     name: Adidas Team Force By Adidas For Men, Spray, 3.4-Ounce Bottle
     short_description: Perfume para hombre
-    sku: ''
+    sku: 09O7B1Q0PEAV
     description: "Eau De Toilette\r\nAdidas Team Force by Coty for Men\r\n3.4 oz Eau\
       \ De Toilette Spray\r\nAdidas"
     company: 2
@@ -133,11 +133,11 @@
   pk: 9
   fields:
     created_at: 2023-05-08 04:03:12.355106+00:00
-    updated_at: 2023-05-22 03:09:56.465061+00:00
-    hash: '-4359503393415944548'
+    updated_at: 2023-06-07 05:58:17.179075+00:00
+    hash: '-6087361047087608352'
     name: adidas Alliance 2 Mochila, Mochila Alliance 2
     short_description: Mochila de poliestireno
-    sku: ''
+    sku: S4LVZJKZMKE4
     description: "98% poliéster, 2% licra\r\nRevestimiento de Poliéster\r\nCierre\
       \ de Cordón\r\nLavado a mano\r\nFácil apertura con cordón duradero\r\nBolsillo\
       \ con cierre para objetos de valor para guardar tu teléfono y cosas pequeñas\r\
@@ -149,11 +149,11 @@
   pk: 10
   fields:
     created_at: 2023-05-08 04:03:54.304228+00:00
-    updated_at: 2023-05-22 03:10:05.977141+00:00
-    hash: '-4017864275662916270'
+    updated_at: 2023-06-07 05:54:57.101722+00:00
+    hash: '-4074477259567943851'
     name: Adidas Tiro 21 - Pantalones de Deporte Pantalones para Hombre
     short_description: Pantalones deportivos
-    sku: ''
+    sku: 6LD6K63Q7A7V
     description: "Pantalones deportivos cónicos para hombre para comodidad diaria\r\
       \nEl ajuste cónico regular es cómodo y espacioso pero estrecho en el tobillo\r\
       \nCordón en la cintura elástica para un ajuste ajustable. Absorbe la humedad\r\
@@ -167,11 +167,11 @@
   pk: 11
   fields:
     created_at: 2023-05-22 03:32:36.757047+00:00
-    updated_at: 2023-05-22 03:32:36.757078+00:00
-    hash: '8032142964233357505'
+    updated_at: 2023-06-07 05:55:04.569746+00:00
+    hash: '-278963851156387069'
     name: CineBeam Proyector HU715Q
     short_description: Proyector LG
-    sku: ''
+    sku: DG223VR5GXY9
     description: "Tiro UltraCorto, Optimizador de brillo, Sistema Operativo WebOS\r\
       \nLáser 4K UHD (3840 x 2160) 1) y 8,3 megapíxeles, Relación de contraste (Full\
       \ On Full Off) 2,000,000:1, Brillo 2500 Ansi Lumenes\r\nCompatiblecon Apple\
@@ -188,11 +188,11 @@
   pk: 12
   fields:
     created_at: 2023-05-22 03:35:59.519585+00:00
-    updated_at: 2023-05-22 03:35:59.519617+00:00
-    hash: '2151598364108696382'
+    updated_at: 2023-06-07 05:55:12.548581+00:00
+    hash: '-5501192363612912775'
     name: LG Pantalla OLED TV 65" 4K
     short_description: Smart TV
-    sku: ''
+    sku: 6FM61D9UL8YN
     description: "4k oled\r\nColor negro perfecto\r\nFácil de usar\r\nProducto de\
       \ calidad"
     company: 3
@@ -202,11 +202,11 @@
   pk: 13
   fields:
     created_at: 2023-05-22 03:38:14.928541+00:00
-    updated_at: 2023-05-22 03:38:14.928567+00:00
-    hash: '-7436587368044529579'
+    updated_at: 2023-06-07 05:55:20.295108+00:00
+    hash: '-5087728649570844241'
     name: LG XBOOM Go XG5
     short_description: Bocina Bluetooth Portátil
-    sku: ''
+    sku: V776YAUZPGEL
     description: "[Sonido Más Claro y Potente] Experimenta el sonido extraordinario\
       \ de XBOOM Go. Todas las nuevas unidades ofrecen graves profundos y crean una\
       \ respuesta de alta frecuencia. Siente bajos definidos incluso cuando bajas\
@@ -227,11 +227,11 @@
   pk: 14
   fields:
     created_at: 2023-05-22 03:40:17.619870+00:00
-    updated_at: 2023-05-22 03:40:17.619895+00:00
-    hash: '-4984194602147099526'
+    updated_at: 2023-06-07 05:55:27.676414+00:00
+    hash: '4170802905606420235'
     name: LG Tone Free Fit TF7
     short_description: Audífonos Inalámbricos Deportivos
-    sku: ''
+    sku: 7IHY3HIE6544
     description: "【Pueden Lavarse】IP67 a prueba de agua. Ejercítate a pesar del polvo,\
       \ el sudor y la humedad. Disfruta de deportes extremos o acuáticos, corre o\
       \ haz ejercicio mientras escuchas música con auriculares.\r\n【Ajuste Extremo】Diseño\
@@ -253,11 +253,11 @@
   pk: 15
   fields:
     created_at: 2023-05-22 03:42:14.586738+00:00
-    updated_at: 2023-05-22 03:42:14.586765+00:00
-    hash: '-5560465247395601551'
+    updated_at: 2023-06-07 05:58:28.505499+00:00
+    hash: '7940659388183794144'
     name: LG - 34GL750-B
     short_description: Monitor para juegos
-    sku: ''
+    sku: 400KLX2N8DYS
     description: "Compatible con NVIDIA G-Sync\r\nTecnología Adaptive-Sync, HDR10\r\
       \n144Hz Refresh Rate, 1ms MBR\r\nResolución 2560 x 1080, panel IPS con sRGB\
       \ 99%, Brillo 300cd\r\nConsumo de energía 52W (typ.) / 58W (max.)\r\nPanel curvo\
@@ -270,11 +270,11 @@
   pk: 16
   fields:
     created_at: 2023-05-22 03:53:28.195962+00:00
-    updated_at: 2023-05-22 03:53:28.195987+00:00
-    hash: '-4823015593090502936'
+    updated_at: 2023-06-07 05:58:50.327936+00:00
+    hash: '4464922234005395163'
     name: McCormick Té de Limón 50 sobres
     short_description: Té
-    sku: ''
+    sku: G73PMHFHRNTC
     description: Zacate Limón (Cymbopogon citartus)
     company: 4
     sale: null
@@ -283,11 +283,11 @@
   pk: 17
   fields:
     created_at: 2023-05-22 03:59:33.111880+00:00
-    updated_at: 2023-05-22 03:59:33.111907+00:00
-    hash: '4573192424548045854'
+    updated_at: 2023-06-07 05:58:59.078163+00:00
+    hash: '-6448093428813993437'
     name: McCormick Mayonesa con Limón 725 g
     short_description: Mayonesa
-    sku: ''
+    sku: ZUFFE6YJ4HZC
     description: "Mayonesa con jugo de limón de 725 gramos.\r\nAdicionada con Omega\
       \ 3 y vitamina E.\r\nCon más del 60% de Aceite de Soya.\r\nConsistencia perfecta.\r\
       \nEn su presentación de 725 gramos."
@@ -298,11 +298,11 @@
   pk: 18
   fields:
     created_at: 2023-05-22 04:01:31.342329+00:00
-    updated_at: 2023-05-22 04:01:31.342353+00:00
-    hash: '4997481382115244115'
+    updated_at: 2023-06-07 05:59:07.934318+00:00
+    hash: '-4563499174891275944'
     name: McCormick Cebolla en Polvo 70 g
     short_description: Cebolla condimento
-    sku: ''
+    sku: 4ZF14DKND5WQ
     description: Cebolla deshidratada en polvo
     company: 4
     sale: null
@@ -311,11 +311,11 @@
   pk: 19
   fields:
     created_at: 2023-05-22 04:03:05.953266+00:00
-    updated_at: 2023-05-22 04:22:10.858961+00:00
-    hash: '9022027125687880316'
+    updated_at: 2023-06-07 05:59:16.221419+00:00
+    hash: '-4513888824075570080'
     name: McCormick Canela Entera 750 g
     short_description: Canela condimento
-    sku: ''
+    sku: UFJ7TJ96U8TO
     description: Corteza del árbol de la canela
     company: 4
     sale: null
@@ -324,11 +324,11 @@
   pk: 20
   fields:
     created_at: 2023-05-22 04:04:33.867875+00:00
-    updated_at: 2023-05-22 04:22:27.300772+00:00
-    hash: '-5545680812753232009'
+    updated_at: 2023-06-07 05:59:23.989455+00:00
+    hash: '-5834756564294281603'
     name: McCormick Balance Conserva de Mango 235 g
     short_description: Conserva de mango
-    sku: ''
+    sku: 2ATP1I5LTZR5
     description: Mango, azúcares añadidos (jarabe de maíz, azúcar), agua, pectina,
       ácido cítrico, benzonato de sodio, sorbato de potasio y cloruro de calcio.
     company: 4
@@ -338,11 +338,11 @@
   pk: 21
   fields:
     created_at: 2023-05-22 04:11:37.127770+00:00
-    updated_at: 2023-05-22 04:22:20.074587+00:00
-    hash: '4108233186120117489'
+    updated_at: 2023-06-07 05:59:31.899942+00:00
+    hash: '-2762509728489928828'
     name: Crema Baileys - 1 L
     short_description: Licor de chocolate
-    sku: ''
+    sku: 5ZSGZZG2HXMY
     description: "Crema\r\nPaís de Origen: Irlanda\r\n1 L"
     company: 5
     sale: 4
@@ -351,11 +351,11 @@
   pk: 22
   fields:
     created_at: 2023-05-22 04:13:49.835536+00:00
-    updated_at: 2023-05-22 04:13:49.835560+00:00
-    hash: '2057107357990228301'
+    updated_at: 2023-06-07 05:59:38.467123+00:00
+    hash: '4823002973090061832'
     name: Chocolate Turín Baileys
     short_description: Chocolates con licor
-    sku: ''
+    sku: HWBA8V3KNVW4
     description: 'INGREDIENTES: CHOCOLATE CON LECHE 65% (AZÚCARES AÑADIDOS (AZÚCAR),
       LECHE ENTERA EN POLVO, MANTECA DE CACAO, PASTA DE CACAO, LECITINA DE SOYA, POLIGLICEROL
       DE POLIRRICINOLEATO, SABORIZANTES ARTIFICIALES, SAL), RELLENO 35% (LICOR BAILEYS®
@@ -375,11 +375,11 @@
   pk: 23
   fields:
     created_at: 2023-05-22 04:19:17.486019+00:00
-    updated_at: 2023-05-22 04:19:17.486053+00:00
-    hash: '-593781884054872018'
+    updated_at: 2023-06-07 05:59:45.151061+00:00
+    hash: '6784357206906634941'
     name: Café Coffee Mate Líquido Baileys
     short_description: Sustituto de Crema
-    sku: ''
+    sku: QIQFZM4FN4JO
     description: Agua, azúcares añadidos (azúcar), aceite vegetal hidrogenado, caseinato
       de sodio, fosfato hidrogenado dipotásico, ésteres de glicerol de ácidos grasos
       de diacetil tartárico, celulosa microcristalina, mono y diglicéridos, saborizante
@@ -391,11 +391,11 @@
   pk: 24
   fields:
     created_at: 2023-05-22 04:21:11.771964+00:00
-    updated_at: 2023-05-22 04:21:11.772003+00:00
-    hash: '4073560633882568520'
+    updated_at: 2023-06-07 05:59:51.999272+00:00
+    hash: '2886597495171583169'
     name: Crema De Whisky Baileys Colada 700 ml
     short_description: Whisky
-    sku: ''
+    sku: IQ6ETDRS40XJ
     description: "TROPICAL: Esta edición de Baileys sabe a vacaciones tropicales,\
       \ en una botella de 700 ml. Mezcla el licor de crema irlandesa número uno del\
       \ mundo con la cremosidad del coco y la dulzura de la piña\r\nSABOR: Baileys\
@@ -417,11 +417,11 @@
   pk: 25
   fields:
     created_at: 2023-05-22 04:23:16.195503+00:00
-    updated_at: 2023-05-22 04:23:16.195528+00:00
-    hash: '6161801886802207923'
+    updated_at: 2023-06-07 05:59:59.429745+00:00
+    hash: '8343063812856385160'
     name: TURIN BAILEYS
     short_description: Chocolate
-    sku: ''
+    sku: ANNPLVE25QXG
     description: 150 Gramos
     company: 5
     sale: 4
@@ -430,11 +430,11 @@
   pk: 26
   fields:
     created_at: 2023-05-22 04:35:26.101765+00:00
-    updated_at: 2023-05-22 04:35:26.101791+00:00
-    hash: '-1316284487636890258'
+    updated_at: 2023-06-07 06:00:05.830529+00:00
+    hash: '-809899225596843334'
     name: EVERLAST Powerlock2
     short_description: Guantes de Entrenamiento de Boxeo
-    sku: ''
+    sku: FLGFCTISUVCQ
     description: "Powerlock que conoces con actualizaciones modernas\r\nHecho de piel\
       \ sintética de alta calidad, protección de núcleo de espuma de cuatro capas\r\
       \nBarra de agarre ergonómica, palma de malla completa\r\nInnovador sistema de\
@@ -447,11 +447,11 @@
   pk: 27
   fields:
     created_at: 2023-05-22 04:42:42.524812+00:00
-    updated_at: 2023-05-22 04:42:42.524845+00:00
-    hash: '8877345349691466148'
+    updated_at: 2023-06-07 06:00:11.309053+00:00
+    hash: '6920567129405164293'
     name: Everlast New Elite High
     short_description: Zapatos de boxeo
-    sku: ''
+    sku: TJS56Q468K4D
     description: "Suela de Caucho\r\nDiseño híbrido de calzado de boxeo para gimnasio\
       \ y uso en anillo.\r\nConstruido con una suela técnica para máxima tracción,\
       \ flexibilidad y apoyo. Innovador diseño de banda de rodadura que evita el deslizamiento\
@@ -466,11 +466,11 @@
   pk: 28
   fields:
     created_at: 2023-05-22 04:47:05.778639+00:00
-    updated_at: 2023-05-22 04:47:05.778665+00:00
-    hash: '7572833845757282122'
+    updated_at: 2023-06-07 06:00:17.168570+00:00
+    hash: '-2093340110369420710'
     name: Everlast X4007A Costal tradicional
     short_description: Costal de boxeo
-    sku: ''
+    sku: A6YE1T1WMDND
     description: "Costal de entrenamiento\r\nCostal 70lbs"
     company: 6
     sale: 5
@@ -479,11 +479,11 @@
   pk: 29
   fields:
     created_at: 2023-05-22 04:51:14.855157+00:00
-    updated_at: 2023-05-22 04:51:14.855225+00:00
-    hash: '4339523220172021500'
+    updated_at: 2023-06-07 06:00:23.228528+00:00
+    hash: '-1351041881927413275'
     name: EVERLAST Everhide Mantis
     short_description: Guantes de Sparring
-    sku: ''
+    sku: 9YHW4PVK8O71
     description: "Color: Gray\r\nHecho de duro\r\nCojines de diseño curvo para mayor\
       \ comodidad.\r\nEl agarre de palma levantado sostiene los guantes en su lugar\r\
       \nUtilizar para desarrollar combinaciones de punzonado.\r\nGran ejercicio cardiovascular"
@@ -494,11 +494,11 @@
   pk: 30
   fields:
     created_at: 2023-05-22 04:52:37.369099+00:00
-    updated_at: 2023-05-22 04:52:37.369125+00:00
-    hash: '5101888952242027047'
+    updated_at: 2023-06-07 06:00:29.859657+00:00
+    hash: '-8729752283785625176'
     name: EVERLAST Guantes para Artes Marciales Mixtas
     short_description: Guantes de combate
-    sku: ''
+    sku: RG5F68AO6CN5
     description: "Más de 1.9 cm de acolchado en los nudillos para mayor protección\
       \ en las manos y puños\r\nCosturas reforzadas y orificios para los dedos\r\n\
       Duradera correa con velcro para la muñeca\r\nPuño elástico para un ajuste profesional"
