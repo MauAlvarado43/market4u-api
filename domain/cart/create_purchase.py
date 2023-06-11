@@ -1,7 +1,7 @@
 import json
 from django.utils.crypto import get_random_string
-from app.serializers import ProductSerializer, VariantSerializer, CategorySerializer
-from app.models import Shipping, Purchase, Cart, User, Product, Variant, Payment, Company, Category
+from app.serializers import ProductSerializer, VariantSerializer, CategorySerializer, SaleSerializer
+from app.models import Shipping, Purchase, Cart, User, Product, Variant, Payment, Company, Sale
 
 def create_purchase(user_id, products = [], delivery = {}, payment_raw = {}):
 
@@ -58,6 +58,8 @@ def save_products(user, cart, delivery, products):
 
         for product_raw in products_company:
             
+            sale_raw = product_raw.get("sale")
+            sale = None
             product = Product.objects.get(id=product_raw["id"])
             variant = Variant.objects.get(id=product_raw["variant"]["id"])
             category = product.category
@@ -68,12 +70,16 @@ def save_products(user, cart, delivery, products):
                 "category": CategorySerializer(category, many=False).data
             }
 
+            if sale_raw is not None:
+                sale = Sale.objects.get(id=sale_raw["id"])
+                
+
             remove_stock(variant.id, product_raw["amount"])
 
             Purchase.objects.create(
                 amount=product_raw["amount"],
                 product=json.dumps(product_json),
-                sale="",
+                sale="" if sale is None else SaleSerializer(sale, many=False).data,
                 shipping=shipping
             )
 
