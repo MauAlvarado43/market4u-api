@@ -33,6 +33,8 @@ class ShippingSerializer(serializers.ModelSerializer):
             'address',
             'status',
             'total',
+            'subtotal',
+            'shipment',
             'cart_id',
             'buyer_id',
             'company_id',  

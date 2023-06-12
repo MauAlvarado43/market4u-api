@@ -1535,6 +1535,8 @@ class TestGraphql(GraphQLTestCase):
                     address
                     status
                     total
+                    subtotal
+                    shipment
                     cart {
                       id
                     }
@@ -1615,6 +1617,8 @@ class TestGraphql(GraphQLTestCase):
                     address
                     status
                     total
+                    subtotal
+                    shipment
                     cart {
                       id
                     }
@@ -1644,6 +1648,8 @@ class TestGraphql(GraphQLTestCase):
                     buyer:  1,
                     company:  1,
                     total: 128.0,
+                    subtotal: 128.0,
+                    shipment: 128.0,
                 ) {
                     shipping {
                         id
@@ -1652,6 +1658,8 @@ class TestGraphql(GraphQLTestCase):
                         address
                         status
                         total
+                        subtotal
+                        shipment
                         cart {
                           id
                         }
@@ -1682,6 +1690,8 @@ class TestGraphql(GraphQLTestCase):
                     buyer:  1,
                     company:  1,
                     total: 128.0,
+                    subtotal: 128.0,
+                    shipment: 128.0,
 
                 ) {
                     shipping {
@@ -1691,6 +1701,8 @@ class TestGraphql(GraphQLTestCase):
                         address
                         status
                         total
+                        subtotal
+                        shipment
                         cart {
                           id
                         }

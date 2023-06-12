@@ -130,6 +130,8 @@
     buyer: 1
     company: 1
     total: 128.0
+    subtotal: 128.0
+    shipment: 128.0
 
 ## USERS
 

@@ -21,6 +21,8 @@ class SaveShippingMutation(graphene.Mutation):
         address = graphene.String(required=True)
         status = graphene.String(required=True)
         total = graphene.Float(required=True)
+        subtotal = graphene.Float(required=True)
+        shipment = graphene.Float(required=True)
         cart = graphene.Int(required=True)
         buyer = graphene.Int(required=False)
         company = graphene.Int(required=False)
@@ -40,6 +42,10 @@ class SaveShippingMutation(graphene.Mutation):
             shipping["status"] = kwargs["status"]
         if "total" in kwargs:
             shipping["total"] = kwargs["total"]
+        if "subtotal" in kwargs:
+            shipping["subtotal"] = kwargs["subtotal"]
+        if "shipment" in kwargs:
+            shipping["shipment"] = kwargs["shipment"]
         if "cart" in kwargs:
             cart = Cart.filter_permissions(
                 Cart.objects,
@@ -76,6 +82,8 @@ class SetShippingMutation(graphene.Mutation):
         address = graphene.String(required=False)
         status = graphene.String(required=False)
         total = graphene.Float(required=False)
+        subtotal = graphene.Float(required=False)
+        shipment = graphene.Float(required=False)
         cart = graphene.Int(required=False)
         buyer = graphene.Int(required=False)
         company = graphene.Int(required=False)
@@ -97,6 +105,10 @@ class SetShippingMutation(graphene.Mutation):
             shipping.status = kwargs["status"]
         if "total" in kwargs:
             shipping.total = kwargs["total"]
+        if "subtotal" in kwargs:
+            shipping.subtotal = kwargs["subtotal"]
+        if "shipment" in kwargs:
+            shipping.shipment = kwargs["shipment"]
         if "cart" in kwargs:
             cart = Cart.objects \
                 .get(pk=kwargs["cart"])

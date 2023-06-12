@@ -9,23 +9,23 @@ from domain.create_user import send_mail_token
 
 def send_token_password(email):
 
+    if not User.objects.filter(email=email).exists():
+        return status.HTTP_401_UNAUTHORIZED, None
+
     user = User.objects.get(email=email)
 
-    if not user:
-        return status.HTTP_401_UNAUTHORIZED
-
     if not user.token_verified:
-        return codes.CODE_420_TOKEN_NOT_VERIFIED
+        return status.HTTP_200_OK, user.token
 
     token = get_random_string(length=32)
     user.token = token
     user.save()
 
-    subject_html_mail = "[Martket4U] Recuperación de cuenta"
+    subject_html_mail = "[Martket4U] Restablecimiento de contraseña"
     preheader_html_mail = (
         "Al parecer has olvidado tu contraseña. No te preocupes recuperala ahora mismo"
     )
-    title_html_mail = f"Recuperación de cuenta"
+    title_html_mail = f"Restablecimiento de contraseña"
     body_html_mail = """
     Hace poco hemos recibido una solicitud de restablecimiento de la 
     contraseña de su cuenta. Para restablecer su contraseña solo presiona 
@@ -45,7 +45,7 @@ def send_token_password(email):
         token
     )
 
-    return status.HTTP_200_OK
+    return status.HTTP_200_OK, None
 
 
 def restore_password(token, new_password):
