@@ -24,6 +24,10 @@ class Shipping(Model):
         blank=False)
     total = models.FloatField(
         default=0)
+    subtotal = models.FloatField(
+        default=0)
+    shipment = models.FloatField(
+        default=0)
 
     cart = models.ForeignKey(
         'models.Cart', related_name='shippings',

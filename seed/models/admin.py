@@ -208,6 +208,8 @@ class Admin:
                     'address',
                     'status',
                     'total',
+                    'subtotal',
+                    'shipment',
                     'cart',
                     'buyer',
                     'company',

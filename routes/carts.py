@@ -11,8 +11,8 @@ from rest_framework import permissions
 from django.shortcuts import get_object_or_404
 from seed.util.request_util import has_fields_or_400
 from app.models import Cart
-from app.serializers import ProductSerializer, VariantSerializer, CategorySerializer, SaleSerializer
-from app.models import Product, Variant, Category
+from app.serializers import ProductSerializer, VariantSerializer, CategorySerializer, SaleSerializer, VariantoptionSerializer
+from app.models import Product, Variant, Variantoption
 from domain.cart.create_purchase import create_purchase
 from django.utils import timezone
 
@@ -36,14 +36,17 @@ class CartViewSet(SeedRoute.CartViewSet):
             product = Product.objects.get(pk=product_id)
             variant = Variant.objects.get(pk=vartian_id)
             sale = product.sale
+            variant_options = Variantoption.objects.filter(variant=variant)
 
             serializer_products = ProductSerializer(product, many=False)
             serializer_variants = VariantSerializer(variant, many=False)
             serializer_category = CategorySerializer(product.category, many=False)
+            serializer_variant_options = VariantoptionSerializer(variant_options, many=True)
 
             res["category"] = serializer_category.data
             res["variant"] = serializer_variants.data
             res["amount"] = amount
+            res["variant_options"] = serializer_variant_options.data
 
             if sale is not None:
                 if timezone.now() >= sale.start_date and timezone.now() <= sale.end_date:

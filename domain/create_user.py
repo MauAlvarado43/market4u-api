@@ -467,21 +467,7 @@ HTML_TEMPLATE_TOKEN = """
                 align="center"
                 valign="top"
                 style="padding: 40px 10px 40px 10px"
-              >
-                <a href="{site_url}" target="_blank">
-                  <img
-                    alt="Logo"
-                    src="https://i.ibb.co/PYDKsRf/market4u.png"
-                    style="
-                      display: block;
-                      width: 30%;
-                      font-family: 'Lato', Helvetica, Arial, sans-serif;
-                      color: #ffffff;
-                      font-size: 18px;
-                    "
-                    border="0"
-                  />
-                </a>
+              >              
               </td>
             </tr>
           </table>
@@ -513,9 +499,25 @@ HTML_TEMPLATE_TOKEN = """
                   line-height: 48px;
                 "
               >
-                <h1 style="font-size: 40px; font-weight: 400; margin: 0">
+              
+                <a href="{site_url}" target="_blank" style="margin-bottom: 30px;">
+                  <img
+                    alt="Logo"
+                    src="https://i.ibb.co/PYDKsRf/market4u.png"
+                    style="
+                      display: block;
+                      width: 30%;
+                      font-family: 'Lato', Helvetica, Arial, sans-serif;
+                      color: #ffffff;
+                      font-size: 18px;
+                    "
+                    border="0"
+                  />
+                </a> <br/>
+
+                <h3 style="font-size: 40px; font-weight: 400; margin: 0">
                   {title}
-                </h1>
+                </h3>
               </td>
             </tr>
           </table>

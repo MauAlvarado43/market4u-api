@@ -479,6 +479,14 @@
           "default": "0",
           "name": "total",
           "type": "float"
+        },
+        {
+          "name": "subtotal",
+          "type": "float"
+        },
+        {
+          "name": "shipment",
+          "type": "float"
         }
       ],
       "name": "shipping"

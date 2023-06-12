@@ -120,6 +120,8 @@
     buyer: 0
     company: 0
     total: 0
+    subtotal: 0
+    shipment: 0
 
 ## USERS
 

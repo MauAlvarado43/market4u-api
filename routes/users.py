@@ -99,8 +99,8 @@ class UserViewSet(SeedRoute.UserViewSet):
         has_fields_or_400(data, "email")
 
         email = data["email"]
-        code = send_token_password(email)
-        return Response(status=code)
+        code, token = send_token_password(email)
+        return Response(status=code, data = {"token": token} if token is not None else {})
 
     @action(detail=False, methods=["POST"])
     def restore_password(self, request):

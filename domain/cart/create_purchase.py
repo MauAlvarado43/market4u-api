@@ -1,7 +1,7 @@
 import json
 from django.utils.crypto import get_random_string
-from app.serializers import ProductSerializer, VariantSerializer, CategorySerializer
-from app.models import Shipping, Purchase, Cart, User, Product, Variant, Payment, Company, Category
+from app.serializers import ProductSerializer, VariantSerializer, CategorySerializer, SaleSerializer, VariantoptionSerializer
+from app.models import Shipping, Purchase, Cart, User, Product, Variant, Payment, Company, Sale, Variantoption
 
 def create_purchase(user_id, products = [], delivery = {}, payment_raw = {}):
 
@@ -29,6 +29,15 @@ def create_purchase(user_id, products = [], delivery = {}, payment_raw = {}):
                 user=user
             )
 
+    if delivery["save"]:
+        user.telephone = delivery["telephone"]
+        user.street = delivery["street"]
+        user.cologn = delivery["cologn"]
+        user.cp = delivery["cp"]
+        user.city = delivery["city"]
+        user.state = delivery["state"]
+        user.save()
+
     save_products(user, cart, delivery, products)
     return 201, None
 
@@ -55,27 +64,48 @@ def save_products(user, cart, delivery, products):
             buyer=user,
             company=company
         ) 
+        total = 0
+        subtotal = 0
+        shipment = 0
 
         for product_raw in products_company:
             
+            sale_raw = product_raw.get("sale")
+            sale = None
             product = Product.objects.get(id=product_raw["id"])
             variant = Variant.objects.get(id=product_raw["variant"]["id"])
+            variant_options = Variantoption.objects.filter(variant=variant)
             category = product.category
 
             product_json = {
                 "product": ProductSerializer(product, many=False).data,
                 "variant": VariantSerializer(variant, many=False).data,
+                "variant_options": VariantoptionSerializer(variant_options, many=True).data,
                 "category": CategorySerializer(category, many=False).data
             }
 
+            if sale_raw is not None:
+                sale = Sale.objects.get(id=sale_raw["id"])
+                new_price = variant.price * (sale.disscount / 100)
+                subtotal += product_raw["amount"] * new_price
+                shipment += variant.shipment
+            else:
+                subtotal += product_raw["amount"] * variant.price
+                shipment += variant.shipment
+                
             remove_stock(variant.id, product_raw["amount"])
 
             Purchase.objects.create(
                 amount=product_raw["amount"],
                 product=json.dumps(product_json),
-                sale="",
+                sale="" if sale is None else SaleSerializer(sale, many=False).data,
                 shipping=shipping
             )
+
+        shipping.shipment = shipment
+        shipping.subtotal = subtotal
+        shipping.total = subtotal + total
+        shipping.save()
 
 def get_products_by_company(products, company_id):
     filtered_products = []
