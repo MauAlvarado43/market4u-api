@@ -86,7 +86,7 @@ def save_products(user, cart, delivery, products):
 
             if sale_raw is not None:
                 sale = Sale.objects.get(id=sale_raw["id"])
-                new_price = variant.price * (sale.disscount / 100)
+                new_price = variant.price - (variant.price * (sale.disscount / 100))
                 subtotal += product_raw["amount"] * new_price
                 shipment += variant.shipment
             else:
@@ -104,7 +104,7 @@ def save_products(user, cart, delivery, products):
 
         shipping.shipment = shipment
         shipping.subtotal = subtotal
-        shipping.total = subtotal + total
+        shipping.total = subtotal + shipment
         shipping.save()
 
 def get_products_by_company(products, company_id):
